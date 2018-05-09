@@ -1,0 +1,15 @@
+\changetocdepth {4}
+\babel@toc {brazil}{}
+\setlength {\cftchapterindent }{\cftlastnumwidth } \setlength {\cftchapternumwidth }{2em}
+\setlength {\cftchapterindent }{0em} \setlength {\cftchapternumwidth }{\cftlastnumwidth }
+\contentsline {chapter}{\chapternumberline {1}\MakeTextUppercase {INTRODU\IeC {\c C}\IeC {\~A}O}}{3}{chapter.1}
+\contentsline {section}{\numberline {1.1}BREVE HIST\IeC {\'O}RIA}{3}{section.1.1}
+\contentsline {section}{\numberline {1.2}PROBLEM\IeC {\'A}TICA}{4}{section.1.2}
+\contentsline {subsection}{\numberline {1.2.1}DETEC\IeC {\c C}\IeC {\~A}O E AQUISI\IeC {\c C}\IeC {\~A}O DA FACE}{4}{subsection.1.2.1}
+\contentsline {subsection}{\numberline {1.2.2}TREINAMENTO E RECONHECIMENTO DA FACE}{6}{subsection.1.2.2}
+\contentsline {section}{\numberline {1.3}OBJETIVOS}{8}{section.1.3}
+\contentsline {subsection}{\numberline {1.3.1}ORGANIZA\IeC {\c C}\IeC {\~A}O DO TRABALHO}{8}{subsection.1.3.1}
+\contentsline {subsection}{\numberline {1.3.2}JUSTIFICATIVA}{9}{subsection.1.3.2}
+\vspace {\cftbeforechapterskip }
+\setlength {\cftchapterindent }{\cftlastnumwidth } \setlength {\cftchapternumwidth }{2em}
+\contentsline {chapter}{\uppercase {REFER{\^ E}NCIAS}}{13}{section*.4}

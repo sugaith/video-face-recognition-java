@@ -1,0 +1,93 @@
+\providecommand{\abntreprintinfo}[1]{%
+ \citeonline{#1}}
+\setlength{\labelsep}{0pt}\begin{thebibliography}{}
+\providecommand{\abntrefinfo}[3]{}
+\providecommand{\abntbstabout}[1]{}
+\abntbstabout{v-1.9.6 }
+
+\bibitem[Barbu Nathan~Lay 2015]{3dmodel_fd}
+\abntrefinfo{Barbu Nathan~Lay}{BARBU NATHAN~LAY}{2015}
+{BARBU NATHAN~LAY, G.~G. A. Face detection with a 3d model.
+2015.
+Dispon{\'\i}vel em:
+  \url{https://pdfs.semanticscholar.org/2bbf/047993f08a608ce4ca22720d374d4cf76f98.pdf}.}
+
+\bibitem[Chao 2011]{wei_lun}
+\abntrefinfo{Chao}{CHAO}{2011}
+{CHAO, W.-L.
+\textbf{Face Recognition}.
+Disserta\c{c}\~{a}o (Mestrado) --- National Taiwan University, GICE, Taiwan,
+  Maio 2011.}
+
+\bibitem[Davison 2013]{drmathew_java_programming}
+\abntrefinfo{Davison}{DAVISON}{2013}
+{DAVISON, D.~A.
+In:  \underline{\ \ \ \ \ \ \ \ }. \textbf{Java Prog. Techniques for Games}.
+  Vienna: Universidade Prince of Songkla, Thailândia, 2013.
+Dispon{\'\i}vel em: \url{hhttp://fivedots.coe.psu.ac.th/~ad/index.html}.}
+
+\bibitem[Electrical e IEEE 1997]{stats_face_detection_IEEE}
+\abntrefinfo{Electrical e IEEE}{ELECTRICAL; IEEE}{1997}
+{ELECTRICAL, I. of; IEEE, E.~E. Face recognition: eigenface, elastic matching,
+  and neural nets.
+\textbf{Proceedings of the IEEE ( Volume: 85, Issue: 9, Sep 1997 )}, 1997.
+Dispon{\'\i}vel em: \url{http://ieeexplore.ieee.org/document/628712/}.}
+
+\bibitem[Introna 2010]{nyu_ccpr_frt}
+\abntrefinfo{Introna}{INTRONA}{2010}
+{INTRONA, H.~N. L.~D. Facial recognition technology - a survey of polycy and
+  implementation issues.
+2010.
+Dispon{\'\i}vel em:
+  \url{https://www.nyu.edu/projects/nissenbaum/papers/facial\_recognition\_report.pdf}.}
+
+\bibitem[Jebara 1995]{tony_columbia}
+\abntrefinfo{Jebara}{JEBARA}{1995}
+{JEBARA, T.~S.
+\textbf{3D Pode Estimation and Normalization for Face Recognition}.
+Disserta\c{c}\~{a}o (Mestrado) --- McGill University, Columbia University,
+  Montréal, Québec - Canada, 1995.
+Dispon{\'\i}vel em:
+  \url{http://www.cs.columbia.edu/~jebara/htmlpapers/UTHESIS/node7.html}.}
+
+\bibitem[Kim Joon Hyung~Shim 2003]{final_project_stanford}
+\abntrefinfo{Kim Joon Hyung~Shim}{KIM JOON HYUNG~SHIM}{2003}
+{KIM JOON HYUNG~SHIM, J.~Y. I.
+\textbf{Final Project - Face Detection Project}.
+Disserta\c{c}\~{a}o (Mestrado) --- Stanford University, Stanford, California,
+  2003.
+Dispon{\'\i}vel em:
+  \url{https://web.stanford.edu/class/ee368/Project\_03/Project/reports/ee368group02.pdf}.}
+
+\bibitem[Portal 2017]{stats_economy_compass_2017}
+\abntrefinfo{Portal}{PORTAL}{2017}
+{PORTAL, S. T.~S. Face recognition software comparison as %-error in face
+  recognition.
+\textbf{Digital Economy Compass 2017}, 2017.
+Dispon{\'\i}vel em:
+  \url{https://www.slideshare.net/statista\_com/statista-digital-economy-compass-2017}.}
+
+\bibitem[Science e (NSTC) 2009]{nstc_homeland}
+\abntrefinfo{Science e (NSTC)}{SCIENCE; (NSTC)}{2009}
+{SCIENCE, N.; (NSTC), T.~C. Face recognition.
+\textbf{National Science and Technology Consil (NSTC)}, National Science and
+  Technology Consil (NSTC), p. 92--99, 2009.
+Dispon{\'\i}vel em:
+  \url{https://www.fbi.gov/file-repository/about-us-cjis-fingerprints\_biometrics-biometric-center-of-}.
+  Acesso em: 04.2018.}
+
+\bibitem[Wójcik Konrad~Gromaszek 2016]{issues_methods_FR}
+\abntrefinfo{Wójcik Konrad~Gromaszek}{WóJCIK KONRAD~GROMASZEK}{2016}
+{WóJCIK KONRAD~GROMASZEK, M.~J. W. Face recognition: Issues, methods and
+  alternative applications.
+2016.
+Dispon{\'\i}vel em:
+  \url{https://www.intechopen.com/books/face-recognition-semisupervised-classification-subspace-projection-and-evaluation-methods/face-recognition-issues-methods-and-alternative-applications}.}
+
+\bibitem[Yang Ping~Luo 2015]{stats_hong_kong}
+\abntrefinfo{Yang Ping~Luo}{YANG PING~LUO}{2015}
+{YANG PING~LUO, C. C. L. X.~T. S. Wider face: A face recognition benchmark.
+2015.
+Dispon{\'\i}vel em: \url{https://arxiv.org/pdf/1511.06523.pdf}.}
+
+\end{thebibliography}
