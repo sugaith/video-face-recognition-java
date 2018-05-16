@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.19 (MiKTeX 2.9.6630 64-bit) (preloaded format=pdflatex 2018.4.5)  9 APR 2018 12:22
+This is pdfTeX, Version 3.14159265-2.6-1.40.19 (MiKTeX 2.9.6630 64-bit) (preloaded format=pdflatex 2018.4.5)  15 MAY 2018 12:36
 entering extended mode
 **./modelo.tex
 (modelo.tex
@@ -1788,7 +1788,7 @@ l.129
 
 
 ]
-<./Imagens/ex_variacao.png, id=83, 454.69875pt x 536.0025pt>
+<./Imagens/ex_variacao.png, id=85, 454.69875pt x 536.0025pt>
 File: ./Imagens/ex_variacao.png Graphic file (type png)
 <use ./Imagens/ex_variacao.png>
 Package pdftex.def Info: ./Imagens/ex_variacao.png  used on input line 33.
@@ -1807,19 +1807,19 @@ LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <12> not available
 (Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 69.
 
 [6]
-<./Imagens/someeigen.png, id=127, 263.48438pt x 211.54031pt>
+<./Imagens/someeigen.png, id=130, 263.48438pt x 211.54031pt>
 File: ./Imagens/someeigen.png Graphic file (type png)
 <use ./Imagens/someeigen.png>
 Package pdftex.def Info: ./Imagens/someeigen.png  used on input line 82.
 (pdftex.def)             Requested size: 273.00278pt x 219.19298pt.
  [7 <./Imagens/someeigen.png>]
-<./Imagens/eigencartesiano.png, id=146, 306.39468pt x 263.48438pt>
+<./Imagens/eigencartesiano.png, id=149, 306.39468pt x 263.48438pt>
 File: ./Imagens/eigencartesiano.png Graphic file (type png)
 <use ./Imagens/eigencartesiano.png>
 Package pdftex.def Info: ./Imagens/eigencartesiano.png  used on input line 98.
 (pdftex.def)             Requested size: 273.00278pt x 234.78177pt.
  [8 <./Imagens/eigencartesiano.png>]
-<./Imagens/tabelaEmpresasRecog.png, id=160, 546.54187pt x 848.4197pt>
+<./Imagens/tabelaEmpresasRecog.png, id=163, 546.54187pt x 848.4197pt>
 File: ./Imagens/tabelaEmpresasRecog.png Graphic file (type png)
 <use ./Imagens/tabelaEmpresasRecog.png>
 Package pdftex.def Info: ./Imagens/tabelaEmpresasRecog.png  used on input line 
@@ -1830,7 +1830,7 @@ Package pdftex.def Info: ./Imagens/tabelaEmpresasRecog.png  used on input line
 LaTeX Warning: `h' float specifier changed to `ht'.
 
 [9]
-<./Imagens/stats_toprecog.png, id=171, 392.21532pt x 150.5625pt>
+<./Imagens/stats_toprecog.png, id=174, 392.21532pt x 150.5625pt>
 File: ./Imagens/stats_toprecog.png Graphic file (type png)
 <use ./Imagens/stats_toprecog.png>
 Package pdftex.def Info: ./Imagens/stats_toprecog.png  used on input line 152.
@@ -1840,7 +1840,21 @@ Package pdftex.def Info: ./Imagens/stats_toprecog.png  used on input line 152.
 LaTeX Warning: Citation `baidiu_theverge' on page 11 undefined on input line 16
 1.
 
-[11 <./Imagens/stats_toprecog.png>]) (modelo.bbl [12]
+[11 <./Imagens/stats_toprecog.png>]) (Capitulos/revisa_bib.tex [12]
+
+LaTeX Warning: Citation `credito-bancario' on page 13 undefined on input line 7
+.
+
+
+LaTeX Warning: Citation `credito-bancario' on page 13 undefined on input line 9
+.
+
+
+LaTeX Warning: Citation `logs-web' on page 13 undefined on input line 13.
+
+) (modelo.bbl [13
+
+]
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
 (hyperref)                removing `\uppercase' on input line 3.
@@ -1852,13 +1866,13 @@ Overfull \hbox (16.14395pt too wide) in paragraph at lines 81--86
 ]projection-[]and-[]evaluation-[]methods /
  []
 
-) [13
+) [14
 
 ]
 No file modelo.ind.
 
 AED: lastpage setting LastPage
-[14]
+[15]
 \tf@toc=\write6
 \openout6 = `modelo.toc'.
 
@@ -1877,30 +1891,31 @@ LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 228.
  ) 
 Here is how much of TeX's memory you used:
- 35964 strings out of 493305
- 817719 string characters out of 3130238
- 1041660 words of memory out of 3000000
- 38808 multiletter control sequences out of 15000+200000
- 16637 words of font info for 44 fonts, out of 3000000 for 9000
+ 35980 strings out of 493305
+ 818387 string characters out of 3130238
+ 1040797 words of memory out of 3000000
+ 38817 multiletter control sequences out of 15000+200000
+ 17323 words of font info for 45 fonts, out of 3000000 for 9000
  1147 hyphenation exceptions out of 8191
  74i,12n,128p,1585b,609s stack positions out of 5000i,500n,10000p,200000b,50000s
  <C:\Users\suga\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi600\e
-cti1200.pk> <C:\Users\suga\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec
-\dpi600\eccc1200.pk> <C:\Users\suga\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jk
-nappen\ec\dpi600\ecxc1200.pk> <C:\Users\suga\AppData\Local\MiKTeX\2.9\fonts\pk\
-ljfour\jknappen\ec\dpi600\ecbx1200.pk> <C:\Users\suga\AppData\Local\MiKTeX\2.9\
-fonts\pk\ljfour\jknappen\ec\dpi600\ecrm1000.pk> <C:\Users\suga\AppData\Local\Mi
-KTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi600\ecti1440.pk> <C:\Users\suga\AppData
-\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi600\ecrm1440.pk> <C:\Users\sug
-a\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi600\ecrm1095.pk> <C:\
-Users\suga\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi600\ecbi1440
+cti1000.pk> <C:\Users\suga\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec
+\dpi600\ecti1200.pk> <C:\Users\suga\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jk
+nappen\ec\dpi600\eccc1200.pk> <C:\Users\suga\AppData\Local\MiKTeX\2.9\fonts\pk\
+ljfour\jknappen\ec\dpi600\ecxc1200.pk> <C:\Users\suga\AppData\Local\MiKTeX\2.9\
+fonts\pk\ljfour\jknappen\ec\dpi600\ecbx1200.pk> <C:\Users\suga\AppData\Local\Mi
+KTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi600\ecrm1000.pk> <C:\Users\suga\AppData
+\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi600\ecti1440.pk> <C:\Users\sug
+a\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi600\ecrm1440.pk> <C:\
+Users\suga\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi600\ecrm1095
 .pk> <C:\Users\suga\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi600
-\ecrm1200.pk> <C:\Users\suga\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappen\
-ec\dpi600\ecbx1440.pk><h:/Users/suga/AppData/Local/Programs/MiKTeX 2.9/fonts/ty
-pe1/public/amsfonts/cm/cmsy10.pfb>
-Output written on modelo.pdf (15 pages, 937557 bytes).
+\ecbi1440.pk> <C:\Users\suga\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappen\
+ec\dpi600\ecrm1200.pk> <C:\Users\suga\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\
+jknappen\ec\dpi600\ecbx1440.pk><h:/Users/suga/AppData/Local/Programs/MiKTeX 2.9
+/fonts/type1/public/amsfonts/cm/cmsy10.pfb>
+Output written on modelo.pdf (16 pages, 944054 bytes).
 PDF statistics:
- 658 PDF objects out of 1000 (max. 8388607)
- 50 named destinations out of 1000 (max. 500000)
- 146 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 684 PDF objects out of 1000 (max. 8388607)
+ 52 named destinations out of 1000 (max. 500000)
+ 154 words of extra memory for PDF output out of 10000 (max. 10000000)
 
