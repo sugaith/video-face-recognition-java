@@ -5,6 +5,13 @@
 \providecommand{\abntbstabout}[1]{}
 \abntbstabout{v-1.9.6 }
 
+\bibitem[Balan 2009]{img-digital-willians}
+\abntrefinfo{Balan}{BALAN}{2009}
+{BALAN, W.~C. A imagem digital.
+\textbf{Espaço para apoio didático do Curso de Comunicação social -
+  Radialismo}, 2009.
+Dispon{\'\i}vel em: \url{http://willians.pro.br/textos/}. Acesso em: 05.2018.}
+
 \bibitem[Barbu Nathan~Lay 2015]{3dmodel_fd}
 \abntrefinfo{Barbu Nathan~Lay}{BARBU NATHAN~LAY}{2015}
 {BARBU NATHAN~LAY, G.~G. A. Face detection with a 3d model.
@@ -59,6 +66,15 @@ Disserta\c{c}\~{a}o (Mestrado) --- Stanford University, Stanford, California,
 Dispon{\'\i}vel em:
   \url{https://web.stanford.edu/class/ee368/Project\_03/Project/reports/ee368group02.pdf}.}
 
+\bibitem[Kitani]{tutorial_pt}
+\abntrefinfo{Kitani}{KITANI}{}
+{KITANI, C. E.~T. E.~C. Um tutorial sobre análise de componentes principais
+  para o reconhecimento automático de faces.
+\textbf{Departamente de Engenharia Elétrica}, Centro Universitário da FEI.
+Dispon{\'\i}vel em:
+  \url{http://fei.edu.br/~cet/Tutorial\_ReconhecimentoFaces.pdf}. Acesso em:
+  05.2018.}
+
 \bibitem[Portal 2017]{stats_economy_compass_2017}
 \abntrefinfo{Portal}{PORTAL}{2017}
 {PORTAL, S. T.~S. Face recognition software comparison as %-error in face
@@ -75,6 +91,30 @@ Dispon{\'\i}vel em:
 Dispon{\'\i}vel em:
   \url{https://www.fbi.gov/file-repository/about-us-cjis-fingerprints\_biometrics-biometric-center-of-}.
   Acesso em: 04.2018.}
+
+\bibitem[Silva 2009]{geysilva}
+\abntrefinfo{Silva}{SILVA}{2009}
+{SILVA, G.~N. da.
+\textbf{Estudo das Técnicas PCA (Análise de Componentes Principais) e
+  Auto-faces Aplicadas ao Reconhecimento de Faces Humanas}.
+Disserta\c{c}\~{a}o (Mestrado) --- Centro Universitário Eurípides Soares -
+  UNIVEM, Marília, 2009.}
+
+\bibitem[Smith 2002]{tutorial_en_smith}
+\abntrefinfo{Smith}{SMITH}{2002}
+{SMITH, L.~I. A tutorial on principal components analysis.
+2002.
+Dispon{\'\i}vel em:
+  \url{http://www.cs.otago.ac.nz/cosc453/student\_tutorials/principal\_components.pdf}.
+  Acesso em: 05.2018.}
+
+\bibitem[Verge.com 2016]{baidiu_theverge}
+\abntrefinfo{Verge.com}{VERGE.COM}{2016}
+{VERGE.COM, T. • baidu swaps tickets for facial recognition in historic
+  chinese 'water town'.
+novembro 2016.
+Dispon{\'\i}vel em:
+  \url{https://www.theverge.com/2016/11/17/13663084/baidu-facial-recognition-park-wuzhen}.}
 
 \bibitem[Wójcik Konrad~Gromaszek 2016]{issues_methods_FR}
 \abntrefinfo{Wójcik Konrad~Gromaszek}{WóJCIK KONRAD~GROMASZEK}{2016}
