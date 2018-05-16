@@ -31,22 +31,21 @@ processamento computacional deve sofrer uma separação espacial (amostragem) e 
 (quantização) \cite{img-digital-willians}. 
 
 A amostragem é a divisão do plano x,y em uma grade onde x e y serão números inteiros. Os pontos da
-matriz de são denominados \textit{pixels} (\textit{PICTure Elements}). Cada pixel representa uma parte da cena real, desta
-forma a resolução espacial da imagem é proporcional aos valores de M e N correspondentes na matriz
-(exemplo Fig.22). Em geral a malha de amostragem, o formato dos pixels (x,y), é retangular, mas pode também
-ser triangular ou mais complexa. Os valores de cada ponto da matriz, coluna x linha (xy), que identifica um
-único pixel (M,N0, devem ser escolhidos de forma a respeitar a relação qualidade da imagem x espaço de
-armazenamento, em função da aplicação para a qual a imagem se destina. Para uma imagem digital com 256
-níveis de cinza o número de bytes ocupados para armazenar a imagem é o produto da linha vezes a coluna da
-matriz \cite{img-digital-willians}. 
+matriz de são denominados \textit{pixels} (\textit{PICTure Elements}). Cada pixel representa uma parte da cena real, desta forma a resolução espacial da imagem é proporcional aos valores de M e N correspondentes na matriz (exemplo Fig.22). Em geral a malha de amostragem, o formato dos pixels (x,y), é retangular, mas pode também ser triangular ou mais complexa. Os valores de cada ponto da matriz, coluna x linha (xy), que identifica um único pixel (M,N0, devem ser escolhidos de forma a respeitar a relação qualidade da imagem x espaço de armazenamento, em função da aplicação para a qual a imagem se destina. Para uma imagem digital com 256 níveis de cinza o número de bytes ocupados para armazenar a imagem é o produto da linha vezes a coluna da matriz \cite{img-digital-willians}. 
 
 
 \subsection{FORMATO PNG}\label{subsec:png}
 
-O formato PNG (\textit{Portable Network Graphics} ou "\textit{PNG is Not Giff}")  foi desenhado para substituir o formato GIF e o TIFF. O PNG tem 3 vantagens principais: suporta canal alfa (transparência) de forma eficiente, tem a maior gama de profundidade de cores alta compressão que pode ser regulável. Além disso, o formato é livre enquanto os outros possuem patentes \cite{png}. 
+O PNG (\textit{Portable Network Graphics} ou "\textit{PNG is Not Giff}") é um formato de representação de imagens do tipo \textit{rasters}. foi desenhado para substituir o formato GIF e o TIFF em certa extensão. O PNG tem 3 vantagens principais: suporta canal alfa (transparência) de forma eficiente, tem a maior gama de profundidade de cores alta compressão que pode ser regulável. Além disso, o formato é livre enquanto os outros possuem patentes \cite{png}. 
+
+O trabalho da compressão é justamente retirar essas informações redundantes para diminuir o peso do arquivo. Por exemplo, vamos imaginar um pixel qualquer de uma imagem. Possivelmente, a cor ou o valor desse pixel será igual a de vários outros elementos dentro da mesma imagem. Quando a imagem é comprimida, em vez de ela possuir vários pixels iguais e repetidos, ela guarda apenas um valor desse pixel, que é reproduzido para os outros semelhantes, economizando tempo de carregamento \cite{img_compact}. Outras técnicas mais complexas também são utilizadas.
+
+Este formato leve e de fácil manipulação é foi escolhido neste trabalho para o representar as imagens digitalmente.
 
 
 \subsection{AQUISIÇÃO DE IMAGEM E VÍDEO}\label{subsec:aquisicao_video}
+
+
 
 \subsection{PROCESSAMENTO}\label{subsec:processamento}
 
