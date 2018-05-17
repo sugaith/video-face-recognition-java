@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.19 (MiKTeX 2.9.6630 64-bit) (preloaded format=pdflatex 2018.4.5)  16 MAY 2018 12:50
+This is pdfTeX, Version 3.14159265-2.6-1.40.19 (MiKTeX 2.9.6630 64-bit) (preloaded format=pdflatex 2018.4.5)  17 MAY 2018 01:28
 entering extended mode
 **./modelo.tex
 (modelo.tex
@@ -1784,11 +1784,11 @@ l.129
 
 
 
-] (modelo.toc) [2] [3] (Capitulos/introducao.tex [4
+] (modelo.toc) [2] (Capitulos/introducao.tex [3
 
 
 ]
-<./Imagens/ex_variacao.png, id=134, 454.69875pt x 536.0025pt>
+<./Imagens/ex_variacao.png, id=126, 454.69875pt x 536.0025pt>
 File: ./Imagens/ex_variacao.png Graphic file (type png)
 <use ./Imagens/ex_variacao.png>
 Package pdftex.def Info: ./Imagens/ex_variacao.png  used on input line 33.
@@ -1797,7 +1797,7 @@ Package pdftex.def Info: ./Imagens/ex_variacao.png  used on input line 33.
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-[5] [6 <./Imagens/ex_variacao.png>]
+[4] [5 <./Imagens/ex_variacao.png>]
 LaTeX Font Info:    Try loading font information for OMS+cmr on input line 69.
 
 ("h:\Users\suga\AppData\Local\Programs\MiKTeX 2.9\tex\latex\base\omscmr.fd"
@@ -1806,20 +1806,20 @@ File: omscmr.fd 2014/09/29 v2.5h Standard LaTeX font definitions
 LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <12> not available
 (Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 69.
 
-[7]
-<./Imagens/someeigen.png, id=179, 263.48438pt x 211.54031pt>
+[6]
+<./Imagens/someeigen.png, id=171, 263.48438pt x 211.54031pt>
 File: ./Imagens/someeigen.png Graphic file (type png)
 <use ./Imagens/someeigen.png>
 Package pdftex.def Info: ./Imagens/someeigen.png  used on input line 82.
 (pdftex.def)             Requested size: 273.00278pt x 219.19298pt.
- [8 <./Imagens/someeigen.png>]
-<./Imagens/eigencartesiano.png, id=198, 306.39468pt x 263.48438pt>
+ [7 <./Imagens/someeigen.png>]
+<./Imagens/eigencartesiano.png, id=190, 306.39468pt x 263.48438pt>
 File: ./Imagens/eigencartesiano.png Graphic file (type png)
 <use ./Imagens/eigencartesiano.png>
 Package pdftex.def Info: ./Imagens/eigencartesiano.png  used on input line 98.
 (pdftex.def)             Requested size: 273.00278pt x 234.78177pt.
- [9 <./Imagens/eigencartesiano.png>]
-<./Imagens/tabelaEmpresasRecog.png, id=212, 546.54187pt x 848.4197pt>
+ [8 <./Imagens/eigencartesiano.png>]
+<./Imagens/tabelaEmpresasRecog.png, id=204, 546.54187pt x 848.4197pt>
 File: ./Imagens/tabelaEmpresasRecog.png Graphic file (type png)
 <use ./Imagens/tabelaEmpresasRecog.png>
 Package pdftex.def Info: ./Imagens/tabelaEmpresasRecog.png  used on input line 
@@ -1829,54 +1829,94 @@ Package pdftex.def Info: ./Imagens/tabelaEmpresasRecog.png  used on input line
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-[10]
-<./Imagens/stats_toprecog.png, id=223, 392.21532pt x 150.5625pt>
+[9]
+<./Imagens/stats_toprecog.png, id=215, 392.21532pt x 150.5625pt>
 File: ./Imagens/stats_toprecog.png Graphic file (type png)
 <use ./Imagens/stats_toprecog.png>
 Package pdftex.def Info: ./Imagens/stats_toprecog.png  used on input line 152.
 (pdftex.def)             Requested size: 409.49722pt x 157.20618pt.
- [11 <./Imagens/tabelaEmpresasRecog.png>] [12 <./Imagens/stats_toprecog.png>]) 
-(Capitulos/revisa_bib.tex [13]
+ [10 <./Imagens/tabelaEmpresasRecog.png>] [11 <./Imagens/stats_toprecog.png>]) 
+(Capitulos/revisa_bib.tex [12]
 
 Package hyperref Warning: Suppressing empty link on input line 11.
 
-[14
+[13
 
 ]
-<./Imagens/pixel-img.png, id=273, 426.84468pt x 413.29407pt>
+<./Imagens/pixel-img.png, id=265, 426.84468pt x 413.29407pt>
 File: ./Imagens/pixel-img.png Graphic file (type png)
 <use ./Imagens/pixel-img.png>
 Package pdftex.def Info: ./Imagens/pixel-img.png  used on input line 32.
 (pdftex.def)             Requested size: 273.00278pt x 264.34962pt.
- [15 <./Imagens/pixel-img.png>]
+ [14 <./Imagens/pixel-img.png>]
+Overfull \hbox (13.04149pt too wide) in paragraph at lines 70--71
+[]\T1/cmr/m/n/12 No pro-cesso de aqui-si-ção de ima-gens, tra-di-ci-o-nal-mente
+, um uma "cena"tridimensional
+ []
 
-Package hyperref Warning: Suppressing empty link on input line 59.
+[15]
+Overfull \hbox (10.10889pt too wide) in paragraph at lines 82--86
+[]\T1/cmr/m/n/12 O pro-ces-sa-mento de ima-gens pode ser di-vi-dido em 3 fa-ses
+ bá-si-cas: pré-processamento,
+ []
 
-[16]) (modelo.bbl [17]
+[16]
+<./Imagens/escala.png, id=322, 246.9225pt x 86.57344pt>
+File: ./Imagens/escala.png Graphic file (type png)
+<use ./Imagens/escala.png>
+Package pdftex.def Info: ./Imagens/escala.png  used on input line 133.
+(pdftex.def)             Requested size: 273.00278pt x 95.72247pt.
+ [17 <./Imagens/escala.png>]
+Overfull \hbox (7.95142pt too wide) in paragraph at lines 144--145
+[]\T1/cmr/m/n/12 O his-to-grama de uma ima-gem di-gi-tal é de-fi-nido como "uma
+ fun-ção dis-creta h(rk)=nk
+ []
+
+
+LaTeX Warning: Citation `fig:histograma' on page 18 undefined on input line 146
+.
+
+<./Imagens/histograma.png, id=337, 289.08pt x 138.5175pt>
+File: ./Imagens/histograma.png Graphic file (type png)
+<use ./Imagens/histograma.png>
+Package pdftex.def Info: ./Imagens/histograma.png  used on input line 150.
+(pdftex.def)             Requested size: 273.00278pt x 130.8194pt.
+[18 <./Imagens/histograma.png>]
+
+LaTeX Warning: Citation `subsubsec:elem_haar' on page 19 undefined on input lin
+e 166.
+
+) (modelo.bbl [19]
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
 (hyperref)                removing `\uppercase' on input line 3.
 
 bibitemlist
 
-Underfull \hbox (badness 1527) in paragraph at lines 86--92
+Underfull \hbox (badness 1527) in paragraph at lines 100--106
 []\T1/cmr/m/n/12 KITANI, C. E. T. E. C. Um tu-to-rial so-bre aná-lise de com-po
 -nen-tes prin-ci-pais
  []
 
-[18
+[20
 
 ]
-Overfull \hbox (16.14395pt too wide) in paragraph at lines 143--148
+Underfull \hbox (badness 10000) in paragraph at lines 165--172
+\T1/cmr/m/n/12 computacao-[]graca / transformacoes-[]geometricas-[]2d-[]e-[]co
+ordenadas-[]homogeneas>[]$[][].
+ []
+
+
+Overfull \hbox (16.14395pt too wide) in paragraph at lines 175--180
 \T1/cmr/m/n/12 face-[]recognition-[]semisupervised-[]classication-[]subspace-[
 ]projection-[]and-[]evaluation-[]methods /
  []
 
-) [19]
+) [21]
 No file modelo.ind.
 
 AED: lastpage setting LastPage
-[20]
+[22]
 \tf@toc=\write6
 \openout6 = `modelo.toc'.
 
@@ -1887,15 +1927,18 @@ Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 228.
 Package atveryend Info: Empty hook `AtEndAfterFileList' on input line 228.
 
 
+LaTeX Warning: There were undefined references.
+
+
 LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
 
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 228.
  ) 
 Here is how much of TeX's memory you used:
- 36106 strings out of 493305
- 820400 string characters out of 3130238
- 1046147 words of memory out of 3000000
- 38903 multiletter control sequences out of 15000+200000
+ 36151 strings out of 493305
+ 821359 string characters out of 3130238
+ 1046055 words of memory out of 3000000
+ 38940 multiletter control sequences out of 15000+200000
  18798 words of font info for 47 fonts, out of 3000000 for 9000
  1147 hyphenation exceptions out of 8191
  74i,12n,128p,1585b,609s stack positions out of 5000i,500n,10000p,200000b,50000s
@@ -1916,9 +1959,9 @@ jknappen\ec\dpi600\ecbi1440.pk> <C:\Users\suga\AppData\Local\MiKTeX\2.9\fonts\p
 k\ljfour\jknappen\ec\dpi600\ecrm1200.pk> <C:\Users\suga\AppData\Local\MiKTeX\2.
 9\fonts\pk\ljfour\jknappen\ec\dpi600\ecbx1440.pk><h:/Users/suga/AppData/Local/P
 rograms/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy10.pfb>
-Output written on modelo.pdf (21 pages, 1497990 bytes).
+Output written on modelo.pdf (23 pages, 1611529 bytes).
 PDF statistics:
- 934 PDF objects out of 1000 (max. 8388607)
- 87 named destinations out of 1000 (max. 500000)
- 327 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 990 PDF objects out of 1000 (max. 8388607)
+ 93 named destinations out of 1000 (max. 500000)
+ 321 words of extra memory for PDF output out of 10000 (max. 10000000)
 

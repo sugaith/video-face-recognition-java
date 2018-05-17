@@ -40,6 +40,14 @@ Dispon{\'\i}vel em: \url{hhttp://fivedots.coe.psu.ac.th/~ad/index.html}.}
 \textbf{Proceedings of the IEEE ( Volume: 85, Issue: 9, Sep 1997 )}, 1997.
 Dispon{\'\i}vel em: \url{http://ieeexplore.ieee.org/document/628712/}.}
 
+\bibitem[Eymar Laércio 2018]{inpe_proc_img}
+\abntrefinfo{Eymar Laércio}{EYMAR LAéRCIO}{2018}
+{EYMAR LAéRCIO, R. Teoria : Processamento de imagens.
+\textbf{Instituto Nacional de Pesquisas Espaciais - INPE}, 2018.
+Dispon{\'\i}vel em:
+  \url{http://www.dpi.inpe.br/spring/teoria/realce/realce.htm}. Acesso em:
+  05.2018.}
+
 \bibitem[Farias 2017]{img_compact}
 \abntrefinfo{Farias}{FARIAS}{2017}
 {FARIAS, F. Como compactar imagens sem perder qualidade e aumentar a velocidade
@@ -72,6 +80,12 @@ Disserta\c{c}\~{a}o (Mestrado) --- McGill University, Columbia University,
 Dispon{\'\i}vel em:
   \url{http://www.cs.columbia.edu/~jebara/htmlpapers/UTHESIS/node7.html}.}
 
+\bibitem[Johnson 2006]{stephen_greyscale}
+\abntrefinfo{Johnson}{JOHNSON}{2006}
+{JOHNSON, S.
+In:  \underline{\ \ \ \ \ \ \ \ }. \textbf{Stephen Johnson on Digital
+  Photography}. [S.l.]: O'Reilly Media, Incorporated, 2006.}
+
 \bibitem[Kim Joon Hyung~Shim 2003]{final_project_stanford}
 \abntrefinfo{Kim Joon Hyung~Shim}{KIM JOON HYUNG~SHIM}{2003}
 {KIM JOON HYUNG~SHIM, J.~Y. I.
@@ -98,10 +112,10 @@ Dispon{\'\i}vel em:
 Dispon{\'\i}vel em:
   \url{https://www.slideshare.net/statista\_com/statista-digital-economy-compass-2017}.}
 
-\bibitem[Roelofs]{png}
-\abntrefinfo{Roelofs}{ROELOFS}{}
+\bibitem[Roelofs 2017]{png}
+\abntrefinfo{Roelofs}{ROELOFS}{2017}
 {ROELOFS, G. A basic introduction to png features.
-\textbf{PNG LIB}.
+\textbf{PNG LIB}, 2017.
 Dispon{\'\i}vel em: \url{http://www.libpng.org/pub/png/pngintro.html}. Acesso
   em: 05.2018.}
 
@@ -130,6 +144,14 @@ Dispon{\'\i}vel em:
   \url{http://www.cs.otago.ac.nz/cosc453/student\_tutorials/principal\_components.pdf}.
   Acesso em: 05.2018.}
 
+\bibitem[Velasquez 2017]{edinburgh_classifier}
+\abntrefinfo{Velasquez}{VELASQUEZ}{2017}
+{VELASQUEZ, H.~C. Advanced vision module.
+\textbf{The University of Edinburgh}, 2017.
+Dispon{\'\i}vel em:
+  \url{http://www.inf.ed.ac.uk/teaching/courses/av/index.html}. Acesso em:
+  05.2018.}
+
 \bibitem[Verge.com 2016]{baidiu_theverge}
 \abntrefinfo{Verge.com}{VERGE.COM}{2016}
 {VERGE.COM, T. • baidu swaps tickets for facial recognition in historic
@@ -137,6 +159,16 @@ Dispon{\'\i}vel em:
 novembro 2016.
 Dispon{\'\i}vel em:
   \url{https://www.theverge.com/2016/11/17/13663084/baidu-facial-recognition-park-wuzhen}.}
+
+\bibitem[Wangenheim 2017]{lapix_escala}
+\abntrefinfo{Wangenheim}{WANGENHEIM}{2017}
+{WANGENHEIM, D.~A. von. Transformações geométricas 2d e coordenadas
+  homogêneas.
+\textbf{Image Processing and Computer Graphcs Lab - LAPiX}, Universidade
+  Federal de Santa Catarina – UFSC, 2017.
+Dispon{\'\i}vel em:
+  \url{http://www.lapix.ufsc.br/ensino/computacao-grafica/transformacoes-geometricas-2d-e-coordenadas-homogeneas}.
+  Acesso em: 05.2018.}
 
 \bibitem[Wójcik Konrad~Gromaszek 2016]{issues_methods_FR}
 \abntrefinfo{Wójcik Konrad~Gromaszek}{WóJCIK KONRAD~GROMASZEK}{2016}
