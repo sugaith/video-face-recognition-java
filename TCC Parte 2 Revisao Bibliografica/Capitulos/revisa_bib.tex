@@ -20,7 +20,7 @@ Com a abrangência dos sistemas de comunicação, com difusão de conhecimentos 
 As sessões a seguir contemplam fundamentos básicos sobre imagem, vídeo, a alguns de seus processamentos necessários para a aplicação dos algoritmos de detecção e reconhecimento de faces.
 
 
-\subsection{IMAGEM E VÍDEO DIGITAL}\label{subsec:imagem}
+\subsection{Imagem e Vídeo Digital}\label{subsec:imagem}
 
 A imagem digital são valores numéricos disponibilizados em uma matriz bidimensional. Basicamente existem dois tipos de imagens: os chamados \textit{rasters} ou \textit{bitmaps}, e vetorizadas. A primeira são representações de cada ponto da imagem com alguma cor usadas geralmente em fotografias, enquanto que o segundo é produzido por plotadores que recebem os pontos e as distâncias entre eles como parâmetros, consideranto retas, curvas, polígonoas e etc, sendo assim não perdem sua qualidade quando redimensionados.
 
@@ -36,12 +36,11 @@ Converter uma imagem para o formato digital significa transferir os elementos qu
 \end{figure}
 
 
-
 Uma imagem analógica que é a (representação real da cena, para ser convertida para o formato do
 processamento computacional deve sofrer uma separação espacial (amostragem) e em amplitude
 (quantização) \cite{img-digital-willians}. 
 
-A amostragem é a divisão do plano x,y em uma grade (ou matriz bi dimensional) onde x e y serão números inteiros. Os pontos da matriz de são denominados \textit{pixels} (\textit{PICTure Elements}), como ilustra a \autoref{pixel_img}. Cada pixel representa uma parte da cena real, desta forma a resolução espacial da imagem é proporcional aos valores de M e N correspondentes na matriz (exemplo Fig.22). Em geral a malha de amostragem, o formato dos pixels (x,y), é retangular, mas pode também ser triangular ou mais complexa. Os valores de cada ponto da matriz, coluna x linha (xy), que identifica um único pixel (M,N0, devem ser escolhidos de forma a respeitar a relação qualidade da imagem x espaço de armazenamento, em função da aplicação para a qual a imagem se destina. Para uma imagem digital com 256 níveis de cinza o número de bytes ocupados para armazenar a imagem é o produto da linha vezes a coluna da matriz \cite{img-digital-willians}. 
+A amostragem é a divisão do plano x,y em uma grade (ou matriz bi-dimensional) onde x e y serão números inteiros. Os pontos da matriz de são denominados \textit{pixels} (\textit{PICTure Elements}), como ilustra a \autoref{pixel_img}. Cada pixel representa uma parte da cena real, desta forma a resolução espacial da imagem é proporcional aos valores de M e N correspondentes na matriz (exemplo Fig.22). Em geral a malha de amostragem, o formato dos pixels (x,y), é retangular, mas pode também ser triangular ou mais complexa. Os valores de cada ponto da matriz, coluna x linha (xy), que identifica um único pixel (M,N0, devem ser escolhidos de forma a respeitar a relação qualidade da imagem x espaço de armazenamento, em função da aplicação para a qual a imagem se destina. Para uma imagem digital com 256 níveis de cinza o número de bytes ocupados para armazenar a imagem é o produto da linha vezes a coluna da matriz \cite{img-digital-willians}. 
 
 Matematicamente, toda imagem monocromática (preto e branco) é um função f(x,y) da intensidade luminosa, em qualquer parte das coordenadas (x,y), proporcional ao brilho (tons de cinza) da imagem em um determinado ponto. A figura mostra uma imagem e como representamos os eixos x e y no plano cartesiano \cite{gonzalez_woods}. 
 
@@ -56,7 +55,7 @@ onde 0 < i(x,y) e 0 < r(x,y) < 1 .
 Quando se utiliza uma imagem colorida, no padrão RGB por exemplo,  deve se usar uma função f(x,y) para cada banda, R(Red), G(Green) e B(Blue) que são as cores primárias\cite{gonzalez_woods}.
 
 
-\subsection{FORMATO PNG}\label{subsec:png}
+\subsection{Formato PNG}\label{subsec:png}
 
 O PNG (\textit{Portable Network Graphics} ou "\textit{PNG is Not Giff}") é um formato de representação de imagens do tipo \textit{rasters}. foi desenhado para substituir o formato GIF e o TIFF em certa extensão. O PNG tem 3 vantagens principais: suporta canal alfa (transparência) de forma eficiente, tem a maior gama de profundidade de cores e alta compressão que pode ser regulável. Além disso, o formato é livre enquanto os outros possuem patentes \cite{png}. 
 
@@ -65,7 +64,7 @@ O trabalho da compressão é justamente retirar essas informações redundantes 
 Este formato leve e de fácil manipulação foi escolhido neste trabalho para a representação de imagens digitais quando for necessário.
 
 
-\subsection{AQUISIÇÃO DE IMAGEM E VÍDEO}\label{subsec:aquisicao_video}
+\subsection{Aquisição da Imagem e de Vídeo}\label{subsec:aquisicao_video}
 
 No processo de aquisição de imagens, tradicionalmente, um uma "cena" tridimensional (ou imagem analógica) deve ser capturada por um dispositivo eletrônico, que colhe uma amostragem convertendo-a para uma imagem digital de duas dimensões. Por exemplo, uma câmera digital captando uma cena 3D e convertêndo-a em 2D.
 
@@ -73,7 +72,7 @@ Atualmente o dispositivo de conversão mais usado  é a câmera CCD (\textit{cha
 
 A saída deste processo é a imagem do tipo \textit{raster}, pronta pra ser formatada e compactada por alguma representação (PNG, JPG, BPM, etc). 
 
-\subsection{PROCESSAMENTO DE IMAGEM}\label{subsec:processamento}
+\subsection{Processamento da Imagem}\label{subsec:processamento}
 
 O processamento de imagem é todo o processo que tem uma imagem como entrada e saída, tais como fotografia ou quadros de vídeo. 
 
@@ -94,7 +93,7 @@ Nas próximas seções algumas técnicas de processamento de imagens serão abor
 	\item Classificação: uso de classificadores para reconhecer padrões em imagens \cite{drmathew_java_programming}
 \end{itemize}
 
-\subsubsection{CONVERSÃO EM ESCALA DE CINZA}\label{subsubsec:filtros}
+\subsubsection{Conversão em Escala de Cinza}\label{subsubsec:filtros}
 
 Em fotografia, computação e colometria, uma imagem em escala de cinza é uma imagem em que cada valor de pixel é uma única amostra da representação de intensidade de luz \cite{stephen_greyscale}. Em outras palavras, o valor R, G e B de cada pixel devem ser iguais para se obter uma escala de cinza que varia de preto em sua intensidade mais baixa para o branco absoluto.
 
@@ -119,7 +118,7 @@ For Each Pixel in Image {
 Converter a imagem em escala de é necessário para tornar eficientes os subsequente processos, como equalização e aplicação de classificadores \cite{drmathew_java_programming}.
 
 
-\subsubsection{ESCALONAMENTO}\label{subsubsec:escalonamento}
+\subsubsection{Escalonamento}\label{subsubsec:escalonamento}
 
 O escalonamento de imagens é uma transformação geométrica 2D. Pontos no Plano xy podem ser escalonados (esticados) por fatores de escala Sx e Sy através de multiplicação \cite{lapix_escala}:
 
@@ -139,7 +138,7 @@ No exemplo da figura abaixo Sx=2 eS y=1 os valores de x foram escalonados em 2 (
 O escalonamento pode causar distorções na imagens se nao for feita linearmente, e perda de qualidade caso os valores sejam alterados de forma a aumentar a imagem. É muito usado para padronização de tamanhos, e se o escalonamento for feito com a subtração de valores pequenos, a qualidade da imagem pode ser melhorada. Outra vantagem de escalonar a imagem subtraindo valores é o fato de posteriores processamentos performarem mais rapidamente, pois a imagem apresenta-se menor \cite{drmathew_java_programming}. 
 
 
-\subsubsection{EQUALIZAÇÃO DE HISTOGRAMA}\label{subsubsec:equalizacao}
+\subsubsection{Equalização de Histograma}\label{subsubsec:equalizacao}
 
 O histograma de uma imagem digital é definido como "uma função discreta h(rk)=nk onde  rk é o k-ésimo valor de intensidade e nk  é o número de pixels da imagem com intensidade rk e cujos níveis de intensidade desta imagem estejam no intervalo [0, L - 1]." Os Histogramas são a base para várias técnicas de processamento no domínio espacial, onde sua manipulação pode ser utilizada para realce de imagens, além de fornecer dados estatísticos a seu respeito \cite{gonzalez_woods}.
 
@@ -147,7 +146,7 @@ Em outras palavras, esta técnica realça o contraste da imagem com o objetivo d
 
 \begin{figure}[h]
 	\centering
-	\includegraphics[width=.6\textwidth]{histograma}
+	\includegraphics[width=.8\textwidth]{histograma}
 	\caption{Exemplo de aplicação de equalização de  histograma.}
 %	\fonte{\cite{lapix_escala}}
 	\label{fig:histograma}
@@ -155,13 +154,13 @@ Em outras palavras, esta técnica realça o contraste da imagem com o objetivo d
 
 
 
-\subsubsection{SEGMENTAÇÃO}\label{subsubsec:segmentacao}
+\subsubsection{Segmentação}\label{subsubsec:segmentacao}
 
 Em visão computacional, segmentação se refere ao processo recortar uma imagem digital, ou seja, recolher um conjunto de pixels, para simplificar, mudar a representação de uma imagem ou extrair áreas relevantes para facilitar a sua análise. 
 
 Como resultado, cada um dos pixels em uma mesma região é similar com referência a alguma característica ou propriedade computacional, tais como cor, intensidade, textura ou continuidade. Este processo ~e pr~e requisito para que reconhecimentos de objetos tenham grandes chances de sucesso \cite{gonzalez_woods}.
 
-\subsubsection{CLASSIFICAÇÃO}\label{subsubsec:classificacao}
+\subsubsection{Classificação}\label{subsubsec:classificacao}
 
 Segundo \cite{edinburgh_classifier}, classificação de imagem contextual é um tópico de reconhecimento de padrões em  Visão Computacional. Chama-se "contextual" pois significa que esta abordagem é focada na proximidade com os pixels e sua relação com o "classificador", (contemplado na seção \autoref{subsubsec:elem_haar}). É utilizado efetivamente na detecção de objetos e também pode ser aplicado para a detecção de faces em uma imagem.
 
@@ -178,7 +177,7 @@ Um classificador bem treinado pode envolver \textit{milhares} de fotos de alta q
 Existem diversas bibliotecas com classificadores pré-treinados para diferentes objetos, incluindo faces.
 
 
-\subsection{CARACTERÍSTICAS HAAR (\textit{HAAR FEATURES}) }\label{subsubsec:elem_haar}
+\subsection{As Características Haar (\textit{Haar Features}) }\label{subsubsec:elem_haar}
 
 Os classificadores Haar (ou cacarcterísticas de haar, ou filtro haar) recebem esse nome pela sua similaridade com a \textit{Haar wavelet} (ou ondulação Haar), que consiste em uma sequencia de funções quadradas redimensionadas quem formam uma familia de ondulações das mais simples possíveis.
 
@@ -196,7 +195,7 @@ A \autoref{fig:haarfeatures} mostra um classificador Haar em ação.
 
  \begin{figure}[h]
 	\centering
-	\includegraphics[width=.6\textwidth]{haarfeatures}
+	\includegraphics[width=.9\textwidth]{haarfeatures}
 	\caption{Classificadores Haar representando características relevantes face}
 	\fonte{Biblioteca OpenCV}
 	\label{fig:haarfeatures}
@@ -205,7 +204,7 @@ A \autoref{fig:haarfeatures} mostra um classificador Haar em ação.
 Estes padrões retangulares podem ser escalonados para que caracterísricas de diferentes tamanhos na imagem possam ser detectados usando a mesma abordagem.
 
 
-\subsection{ALGORÍTIMO VIOLA-JONES (\textit{HAAR CASCADES CLASSIFIER}) }\label{subsubsec:violajones}
+\subsection{Algorítimo Viola-Jones (\textit{Haar Cascades Classifier}) }\label{subsubsec:violajones}
 
 O \textit{framework} de detecção de objetos Viola-Jones, apelidado em inglês de \textit{Haar Cascades Classifier}, ou em português Cascata de Classificadores Haar \cite{gustavo_cascata}, foi o primeiro algorítimo de detecção a fornecer detecção de objetos com taxas de sucesso competitivas e em tempo real. Foi proposto em 2001 por Paul Viola e Michael Jones. Apesar de poder detectar uma variedade de classes de objetos, foi desenhada com o objetivo primordial de detectar faces.
 
@@ -215,21 +214,290 @@ De acordo com \cite{drmathew_java_programming}, o algorítimo funciona com o uso
 
 O grande ponto negativo é que este algorítimo também detecta os objetos que não são realmente os objetos que se tinha a intensão de detectar\cite{drmathew_java_programming}. Por exemplo, o desenho de um rosto certamente vai ser detectado com uma face original, e este desenho não precisa ser muito bem elaborado. As vezes uma disposição de sombras e regiões luminosas aleatórias podem er detectadas como objetos característicos .
 
+Segundo \cite{gustavo_cascata}, os estágios dentro de uma cascata são criados através da combinação de funções de classificadores Haar previamente treinados. O principal objetivo do uso de cascatas e fazer com que seus estágios iniciais descartem um grande numero de regiões que contem o objetivo desejado, e estágios mais avançados sejam melhores em evitar um falso positivo na região analisada. 
 
+Na \autoref{fig:cascata} representa-se os N estágios de uma cascata de classificadores. Cada um deles deve descartar ao máximo o numero de regiões da imagem que não contem o objeto, a fim de diminuir a quantidade de processamento de outras sub-áreas da imagem original \cite{gustavo_cascata}.
 
+ \begin{figure}[h]
+	\centering
+	\includegraphics[width=.8\textwidth]{cascata}
+	\caption{Cascata de classificadores com estágios (C0, C1, ..., Cn)}.
+	\fonte{\cite{gustavo_cascata}}
+	\label{fig:cascata}
+\end{figure}
 
+O processo para geração da cascata e guiado por um conjunto de metas de detecção e de desempenho. Na prática, uma arquitetura muito simples pode ser usada para produzir uma eficiente cascata de classificadores. O usuário pode informar as taxas mínimas aceitáveis e cada estágio da cascata é treinada junto ao conjunto de características Haar contando com cada vez mais elementos até que se atinjam as taxas de detecção de sucesso e falsos positivos. As taxas são encontradas testando-se o detector corrente sobre um conjunto de validação. Se a taxa de falsos positivos ainda não for atendida, então um novo estágio subsequente é ativado, coletando todas as falsas detecções encontradas \cite{gustavo_cascata}.
+
+Para que o algorítimo possa detectar o objeto de interesse, é necessário que a imagem seja percorrida diversas vezes em vários, assim a cada iteração é analisado uma região de tamanho diferente, chamada \textbf{janela de busca} \cite{gustavo_cascata}. 
+
+O usuário pode definir o tamanho desta janela que deve ser maior ou igual ao tamanho das imagens que foram treinadas na cascata, ou seja, se a cascata foi treinada com imagens positivas de 24x24 pixels, o tamanho mínimo da janela de busca deve seguir a mesma resolução \cite{gustavo_cascata}. As janelas devem funcionar em \textit{thread} (multiplas locações), sendo que \textit{n} janelas devem se deslocar no eixo X da imagem e \textit{m} no eixo Y. A quantidade de janelas deve ser o suficiente para ocupar todo o espaço da imagem.
+
+Outro valor que o usuário pode informar é número de detecções subsequentes necessários para que a região seja considerada a ter o objeto alvo. Reduzir este valor pode aumentar a velocidade de processamento, mas também aumenta as chances de taxas de falsos positivos \cite{drmathew_java_programming}.
+
+O resultado do algoritmo são as posições dos objetos classificados com as características com as quais se recebeu treinamento, podendo ser identificados na imagem e sofre posteriores processamentos como a segmentação.
 
 
 %============================================================================================================
 
 
-\section{RECONHECIMENTO DE FACES COM ANALISE DE COMPONENTE PRINCIPAL (ACP) }\label{sec:recog_faces}
+\section{\textit{EIGENFACES} E ANÁLISE DE COMPONENTE PRINCIPAL (ACP) }\label{sec:recog_faces}
+
+O processo de reconhecimento de faces depende de uma fase de treinamento precedente envolvendo imagens faciais com suas identidades associadas. Imagens típicas de treinamento são mostradas na \autoref{fig:trein_img}.
+\begin{figure}[h]
+	\centering
+	\includegraphics[width=.7\textwidth]{trein_img}
+	\caption{Exemplo de imagens típicas de treinamento.}
+	%	\fonte{\cite{img-digital-willians}}
+	\label{fig:trein_img}
+\end{figure}
+
+É importante que as imagens sejam todas colhidas e orientadas de maneira similar, para que as variações entre as imagens sejam causadas por diferenças entre as faces e não por diferenças  em plano de fundo ou posição facial. Também deve haver uniformidade na posição, clareamento, tamanho e resolução da imagem. É recomendado incluir várias imagens da mesma face mostrando diferentes expressões, como sorrindo ou abrindo a boca. A relação da imagem com o indivíduo pode ser feita de diversas maneiras, uma delas é codificar alguma chave único para o indivíduo junto ao nome da imagem \cite{drmathew_java_programming}. 
 
 
-\subsection{ANALISE DE COMPONENTE PRINCIPAL (ACP)}\label{subsec:acp}
+
+O processo de treinamento cria as \textit{EigenFaces}, como mostra a \autoref{someeigen} explicada na  \autoref{subsec:treinrecface}, que são composições das imagens de treinamento que tem a propriedade de acentuar elementos que podem ser distinguidos mais facilmente pelo algorítimo. Uma imagem de face pode gerar várias Eigenfaces. As a imagem de treino da face podem ser representadas por uma sequencia de "pesos" (p1, p2, p3, p4, p5, p6), como ilustra a figura \autoref{fig:eigenpeso}.
+\begin{figure}[h]
+	\centering
+	\includegraphics[width=.7\textwidth]{eigenpeso}
+	\caption{Exemplo de uma imagem de treinamento representada em uma sequencia de pesos de engenfaces.}
+	\fonte{Adapdato de \cite{drmathew_java_programming}}
+	\label{fig:eigenpeso}
+\end{figure}
+
+O objetivo é que a imagem de treinamento pode ser decomposta para uma soma dos pesos das multiplas engeifaces, sendo todos estes pesos salvos como uma sequência.
+
+Nem todas as eigenfaces são igualmente importantes - algumas pode contar elementos faciais mais importantes para distinguir faces. Isto quer dizer que não é necessário utilizar todas as eigenfaces para reconhecer uma face, o que permite que uma imagem seja representada por uma pequena quantidade de eigenfaces, oque consome menos espaço e torna a execução do algorítimo mais rápida. O ponto negativo é que quando menos pesos, a probabilidade de se perder importantes elementos faciais também aumenta\cite{drmathew_java_programming}.
+
+Outra maneira de se entender a relação entre eigenfaces e as imagens é representa-las em um plano cartesiado multidimensional (ou um \textit{eigenspace}), como mostra a \autoref{eigenpeso_axis}.
+
+\begin{figure}[h]
+	\centering
+	\includegraphics[width=.7\textwidth]{eigenpeso_axis}
+	\caption{Exemplo de eigenfaces representadas em um plano cartesiano (\textit{eigenspace})de 3 dimensões. }
+	\fonte{Adapdato de \cite{drmathew_java_programming}}
+	\label{fig:eigenpeso_axis}
+\end{figure}
+
+Os pesos agora podem ser observados como as coordenadas da imagem de treinamento em um plano cartesiano multidimensional (\textit{eigenspace}). Na \autoref{fig:eigenpeso_axis}, existem apenas 3 eixos representando as eigenfaces p1, p2 e p3, porém se houvessem 10 eigenfaces, haveria 10 eixos neste plano cartesiano.
+
+Após o processo de treinamento das faces vem o processo de reconhecimento. Neste novo processo, uma nova imagem para reconhecimento deve ser decomposta em eigenfaces (na mesma maneira da \autoref{fig:eigenpeso}). A sequencia de pesos resultante é comparada com cada sequencia de pesos que foram treinadas previamente, e o nome associado com o as características mais próximas dos eigenfaces treinados é associado \cite{drmathew_java_programming}..
+
+Em outras palavras, em termos de \textit{engenspaces}, a nova imagem é posicionada no plano cartesiano com suas próprias coordenadas (pesos). Então uma técnica de medida de distância (usualmente a distância Euclidiana, que será abordada na próxima seção) é utilizada para encontrar e figura de treinamento correspondente mais próxima. Sendo assim, uma distância Zero seria uma correspondência (reconhecimento) perfeita \cite{drmathew_java_programming}. A \autoref{eigencartesiano} na \autoref{subsec:treinrecface} ilustra este processo.
+
+As Eigenfaces são geradas utilizando um procedimento matemático chamado Análise de Componentes Principais - ACP (em inglês Principal Components Analysis - PCA). Esta técnica acentua as similaridades e as diferenças nos dados. 
 
 
-\subsection{ACP PARA \textit{EIGENFACES}}\label{subsec:acp-eigen}
+%=======================================================================================================================
+
+\subsection{Análise de Componentes Principais (ACP)}\label{subsec:acp}
+
+Para que esta técnica seja explicada, será utilizado vetores de valores numéricos: o vetor \textit{x} e \textit{y}, como mostra a \autoref{tabelaxy}.
+
+\begin{table}[h]
+	\centering
+	\caption{Dados dos vetores \textit{x} e \textit{y}.}
+	\includegraphics[width=.15\textwidth]{tabelaxy}
+	\fonte{\cite{drmathew_java_programming}}
+	\label{tabelaxy}
+\end{table}
+
+Os dados de \textit{x} e \textit{y} poderiam representar a altura de estudantes, preços de frutas, ou valores numéricos extraídos de uma imagem, por exemplo. O objetivo da demonstração é acentuar as diferenças e similaridades entre os dois vetores de dados em uma abordagem numérica \cite{drmathew_java_programming}. 
+
+Para tal, medidas estatísticas como média e desvio padrão (uma medida que tem o objetivo de espalhar valores acerca da média). Variância é outra medida de espalhamento, que é igual ao desvio padrão ao quadrado:
+
+\begin{figure}[h]
+	\centering
+	\includegraphics[width=.3\textwidth]{variancia}
+%	\caption{Exemplo de eigenfaces representadas em um plano cartesiano (\textit{eigenspace})de 3 dimensões. }
+%	\fonte{Adapdato de \cite{drmathew_java_programming}}
+	\label{fig:variancia}
+\end{figure}
+
+A variável \textit{n} é o número de itens dos vetores (10 de acordo com a \autoref{tabelaxy}), e $\bar{x}$  é a média dos valores d conjunto de dados.
+
+Contudo, a média e a variância fornecem informação apenas sobre a forma dos dados em um único vetor (por exemplo, e média e a variância do vetor \textit{x}), sendo que o objetivo é quantificar as diferenças \textbf{entre} os dois vetores \cite{drmathew_java_programming}.  Justamente a covariância é uma medida estatística, generalizada da variância, que compara dois conjuntos de dados \cite{drmathew_java_programming}:
+
+\begin{figure}[h]
+	\centering
+	\includegraphics[width=.3\textwidth]{covariancia}
+	%	\caption{Exemplo de eigenfaces representadas em um plano cartesiano (\textit{eigenspace})de 3 dimensões. }
+	%	\fonte{Adapdato de \cite{drmathew_java_programming}}
+	\label{fig:variancia}
+\end{figure}
+
+Se a fórmula da covariância for aplicada nos dados dos vetores \textit{x} e \textit{y} dados na \autoref{tabelaxy}, o resultado será 0.6154. A parte em que se deve estar atendo é o sinal: se for negativo significa que quando um vetor aumenta em dados, o outro diminui. Quando o valor é positivo, que é o caso, então os dois conjuntos de dados aumentam juntas. Para ilustrar este conceito, na \autoref{fig:graphxy} plota-se os valores correspondentes dos vetores \textit{x} e \textit{y} como pontos em um gráfico \cite{drmathew_java_programming}.
+
+
+\begin{figure}[h]
+	\centering
+	\includegraphics[width=.4\textwidth]{graphxy}
+	\caption{Plotagem dos valores de \textit{x} e \textit{y}.}
+	\fonte{Adapdato de \cite{drmathew_java_programming}}
+	\label{fig:graphxy}
+\end{figure}
+
+Se houverem mais de dois vetores (por exemplo o vetor \textit{x}, \textit{y} e \textit{z}) então a covariância deve ser calculada entra todas os conjuntos de dados, ou seja, calculando cov(x, y), cov(x, z) e cov(y, z). 
+
+Não há necessidade de calcular cov(y, x), cov(z, x) e cov(z, y) sendo que a definição da equação garante que cov(A, B) é igual a cov(B, A) .
+
+A maneira padrão de armazenar a covariância entre múltiplos vetores de dados é por uma matriz onde os conjuntos de dados tornam-se os índices das colunas e linhas. Por exemplo, a covariância para os conjuntos de dados x,y e z se tornariam uma matria de dimensões 3x3 \cite{drmathew_java_programming}:
+
+\begin{figure}[h]
+	\centering
+	\includegraphics[width=.3\textwidth]{covmatrix}
+	%	\caption{Exemplo de eigenfaces representadas em um plano cartesiano (\textit{eigenspace})de 3 dimensões. }
+	%	\fonte{Adapdato de \cite{drmathew_java_programming}}
+	\label{fig:covmatrix}
+\end{figure}
+
+Na diagonal principal, pode-se observar que a covariância é entre o conjunto de dados a própria covariância, que é equivalente à variância nestes dados. Podemos provar isto comparando a variância de x ( var(x) ) e a covariância de x com x ( cov(x) ). A matriz também apresenta simetria em volta da diagonal principal. 
+
+Os conjuntos de dados x e y da \autoref{tabelaxy} seriam representados em uma matriz de dimensões 2x2:
+
+\begin{center}
+	$\begin{pmatrix} 0.6166 & 0.6154 \\ 0.6154 & 0.7166 \end{pmatrix}$
+\end{center}
+
+
+A matriz de covariância é um meio útil de demonstrar a relação entre os conjuntos de dados, mas deve-se obter ainda mais informações para que sejam geradas as eigenfaces calculando dois vetores que serão contemplados na seção seguinte: \textit{eigenvectors} e \textit{eigenvalues}.
+
+\subsection{ACP E \textit{Eigenfaces}}\label{subsec:acp-eigen}
+
+Para que as eigenfaces sejam geradas, deve-se transformar a covariância ou outros conjuntos de dados chamados de \textit{eigenvectors} e \textit{eigenvalues}.
+
+O \textit{eigenvector} é um vetor de valores ordinário que quando multiplicado por uma dada matriz, muda de magnitude, enquanto que \textit{eigenvalue} é apenas um termo para esta magnitude. 
+
+Por exemplo, dada a matriz:
+
+\begin{center}
+	$\begin{pmatrix} 2 & 3 \\ 2 & 1 \end{pmatrix}$
+\end{center}
+
+O eigenvector para esta matriz é $\begin{pmatrix} 3 \\ 2\end{pmatrix}$, pois quando multiplicado pela matriz acima, o mesmo vetor é retornado o mesmo vetor é retornado se multiplicado por 4:
+
+\begin{center}
+	$\begin{pmatrix} 2 & 3 \\ 2 & 1 \end{pmatrix}$ $\times$ $\begin{pmatrix} 3 \\ 2 \end{pmatrix}$ $=$ $4$ $\times$ $\begin{pmatrix} 2 \\ 3\end{pmatrix}$
+\end{center}
+
+Sendo assim, 4 é o \textit{eigenvalue} para o \textit{eigenvector}  $\begin{pmatrix} 3 \\ 2\end{pmatrix}$.
+
+Os eigenvectores podem ser encontradas apenas para matrizes quadradas, porém nem todas. Para uma dada matriz n x n, se realmente houver eigenvectores, haverá n. A matriz 2x2 usada de exemplo acima tem dois eigenvetores (e seus valores eigenvalues correspondentes).
+
+A relação eigenvalue pode ser escrita matematicamente como: 
+
+ $\Lambda$ $\nu$  $=$  $\lambda$ $\nu$  
+
+onde $\Lambda$ é a matriz quadrada, $\nu$ é um eigenvetor para A e o valor $\lambda$ é um eigenvalue.
+
+Para usa-los no algorítimo PCA, os eigenvetores devem ser normalizados para que todos eles tenham a mesma unidade de tamanho. Isto é, o eigenvetor acima, $\begin{pmatrix} 3 \\ 2\end{pmatrix}$, tem a unidade de tamanho "falso"  de  $\sqrt[]{(3^2 + 2^2)}$ $=$ $\sqrt[]{13}$. Se o vetor for dividido por este valor resultara em um tamanho de unidade:
+
+\begin{center}
+	$\begin{pmatrix} 3 \\ 2 \end{pmatrix}$ 
+	$\div$  
+	$\sqrt[]{13}$ $=$ 
+	$\begin{pmatrix} 3 / \sqrt[]{13} \\ 2/\sqrt[]{13} \end{pmatrix}$
+\end{center}
+
+Se recuperarmos a matriz de covariância que geramos acima:
+
+\begin{center}
+	$\begin{pmatrix} 0.6166 & 0.6154 \\ 0.6154 & 0.7166 \end{pmatrix}$
+\end{center}
+
+pode-se observar que, com é uma matriz 2x2, possui dois eigenvetores e eigenvalues:
+
+\begin{center}
+$\begin{pmatrix} -0.7352 \\ 0.6779 \end{pmatrix}$  e 0.049
+
+$\begin{pmatrix} 0.6779 \\ 0.7352 \end{pmatrix}$  e 1.284
+\end{center}
+
+Ambos os eigenvetores possuem unidade de tamanho.
+
+\subsubsection{Utilizando Eigenfaces como Componente Principal}\label{subsec:eigenacp}
+
+Observando novamente a plotagem dos vetores x e y contemplados na \autoref{fig:graphxy}, se a média destes conjuntos de dados ($\bar{x}$ e $\bar{y}$) for subtraído de deus valores os dados serão \textbf{normalizados}. Isto também quer dizer que as linhas que representam os vetores \textit{x} e \textit{y} são transladados para o centro como mostra a \autoref{fig:graphxy2}. 
+
+\begin{figure}[h]
+	\centering
+	\includegraphics[width=.5\textwidth]{graphxy2}
+	\caption{Plotagem normalizada dos dados de \textit{x} e \textit{y} com eigenvetores.}
+	\fonte{\cite{drmathew_java_programming}}
+	\label{fig:graphxy2}
+\end{figure}
+
+Os dois engenvetores pode ser adicionados ao gráfico como linhas convertendo os vetores em equações. 
+$\begin{pmatrix} -0.7352 \\ 0.6779 \end{pmatrix}$ torna-se $y$ $=$ $\frac{-0.7352}{0.6779}$$x$  e $\begin{pmatrix} 0.6779 \\ 0.7352 \end{pmatrix}$ torna-se $y$ $=$ $\frac{0.6779}{0.7352}$$x$.
+
+Os dados normalizados e as duas equações são ilustradas na \autoref{fig:graphxy2} como linhas azuis. 
+
+Observa-se que na \autoref{fig:graphxy2} demonstra como os eigenvectores acentuam as relações entre os conjuntos de dados- os vetores indicam como os conjuntos de dados se espalham nas coordenadas do espaço cartesiano. Este espalhamento facilita a distinção dos dados.
+
+Dos dois eigenvetores marcados em azul, a linha $\frac{0.6779}{0.7352}$$x$ é a mais útil, pois os dados estão mais espalhados acerca do trajeto desta linha. Isto pode ser confirmado numericamente observando o eigenvalue associado com seu eigenvetor: o eigenvalue (1.284) é um melhor indicador de espalhamento pois é o maior dentre os dois eigenvalues.
+
+A outra linha, $\frac{-0.7352}{0.6779}$$x$, contribui com a informação demonstrando como os dados são espaçados para direita ou esquerda do eigenvetor principal (a linha $\frac{0.6779}{0.7352}$$x$). Entretanto, trata-se de um componente menos importante no espalhamento de dados, assim como indica seu eigenvalue (0.049).
+
+O eigenvetor com o maior eigenvalue (no caso a linha $\frac{0.6779}{0.7352}$$x$, ou o vetor $\begin{pmatrix} 0.6779 \\ 0.7352 \end{pmatrix}$) é chamado de \textbf{componente principal} do conjunto de dados. Isto é, os eigenvetores e eigenvalues são efetivamente utilizados para performar uma análise de componente principal nos conjuntos de dados \cite{drmathew_java_programming}.
+
+Todos os eigenvetores extraídos da matriz são perpendiculares. Isto significa que é possível rotacionar (talvez refletir) os dados para que os eigenvetores tornem-se alinhados com os eixos. Se este componente principal $\begin{pmatrix} 0.6779 \\ 0.7352 \end{pmatrix}$ for rotacionado e refletido para que seja alinhado com o eixo y, resulta-se em uma plotagem mostrada na \autoref{fig:graphxy3}:
+
+\begin{figure}[h]
+	\centering
+	\includegraphics[width=.5\textwidth]{graphxy3}
+	\caption{Versão rotacionada e refletida da \autoref{fig:graphxy2}}
+	\fonte{\cite{drmathew_java_programming}}
+	\label{fig:graphxy3}
+\end{figure}
+
+Observando a \autoref{fig:graphxy3}, o ponto mais próximo da origem se situa na coordenada (0.13, 0.27). Pode-se afirmar que também que este ponto tem uma sequência de pesos relativos a cada eigenvetor, no caso, a sequencia {0.13, 0.27}.
+
+Tanto a denotação de coordenadas quanto a de pesos pode ser usada para representar as eigenfaces - como contemplado anteriormente, na \autoref{fig:eigenpeso} foi dado o exemplo em que uma imagem é uma sequência de pesos de seis eigenfaces, enquanto que, alternativamente, na  \autoref{fig:eigenpeso_axis} é representada em coordenadas de um plano carte siado de 3 dimensões, sendo que cada eixo é definido por uma eigenface (ou eigenvetor).
+
+\subsubsection{O Reconhecimento}\label{subsec:eigenacp}
+
+O processo de reconhecimento consiste em recolher novos conjutos de dados (no caso, uma nova face), e utilizando os dados processados até agora e representados na \autoref{fig:graphxy3}, deve-se comparar os dois novos conjuntos de dados (a nova face e os eigenfaces ou eigenvetores) fazendo uso de medidas de distância. 
+
+Existem algumas técnicas de medidas de distância, dentre elas, hã uma simples chamada \textbf{Distância Euclidiana}. Esta medida nada é do que a distância mínima entre dois pontos no espaço (uma linha reta). O resultado desta medida é então utilizada para calcular a taxa de sucesso de uma comparação, sendo assim uma distância nula representaria uma equivalência perfeita.
+
+Contudo, em aplicações em vida-real, deve-se reduzir o tamanho dos dados, pois existem informações irrelevantes e a tarefa de reconhecimento pode ser executada mais rapidamente enquanto retém informações suficientes para distinguir entre os pontos quando comparados com os novos conjuntos de dados.
+
+A técnica consiste em reter todas as coordenadas dos dados, mas reduzir a dimensionalidade do eigenspace, isto é, subtrair o número de eixos do plano cartesiano. Este processo é equivalente a subtrair algumas eingenfaces, mas como citado anteriormente, os enigenvalues de menor intensidade não tem influência no espalhamentos dos dados no plano, sendo pouco significativos para o reconhecimento, e portanto podem ser removidos.
+
+Portanto, os dados mostrados na  \autoref{fig:graphxy3} possuem os seguintem eigenvetores e eigenvalores:
+
+\begin{center}
+	$\begin{pmatrix} -0.7352 \\ 0.6779 \end{pmatrix}$  e 0.049
+	
+	$\begin{pmatrix} 0.6779 \\ 0.7352 \end{pmatrix}$  e 1.284
+\end{center}
+
+Observando que primeiro eigenvetor foi rotacionado em direção ao eixo x, e o segundo eigenvetor em direção ao eixo y, se o primeiro eigenvetor que contribui muito pouco para a informação de espalhamento (devido ao seu pequeno eigenvalue) for descartado junto ao seu aixo, os dados deste eigenvetor são projetados para o eixo y, resultando na plotagem mostrada na 
+
+\begin{figure}[h]
+	\centering
+	\includegraphics[width=.5\textwidth]{graphxy4}
+	\caption{Dados da \autoref{fig:graphxy3} projetados em direção ao eixo y.}
+	\fonte{\cite{drmathew_java_programming}}
+	\label{fig:graphxy4}
+\end{figure}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 \subsection{TREINAMENTO DA FACE}\label{subsec:treiamento}
 
