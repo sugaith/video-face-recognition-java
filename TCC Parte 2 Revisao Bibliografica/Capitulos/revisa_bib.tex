@@ -352,7 +352,7 @@ A maneira padrão de armazenar a covariância entre múltiplos vetores de dados 
 
 Na diagonal principal, pode-se observar que a covariância é entre o conjunto de dados a própria covariância, que é equivalente à variância nestes dados. Podemos provar isto comparando a variância de x ( var(x) ) e a covariância de x com x ( cov(x) ). A matriz também apresenta simetria em volta da diagonal principal. 
 
-Os conjuntos de dados x e y da \autoref{tabelaxy} seriam representados em uma matriz de dimensões 2x2:
+Os conjuntos de dados \textit{x} e \textit{y} da \autoref{tabelaxy} seriam representados em uma matriz de dimensões 2x2:
 
 \begin{center}
 	$\begin{pmatrix} 0.6166 & 0.6154 \\ 0.6154 & 0.7166 \end{pmatrix}$
@@ -365,7 +365,7 @@ A matriz de covariância é um meio útil de demonstrar a relação entre os con
 
 Para que as eigenfaces sejam geradas, deve-se transformar a covariância ou outros conjuntos de dados chamados de \textit{eigenvectors} e \textit{eigenvalues}.
 
-O \textit{eigenvector} é um vetor de valores ordinário que quando multiplicado por uma dada matriz, muda de magnitude, enquanto que \textit{eigenvalue} é apenas um termo para esta magnitude. 
+Segundo \cite{drmathew_java_programming}, o \textit{eigenvector} é um vetor de valores ordinário que quando multiplicado por uma dada matriz, muda de magnitude, enquanto que \textit{eigenvalue} é apenas um termo para esta magnitude. 
 
 Por exemplo, dada a matriz:
 
@@ -389,7 +389,7 @@ A relação eigenvalue pode ser escrita matematicamente como:
 
 onde $\Lambda$ é a matriz quadrada, $\nu$ é um eigenvetor para A e o valor $\lambda$ é um eigenvalue.
 
-Para usa-los no algorítimo PCA, os eigenvetores devem ser normalizados para que todos eles tenham a mesma unidade de tamanho. Isto é, o eigenvetor acima, $\begin{pmatrix} 3 \\ 2\end{pmatrix}$, tem a unidade de tamanho "falso"  de  $\sqrt[]{(3^2 + 2^2)}$ $=$ $\sqrt[]{13}$. Se o vetor for dividido por este valor resultara em um tamanho de unidade:
+Para usa-los no algorítimo PCA, os eigenvetores devem ser normalizados para que todos eles tenham a mesma unidade de tamanho. Isto é, o eigenvetor acima, $\begin{pmatrix} 3 \\ 2\end{pmatrix}$, tem a unidade de tamanho "falso"  de  $\sqrt[]{(3^2 + 2^2)}$ $=$ $\sqrt[]{13}$. Se o vetor for dividido por este valor resultara em um tamanho de unidade \cite{drmathew_java_programming}:
 
 \begin{center}
 	$\begin{pmatrix} 3 \\ 2 \end{pmatrix}$ 
@@ -431,11 +431,11 @@ $\begin{pmatrix} -0.7352 \\ 0.6779 \end{pmatrix}$ torna-se $y$ $=$ $\frac{-0.735
 
 Os dados normalizados e as duas equações são ilustradas na \autoref{fig:graphxy2} como linhas azuis. 
 
-Observa-se que na \autoref{fig:graphxy2} demonstra como os eigenvectores acentuam as relações entre os conjuntos de dados- os vetores indicam como os conjuntos de dados se espalham nas coordenadas do espaço cartesiano. Este espalhamento facilita a distinção dos dados.
+Observa-se que na \autoref{fig:graphxy2} demonstra como os eigenvectores acentuam as relações entre os conjuntos de dados- os vetores indicam como os conjuntos de dados se espalham nas coordenadas do espaço cartesiano. Este espalhamento facilita a distinção dos dados \cite{drmathew_java_programming}.
 
 Dos dois eigenvetores marcados em azul, a linha $\frac{0.6779}{0.7352}$$x$ é a mais útil, pois os dados estão mais espalhados acerca do trajeto desta linha. Isto pode ser confirmado numericamente observando o eigenvalue associado com seu eigenvetor: o eigenvalue (1.284) é um melhor indicador de espalhamento pois é o maior dentre os dois eigenvalues.
 
-A outra linha, $\frac{-0.7352}{0.6779}$$x$, contribui com a informação demonstrando como os dados são espaçados para direita ou esquerda do eigenvetor principal (a linha $\frac{0.6779}{0.7352}$$x$). Entretanto, trata-se de um componente menos importante no espalhamento de dados, assim como indica seu eigenvalue (0.049).
+A outra linha, $\frac{-0.7352}{0.6779}$$x$, contribui com a informação demonstrando como os dados são espaçados para direita ou esquerda do eigenvetor principal (a linha $\frac{0.6779}{0.7352}$$x$). Entretanto, trata-se de um componente menos importante no espalhamento de dados, assim como indica seu eigenvalue (0.049) \cite{drmathew_java_programming}.
 
 O eigenvetor com o maior eigenvalue (no caso a linha $\frac{0.6779}{0.7352}$$x$, ou o vetor $\begin{pmatrix} 0.6779 \\ 0.7352 \end{pmatrix}$) é chamado de \textbf{componente principal} do conjunto de dados. Isto é, os eigenvetores e eigenvalues são efetivamente utilizados para performar uma análise de componente principal nos conjuntos de dados \cite{drmathew_java_programming}.
 
@@ -475,33 +475,40 @@ Observando que primeiro eigenvetor foi rotacionado em direção ao eixo x, e o s
 
 \begin{figure}[h]
 	\centering
-	\includegraphics[width=.5\textwidth]{graphxy4}
+	\includegraphics[width=.3\textwidth]{graphxy4}
 	\caption{Dados da \autoref{fig:graphxy3} projetados em direção ao eixo y.}
 	\fonte{\cite{drmathew_java_programming}}
 	\label{fig:graphxy4}
 \end{figure}
 
 
+Apesar dos eixos serem eliminados, seus dados ainda estão presentes e espalhados o suficiente para que o novo conjunto de dados seja comparado com o uso da distância euclidiana.
 
+Considerando que um novo conjunto de dados adicionado com os valores do vetor \textit{z} = (2.511, 2.411), e estes conjuntos passarem pelos mesmos processos que os vetores \textit{x} e \textit{y}, e por fim normalizado e projetado assim como mostra a \autoref{fig:graphxy2} e \autoref{fig:graphxy3}, plotando-o no mesmo espaço resulta na \autoref{fig:graphxy5}.
 
+\begin{figure}[h]
+	\centering
+	\includegraphics[width=.3\textwidth]{graphxy5}
+	\caption{Plotagem dos novos dados com os dados de treino transformados.}
+	\fonte{\cite{drmathew_java_programming}}
+	\label{fig:graphxy5}
+\end{figure}
 
+A \autoref{fig:graphxy5} é a mesma que a \autoref{fig:graphxy3} com a adição de um novo ponto vermelho que indica a ccoordenada do novo conjunto de dados do vetor \textit{z}, posicionada logo acima do ponto (-0.1751, 0.8280), que por sua vez começou como um ponto de treinamento de pesos (2.5, 2.4), informada nos conjuntos de dados \textit{x} e \textit{y}. Isto quer dizer que o novo conjunto de dados \textit{z} (2.511, 2.411) possui a menor distância euclidiana com o conjunto de treinamento (2.5, 2.4). 
 
+A real vantagem dos eigenvetores é quando a dimensionalidade do espaço (eigenspace) torna-se extremamente grande. No presente exemplo foi utilizado uma dimensionalidade dois, enquanto que em aplicações reais com imagem os eixos podem aumentar para valores como 40 mil \cite{drmathew_java_programming}.
 
+Com tamanha dimensão e, portanto, quantidade de eixos, como citado anteriormente pode-se eliminar alguns eixos dependendo de seus valores eingenvalues (se forem pequenos, podem ser considerados dispensáveis). Se por uma hipotese isto for feito neste exemplo incluindo o novo conjunto dados \textit{z}, a plotagem do resultado seria como na \autoref{fig:graphxy6} abaixo
 
+\begin{figure}[h]
+	\centering
+	\includegraphics[width=.3\textwidth]{graphxy6}
+	\caption{Plotagem dos conjuntos de dados \textit{x}, \textit{y} e \textit{z}, trasnformados e projetados no eixo do Componente Principal}
+	\fonte{\cite{drmathew_java_programming}}
+	\label{fig:graphxy6}
+\end{figure}
 
-
-
-
-
-
-
-
-
-
-
-\subsection{TREINAMENTO DA FACE}\label{subsec:treiamento}
-
-\subsection{RECONHECIMENTO DA FACE}\label{subsec:reconhecimento}
+A \autoref{fig:graphxy6} é similar à \autoref{graphxy4} com exceção do ponto vermelho (novo dado). Pode-se observar nesta figura o problema potencial em se reduzir a dimensionalidade: a probabilidade de erros aumenta tornando difícil de decidir qual ponto de treinamento é que possui a menor distância euclidiana. Outro fator da equação da distância euclidiana é que se utiliza de um parâmetro para definir quando dois pontos estão perto. Se um valor alto é definido então diversos pontos podem estar dentro do alcance aceitável do novo dado \cite{drmathew_java_programming}.
 
 
 %============================================================================================================

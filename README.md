@@ -10,16 +10,19 @@ A o arquivo de saíde da monografia (parcial) é o
 
 
 
-==============================================================
-Para o desenvolvimento da monografia:
+==============================================================\n
+Para o desenvolvimento:
 
 Items pendentes:
+
 * Introdução
-- fazer a correção que a orientadora passou
+	- fazer a correção que a orientadora passou
 
 * Revisao Bibliografica
-- mencionar os videos na aquisicao
-- mencionar a transformacao de eigenvetores para imagens eigenfaces
-- perguntar para a orientadora se eu traduzo os nome tecnicos para PT ou uso em EN mesmo
-- demonstrar a operacao da distancia euclidiana
+	- mencionar os videos na aquisicao
+	- mencionar a transformacao de eigenvetores para imagens eigenfaces
+	- perguntar para a orientadora se eu traduzo os nome tecnicos para PT ou uso EN mesmo
+	- adicionar a forumla da distancia euclidiana
+
+	- adicionar citaçoes na seccao de eigenfaces
 

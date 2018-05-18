@@ -2,37 +2,37 @@
 \babel@toc {brazil}{}
 \setlength {\cftchapterindent }{\cftlastnumwidth } \setlength {\cftchapternumwidth }{2em}
 \setlength {\cftchapterindent }{0em} \setlength {\cftchapternumwidth }{\cftlastnumwidth }
-\contentsline {chapter}{\chapternumberline {1}\MakeTextUppercase {INTRODU\IeC {\c C}\IeC {\~A}O}}{4}{chapter.1}
-\contentsline {section}{\numberline {1.1}BREVE HIST\IeC {\'O}RIA}{4}{section.1.1}
-\contentsline {section}{\numberline {1.2}PROBLEM\IeC {\'A}TICA}{5}{section.1.2}
-\contentsline {subsection}{\numberline {1.2.1}DETEC\IeC {\c C}\IeC {\~A}O E AQUISI\IeC {\c C}\IeC {\~A}O DA FACE}{5}{subsection.1.2.1}
-\contentsline {subsection}{\numberline {1.2.2}TREINAMENTO E RECONHECIMENTO DA FACE}{7}{subsection.1.2.2}
-\contentsline {section}{\numberline {1.3}OBJETIVOS}{9}{section.1.3}
-\contentsline {subsection}{\numberline {1.3.1}ORGANIZA\IeC {\c C}\IeC {\~A}O DO TRABALHO}{9}{subsection.1.3.1}
-\contentsline {subsection}{\numberline {1.3.2}JUSTIFICATIVA}{10}{subsection.1.3.2}
+\contentsline {chapter}{\chapternumberline {1}\MakeTextUppercase {INTRODU\IeC {\c C}\IeC {\~A}O}}{3}{chapter.1}
+\contentsline {section}{\numberline {1.1}BREVE HIST\IeC {\'O}RIA}{3}{section.1.1}
+\contentsline {section}{\numberline {1.2}PROBLEM\IeC {\'A}TICA}{4}{section.1.2}
+\contentsline {subsection}{\numberline {1.2.1}DETEC\IeC {\c C}\IeC {\~A}O E AQUISI\IeC {\c C}\IeC {\~A}O DA FACE}{4}{subsection.1.2.1}
+\contentsline {subsection}{\numberline {1.2.2}TREINAMENTO E RECONHECIMENTO DA FACE}{6}{subsection.1.2.2}
+\contentsline {section}{\numberline {1.3}OBJETIVOS}{8}{section.1.3}
+\contentsline {subsection}{\numberline {1.3.1}ORGANIZA\IeC {\c C}\IeC {\~A}O DO TRABALHO}{8}{subsection.1.3.1}
+\contentsline {subsection}{\numberline {1.3.2}JUSTIFICATIVA}{9}{subsection.1.3.2}
 \setlength {\cftchapterindent }{0em} \setlength {\cftchapternumwidth }{\cftlastnumwidth }
-\contentsline {chapter}{\chapternumberline {2}\MakeTextUppercase {REVIS\IeC {\~A}O BIBLIOGR\IeC {\'A}FICA}}{14}{chapter.2}
-\contentsline {section}{\numberline {2.1}AQUISI\IeC {\c C}\IeC {\~A}O E PROCESSAMENTO DE IMAGENS E V\IeC {\'I}DEO}{14}{section.2.1}
-\contentsline {subsection}{\numberline {2.1.1}Imagem e V\IeC {\'\i }deo Digital}{14}{subsection.2.1.1}
-\contentsline {subsection}{\numberline {2.1.2}Formato PNG}{16}{subsection.2.1.2}
-\contentsline {subsection}{\numberline {2.1.3}Aquisi\IeC {\c c}\IeC {\~a}o da Imagem e de V\IeC {\'\i }deo}{16}{subsection.2.1.3}
-\contentsline {subsection}{\numberline {2.1.4}Processamento da Imagem}{17}{subsection.2.1.4}
-\contentsline {subsubsection}{\numberline {2.1.4.1}Convers\IeC {\~a}o em Escala de Cinza}{18}{subsubsection.2.1.4.1}
-\contentsline {subsubsection}{\numberline {2.1.4.2}Escalonamento}{18}{subsubsection.2.1.4.2}
-\contentsline {subsubsection}{\numberline {2.1.4.3}Equaliza\IeC {\c c}\IeC {\~a}o de Histograma}{19}{subsubsection.2.1.4.3}
-\contentsline {subsubsection}{\numberline {2.1.4.4}Segmenta\IeC {\c c}\IeC {\~a}o}{19}{subsubsection.2.1.4.4}
-\contentsline {subsubsection}{\numberline {2.1.4.5}Classifica\IeC {\c c}\IeC {\~a}o}{20}{subsubsection.2.1.4.5}
-\contentsline {section}{\numberline {2.2}DETEC\IeC {\c C}\IeC {\~A}O DE FACES COM CARACTER\IeC {\'I}STICAS HAAR}{20}{section.2.2}
-\contentsline {subsection}{\numberline {2.2.1}As Caracter\IeC {\'\i }sticas Haar (\textit {Haar Features}) }{20}{subsection.2.2.1}
-\contentsline {subsection}{\numberline {2.2.2}Algor\IeC {\'\i }timo Viola-Jones (\textit {Haar Cascades Classifier}) }{21}{subsection.2.2.2}
-\contentsline {section}{\numberline {2.3}\textit {EIGENFACES} E AN\IeC {\'A}LISE DE COMPONENTE PRINCIPAL (ACP) }{23}{section.2.3}
-\contentsline {subsection}{\numberline {2.3.1}An\IeC {\'a}lise de Componentes Principais (ACP)}{26}{subsection.2.3.1}
-\contentsline {subsection}{\numberline {2.3.2}ACP E \textit {Eigenfaces}}{28}{subsection.2.3.2}
-\contentsline {subsubsection}{\numberline {2.3.2.1}Utilizando Eigenfaces como Componente Principal}{29}{subsubsection.2.3.2.1}
-\contentsline {subsubsection}{\numberline {2.3.2.2}O Reconhecimento}{31}{subsubsection.2.3.2.2}
+\contentsline {chapter}{\chapternumberline {2}\MakeTextUppercase {REVIS\IeC {\~A}O BIBLIOGR\IeC {\'A}FICA}}{13}{chapter.2}
+\contentsline {section}{\numberline {2.1}AQUISI\IeC {\c C}\IeC {\~A}O E PROCESSAMENTO DE IMAGENS E V\IeC {\'I}DEO}{13}{section.2.1}
+\contentsline {subsection}{\numberline {2.1.1}Imagem e V\IeC {\'\i }deo Digital}{13}{subsection.2.1.1}
+\contentsline {subsection}{\numberline {2.1.2}Formato PNG}{15}{subsection.2.1.2}
+\contentsline {subsection}{\numberline {2.1.3}Aquisi\IeC {\c c}\IeC {\~a}o da Imagem e de V\IeC {\'\i }deo}{15}{subsection.2.1.3}
+\contentsline {subsection}{\numberline {2.1.4}Processamento da Imagem}{16}{subsection.2.1.4}
+\contentsline {subsubsection}{\numberline {2.1.4.1}Convers\IeC {\~a}o em Escala de Cinza}{17}{subsubsection.2.1.4.1}
+\contentsline {subsubsection}{\numberline {2.1.4.2}Escalonamento}{17}{subsubsection.2.1.4.2}
+\contentsline {subsubsection}{\numberline {2.1.4.3}Equaliza\IeC {\c c}\IeC {\~a}o de Histograma}{18}{subsubsection.2.1.4.3}
+\contentsline {subsubsection}{\numberline {2.1.4.4}Segmenta\IeC {\c c}\IeC {\~a}o}{18}{subsubsection.2.1.4.4}
+\contentsline {subsubsection}{\numberline {2.1.4.5}Classifica\IeC {\c c}\IeC {\~a}o}{19}{subsubsection.2.1.4.5}
+\contentsline {section}{\numberline {2.2}DETEC\IeC {\c C}\IeC {\~A}O DE FACES COM CARACTER\IeC {\'I}STICAS HAAR}{19}{section.2.2}
+\contentsline {subsection}{\numberline {2.2.1}As Caracter\IeC {\'\i }sticas Haar (\textit {Haar Features}) }{19}{subsection.2.2.1}
+\contentsline {subsection}{\numberline {2.2.2}Algor\IeC {\'\i }timo Viola-Jones (\textit {Haar Cascades Classifier}) }{20}{subsection.2.2.2}
+\contentsline {section}{\numberline {2.3}\textit {EIGENFACES} E AN\IeC {\'A}LISE DE COMPONENTE PRINCIPAL (ACP) }{22}{section.2.3}
+\contentsline {subsection}{\numberline {2.3.1}An\IeC {\'a}lise de Componentes Principais (ACP)}{25}{subsection.2.3.1}
+\contentsline {subsection}{\numberline {2.3.2}ACP E \textit {Eigenfaces}}{27}{subsection.2.3.2}
+\contentsline {subsubsection}{\numberline {2.3.2.1}Utilizando Eigenfaces como Componente Principal}{28}{subsubsection.2.3.2.1}
+\contentsline {subsubsection}{\numberline {2.3.2.2}O Reconhecimento}{30}{subsubsection.2.3.2.2}
 \contentsline {subsection}{\numberline {2.3.3}TREINAMENTO DA FACE}{31}{subsection.2.3.3}
 \contentsline {subsection}{\numberline {2.3.4}RECONHECIMENTO DA FACE}{31}{subsection.2.3.4}
 \contentsline {section}{\numberline {2.4}CONSIDERA\IeC {\c C}\IeC {\~O}ES FINAIS}{31}{section.2.4}
 \vspace {\cftbeforechapterskip }
 \setlength {\cftchapterindent }{\cftlastnumwidth } \setlength {\cftchapternumwidth }{2em}
-\contentsline {chapter}{\uppercase {REFER{\^ E}NCIAS}}{32}{section*.4}
+\contentsline {chapter}{\uppercase {REFER{\^ E}NCIAS}}{33}{section*.4}
