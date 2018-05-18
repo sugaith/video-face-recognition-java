@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.19 (MiKTeX 2.9.6630 64-bit) (preloaded format=pdflatex 2018.4.5)  18 MAY 2018 03:24
+This is pdfTeX, Version 3.14159265-2.6-1.40.19 (MiKTeX 2.9.6630 64-bit) (preloaded format=pdflatex 2018.4.5)  18 MAY 2018 04:20
 entering extended mode
 **./modelo.tex
 (modelo.tex
@@ -1801,7 +1801,7 @@ TE PRIN-CI-PAL (ACP)
 
 
 ]
-<./Imagens/ex_variacao.png, id=129, 454.69875pt x 536.0025pt>
+<./Imagens/ex_variacao.png, id=125, 454.69875pt x 536.0025pt>
 File: ./Imagens/ex_variacao.png Graphic file (type png)
 <use ./Imagens/ex_variacao.png>
 Package pdftex.def Info: ./Imagens/ex_variacao.png  used on input line 33.
@@ -1820,19 +1820,19 @@ LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <12> not available
 (Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 69.
 
 [6]
-<./Imagens/someeigen.png, id=174, 263.48438pt x 211.54031pt>
+<./Imagens/someeigen.png, id=170, 263.48438pt x 211.54031pt>
 File: ./Imagens/someeigen.png Graphic file (type png)
 <use ./Imagens/someeigen.png>
 Package pdftex.def Info: ./Imagens/someeigen.png  used on input line 82.
 (pdftex.def)             Requested size: 273.00278pt x 219.19298pt.
  [7 <./Imagens/someeigen.png>]
-<./Imagens/eigencartesiano.png, id=193, 306.39468pt x 263.48438pt>
+<./Imagens/eigencartesiano.png, id=189, 306.39468pt x 263.48438pt>
 File: ./Imagens/eigencartesiano.png Graphic file (type png)
 <use ./Imagens/eigencartesiano.png>
 Package pdftex.def Info: ./Imagens/eigencartesiano.png  used on input line 98.
 (pdftex.def)             Requested size: 273.00278pt x 234.78177pt.
  [8 <./Imagens/eigencartesiano.png>]
-<./Imagens/tabelaEmpresasRecog.png, id=207, 546.54187pt x 848.4197pt>
+<./Imagens/tabelaEmpresasRecog.png, id=203, 546.54187pt x 848.4197pt>
 File: ./Imagens/tabelaEmpresasRecog.png Graphic file (type png)
 <use ./Imagens/tabelaEmpresasRecog.png>
 Package pdftex.def Info: ./Imagens/tabelaEmpresasRecog.png  used on input line 
@@ -1843,7 +1843,7 @@ Package pdftex.def Info: ./Imagens/tabelaEmpresasRecog.png  used on input line
 LaTeX Warning: `h' float specifier changed to `ht'.
 
 [9]
-<./Imagens/stats_toprecog.png, id=218, 392.21532pt x 150.5625pt>
+<./Imagens/stats_toprecog.png, id=214, 392.21532pt x 150.5625pt>
 File: ./Imagens/stats_toprecog.png Graphic file (type png)
 <use ./Imagens/stats_toprecog.png>
 Package pdftex.def Info: ./Imagens/stats_toprecog.png  used on input line 152.
@@ -1856,7 +1856,7 @@ Package hyperref Warning: Suppressing empty link on input line 11.
 [13
 
 ]
-<./Imagens/pixel-img.png, id=268, 426.84468pt x 413.29407pt>
+<./Imagens/pixel-img.png, id=264, 426.84468pt x 413.29407pt>
 File: ./Imagens/pixel-img.png Graphic file (type png)
 <use ./Imagens/pixel-img.png>
 Package pdftex.def Info: ./Imagens/pixel-img.png  used on input line 32.
@@ -1874,7 +1874,7 @@ Overfull \hbox (10.10889pt too wide) in paragraph at lines 81--85
  []
 
 [16]
-<./Imagens/escala.png, id=325, 246.9225pt x 86.57344pt>
+<./Imagens/escala.png, id=321, 246.9225pt x 86.57344pt>
 File: ./Imagens/escala.png Graphic file (type png)
 <use ./Imagens/escala.png>
 Package pdftex.def Info: ./Imagens/escala.png  used on input line 132.
@@ -1885,13 +1885,13 @@ Overfull \hbox (7.95142pt too wide) in paragraph at lines 143--144
  fun-ção dis-creta h(rk)=nk
  []
 
-<./Imagens/histograma.png, id=343, 289.08pt x 138.5175pt>
+<./Imagens/histograma.png, id=339, 289.08pt x 138.5175pt>
 File: ./Imagens/histograma.png Graphic file (type png)
 <use ./Imagens/histograma.png>
 Package pdftex.def Info: ./Imagens/histograma.png  used on input line 149.
 (pdftex.def)             Requested size: 364.00139pt x 174.42728pt.
 [18 <./Imagens/histograma.png>]
-<./Imagens/haarwavelet.png, id=357, 200.24812pt x 151.3153pt>
+<./Imagens/haarwavelet.png, id=353, 200.24812pt x 151.3153pt>
 File: ./Imagens/haarwavelet.png Graphic file (type png)
 <use ./Imagens/haarwavelet.png>
 Package pdftex.def Info: ./Imagens/haarwavelet.png  used on input line 186.
@@ -1901,13 +1901,13 @@ Package pdftex.def Info: ./Imagens/haarwavelet.png  used on input line 186.
 LaTeX Warning: `h' float specifier changed to `ht'.
 
 [19]
-<./Imagens/haarfeatures.png, id=366, 682.80093pt x 347.04657pt>
+<./Imagens/haarfeatures.png, id=362, 682.80093pt x 347.04657pt>
 File: ./Imagens/haarfeatures.png Graphic file (type png)
 <use ./Imagens/haarfeatures.png>
 Package pdftex.def Info: ./Imagens/haarfeatures.png  used on input line 198.
 (pdftex.def)             Requested size: 409.49722pt x 208.13951pt.
  [20 <./Imagens/haarwavelet.png> <./Imagens/haarfeatures.png>]
-<./Imagens/cascata.png, id=385, 357.58594pt x 120.45pt>
+<./Imagens/cascata.png, id=381, 357.58594pt x 120.45pt>
 File: ./Imagens/cascata.png Graphic file (type png)
 <use ./Imagens/cascata.png>
 Package pdftex.def Info: ./Imagens/cascata.png  used on input line 223.
@@ -1917,7 +1917,7 @@ Package pdftex.def Info: ./Imagens/cascata.png  used on input line 223.
 LaTeX Warning: `h' float specifier changed to `ht'.
 
 [21]
-<./Imagens/trein_img.png, id=404, 401.24907pt x 353.82187pt>
+<./Imagens/trein_img.png, id=400, 401.24907pt x 353.82187pt>
 File: ./Imagens/trein_img.png Graphic file (type png)
 <use ./Imagens/trein_img.png>
 Package pdftex.def Info: ./Imagens/trein_img.png  used on input line 248.
@@ -1927,7 +1927,7 @@ Package pdftex.def Info: ./Imagens/trein_img.png  used on input line 248.
 LaTeX Warning: `h' float specifier changed to `ht'.
 
 [22 <./Imagens/cascata.png>]
-<./Imagens/eigenpeso.png, id=415, 402.00188pt x 365.86688pt>
+<./Imagens/eigenpeso.png, id=411, 402.00188pt x 365.86688pt>
 File: ./Imagens/eigenpeso.png Graphic file (type png)
 <use ./Imagens/eigenpeso.png>
 Package pdftex.def Info: ./Imagens/eigenpeso.png  used on input line 261.
@@ -1940,7 +1940,7 @@ LaTeX Warning: `h' float specifier changed to `ht'.
 LaTeX Warning: Reference `eigenpeso_axis' on page 23 undefined on input line 27
 1.
 
-<./Imagens/eigenpeso_axis.png, id=422, 336.50719pt x 339.51843pt>
+<./Imagens/eigenpeso_axis.png, id=418, 336.50719pt x 339.51843pt>
 File: ./Imagens/eigenpeso_axis.png Graphic file (type png)
 <use ./Imagens/eigenpeso_axis.png>
 Package pdftex.def Info: ./Imagens/eigenpeso_axis.png  used on input line 275.
@@ -1949,31 +1949,31 @@ Package pdftex.def Info: ./Imagens/eigenpeso_axis.png  used on input line 275.
 LaTeX Warning: `h' float specifier changed to `ht'.
 
 [23 <./Imagens/trein_img.png>]
-<./Imagens/tabelaxy.png, id=441, 128.73094pt x 325.96782pt>
+<./Imagens/tabelaxy.png, id=437, 128.73094pt x 325.96782pt>
 File: ./Imagens/tabelaxy.png Graphic file (type png)
 <use ./Imagens/tabelaxy.png>
 Package pdftex.def Info: ./Imagens/tabelaxy.png  used on input line 299.
 (pdftex.def)             Requested size: 68.24722pt x 172.81682pt.
  [24 <./Imagens/eigenpeso.png>] [25 <./Imagens/eigenpeso_axis.png> <./Imagens/t
 abelaxy.png>]
-<./Imagens/variancia.png, id=459, 233.37187pt x 55.70813pt>
+<./Imagens/variancia.png, id=455, 233.37187pt x 55.70813pt>
 File: ./Imagens/variancia.png Graphic file (type png)
 <use ./Imagens/variancia.png>
 Package pdftex.def Info: ./Imagens/variancia.png  used on input line 310.
 (pdftex.def)             Requested size: 136.50139pt x 32.58528pt.
-<./Imagens/covariancia.png, id=465, 258.21469pt x 54.2025pt>
+<./Imagens/covariancia.png, id=461, 258.21469pt x 54.2025pt>
 File: ./Imagens/covariancia.png Graphic file (type png)
 <use ./Imagens/covariancia.png>
 Package pdftex.def Info: ./Imagens/covariancia.png  used on input line 322.
 (pdftex.def)             Requested size: 136.50139pt x 28.6544pt.
-<./Imagens/graphxy.png, id=470, 280.79906pt x 246.1697pt>
+<./Imagens/graphxy.png, id=466, 280.79906pt x 246.1697pt>
 File: ./Imagens/graphxy.png Graphic file (type png)
 <use ./Imagens/graphxy.png>
 Package pdftex.def Info: ./Imagens/graphxy.png  used on input line 333.
 (pdftex.def)             Requested size: 181.99722pt x 159.55013pt.
  [26 <./Imagens/variancia.png> <./Imagens/covariancia.png> <./Imagens/graphxy.p
 ng>]
-<./Imagens/covmatrix.png, id=484, 274.77657pt x 76.78688pt>
+<./Imagens/covmatrix.png, id=480, 274.77657pt x 76.78688pt>
 File: ./Imagens/covmatrix.png Graphic file (type png)
 <use ./Imagens/covmatrix.png>
 Package pdftex.def Info: ./Imagens/covmatrix.png  used on input line 347.
@@ -1988,29 +1988,34 @@ Package pdftex.def Info: ./Imagens/graphxy2.png  used on input line 423.
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-[28]
-<./Imagens/graphxy3.png, id=508, 347.79938pt x 251.43938pt>
+[28] [29 <./Imagens/graphxy2.png>]
+<./Imagens/graphxy3.png, id=519, 347.79938pt x 251.43938pt>
 File: ./Imagens/graphxy3.png Graphic file (type png)
 <use ./Imagens/graphxy3.png>
 Package pdftex.def Info: ./Imagens/graphxy3.png  used on input line 446.
 (pdftex.def)             Requested size: 227.5pt x 164.46954pt.
- [29 <./Imagens/graphxy2.png>] [30 <./Imagens/graphxy3.png>]
-<./Imagens/graphxy4.png, id=533, 173.89969pt x 307.1475pt>
+ [30 <./Imagens/graphxy3.png>]
+<./Imagens/graphxy4.png, id=537, 173.89969pt x 307.1475pt>
 File: ./Imagens/graphxy4.png Graphic file (type png)
 <use ./Imagens/graphxy4.png>
 Package pdftex.def Info: ./Imagens/graphxy4.png  used on input line 478.
-(pdftex.def)             Requested size: 227.5pt x 401.83656pt.
+(pdftex.def)             Requested size: 90.99861pt x 160.72525pt.
+<./Imagens/graphxy5.png, id=547, 388.45125pt x 260.47313pt>
+File: ./Imagens/graphxy5.png Graphic file (type png)
+<use ./Imagens/graphxy5.png>
+Package pdftex.def Info: ./Imagens/graphxy5.png  used on input line 491.
+(pdftex.def)             Requested size: 227.5pt x 152.55302pt.
 
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-
-LaTeX Warning: Reference `graphxy2' on page 31 undefined on input line 487.
-
-
-LaTeX Warning: Reference `graphxy3' on page 31 undefined on input line 487.
-
-) (modelo.bbl [31] [32 <./Imagens/graphxy4.png>]
+[31 <./Imagens/graphxy4.png>]
+<./Imagens/graphxy6.png, id=563, 195.73125pt x 302.63063pt>
+File: ./Imagens/graphxy6.png Graphic file (type png)
+<use ./Imagens/graphxy6.png>
+Package pdftex.def Info: ./Imagens/graphxy6.png  used on input line 505.
+(pdftex.def)             Requested size: 90.99861pt x 140.69868pt.
+ [32 <./Imagens/graphxy5.png> <./Imagens/graphxy6.png>]) (modelo.bbl [33]
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
 (hyperref)                removing `\uppercase' on input line 3.
@@ -2022,7 +2027,7 @@ Underfull \hbox (badness 1527) in paragraph at lines 100--106
 -nen-tes prin-ci-pais
  []
 
-[33
+[34
 
 ]
 Underfull \hbox (badness 10000) in paragraph at lines 173--180
@@ -2036,11 +2041,11 @@ Overfull \hbox (16.14395pt too wide) in paragraph at lines 183--188
 ]projection-[]and-[]evaluation-[]methods /
  []
 
-) [34]
+) [35]
 No file modelo.ind.
 
 AED: lastpage setting LastPage
-[35]
+[36]
 \tf@toc=\write6
 \openout6 = `modelo.toc'.
 
@@ -2059,10 +2064,10 @@ LaTeX Warning: There were multiply-defined labels.
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 228.
  ) 
 Here is how much of TeX's memory you used:
- 36270 strings out of 493305
- 823694 string characters out of 3130238
- 1048899 words of memory out of 3000000
- 39018 multiletter control sequences out of 15000+200000
+ 36277 strings out of 493305
+ 823883 string characters out of 3130238
+ 1049145 words of memory out of 3000000
+ 39022 multiletter control sequences out of 15000+200000
  18798 words of font info for 47 fonts, out of 3000000 for 9000
  1147 hyphenation exceptions out of 8191
  74i,13n,128p,1585b,609s stack positions out of 5000i,500n,10000p,200000b,50000s
@@ -2090,9 +2095,9 @@ ts/cm/cmr12.pfb><h:/Users/suga/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/pu
 blic/amsfonts/cm/cmr8.pfb><h:/Users/suga/AppData/Local/Programs/MiKTeX 2.9/font
 s/type1/public/amsfonts/cm/cmsy10.pfb><h:/Users/suga/AppData/Local/Programs/MiK
 TeX 2.9/fonts/type1/public/amsfonts/cm/cmsy8.pfb>
-Output written on modelo.pdf (36 pages, 2435197 bytes).
+Output written on modelo.pdf (37 pages, 2454414 bytes).
 PDF statistics:
- 1227 PDF objects out of 1440 (max. 8388607)
- 120 named destinations out of 1000 (max. 500000)
- 407 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 1256 PDF objects out of 1440 (max. 8388607)
+ 121 named destinations out of 1000 (max. 500000)
+ 401 words of extra memory for PDF output out of 10000 (max. 10000000)
 

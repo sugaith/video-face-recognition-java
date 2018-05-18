@@ -475,7 +475,7 @@ Observando que primeiro eigenvetor foi rotacionado em direção ao eixo x, e o s
 
 \begin{figure}[h]
 	\centering
-	\includegraphics[width=.3\textwidth]{graphxy4}
+	\includegraphics[width=.2\textwidth]{graphxy4}
 	\caption{Dados da \autoref{fig:graphxy3} projetados em direção ao eixo y.}
 	\fonte{\cite{drmathew_java_programming}}
 	\label{fig:graphxy4}
@@ -488,7 +488,7 @@ Considerando que um novo conjunto de dados adicionado com os valores do vetor \t
 
 \begin{figure}[h]
 	\centering
-	\includegraphics[width=.3\textwidth]{graphxy5}
+	\includegraphics[width=.5\textwidth]{graphxy5}
 	\caption{Plotagem dos novos dados com os dados de treino transformados.}
 	\fonte{\cite{drmathew_java_programming}}
 	\label{fig:graphxy5}
@@ -498,17 +498,17 @@ A \autoref{fig:graphxy5} é a mesma que a \autoref{fig:graphxy3} com a adição 
 
 A real vantagem dos eigenvetores é quando a dimensionalidade do espaço (eigenspace) torna-se extremamente grande. No presente exemplo foi utilizado uma dimensionalidade dois, enquanto que em aplicações reais com imagem os eixos podem aumentar para valores como 40 mil \cite{drmathew_java_programming}.
 
-Com tamanha dimensão e, portanto, quantidade de eixos, como citado anteriormente pode-se eliminar alguns eixos dependendo de seus valores eingenvalues (se forem pequenos, podem ser considerados dispensáveis). Se por uma hipotese isto for feito neste exemplo incluindo o novo conjunto dados \textit{z}, a plotagem do resultado seria como na \autoref{fig:graphxy6} abaixo
+Com tamanha dimensão e, portanto, quantidade de eixos, como citado anteriormente pode-se eliminar alguns eixos dependendo de seus valores eingenvalues (se forem pequenos, podem ser considerados dispensáveis). Se por uma hipotese isto for feito neste exemplo incluindo o novo conjunto dados \textit{z}, a plotagem do resultado seria como na \autoref{fig:graphxy6} abaixo:
 
 \begin{figure}[h]
 	\centering
-	\includegraphics[width=.3\textwidth]{graphxy6}
+	\includegraphics[width=.2\textwidth]{graphxy6}
 	\caption{Plotagem dos conjuntos de dados \textit{x}, \textit{y} e \textit{z}, trasnformados e projetados no eixo do Componente Principal}
 	\fonte{\cite{drmathew_java_programming}}
 	\label{fig:graphxy6}
 \end{figure}
 
-A \autoref{fig:graphxy6} é similar à \autoref{graphxy4} com exceção do ponto vermelho (novo dado). Pode-se observar nesta figura o problema potencial em se reduzir a dimensionalidade: a probabilidade de erros aumenta tornando difícil de decidir qual ponto de treinamento é que possui a menor distância euclidiana. Outro fator da equação da distância euclidiana é que se utiliza de um parâmetro para definir quando dois pontos estão perto. Se um valor alto é definido então diversos pontos podem estar dentro do alcance aceitável do novo dado \cite{drmathew_java_programming}.
+A \autoref{fig:graphxy6} é similar à \autoref{fig:graphxy4} com exceção do ponto vermelho (novo dado). Pode-se observar nesta figura o problema potencial em se reduzir a dimensionalidade: a probabilidade de erros aumenta tornando difícil de decidir qual ponto de treinamento é que possui a menor distância euclidiana. Outro fator da equação da distância euclidiana é que se utiliza de um parâmetro para definir quando dois pontos estão perto. Se um valor alto é definido então diversos pontos podem estar dentro do alcance aceitável do novo dado \cite{drmathew_java_programming}.
 
 
 %============================================================================================================

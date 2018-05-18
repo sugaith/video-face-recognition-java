@@ -25,4 +25,5 @@ Items pendentes:
 	- adicionar a forumla da distancia euclidiana
 
 	- adicionar citaçoes na seccao de eigenfaces
+	- adicionar figura em escala de cinza
 

@@ -30,9 +30,7 @@
 \contentsline {subsection}{\numberline {2.3.2}ACP E \textit {Eigenfaces}}{27}{subsection.2.3.2}
 \contentsline {subsubsection}{\numberline {2.3.2.1}Utilizando Eigenfaces como Componente Principal}{28}{subsubsection.2.3.2.1}
 \contentsline {subsubsection}{\numberline {2.3.2.2}O Reconhecimento}{30}{subsubsection.2.3.2.2}
-\contentsline {subsection}{\numberline {2.3.3}TREINAMENTO DA FACE}{31}{subsection.2.3.3}
-\contentsline {subsection}{\numberline {2.3.4}RECONHECIMENTO DA FACE}{31}{subsection.2.3.4}
-\contentsline {section}{\numberline {2.4}CONSIDERA\IeC {\c C}\IeC {\~O}ES FINAIS}{31}{section.2.4}
+\contentsline {section}{\numberline {2.4}CONSIDERA\IeC {\c C}\IeC {\~O}ES FINAIS}{33}{section.2.4}
 \vspace {\cftbeforechapterskip }
 \setlength {\cftchapterindent }{\cftlastnumwidth } \setlength {\cftchapternumwidth }{2em}
-\contentsline {chapter}{\uppercase {REFER{\^ E}NCIAS}}{33}{section*.4}
+\contentsline {chapter}{\uppercase {REFER{\^ E}NCIAS}}{34}{section*.4}
