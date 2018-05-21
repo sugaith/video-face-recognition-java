@@ -15,15 +15,8 @@ Para o desenvolvimento:
 
 Items pendentes:
 
-* Introdução
-	- fazer a correção que a orientadora passou
-
-* Revisao Bibliografica
-	- mencionar os videos na aquisicao
+* Revisao Bibliografica	
 	- mencionar a transformacao de eigenvetores para imagens eigenfaces
 	- perguntar para a orientadora se eu traduzo os nome tecnicos para PT ou uso EN mesmo
-	- adicionar a forumla da distancia euclidiana
-
-	- adicionar citaçoes na seccao de eigenfaces
-	- adicionar figura em escala de cinza
-
+	
+	
