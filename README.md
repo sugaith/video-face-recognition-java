@@ -16,7 +16,8 @@ Para o desenvolvimento:
 Items pendentes:
 
 * Revisao Bibliografica	
-	- mencionar a transformacao de eigenvetores para imagens eigenfaces
+	- eigenvector para eigenfaces incompleto.. completar!
 	- perguntar para a orientadora se eu traduzo os nome tecnicos para PT ou uso EN mesmo
+
 	
 	

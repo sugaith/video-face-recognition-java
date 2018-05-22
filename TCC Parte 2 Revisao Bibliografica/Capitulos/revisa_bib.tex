@@ -137,15 +137,15 @@ Converter a imagem em escala de é necessário para tornar eficientes os subsequ
 
 O escalonamento de imagens é uma transformação geométrica 2D. Pontos no Plano xy podem ser escalonados (esticados) por fatores de escala Sx e Sy através de multiplicação \cite{lapix_escala}:
 
-$ x’ = x . Sx, y’ = y . Sy $.
+$ x’ = x . S_x $, $ y’ = y . S_y $.
 Onde o novo ponto é resultado da multiplicação do ponto pela escala.
 
-No exemplo da figura abaixo Sx=2 eS y=1 os valores de x foram escalonados em 2 (Sx) enquanto y foi escalonado em 1 (Sy). Observe o resultado a seguir.:
+No exemplo da figura abaixo $S_x=2$ e $S_y=1$ os valores de $x$ foram escalonados em 2 ($ S_x $) enquanto y foi escalonado em 1 ($ S_y $). Observe o resultado a seguir.:
 
 \begin{figure}[h]
 	\centering
 	\includegraphics[width=.6\textwidth]{escala}
-	\caption{Escalonamento com Sx=2 eS y=1.}
+	\caption{Escalonamento com $S_x=2$ e $S_y=1$.}
 	\fonte{\cite{lapix_escala}}
 	\label{fig:escala}
 \end{figure}
@@ -532,9 +532,39 @@ Com tamanha dimensão e, portanto, quantidade de eixos, como citado anteriorment
 A \autoref{fig:graphxy6} é similar à \autoref{fig:graphxy4} com exceção do ponto vermelho (novo dado). Pode-se observar nesta figura o problema potencial em se reduzir a dimensionalidade: a probabilidade de erros aumenta tornando difícil de decidir qual ponto de treinamento é que possui a menor distância euclidiana. Outro fator da equação da distância euclidiana é que se utiliza de um parâmetro para definir quando dois pontos estão perto. Se um valor alto é definido então diversos pontos podem estar dentro do alcance aceitável do novo dado \cite{drmathew_java_programming}.
 
 
+\subsection{EigenVectors para EigenFaces}\label{subsec:vectoface}
+
+O transformação dos valores numéricos gerados na ACP para imagens EigenFaces nao são necessário para os algoritimos apresentados. Essa transformação serve apenas para satisfazer olhos humanos, ou seja, uma tentativa de observar em imagens os valores gerados pela teoria.
+
+
+Essencialmente, deve-se converter a imagem para um conjunto de dados, como os vetores $ x $ e $ y $ apresentados na \autoref{tabelaxy}, e performar o algoritimo ACP como descrito anteriormente. A translação de uma imagem para um conjunto de dados é feita tratando esta como um vetor de duas dimensões, e em seguida mapear para um vetor unidimensional como sugere a \autoref{fig:2dto1d}:
+
+\begin{figure}[h]
+	\centering
+	\includegraphics[width=.5\textwidth]{2dto1d}
+	\caption{Conversão de imagem para conjunto de dados. A variável p seria o pixel.}
+	\fonte{\cite{drmathew_java_programming}}
+	\label{fig:2dto1d}
+\end{figure}
+
+Supondo que a imagem tem o tamanho de 200x200 pixels em escala de cinza, o conjunto de dados resultante residirá em um \textit{eigenspace} de 40 mil dimensões, o que acarretará na geração de 40 mil eigenvetors, cuja a maioria possui um eigenvalue perto do insignificante, podendo assim ser descartados. Isto facilitará o processamento da imagem e a utilização da técnica. 
+
+Em geral, supondo que uma imagem quadrada em escala de cinza tem o tamanho de  $ N $ pixels, então $N^2$ eigenvetors serão criados. No seguinte exemplo, será assumido que existem $ M $ imagens:
+
+A técnica consiste em "dividir" a matriz de covariância que é ($ N^2 x N^2 $) em duas matrizes de ($ N^2 x M $) e ($ M x N^2 $). 
+
+
+
 %============================================================================================================
 
 \section{CONSIDERAÇÕES FINAIS}\label{sec:revbib_consid_finais}
+
+Neste capítulo foram apresentados os conceitos necessários para o entendimento de todo o processo de Reconhecimento de Faces, constituído de outros sub processos como aquisição de imagem e vídeo, processamento e  classificação de imagens, detecção da face, treinamento e por fim o reconhecimento efetivo da face.
+
+Os algoritimos de detecção de face Viola-Jones, e o de reconhecimento de faces EigenFaces que utiliza o método matemático ACP (Análise de Componentes Principais), foram detalhados na ordem sequencial de seus processos, adotando uma abordagem didática e utilizando exemplos.
+
+No próximo capítulo serão abordados os materiais e métodos recolhidos a partir do conhecimento adquirido no \autoref{ch:rev-bibs} como estudoe definição da implementação.
+
 
 
 
