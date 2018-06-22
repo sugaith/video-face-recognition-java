@@ -1,0 +1,44 @@
+This is BibTeX, Version 0.99dThe top-level auxiliary file: modelo.aux
+The style file: abntex2-alf.bst
+Database file #1: abntex2-options.bib
+Database file #2: Configuracoes/citacoes.bib
+I was expecting a `,' or a `}'---line 16 of file Configuracoes/citacoes.bib
+ :  
+ :  url={http://aberto.univem.edu.br/bitstream/handle/11077/284/Estudo+da+t%E9cnica+PCA+(An%E1lise+de+Componentes+Principais)+e+Auto-faces+aplicadas+ao+reconhecimento+de+faces+humanas.pdf;jsessionid=2D900F25381260DCCB85EC832736A216?sequence=1}
+(Error may have been on previous line)
+I'm skipping whatever remains of this entry
+I was expecting a `,' or a `}'---line 25 of file Configuracoes/citacoes.bib
+ :  
+ :  url={https://www.maxwell.vrac.puc-rio.br/13069/13069_1.PDF}
+(Error may have been on previous line)
+I'm skipping whatever remains of this entry
+I was expecting a `,' or a `}'---line 159 of file Configuracoes/citacoes.bib
+ :  
+ :  url={http://disp.ee.ntu.edu.tw/~pujols/Face%20Recognition-survey.pdf}
+(Error may have been on previous line)
+I'm skipping whatever remains of this entry
+Too many commas in name 1 of "Shuo Yang, Ping Luo, Chenm Change Loy, Xiaoou Tnang" for entry stats_hong_kong
+while executing---line 2091 of file abntex2-alf.bst
+Too many commas in name 1 of "Shuo Yang, Ping Luo, Chenm Change Loy, Xiaoou Tnang" for entry stats_hong_kong
+while executing---line 2091 of file abntex2-alf.bst
+Too many commas in name 1 of "Shuo Yang, Ping Luo, Chenm Change Loy, Xiaoou Tnang" for entry stats_hong_kong
+while executing---line 2091 of file abntex2-alf.bst
+Too many commas in name 1 of "Shuo Yang, Ping Luo, Chenm Change Loy, Xiaoou Tnang" for entry stats_hong_kong
+while executing---line 2091 of file abntex2-alf.bst
+Too many commas in name 1 of "Shuo Yang, Ping Luo, Chenm Change Loy, Xiaoou Tnang" for entry stats_hong_kong
+while executing---line 2091 of file abntex2-alf.bst
+Warning--campo title vazio em drmathew_java_programming
+Warning--campo title vazio em gonzalez_woods
+Warning--campo title vazio em stephen_greyscale
+Too many commas in name 1 of "Shuo Yang, Ping Luo, Chenm Change Loy, Xiaoou Tnang" for entry stats_hong_kong
+while executing---line 2146 of file abntex2-alf.bst
+Too many commas in name 1 of "Shuo Yang, Ping Luo, Chenm Change Loy, Xiaoou Tnang" for entry stats_hong_kong
+while executing---line 2146 of file abntex2-alf.bst
+Too many commas in name 1 of "Shuo Yang, Ping Luo, Chenm Change Loy, Xiaoou Tnang" for entry stats_hong_kong
+while executing---line 2146 of file abntex2-alf.bst
++---------------------------------------------------------+
+| Estilo bibliográfico abntex2-alf.bst versão v-1.9.6           |
+| Em caso de dúvidas ou problemas com este estilo procure |
+| http://www.abntex.net.br/                               |
++---------------------------------------------------------+
+(There were 11 error messages)
