@@ -32,7 +32,7 @@
 \contentsline {subsubsection}{\numberline {2.3.2.1}Utilizando Eigenfaces como Componente Principal}{29}{subsubsection.2.3.2.1}
 \contentsline {subsubsection}{\numberline {2.3.2.2}O Reconhecimento}{31}{subsubsection.2.3.2.2}
 \contentsline {subsection}{\numberline {2.3.3}EigenVectors para EigenFaces}{34}{subsection.2.3.3}
-\contentsline {section}{\numberline {2.4}CONSIDERA\IeC {\c C}\IeC {\~O}ES FINAIS}{34}{section.2.4}
+\contentsline {section}{\numberline {2.4}Considera\IeC {\c c}\IeC {\~o}es Finais}{34}{section.2.4}
 \setlength {\cftchapterindent }{0em} \setlength {\cftchapternumwidth }{\cftlastnumwidth }
 \contentsline {chapter}{\chapternumberline {3}\MakeTextUppercase {MATERIAIS E M\IeC {\'E}TODOS}}{36}{chapter.3}
 \contentsline {section}{\numberline {3.1}MATERIAIS}{36}{section.3.1}
@@ -42,13 +42,18 @@
 \contentsline {subsubsection}{\numberline {3.1.2.2}Biblioteca OpenCV, JavaCV e JavaCPP}{37}{subsubsection.3.1.2.2}
 \contentsline {subsubsection}{\numberline {3.1.2.3}Biblioteca Colt}{40}{subsubsection.3.1.2.3}
 \contentsline {subsubsection}{\numberline {3.1.2.4}Sistema GIT}{40}{subsubsection.3.1.2.4}
-\contentsline {subsubsection}{\numberline {3.1.2.5}NetBeans IDE}{40}{subsubsection.3.1.2.5}
+\contentsline {subsubsection}{\numberline {3.1.2.5}NetBeans IDE}{41}{subsubsection.3.1.2.5}
 \contentsline {subsubsection}{\numberline {3.1.2.6}Sistemas Linux e Windows}{41}{subsubsection.3.1.2.6}
-\contentsline {section}{\numberline {3.2}M\IeC {\'E}TODOS}{41}{section.3.2}
-\contentsline {subsection}{\numberline {3.2.1}Desenvolvimento \IeC {\'A}gil}{41}{subsection.3.2.1}
-\contentsline {subsubsection}{\numberline {3.2.1.1}XP (\textit {eXtremeProgramming})}{42}{subsubsection.3.2.1.1}
-\contentsline {subsection}{\numberline {3.2.2}Modelagem UML}{42}{subsection.3.2.2}
-\contentsline {section}{\numberline {3.3}Considera\IeC {\c c}\IeC {\~o}es Finais}{42}{section.3.3}
+\contentsline {section}{\numberline {3.2}M\IeC {\'e}todos}{41}{section.3.2}
+\contentsline {subsection}{\numberline {3.2.1}M\IeC {\'e}todo Experimental}{41}{subsection.3.2.1}
+\contentsline {subsection}{\numberline {3.2.2}Desenvolvimento \IeC {\'A}gil}{41}{subsection.3.2.2}
+\contentsline {subsubsection}{\numberline {3.2.2.1}XP (\textit {eXtremeProgramming})}{42}{subsubsection.3.2.2.1}
+\contentsline {subsection}{\numberline {3.2.3}Modelagem UML}{42}{subsection.3.2.3}
+\contentsline {section}{\numberline {3.3}Considera\IeC {\c c}\IeC {\~o}es Finais}{43}{section.3.3}
+\setlength {\cftchapterindent }{0em} \setlength {\cftchapternumwidth }{\cftlastnumwidth }
+\contentsline {chapter}{\chapternumberline {4}\MakeTextUppercase {IMPLEMENTA\IeC {\c C}\IeC {\~A}O}}{44}{chapter.4}
+\contentsline {section}{\numberline {4.1}An\IeC {\'a}lise de Requisitos}{44}{section.4.1}
+\contentsline {section}{\numberline {4.2}Fluxograma}{45}{section.4.2}
 \vspace {\cftbeforechapterskip }
 \setlength {\cftchapterindent }{\cftlastnumwidth } \setlength {\cftchapternumwidth }{2em}
-\contentsline {chapter}{\uppercase {REFER{\^ E}NCIAS}}{44}{section*.4}
+\contentsline {chapter}{\uppercase {REFER{\^ E}NCIAS}}{46}{section*.4}

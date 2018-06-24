@@ -67,7 +67,7 @@ Seu código foi escrito em nas linguagens C e C++, porém possui interface para 
 
 A biblioteca \textbf{JavaCPP}, atualmente mantida pelo grupo ByteDeco, é considerada uma \textit{bridge} ("ponte") entre a linguagem C++ e Java, disponibilizando classes de configurações e interfaces para várias bibliotecas escritas em C++, inclusive a OpenCV \cite{javacpp}.
 
-Por sua vez, a biblioteca \textbf{JavaCV},inicialmente desenvolvida pela Google e agora mantida pelo grupo 1ByteDeco, utiliza as interfaces e \textit{wrapers} da biblioteca JavaCPP e provê classes úteis que podem ser usadas para manipular a  OpenCV de maneira mais fácil para plataforma Java \cite{javacv}. Também oferece drivers de aceleração gráfica que otimizam o funcionamento da OpenCV na plataforma Java, dentre outras utilizades.
+Por sua vez, a biblioteca \textbf{JavaCV},inicialmente desenvolvida pela Google e agora mantida pelo grupo ByteDeco, utiliza as interfaces e \textit{wrapers} da biblioteca JavaCPP e provê classes úteis que podem ser usadas para manipular a  OpenCV de maneira mais fácil para plataforma Java \cite{javacv}. Também oferece drivers de aceleração gráfica que otimizam o funcionamento da OpenCV na plataforma Java, dentre outras utilizades.
 
 Estas três bibliotecas funcionam de maneira conjunta para resolver a problemática de aquisição, processamento de imagens, e classificação de objetos, e será utilizada neste trabalho.
 
@@ -78,7 +78,7 @@ A lista a seguir disponibiliza e detalha os principais pacotes, classes e métod
 	\begin{itemize}
 		\item \textit{\textbf{javacpp.opencv\_core.CvMemStorage}}: classe que representa um bloco de memória para armazenamento de vários componentes da OpenCV. Trata problemas alocação e desalocação de memória;
 		
-		\item \textbf{\textit{javacpp.opencv\_core.CvRect}}: classe utilizada para representar um segmento de uma imagem com pontos x e y, altura e largura do segmento;
+		\item \textbf{\textit{javacpp.opencv\_core.CvRect}}: esta classe é utilizada para representar um segmento de uma imagem com pontos x e y, altura e largura do segmento;
 		
 		\item \textbf{\textit{javacpp.opencv\_core.CvSeq}}: classe que representa uma lista (ou sequência) de classes do tipo \textit{CvRect};
 		
@@ -88,9 +88,9 @@ A lista a seguir disponibiliza e detalha os principais pacotes, classes e métod
 
 		\item \textbf{\textit{javacv.FrameGrabber}}: esta classe tem a função de monitorar o fluxo de \textit{frames} de uma \textit{webcam} conectada a partir da classe \textit{VideoInputFrameGrabber} e disponibilizar uma imagem advinda deste fluxo quando requisitado;		
 			
-		\item \textbf{\textit{javacv.Java2DFrameConverter}}: tem a função de converter as classes de representações de imagens \textit{javacpp.opencv\_core.IplImage} e \textit{java.awt.image};
+		\item \textbf{\textit{javacv.Java2DFrameConverter}}: tem a função de converter as classes de representações de imagens \textit{IplImage} e \textit{java.awt.image};
 		
-		\item \textbf{\textit{javacv.OpenCVFrameConverter}}: tem a função de converter as classes de representações de imagens \textit{javacpp.opencv\_core.IplImage} e \textit{javacv.Frame}, disponibilizada pela classe \textit{FrameGrabber} acima listada;
+		\item \textbf{\textit{javacv.OpenCVFrameConverter}}: tem a função de converter as classes de representações de imagens \textit{IplImage} e \textit{javacv.Frame}, disponibilizada pela classe \textit{FrameGrabber} acima listada;
 		
 		\item \textbf{\textit{javacpp.opencv\_objdetect.CvHaarClassifierCascade}}: classe que contém as configurações e o algoritmo de classificação Haar-Cascades, utilizado para a detecção de objetos (ou faces);
 	\end{itemize}
@@ -109,7 +109,7 @@ A lista a seguir disponibiliza e detalha os principais pacotes, classes e métod
 		
 		\item \textbf{\textit{javacpp.opencv\_imgproc.cvCvtColor}}: função que tem a habilidade de mudar a disposição e profundidade de cores de uma imagem da classe \textit{IplImage}, por exemplo, convertendo-as em escala de cinza como contempla a \autoref{subsubsec:filtros};
 		
-		\item \textbf{\textit{javacpp.opencv\_imgproc.cvEqualizeHist}}: função com a habilidade de performar equalização de histograma, contamplada na \autoref{subsubsec:equalizacao};
+		\item \textbf{\textit{javacpp.opencv\_imgproc.cvEqualizeHist}}: função com a habilidade de performar equalização de histograma, contemplada na \autoref{subsubsec:equalizacao};
 		
 		\item \textbf{\textit{javacpp.opencv\_imgproc.cvResize}}: função com a habilidade de escalonamento, contemplada na \autoref{subsubsec:escalonamento}
 
@@ -122,13 +122,13 @@ A lista a seguir disponibiliza e detalha os principais pacotes, classes e métod
 Estas três bibliotecas também possuem um conjunto de parâmetros e constantes pré estabelecidas para facilitar o estabelecimento do ambiente desenvolvimento que irão ser utilizadas.
 
 \subsubsection{Biblioteca Colt}\label{subsec:bib_colt}
-A biblioteca Colt foi desenvovida pela CERN (sigla francesa que corresponde à \textit{Conseil européen pour la recherche nucléaire}, em portugês Conselho Europeu de Pesquisas Nucleares) e provê uma gama de bibliotecas para Computação Científica e Técnica de Alta Performance em Java \cite{colt}. Será utilizada na implementação do algoritmo \textit{EigenFaces} para performar as operações necessárias na \autoref{subsec:acp} e \autoref{subsec:acp-eigen}. Lista-se a seguir as classes que serão utilizadas desta biblioteca \cite{colt}:
+A biblioteca Colt foi desenvovida pela CERN (sigla francesa que corresponde à \textit{Conseil européen pour la recherche nucléaire}, em portugês Conselho Europeu de Pesquisas Nucleares) e provê uma gama de bibliotecas para Computação Científica e Técnica de Alta Performance em Java \cite{colt}. Será utilizada na implementação do algoritmo \textit{EigenFaces} para performar as operações necessárias descritas na \autoref{subsec:acp} e \autoref{subsec:acp-eigen}. Lista-se a seguir as classes que serão utilizadas desta biblioteca \cite{colt}:
 
 
 \begin{itemize}
 	\item \textbf{\textit{cern.colt.matrix.DoubleMatrix2D}}: uma classe abstrata para representrar matrizes de duas dimensões, contendo elementos do tipo primitivo \textit{double};
 	
-	\item \textbf{\textit{cern.colt.matrix.impl.DenseDoubleMatrix2D}}: uma classe que herda e implementa os métodos abstratos da classe \textit{DoubleMatrix2D} acima descrita. Possui métodos para clonar a matriz, reaver algum elemento, buscar algum elemento, transformar em vetor de \textit{double}, dentre outras utilidades;
+	\item \textbf{\textit{cern.colt.matrix.impl.DenseDoubleMatrix2D}}: uma classe que herda e implementa os métodos abstratos da classe \textit{DoubleMatrix2D} acima descrita. Possui métodos para clonar a matriz, reaver algum elemento, buscar algum elemento, conversão em vetores de \textit{double} po exemplo, dentre outras utilidades;
 			
 	\item \textbf{\textit{cern.jet.math.Functions}}:  contém classes métodos que definem funções matemáticas a serem aplicadas em matrizes como respresentam a classe \textit{DenseDoubleMatrix2D} acima citada, como soma, multiplicação, subtração de matrizes, etc;
 	
@@ -145,14 +145,19 @@ O NetBeans é um IDE (\textit{Integrated Development Environment}, ou em portugu
 Este editor de código tráz facilidades como auto-complemento de código, desenho visual de interface, atalhos de teclados para maior produtividade na escrita, \textit{debugger}, dentre outras vantagens, e foi escolhido para a implementação neste trabalho.
 
 \subsubsection{Sistemas Linux e Windows}\label{subsec:linux}
-O ambiente de desenvolvimento deste trabalho será configurado sob o sistema operacional Linux, que estará executando na máquina de alto rendimento performance descrita na \autoref{sub-hardw}, item '2'. Já o sistema operacional Windows se executará na maquina de baixo à medio rendimento descrito também na \autoref{sub-hardw}, item '3', para testes. O sistema Linux é livre, e os sitema operacional Windows possui licensa para a máquina (\textit{notebook}) na qual está sendo executada.
+O ambiente de desenvolvimento deste trabalho será configurado sob o sistema operacional Linux, que estará executando na máquina de alto rendimento descrita na \autoref{sub-hardw}, item "2". Já o sistema operacional Windows se executará na maquina de baixo à medio rendimento descrito também na \autoref{sub-hardw}, item "3", para testes. O sistema Linux é livre, e o sitema operacional Windows possui licensa para a máquina (\textit{notebook}) na qual estará sendo executada.
 
 
-\section{MÉTODOS}\label{sec:metodos}
-Tecnologias e ferramentas para a implementação de \textit{scripts} e utilização dos algoritmos.
+\section{Métodos}\label{sec:metodos}
+O método define-se com um processo organizado, lógico e sistemático de pesquisa, instrução, desenvolvimento, etc \cite{dicio-metodo}. Existem vários métodos de pesquisa como o observacional, comparativo, histórico, experimental, dentre outros. Neste trabalho terá uma abordagem experimental, descrita na seção a seguir \cite{fachin-metodos}.
 
-\subsection{Desenvolvimento Ágil}
-O Desenvolvimento Ágil foi padronizado pelo \textbf{Manifesto Ágil} como um metodo independente que reúne características de outras metodologias antigas despadronizadas. Este manifesto foi criado para valorizar os seguintes pontos \cite{dev-agil}:
+
+\subsection{Método Experimental}
+
+No método experimental, variáveis são tratadas de maneira pré estabelecida e seus efeitos suficientemente controlados  e conhecidos pelos pesquisador. O princípio central da aplicação do método experimental é que deve-se aceitar os resultados como eles são apresentados, com tudo de imprevisto e acidental que possa haver diante dos resulatos obtidos, ignorando as próprias opiniões e também as alheias \cite{fachin-metodos}.
+
+\subsection{Desenvolvimento Ágil}\label{subsec:devagil}
+O Desenvolvimento Ágil foi padronizado pelo \textbf{Manifesto Ágil} como um método independente que reúne características de outras metodologias antigas as quais eram despadronizadas. Este manifesto foi criado para valorizar os seguintes pontos \cite{dev-agil}:
 
 \begin{itemize}
 	\item Indivíduos e suas interações são mais importantes que processos e ferramentas
@@ -161,7 +166,7 @@ O Desenvolvimento Ágil foi padronizado pelo \textbf{Manifesto Ágil} como um me
 	\item Responder à mudanças é melhor do que seguir planos
 \end{itemize}
 
-No desenvolvimento ágil, os projetos adotam o modelo iterativo e em espiral (figura 1.5). Neste processo, todas as fases descritas no modelo em cascata são executadas diversas vezes ao longo do projeto, produzindo ciclos curtos que se repetem ao longo de todo o desenvolvimento, sendo que, ao final de cada ciclo, sempre se tem um software funcional, testado e aprovado. Os ciclos são chamados de iterações e crescem em número de funcionalidades a cada repetição, sendo que, no último ciclo, todas as funcionalidades desejadas estarão implementadas, testadas e aprovadas \cite{dev-agil2}.
+No desenvolvimento ágil, os projetos adotam o modelo iterativo e em espiral (figura 1.5). Neste processo, as fases do projeto são executadas diversas vezes, produzindo ciclos curtos que se repetem ao longo de todo o desenvolvimento, sendo que, ao final de cada ciclo, sempre se tem um software funcional. Os ciclos são chamados de iterações e crescem em número de funcionalidades a cada repetição, sendo que, no último ciclo, todas as funcionalidades desejadas estariam implementadas, testadas e aprovadas \cite{dev-agil2}.
 
 A \textbf{XP} (\textit{eXtremeProgramming}), explicada na seção seguinte, será utilizada neste projeto por ser incremental, focar-se no desenvolvimento ao invés da documentação e gerar, a cada iteração, um protótipo, essencial para testes, refinamento até que se chegue à um resultado satisfatório.
 
@@ -169,7 +174,7 @@ A \textbf{XP} (\textit{eXtremeProgramming}), explicada na seção seguinte, ser�
 
 Apesar de ser uma metodologia dos anos 90, faz parte dos métodos ágeis, já que se encaixa no que define o que é um método ágil, conforme o Manifesto Ágil. Ela é baseada em três pilares: \textbf{agilidade no desenvolvimento, economia de recursos e qualidade do produto final} \cite{dev-agil2}.
 
-\subsection{Modelagem UML}
+\subsection{Modelagem UML}\label{subsec:uml}
 
 A modelagem UML (\textit{Unified Modeling Language}, em português Linguagem de Modelagem Unificada), por vezes chamada de linguagem UML, procura fornecer meios para auxiliar no levantamento dos requisitos que irão constituir um sistema, além de recursos para a modelagem de estruturas que farão parte do mesmo. O fato da UML ser um padrão de grande aceitação no mercado também se deve, em grande parte, à forte integração desta com conceitos da Orientação a Objetos (OO) \cite{uml}. Como este trabalho propões a implementação na liguagem Java que é orientada a objetos, este padrão de modelagem será utilizado na elaboração de documentos modelando os componentes esperados para o funcionamento do sistema.
 
@@ -184,7 +189,7 @@ Dois dos diagramas que fazem parte da linguagem UML serão utilizados \cite{uml}
 Estes dois diagramas serão utilizados para ilustrar as classes Java que serão implementadas, as interações de seus objetos e os processos do sistema que consiste na aquisição do vídeo, deteção e reconhecimento da face, ou seja, toda a entrada, processamento e saida de dados do sistema detalhando seus componentes e interações.
 
 \section{Considerações Finais}\label{sec:consfin}
-Neste capítulo foram abordados os materiais e métodos necessários para o desenvolvimento do sistema de reconhecimento de faces em vídeo, utilizando o algorítimo \textit{EigenFaces}. Pode-se destacar a modelagem que trará esclarecimento quanto à estrutura do sistema e ao processo que deve ser percorrido, o desenvolimento ágil considerado essencial para se ter resultados rápidos para que sejam analizados e iterados num ciclo de desenvolvimento espiral com melhoras a cada iteração. Outro destaque são as bibliotecas OpenCV, JavaCV e Colt, que juntamente com suas documentações facilitarão o processo de implementação do algorítimo \textit{eigenfaces} e o desenvolvimento do sistema como um todo e por fim, o sistema GIT que grava cada etapa do processo de escrita da monografia e do cógido.
+Neste capítulo foram abordados os materiais e métodos necessários para o desenvolvimento do sistema de reconhecimento de faces em vídeo, utilizando o algorítimo \textit{EigenFaces}. Pode-se destacar a modelagem que trará esclarecimento quanto à estrutura do sistema e ao processo que deve ser percorrido, o desenvolimento ágil considerado essencial para se ter resultados rápidos para que sejam analizados e iterados num ciclo de desenvolvimento espiral com melhoras a cada iteração. Outro destaque são as bibliotecas OpenCV, JavaCV e Colt, que juntamente com suas documentações facilitarão o processo de implementação do algorítimo \textit{eigenfaces} e o desenvolvimento do sistema como um todo e por fim, o sistema GIT que grava e assegura cada etapa do processo de escrita da monografia e do cógido.
 
 
 

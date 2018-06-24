@@ -9,7 +9,10 @@
 \abntrefinfo{ARAUJO}{ARAUJO}{2016}
 {ARAUJO, A.~D. Manifesto Ágil e as top 3 metodologias Ágeis de
   desenvolvimento!
-BeCode, 2016.}
+BeCode, 2016.
+Dispon{\'\i}vel em:
+  \url{https://becode.com.br/manifesto-agil-e-top-metodologias-ageis/}. Acesso
+  em: 06.2018.}
 
 \bibitem[Balan 2009]{img-digital-willians}
 \abntrefinfo{Balan}{BALAN}{2009}
@@ -42,14 +45,19 @@ Dispon{\'\i}vel em: \url{https://github.com/bytedeco/javacv}. Acesso em:
 \bibitem[Castro 2018]{dev-agil2}
 \abntrefinfo{Castro}{CASTRO}{2018}
 {CASTRO, V.~A. Introdução ao desenvolvimento Ágil.
-DevMedia, 2018.}
+DevMedia, 2018.
+Dispon{\'\i}vel em:
+  \url{https://www.devmedia.com.br/introducao-ao-desenvolvimento-agil/5916}.
+  Acesso em: 06.2018.}
 
 \bibitem[Chao 2011]{wei_lun}
 \abntrefinfo{Chao}{CHAO}{2011}
 {CHAO, W.-L.
 \textbf{Face Recognition}.
 Disserta\c{c}\~{a}o (Mestrado) --- National Taiwan University, GICE, Taiwan,
-  Maio 2011.}
+  Maio 2011.
+Dispon{\'\i}vel em:
+  \url{http://disp.ee.ntu.edu.tw/~pujols/Face\%20Recognition-survey.pdf}.}
 
 \bibitem[Colt 2018]{colt}
 \abntrefinfo{Colt}{COLT}{2018}
@@ -57,6 +65,12 @@ Disserta\c{c}\~{a}o (Mestrado) --- National Taiwan University, GICE, Taiwan,
 2018.
 Dispon{\'\i}vel em: \url{http://dst.lbl.gov/ACSSoftware/colt/}. Acesso em:
   05.2018.}
+
+\bibitem[César 2011]{fluxogramalivro}
+\abntrefinfo{César}{CéSAR}{2011}
+{CéSAR, F. I.~G.
+In:  \underline{\ \ \ \ \ \ \ \ }. \textbf{Ferramentas Básicas de Qualidade,
+  1a Ed. 2011}. [S.l.]: Biblioteca 24hrs, 2011.}
 
 \bibitem[Davison 2013]{drmathew_java_programming}
 \abntrefinfo{Davison}{DAVISON}{2013}
@@ -80,6 +94,12 @@ Dispon{\'\i}vel em:
   \url{http://www.dpi.inpe.br/spring/teoria/realce/realce.htm}. Acesso em:
   05.2018.}
 
+\bibitem[FACHIN 2017]{fachin-metodos}
+\abntrefinfo{FACHIN}{FACHIN}{2017}
+{FACHIN, O.
+In:  \underline{\ \ \ \ \ \ \ \ }. \textbf{Fundamentos De Metodologia - 6a Ed.
+  2017}. [S.l.]: Saraiva, 2017.}
+
 \bibitem[Farias 2017]{img_compact}
 \abntrefinfo{Farias}{FARIAS}{2017}
 {FARIAS, F. Como compactar imagens sem perder qualidade e aumentar a velocidade
@@ -100,7 +120,8 @@ Dispon{\'\i}vel em:
 \bibitem[Git 2018]{git}
 \abntrefinfo{Git}{GIT}{2018}
 {GIT.
-2018.}
+2018.
+Dispon{\'\i}vel em: \url{https://git-scm.com/}. Acesso em: 05.2018.}
 
 \bibitem[Gonzalez 2010]{gonzalez_woods}
 \abntrefinfo{Gonzalez}{GONZALEZ}{2010}
@@ -111,7 +132,10 @@ In:  \underline{\ \ \ \ \ \ \ \ }. \textbf{Processamento Digital de Imagens
 \bibitem[Groffe 2013]{uml}
 \abntrefinfo{Groffe}{GROFFE}{2013}
 {GROFFE, R.~J. Artigo modelagem de sistemas através de uml: uma visão geral.
-Devmedia, 2013.}
+Devmedia, 2013.
+Dispon{\'\i}vel em:
+  \url{https://www.devmedia.com.br/modelagem-de-sistemas-atraves-de-uml-uma-visao-geral/27913}.
+  Acesso em: 06.2018.}
 
 \bibitem[Introna 2010]{nyu_ccpr_frt}
 \abntrefinfo{Introna}{INTRONA}{2010}
@@ -160,7 +184,16 @@ Dispon{\'\i}vel em:
 \textbf{Reconhecedor de Objetos em Vídeos Digitais para Aplicações
   Interativas}.
 Disserta\c{c}\~{a}o (Mestrado) --- Pontifícia Universidade Católica do Rio de
-  Janeiro - PUCRJ, Rio de Janeiro, 2008.}
+  Janeiro - PUCRJ, Rio de Janeiro, 2008.
+Dispon{\'\i}vel em:
+  \url{https://www.maxwell.vrac.puc-rio.br/13069/13069\_1.PDF}.}
+
+\bibitem[Método 2018]{dicio-metodo}
+\abntrefinfo{Método}{MéTODO}{2018}
+{MéTODO.
+Dicio, 2018.
+Dispon{\'\i}vel em: \url{https://www.dicio.com.br/metodo/}. Acesso em:
+  06.2018.}
 
 \bibitem[OpenCV - Open Source Computer Vision 2018]{opencv}
 \abntrefinfo{OpenCV\ldots}{OPENCV\ldots}{2018}
@@ -206,7 +239,9 @@ Dispon{\'\i}vel em:
 \textbf{Estudo das Técnicas PCA (Análise de Componentes Principais) e
   Auto-faces Aplicadas ao Reconhecimento de Faces Humanas}.
 Disserta\c{c}\~{a}o (Mestrado) --- Centro Universitário Eurípides Soares -
-  UNIVEM, Marília, 2009.}
+  UNIVEM, Marília, 2009.
+Dispon{\'\i}vel em:
+  \url{http://aberto.univem.edu.br/bitstream/handle/11077/284/Estudo+da+t\%E9cnica+PCA+(An\%E1lise+de+Componentes+Principais)+e+Auto-faces+aplicadas+ao+reconhecimento+de+faces+humanas.pdf;jsessionid=2D900F25381260DCCB85EC832736A216?sequence=1}.}
 
 \bibitem[Smith 2002]{tutorial_en_smith}
 \abntrefinfo{Smith}{SMITH}{2002}
@@ -259,7 +294,7 @@ Dispon{\'\i}vel em:
 
 \bibitem[Yang Ping~Luo 2015]{stats_hong_kong}
 \abntrefinfo{Yang Ping~Luo}{YANG PING~LUO}{2015}
-{YANG PING~LUO, C. C. L. X.~T. S. Wider face: A face recognition benchmark.
+{YANG PING~LUO, C. C. L. e. X.~T. S. Wider face: A face recognition benchmark.
 2015.
 Dispon{\'\i}vel em: \url{https://arxiv.org/pdf/1511.06523.pdf}.}
 
