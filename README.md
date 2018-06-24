@@ -10,4 +10,7 @@
 
 * Revisao Bibliográfica:
 	* `Eigenvector` para `eigenfaces` incompleto. Completar!
-	* Perguntar para a orientadora se eu traduzo os nome tecnicos para `PT` ou uso `EN` mesmo.
+	* Consideracoes finais
+	* parte 1 do capitulo `Implementação`
+
+

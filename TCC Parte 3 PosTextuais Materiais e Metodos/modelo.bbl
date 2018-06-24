@@ -5,6 +5,12 @@
 \providecommand{\abntbstabout}[1]{}
 \abntbstabout{v-1.9.6 }
 
+\bibitem[ARAUJO 2016]{dev-agil}
+\abntrefinfo{ARAUJO}{ARAUJO}{2016}
+{ARAUJO, A.~D. Manifesto Ágil e as top 3 metodologias Ágeis de
+  desenvolvimento!
+BeCode, 2016.}
+
 \bibitem[Balan 2009]{img-digital-willians}
 \abntrefinfo{Balan}{BALAN}{2009}
 {BALAN, W.~C. A imagem digital.
@@ -19,12 +25,38 @@ Dispon{\'\i}vel em: \url{http://willians.pro.br/textos/}. Acesso em: 05.2018.}
 Dispon{\'\i}vel em:
   \url{https://pdfs.semanticscholar.org/2bbf/047993f08a608ce4ca22720d374d4cf76f98.pdf}.}
 
+\bibitem[ByteDeco 2018]{javacpp}
+\abntrefinfo{ByteDeco}{BYTEDECO}{2018a}
+{BYTEDECO. Javacpp - the missing bridge between java and native c++ libraries.
+2018.
+Dispon{\'\i}vel em: \url{https://github.com/bytedeco/javacpp-presets}. Acesso
+  em: 05.2018.}
+
+\bibitem[ByteDeco 2018]{javacv}
+\abntrefinfo{ByteDeco}{BYTEDECO}{2018b}
+{BYTEDECO. Javacv - java interface to opencv, ffmpeg, and more.
+2018.
+Dispon{\'\i}vel em: \url{https://github.com/bytedeco/javacv}. Acesso em:
+  05.2018.}
+
+\bibitem[Castro 2018]{dev-agil2}
+\abntrefinfo{Castro}{CASTRO}{2018}
+{CASTRO, V.~A. Introdução ao desenvolvimento Ágil.
+DevMedia, 2018.}
+
 \bibitem[Chao 2011]{wei_lun}
 \abntrefinfo{Chao}{CHAO}{2011}
 {CHAO, W.-L.
 \textbf{Face Recognition}.
 Disserta\c{c}\~{a}o (Mestrado) --- National Taiwan University, GICE, Taiwan,
   Maio 2011.}
+
+\bibitem[Colt 2018]{colt}
+\abntrefinfo{Colt}{COLT}{2018}
+{COLT.
+2018.
+Dispon{\'\i}vel em: \url{http://dst.lbl.gov/ACSSoftware/colt/}. Acesso em:
+  05.2018.}
 
 \bibitem[Davison 2013]{drmathew_java_programming}
 \abntrefinfo{Davison}{DAVISON}{2013}
@@ -57,11 +89,29 @@ Dispon{\'\i}vel em:
   \url{https://resultadosdigitais.com.br/blog/compactar-imagens-sem-perder-qualidade/}.
   Acesso em: 05.2018.}
 
+\bibitem[Gasparotto 2014]{dev_poo}
+\abntrefinfo{Gasparotto}{GASPAROTTO}{2014}
+{GASPAROTTO, H.~M. Os 4 pilares da programação orientada a objetos.
+Devmedia, 2014.
+Dispon{\'\i}vel em:
+  \url{https://www.devmedia.com.br/os-4-pilares-da-programacao-orientada-a-objetos/9264}.
+  Acesso em: 06.2018.}
+
+\bibitem[Git 2018]{git}
+\abntrefinfo{Git}{GIT}{2018}
+{GIT.
+2018.}
+
 \bibitem[Gonzalez 2010]{gonzalez_woods}
 \abntrefinfo{Gonzalez}{GONZALEZ}{2010}
 {GONZALEZ, R. C.~W. R.~C.
 In:  \underline{\ \ \ \ \ \ \ \ }. \textbf{Processamento Digital de Imagens
   3ªed}. São Paulo: Pearson Prentice Hall, 2010.}
+
+\bibitem[Groffe 2013]{uml}
+\abntrefinfo{Groffe}{GROFFE}{2013}
+{GROFFE, R.~J. Artigo modelagem de sistemas através de uml: uma visão geral.
+Devmedia, 2013.}
 
 \bibitem[Introna 2010]{nyu_ccpr_frt}
 \abntrefinfo{Introna}{INTRONA}{2010}
@@ -111,6 +161,20 @@ Dispon{\'\i}vel em:
   Interativas}.
 Disserta\c{c}\~{a}o (Mestrado) --- Pontifícia Universidade Católica do Rio de
   Janeiro - PUCRJ, Rio de Janeiro, 2008.}
+
+\bibitem[OpenCV - Open Source Computer Vision 2018]{opencv}
+\abntrefinfo{OpenCV\ldots}{OPENCV\ldots}{2018}
+{OPENCV - Open Source Computer Vision.
+2018.
+Dispon{\'\i}vel em: \url{https://opencv.org/about.html}. Acesso em: 05.2018.}
+
+\bibitem[Perry 2016]{ibm_java}
+\abntrefinfo{Perry}{PERRY}{2016}
+{PERRY, J.~S. Aprenda: Tecnologia java.
+IBM - Developer Works, 2016.
+Dispon{\'\i}vel em:
+  \url{https://www.ibm.com/developerworks/br/java/tutorials/j-introtojava1/index.html}.
+  Acesso em: 06.2018.}
 
 \bibitem[Portal 2017]{stats_economy_compass_2017}
 \abntrefinfo{Portal}{PORTAL}{2017}

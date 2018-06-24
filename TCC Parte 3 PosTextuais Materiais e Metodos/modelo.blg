@@ -2,21 +2,42 @@ This is BibTeX, Version 0.99dThe top-level auxiliary file: modelo.aux
 The style file: abntex2-alf.bst
 Database file #1: abntex2-options.bib
 Database file #2: Configuracoes/citacoes.bib
-I was expecting a `,' or a `}'---line 16 of file Configuracoes/citacoes.bib
+I was expecting a `,' or a `}'---line 17 of file Configuracoes/citacoes.bib
+ :  
+ :  url={https://www.devmedia.com.br/modelagem-de-sistemas-atraves-de-uml-uma-visao-geral/27913},
+(Error may have been on previous line)
+I'm skipping whatever remains of this entry
+I was expecting a `,' or a `}'---line 27 of file Configuracoes/citacoes.bib
+ :  
+ :  url={https://becode.com.br/manifesto-agil-e-top-metodologias-ageis/},
+(Error may have been on previous line)
+I'm skipping whatever remains of this entry
+I was expecting a `,' or a `}'---line 37 of file Configuracoes/citacoes.bib
+ :  
+ :  url={https://www.devmedia.com.br/introducao-ao-desenvolvimento-agil/5916},
+(Error may have been on previous line)
+I'm skipping whatever remains of this entry
+I was expecting a `,' or a `}'---line 45 of file Configuracoes/citacoes.bib
+ :  
+ :  url={https://git-scm.com/},
+(Error may have been on previous line)
+I'm skipping whatever remains of this entry
+I was expecting a `,' or a `}'---line 110 of file Configuracoes/citacoes.bib
  :  
  :  url={http://aberto.univem.edu.br/bitstream/handle/11077/284/Estudo+da+t%E9cnica+PCA+(An%E1lise+de+Componentes+Principais)+e+Auto-faces+aplicadas+ao+reconhecimento+de+faces+humanas.pdf;jsessionid=2D900F25381260DCCB85EC832736A216?sequence=1}
 (Error may have been on previous line)
 I'm skipping whatever remains of this entry
-I was expecting a `,' or a `}'---line 25 of file Configuracoes/citacoes.bib
+I was expecting a `,' or a `}'---line 119 of file Configuracoes/citacoes.bib
  :  
  :  url={https://www.maxwell.vrac.puc-rio.br/13069/13069_1.PDF}
 (Error may have been on previous line)
 I'm skipping whatever remains of this entry
-I was expecting a `,' or a `}'---line 159 of file Configuracoes/citacoes.bib
+I was expecting a `,' or a `}'---line 253 of file Configuracoes/citacoes.bib
  :  
  :  url={http://disp.ee.ntu.edu.tw/~pujols/Face%20Recognition-survey.pdf}
 (Error may have been on previous line)
 I'm skipping whatever remains of this entry
+Warning--I didn't find a database entry for "python-analysis"
 Too many commas in name 1 of "Shuo Yang, Ping Luo, Chenm Change Loy, Xiaoou Tnang" for entry stats_hong_kong
 while executing---line 2091 of file abntex2-alf.bst
 Too many commas in name 1 of "Shuo Yang, Ping Luo, Chenm Change Loy, Xiaoou Tnang" for entry stats_hong_kong
@@ -41,4 +62,4 @@ while executing---line 2146 of file abntex2-alf.bst
 | Em caso de dúvidas ou problemas com este estilo procure |
 | http://www.abntex.net.br/                               |
 +---------------------------------------------------------+
-(There were 11 error messages)
+(There were 15 error messages)

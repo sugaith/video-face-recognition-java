@@ -73,7 +73,7 @@ A forma que isso pode ser feito depende totalmente do algoritmo de reconheciment
 	\item reconhecimentos tradicionais ou clássicos, dentre outros;
 \end{itemize}
 
-Este trabalho se focará em dois dos algoritmos clássicos, famosos por serem pioneiros e objetos de muito estudo, testes e documentação: \textit{EigenFaces} e \textit{FisherFaces}. Os algoritmos convencionais podem ser divididos em duas categorias: caracterização holística ou linear, sendo que \textit{EngenFaces} e \textit{FisherFaces} fazem parte da primeira, que fazem parte de outra subdivisão de métodos de projeção linear chamada Análise de Componentes Principais - ACP (ou no inglês, \textit{Principal Component Analysis} – PCA) \cite{issues_methods_FR}.
+Este trabalho se focará em um algoritmo clássicos, famoso por ser pioneir e objeto de muito estudo, teste e documentação: \textit{EigenFaces}. Os algoritmos convencionais podem ser divididos em duas categorias: caracterização holística ou linear, sendo que \textit{EngenFaces} faze parte da primeira, que por sua vez faz parte de outra subdivisão de métodos de projeção linear chamada Análise de Componentes Principais - ACP (ou no inglês, \textit{Principal Component Analysis} – PCA) \cite{issues_methods_FR}.
 
 Basicamente, o método ACP consiste em tratar a imagem de uma forma uniforme, coletar características da mesma transformando-as em valores numéricos e disponibilizá-las em um plano cartesiano, que pode ter mais de três dimensões. Este processo visa destacar discrepâncias da face, ou seja, padrões de mudança de constaste, de relevo ou sombreamentos, ou diferença de cores. A transformação destes valores manipulados de volta em imagens, cria os chamados \textit{EngenFaces} (Faces de fantasmas, em Alemão), pois como mostra a \autoref{someeigen}, é devido a sua estranha aparência \cite{drmathew_java_programming}.
 
@@ -104,9 +104,9 @@ Para o reconhecimento da face propriamente dito, o mesmo processo do treinamento
 Este plano cartesiano, na prática, pode ser um arquivo binário ou texto, comumente chamado de "\textit{bundle}".
 
 \section{OBJETIVOS}\label{sec:objetivos}
-Este projeto propõe a implementação de um Sistema de Reconhecimento de Faces em Vídeo utilizando dois algoritmos desenvolvidos para este fim: \textit{FisherFaces} e \textit{EigenFaces}.
+Este projeto propõe a implementação de um Sistema de Reconhecimento de Faces em Vídeo um algoritmo desenvolvido para este fim: \textit{EigenFaces}.
 
-O algoritmo \textit{EigenFaces} será implementado seguindo as instruções e exemplos de código de \cite{drmathew_java_programming}. Quanto ao algoritmo \textit{FishFaces}, será usado a implementação da biblioteca OpenCV. Haverá uma tentativa de fazer com que os dois algoritmos funcionem juntos para que se use os pontos fortes de cada um para melhorar a taxa de reconhecimento. 
+O algoritmo \textit{EigenFaces} será implementado seguindo as instruções e exemplos de código de \cite{drmathew_java_programming}.  
 
 \subsection{Objetivos Específicos}\label{sec:organizacao-trabalho}
 
@@ -144,7 +144,7 @@ Eis na \autoref{tabelaempresasrecog} algumas das empresas quem produzem tecnolog
 
 
 
-As pioneiras estão avançando exponencialmente no assuntos e empresas a Google e a Baidu já conseguem taxas de erros menores do que as alcançadas por seres humanos, com rapidez de verificação sem precedentes, como mostra a \autoref{statstoprecog}.
+As pioneiras estão avançando exponencialmente no assuntos e empresas a Google e a Baidu já conseguem taxas de erros menores do que as alcançadas por seres humanos, com rapidez de verificação sem precedentes, como ilustra a \autoref{statstoprecog}.
 
 \vspace*{10cm}
 \begin{figure}[h]
