@@ -6,7 +6,7 @@ Após os estudos realizados sobre processamento e classificação de imagens, so
 Este capítulo apresentará os materiais e metodos que serão utilizados para o desenvolvimento do sistema proposto neste trabalho.
 
 
-\section{MATERIAIS}\label{sec: tec-ferramenta}
+\section{Materiais}\label{sec: tec-ferramenta}
 As seguintes seções irão detalhar os equipamentos que serão usados para o desenvolvimento do sistema e as tecnologias de software escolhidas baseado na revisão bibliográfica realizada e na experiência do autor.
 
 \subsection{Hardwares}\label{sub-hardw}
@@ -135,14 +135,16 @@ A biblioteca Colt foi desenvovida pela CERN (sigla francesa que corresponde à \
 	\item \textbf{\textit{cern.colt.matrix.linalg.EigenvalueDecomposition}}: classe que contém métodos para a extração dos \textit{eigenvalues} e \textit{eigenvectors} de uma matriz recebida, necessários para certas etapas do algorítio \textit{EigenFaces} descrito na \autoref{subsec:acp-eigen};
 \end{itemize}		
 
-
-\subsubsection{Sistema GIT}\label{subsec:git}
-Git (uma gíria inglesa que referencia uma "pessoa teimosa") é um sistema de gerenciamento e controle de código livre criado pelos desenvolvedores Linus Tornalds (o criador do Sistema Operacional Linux) e Junio Hamano sob a licensa GNU (GPLv2) \cite{git}. Este sistema é extremamente útil para se ter cada etapa da escrita do código salva, com possibilidade de reversão de ações, criação de ramos de desenvolvimento dentre outras utilidades, e é utilizado tando na escrita desta monografia quanto na escrita do código do sistema de reconhecimento aqui proposto.
-
 \subsubsection{NetBeans IDE}\label{subsec:netbeans}
 O NetBeans é um IDE (\textit{Integrated Development Environment}, ou em português, Ambiente Integrado de Dezemvolvimento) livre licensiado pela \textit{Common Development and Distribution License} (CDDL) e \textit{GNU General Public License} (GPL).
 
 Este editor de código tráz facilidades como auto-complemento de código, desenho visual de interface, atalhos de teclados para maior produtividade na escrita, \textit{debugger}, dentre outras vantagens, e foi escolhido para a implementação neste trabalho.
+
+\subsubsection{LaTex e TeXstudio}\label{subsec:latex}
+LaTeX é um conjunto de macros para o programa de diagramação de textos TeX, utilizado amplamente na produção de textos matemáticos e científicos, devido a sua alta qualidade tipográfica (Wikipédia). Esta tecnologia juntamente com o IDE TeXstudio (editor de textos para o formato LaTex) foram escolhidos e são utilizados neste trabalho para a escrita da monografia.
+
+\subsubsection{Sistema GIT}\label{subsec:git}
+Git (uma gíria inglesa que referencia uma "pessoa teimosa") é um sistema de gerenciamento e controle de código livre criado pelos desenvolvedores Linus Tornalds (o criador do Sistema Operacional Linux) e Junio Hamano sob a licensa GNU (GPLv2) \cite{git}. Este sistema é extremamente útil para se ter cada etapa da escrita do código salva, com possibilidade de reversão de ações, criação de ramos de desenvolvimento dentre outras utilidades, e é utilizado tando na escrita desta monografia quanto na escrita do código do sistema de reconhecimento aqui proposto.
 
 \subsubsection{Sistemas Linux e Windows}\label{subsec:linux}
 O ambiente de desenvolvimento deste trabalho será configurado sob o sistema operacional Linux, que estará executando na máquina de alto rendimento descrita na \autoref{sub-hardw}, item "2". Já o sistema operacional Windows se executará na maquina de baixo à medio rendimento descrito também na \autoref{sub-hardw}, item "3", para testes. O sistema Linux é livre, e o sitema operacional Windows possui licensa para a máquina (\textit{notebook}) na qual estará sendo executada.
@@ -166,13 +168,15 @@ O Desenvolvimento Ágil foi padronizado pelo \textbf{Manifesto Ágil} como um m�
 	\item Responder à mudanças é melhor do que seguir planos
 \end{itemize}
 
-No desenvolvimento ágil, os projetos adotam o modelo iterativo e em espiral (figura 1.5). Neste processo, as fases do projeto são executadas diversas vezes, produzindo ciclos curtos que se repetem ao longo de todo o desenvolvimento, sendo que, ao final de cada ciclo, sempre se tem um software funcional. Os ciclos são chamados de iterações e crescem em número de funcionalidades a cada repetição, sendo que, no último ciclo, todas as funcionalidades desejadas estariam implementadas, testadas e aprovadas \cite{dev-agil2}.
-
-A \textbf{XP} (\textit{eXtremeProgramming}), explicada na seção seguinte, será utilizada neste projeto por ser incremental, focar-se no desenvolvimento ao invés da documentação e gerar, a cada iteração, um protótipo, essencial para testes, refinamento até que se chegue à um resultado satisfatório.
+No desenvolvimento ágil, os projetos adotam o modelo iterativo e em espiral. Neste processo, as fases do projeto são executadas diversas vezes, produzindo ciclos curtos que se repetem ao longo de todo o desenvolvimento, sendo que, ao final de cada ciclo, sempre se tem um software funcional. Os ciclos são chamados de iterações e crescem em número de funcionalidades a cada repetição, sendo que, no último ciclo, todas as funcionalidades desejadas estariam implementadas, testadas e aprovadas \cite{dev-agil2}.
 
 \subsubsection{XP (\textit{eXtremeProgramming})}
 
 Apesar de ser uma metodologia dos anos 90, faz parte dos métodos ágeis, já que se encaixa no que define o que é um método ágil, conforme o Manifesto Ágil. Ela é baseada em três pilares: \textbf{agilidade no desenvolvimento, economia de recursos e qualidade do produto final} \cite{dev-agil2}.
+
+A \textbf{XP} será utilizada neste projeto por ser incremental, focar-se no desenvolvimento ao invés da documentação e gerar, a cada iteração, um protótipo, essencial para testes e refinamento até que se chegue à um resultado satisfatório.
+
+
 
 \subsection{Modelagem UML}\label{subsec:uml}
 
