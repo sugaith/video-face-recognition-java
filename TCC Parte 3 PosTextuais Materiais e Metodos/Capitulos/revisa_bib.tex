@@ -6,11 +6,11 @@ Vários trabalhos serviram como fonte de conhecimento e suporte para o entendime
 
 Trabalhos de autores como \cite{geysilva} ajudaram a estruturar e organizar o tema por abordar tópicos similares e por possuir riqueza de detalhes no assunto de análise de componentes apresentando uma implementação em \textit{MatLab} (um \textit{software} interativo voltado para o cálculo numérico).
 
-O trabalho de \cite{img-digital-willians} foi utilizado para se aprofundar no tema de imagens digitais, assim como  \cite{gonzalez_woods} que também esclareceu o funcionamento de escalonamento, normalização e mono cromatização de imagens. O autor Dr. Andrew Davison em seu livro \cite{drmathew_java_programming} se destacou pela ótima didática facilitando o entendimento de Análise de Componentes e sua relação com \textit{EigenFaces}, disponibilizando ainda exemplos de implementação em \textit{JAVA}. 
+O trabalho de \cite{img-digital-willians} foi utilizado para se aprofundar no tema de imagens digitais, assim como  \cite{gonzalez_woods} que também esclareceu o funcionamento de escalonamento, normalização e mono cromatização de imagens. O autor Dr. Andrew Davison em seu livro \cite{drmathew_java_programming} se destacou pela ótima didática facilitando o entendimento de Análise de Componentes e sua relação com \textit{EigenFaces}. 
 
-Os trabalhos \cite{tutorial_en_smith} e \cite{tutorial_pt} foram estudados como tutoriais do processo de ACP e será usado posteriormente como guias de implementação do algoritmo.
+Os trabalhos \cite{tutorial_en_smith} e \cite{tutorial_pt} foram estudados como tutoriais do processo de ACP e serão usados posteriormente como guias de implementação do algoritmo.
 
-Nas próximas seções serão explanados os conteúdos destes e de outros trabalhos disponibilizados em uma ordem didática.
+Nas próximas seções serão explanados os conteúdos destes e de outros trabalhos.
 
 
 \section{Conceitos de Aquisição e Processamento de Imagens}\label{sec:processamento_imagens}
@@ -22,7 +22,7 @@ As sessões a seguir contemplam fundamentos básicos sobre imagem, vídeo, a alg
 
 \subsection{Imagem Digital}\label{subsec:imagem}
 
-A imagem digital são valores numéricos disponibilizados em uma matriz bidimensional. Basicamente existem dois tipos de imagens: os chamados \textit{rasters} ou \textit{bitmaps}, e vetorizadas. A primeira são representações de cada ponto da imagem com alguma cor usadas geralmente em fotografias, enquanto que o segundo é produzido por plotadores que recebem os pontos e as distâncias entre eles como parâmetros, considerando retas, curvas, polígonos e etc, sendo assim não perdem sua qualidade quando redimensionados.
+A imagem digital são valores numéricos disponibilizados em uma matriz bidimensional. Basicamente existem dois tipos de imagens: os chamados \textit{rasters} e vetorizadas. A primeira são representações de cada ponto da imagem com alguma cor usadas geralmente em fotografias, enquanto que o segundo é materializado por plotadores que recebem os pontos e as distâncias entre eles como parâmetros, considerando retas, curvas, polígonos e etc, sendo assim não perdem sua qualidade quando redimensionados \cite{img-digital-willians}.
 
 Converter uma imagem para o formato digital significa transferir os elementos que a compõem para elementos representativos de cada pequeno fragmento original. O menor elemento da imagem, o \textit{pixel}, é identificado segundo sua intensidade de nível de cinza e as cores correspondentes. Identificados, estes elementos são armazenados por códigos que podem ser reconhecidos pelo dispositivo de visualização e apresentados novamente por um dispositivo de visualização, como um monitor de vídeo ou impressora \cite{img-digital-willians}. 
 
@@ -38,34 +38,31 @@ Converter uma imagem para o formato digital significa transferir os elementos qu
 
 Para que uma imagem analógica (representação real da cena) seja convertida, esta deve sofrer uma separação espacial (amostragem) e em amplitude (quantização) \cite{img-digital-willians}. 
 
-A amostragem é a divisão do plano (x, y) em uma grade (ou matriz bi-dimensional) onde \textit{x} e \textit{y} serão números inteiros. Os pontos da matriz de são denominados \textit{pixels} (\textit{PICTure Elements}), como ilustra a \autoref{pixel_img}. Cada pixel representa uma parte da cena real, desta forma a resolução espacial da imagem é proporcional aos valores de M e N correspondentes na matriz (ao exemplo da \autoref{pixel_img}). Em geral a malha de amostragem, o formato dos pixels (x,y), é retangular, mas pode também ser triangular ou mais complexa. Os valores de cada ponto da matriz, coluna \textit{x} e linha \textit{y}, que identifica um único pixel (M,N), devem ser escolhidos de forma a respeitar a relação qualidade da imagem \textit{vs.} espaço de armazenamento, em função da aplicação para a qual a imagem se destina. Para uma imagem digital com 256 níveis de cinza o número de bytes ocupados para armazenar a imagem é o produto da linha com a coluna da matriz \cite{img-digital-willians}. 
+A amostragem é a divisão do plano $(x,y)$ em uma grade (ou matriz bi-dimensional) onde \textit{x} e \textit{y} serão números inteiros. Os pontos da matriz são denominados \textit{pixels} (\textit{PICTure Elements}), como ilustra a \autoref{pixel_img}. Cada pixel representa uma parte da cena real, desta forma a resolução espacial da imagem é proporcional aos valores de M e N correspondentes na matriz (ao exemplo da \autoref{pixel_img}). Em geral a malha de amostragem, o formato dos pixels $(x,y)$, é retangular, mas pode também ser triangular ou mais complexa. Os valores de cada ponto da matriz, coluna \textit{x} e linha \textit{y}, que identificam um único pixel $(M,N)$, devem ser escolhidos de forma a respeitar a relação qualidade da imagem \textit{vs.} espaço de armazenamento, em função da aplicação para a qual a imagem se destina. Para uma imagem digital com 256 níveis de cinza o número de bytes ocupados para armazenar a imagem é o produto da linha, coluna da matriz e 8 bits (unidade mínima de armazenamento digital) \cite{img-digital-willians}. 
 
-Matematicamente, toda imagem monocromática (preto e branco) é um função $f(x,y)$ da intensidade luminosa, em qualquer parte das coordenadas (x,y), proporcional ao brilho (tons de cinza) da imagem em um determinado ponto. A \autoref{pixel_img}) mostra uma imagem e como representamos os eixos x e y no plano cartesiano \cite{gonzalez_woods}. 
+Matematicamente, toda imagem em escala de conza é um função $f(x,y)$ da intensidade luminosa, em qualquer parte das coordenadas $(x,y)$, proporcional ao brilho (tons de cinza) da imagem em um determinado ponto \cite{gonzalez_woods}. 
 
-A função  $f(x,y)$  é a multiplicação da iluminância  i(x,y) (que é a quantidade de luz que incide sobre o objeto) pela refletância  r(x,y)  (que é fração de luz incidente que o objeto vai refletir ao ponto (x,y). 
+A função  $f(x,y)$  é a multiplicação da iluminância  $i(x,y)$ que é a quantidade de luz que incide sobre o objeto pela refletância  $r(x,y)$  que é fração de luz incidente que o objeto vai refletir ao ponto $(x,y)$. 
 
 Sendo assim, podemos dizer que :
 
 $f(x,y) = i(x,y) * r(x,y)$,
-
 onde $0 < i(x,y)$ e $0 < r(x,y) < 1$ .
 
-Quando se utiliza uma imagem colorida, no padrão RGB por exemplo,  deve se usar uma função $f(x,y)$ para cada banda, R(\textit{Red}), G(\textit{Green}) e B(\textit{Blue}) que são as cores primárias\cite{gonzalez_woods}.
+Quando se utiliza uma imagem colorida, no padrão RGB por exemplo,  deve se usar uma função $f(x,y)$ para cada banda, R (\textit{Red}), G (\textit{Green}) e B (\textit{Blue}) que são as cores primárias \cite{gonzalez_woods}.
 
  
 \subsection{Formato PNG}\label{subsec:png}
 
-O PNG (\textit{Portable Network Graphics} ou "\textit{PNG is Not Giff}") é um formato de representação de imagens do tipo \textit{rasters} e foi desenhado para substituir o formato GIF e o TIFF em certa extensão. O PNG tem 3 vantagens principais: suporta canal alfa (transparência) de forma eficiente, tem a maior gama de profundidade de cores e alta compressão que pode ser regulável. Além disso, o formato é livre enquanto os outros possuem patentes \cite{png}. 
+PNG (\textit{Portable Network Graphics} ou "\textit{PNG is Not Giff}") é um formato de representação de imagens do tipo \textit{raster} e foi desenhado para substituir o formato GIF e o TIFF em certa extensão. Uma das vantagens do PNG é o suporte de canal alfa (transparência) de forma eficiente. Além disso, o formato é livre \cite{png}. 
 
-O trabalho da compressão é justamente retirar essas informações redundantes para diminuir o peso do arquivo. Por exemplo, dado um pixel qualquer de uma imagem, possivelmente, a cor ou o valor desse pixel será igual a de vários outros elementos dentro da mesma imagem. Quando a imagem é comprimida, para excluir os pixels de valores iguais, é guardado apenas um valor desse pixel, que é reproduzido para os outros semelhantes, economizando tempo de carregamento \cite{img_compact}. Outras técnicas mais complexas também são utilizadas.
-
-Este formato que ocupa pouco espaço em memória e de fácil manipulação foi escolhido neste trabalho para a representação de imagens digitais quando for necessário.
+O trabalho da compressão é justamente retirar essas informações redundantes para diminuir o peso do arquivo. Por exemplo, dado um pixel qualquer de uma imagem, possivelmente, a cor ou o valor desse pixel será igual a de vários outros elementos dentro da mesma imagem. Quando a imagem é comprimida, para excluir os pixels de valores iguais, é guardado apenas um valor desse pixel, que é reproduzido para os outros semelhantes, economizando tempo de carregamento \cite{img_compact}. Existem outras técnicas são utilizadas para tal processo.
 
  \subsection{Vídeo Digital}\label{subsec:videodigi}
  
  Um vídeo é uma sucessão de imagens apresentadas sequêncialmente em um determinado ritmo. O olho humano pode distinguir cerca de 20 imagens por segundo. Deste modo, quando se mostram mais de 20 imagens por segundo, é possível enganar o olho e criar a ilusão de uma imagem em movimento. 
  
- A fluidez de um vídeo se caracteriza pelo número de imagens por segundo (frequência de quadros), expresso em FPS (Frames per second - Quadros por segundo). o vídeo multimídia é geralmente acompanhado de som, ou seja, dados de áudio \cite{ccm_video_digi}.
+ A fluidez de um vídeo se caracteriza pelo número de imagens por segundo (frequência de quadros), expresso em FPS (Frames per second - Quadros por segundo). O vídeo multimídia é geralmente acompanhado de som, ou seja, dados de áudio \cite{ccm_video_digi}.
 
 \subsection{Aquisição da Imagem e de Vídeo}\label{subsec:aquisicao_video}
 
@@ -92,7 +89,7 @@ Na classificação são atribuídas classes aos objetos presentes na imagem \cit
 Nas próximas seções algumas técnicas de processamento de imagens serão abordadas pela sua importância e sua necessidade de uso em algoritmos de detecção e reconhecimento de faces. São elas:
 
 \begin{itemize}
-	\item Conversão em Escala de Cinza: considerada uma técnica pré-processamento, é usada para transformar a imagem em "preto e branco" (na escala de cinza) , o que torna outras operações de processamento mais rápidas e eficientes;
+	\item Conversão em Escala de Cinza: considerada uma técnica de pré-processamento, é usada para transformar a imagem para  escala de cinza, o que torna outras operações de processamento mais rápidas e eficientes;
 	\item Escalonamento: pré-processamento de correção linear geométrica 2D \cite{lapix_escala};
 	\item Equalização: uma técnica de realce de contraste \cite{gonzalez_woods}
 	\item Segmentação: recorte da imagem, onde se extraem os objetos relevantes para a aplicação desejada \cite{inpe_proc_img}.
@@ -101,61 +98,94 @@ Nas próximas seções algumas técnicas de processamento de imagens serão abor
 
 \subsubsection{Conversão em Escala de Cinza}\label{subsubsec:filtros}
 
-Em fotografia, computação e colometria, uma imagem em escala de cinza é uma imagem em que cada valor de pixel é uma única amostra da representação de intensidade de luz \cite{stephen_greyscale}. Em outras palavras, o valor R, G e B de cada pixel devem ser iguais para se obter uma escala de cinza que varia de preto em sua intensidade mais baixa para o branco absoluto.
+Em fotografia, computação e colometria, uma imagem em escala de cinza é uma imagem em que cada valor de pixel é uma única amostra da representação de intensidade de luz \cite{stephen_greyscale}. A seguir são apresentadas três dos vários métodos utilizados para conversão de imagens coloridas para escala de cinza para imagens do tipo \textit{raster}: método escolha de canal, máximo canal e conversão clássica \cite{ricardo_pdi}.
 
-A conversão de uma cor para escala de cinza não é algo único. Existem diversas maneiras e possibilidades de inserção de parâmetros que dariam resultados diferentes. A maneira mais usual é calcular a média dos valores RGB de cada pixel e atribuir o resultado ao pixel novamente. Exemplo:
-
-$ Gray = (Red + Green + Blue) / 3 $, reconhecendo que o algoritmo seria algo como:
-
-\begin{lstlisting}
-For Each Pixel in Image {
-	Red = Pixel.Red
-	Green = Pixel.Green
-	Blue = Pixel.Blue
-	Gray = (Red + Green + Blue) / 3	
-	Pixel.Red = Gray
-	Pixel.Green = Gray
-	Pixel.Blue = Gray
-}
-\end{lstlisting}
-
-
-
-Converter a imagem em escala de é necessário para tornar eficientes os subsequente processos, como equalização e aplicação de classificadores \cite{drmathew_java_programming}. Na \autoref{fig:escalacinza} apresenta-se um exemplo desta tipo de conversão.
-
+%\vspace*{5cm}
 \begin{figure}[h]
 	\centering
-	\includegraphics[width=.7\textwidth]{escalacinza}
-	\caption{Imagem convertida para escalada de cinza.}
-%	\fonte{\cite{lapix_escala}}
-	\label{fig:escalacinza}
+	\includegraphics[width=.65\textwidth]{escalacinza}
+	\caption{Decomposição dos canais do sistema RBG. }
+	\fonte{\cite{ricardo_pdi}}
+	\label{escalacinza_img}
 \end{figure}
+
+No Método \textbf{Escolha de Canal}, tendo uma imagem do tipo \textit{raster} RGB, umas das formas mais simples para convertê-la em níveis de cinza é escolhendo um dos três canais (\textit{red}, \textit{blue} ou \textit{green}) para ser a imagem resultande, ou seja, a repetiçãao do canal escolhido nos outros dois canais mantendo assim a imagem com três matrizes (em RGB) como mostra a \autoref{escalacinza_img}.	
+
+
+No Método \textbf{Máximos Canal}, considerando uma imagem RBG, cada pixel "\textit{p}" da matriz da imagem resultante será o de maior valor dentre os pixels da mesma posiçào "\textit{p}" dos três canais do RGB. O resultado da conversão por este metodo é ilustrado na \autoref{maximo_canalimg}.
+\begin{figure}[h]
+	\centering
+	\includegraphics[width=.4\textwidth]{maximo_canal}
+	\caption{Conversão em tons de cinza pelo método máximo canal.}
+	\fonte{\cite{ricardo_pdi}}
+	\label{maximo_canalimg}
+\end{figure}	
+
+	
+No Método de \textbf{Coversão Clássico} utiliza-se de "pesos" sobre os valores RGB para calcular a resultante "$r$" pela equação $r = 0.29R + 0.59G + 0.11B$. A \autoref{conversao_classica} ilustra o resultado do uso deste método. 
+\begin{figure}[h]
+	\centering
+	\includegraphics[width=.4\textwidth]{conversao_classica}
+	\caption{Conversão em tons de cinza pelo método de conversão clássico}
+	\fonte{\cite{ricardo_pdi}}
+	\label{conversao_classica}
+\end{figure}
+
+Já o Método \textbf{Média de Canal} consiste em calcular a média dos valores RGB de cada pixel e atribuir o resultado ao pixel novamente para cada valor R, G e B, como mostra a \autoref{media_canal}
+\begin{figure}[h]
+	\centering
+	\includegraphics[width=.4\textwidth]{media_canal}
+	\caption{Conversão em tons de cinza pelo método de média de canal.}
+	\fonte{\cite{ricardo_pdi}}
+	\label{media_canal}
+\end{figure}
+
+Converter a imagem em escala de cinza torna mais eficientes os subsequente processos, como equalização e aplicação de classificadores \cite{drmathew_java_programming}. 
+
+
+%-----------------------------------------------
+
 
 \subsubsection{Escalonamento}\label{subsubsec:escalonamento}
 
-O escalonamento de imagens é uma transformação geométrica 2D. Pontos no Plano $(x, y)$ podem ser escalonados (esticados) por fatores de escala, definida como $S_x$ e $S_y$, através de multiplicação \cite{lapix_escala}:
-
-$ x’ = x . S_x $, $ y’ = y . S_y $.
-Onde o novo ponto é resultado da multiplicação do ponto pela escala.
-
-No exemplo da figura abaixo $S_x=2$ e $S_y=1$ os valores de $x$ foram escalonados em 2 ($ S_x $) enquanto y foi escalonado em 1 ($ S_y $). Observe o resultado a seguir.:
+No âmbito de Computação Gráfica e Imagens Digitais e referindo-se a imagens do tipo \textit{raster} (matriciais), o escalonamentro de imagens pode ser interpretado como uma reamostragem ou reconstrução da imagem. A imagem reconstruída pode ser maior ou menor dependendo do fator de escala. Quando uma imagem é diminuida de seu tamanho original, os dados da imagem (pixels) são descartados, e quanto o tamaho da imagem é aumentada, novos dados devem ser inseridos na imagem.
+Basicamente esses  novos dados a principio são espaços "vazios" como mosta a \autoref{escalabasico}. 
 
 \begin{figure}[h]
 	\centering
-	\includegraphics[width=.6\textwidth]{escala}
-	\caption{Escalonamento com $S_x=2$ e $S_y=1$.}
-	\fonte{\cite{lapix_escala}}
-	\label{fig:escala}
+	\includegraphics[width=.8\textwidth]{escalabasico}
+	\caption{Exemplo de escalonamento de imagem.}
+	\fonte{Adaptado de \cite{tech_algo_scaling}}
+	\label{escalabasico}
 \end{figure}
 
-O escalonamento pode causar distorções na imagens se não for feita linearmente, e perda de qualidade caso os valores sejam alterados de forma a aumentar a imagem. É muito usado para padronização de tamanhos, e se o escalonamento for feito com a subtração de valores pequenos, a qualidade da imagem pode ser melhorada. Outra vantagem de escalonar a imagem subtraindo valores é o fato de posteriores processamentos performarem mais rapidamente, pois a imagem apresenta-se menor \cite{drmathew_java_programming}. 
+A principal função de um algoritmo de escalonamento é de prenecher estes espaços "vazios" com pixels de valores coerentes. Para tal utiliza-se técnicas matemáticas de interpolação com os dados da imagem. Interpolação é o processo de estimar valores intermediários de uma função ou sinal discreto amostrado em posições no espaço contínuo \cite{luiz_vizinho}.
+
+Existem várias técnicas de interpolação, dentre elas:
+
+\begin{itemize}
+	\item Interpolação do vizinho mais próximo;
+	\item Interpolação Bilinear;
+	\item Interpolação Bicúbica;
+	\item Interpolação Bicúbica Generalizada;	
+\end{itemize}
+
+A interpolação do Vizinho Mais Próximo por exemplo, é a maneira mais simples de abordar a problemática da interpolação e consiste em determinar o pixel vizinho mais próximo e assumir um valor de intensidade à este \cite{giassa_escalona}, operado pelo arredondamento da coordenada $x$ pelo inteiro mais próximo $u_0$ e usa a amostra em como estimativa de $g(x)$, como ilustra a \autoref{vizinho_interp}.
+
+\begin{figure}[h]
+	\centering
+	\includegraphics[width=.7\textwidth]{vizinho_interp}
+	\caption{(a) Função ou sinal discreto (b) Função ou sinal interpolado }
+	\fonte{Adaptado de \cite{giassa_escalona}}
+	\label{vizinho_interp}
+\end{figure}
 
 
 \subsubsection{Equalização de Histograma}\label{subsubsec:equalizacao}
 
-O histograma de uma imagem digital é definido como "uma função discreta h(rk)=nk onde  rk é o k-ésimo valor de intensidade e nk  é o número de pixels da imagem com intensidade rk e cujos níveis de intensidade desta imagem estejam no intervalo [0, L - 1]". Os Histogramas são a base para várias técnicas de processamento no domínio espacial, onde sua manipulação pode ser utilizada para realce de imagens, além de fornecer dados estatísticos a seu respeito \cite{gonzalez_woods}.
+O histograma de uma imagem digital é definido segundo \cite{gonzalez_woods} como "uma função discreta $h(r_k)=n_k$ onde  $r_k$ é o k-ésimo valor de intensidade e $n_k$  é o número de pixels da imagem com intensidade $r_k$ e cujos níveis de intensidade desta imagem estejam no intervalo [0, L - 1]". Os Histogramas são a base para várias técnicas de processamento no domínio espacial, onde sua manipulação pode ser utilizada para realce de imagens, além de fornecer dados estatísticos a seu respeito \cite{gonzalez_woods}.
 
-Em outras palavras, esta técnica realça o contraste da imagem com o objetivo de melhorar a qualidade da imagem em um ponto de vista humano. Do ponto de vista computacional, a equalização examina o intervalo de valores em escala de cinza (ou outra disposição de cores, dependendo da imagem) e tonifica mais a parte que existe mudança abrupta do branco para o preto (ou cinza escuro). O resultado é uma imagem com maior contraste entre áreas sombreadas, iluminadas e contornos, tornando a detecção de padrões mais fácil posteriormente \cite{drmathew_java_programming}. A \autoref{fig:histograma} mostra o resultado depois da aplicação deste procedimento.
+Histograma pode ser visto como uma função de distribuição de frequência ou como uma função de distribuição de probabilidade e é essencialmente um vetor que armazena as ocorrências de cada tom de cinza presentes. Geralmente é mostrado como um gráfico. A equalização de histogramas é "uma operação que melhora o contraste, uniformizando o histograma de forma automática, distribuindo os níveis de cinza existentes e mapeando-os para novos níveis" \cite{gabriel_histograma}.
 
 \begin{figure}[h]
 	\centering
@@ -183,14 +213,14 @@ Segundo \cite{edinburgh_classifier}, classificação de imagem contextual é um 
 
 \section{Detecção de Faces com Classificadores Haar}\label{sec:deteccao}
 
-Um classificador HAAR pode ser treinado para detectar vários tipos de objetos rígidos, definidos, como carros, motos ou partes do corpo humano como olhos ou boca, com altas taxas de sucesso. Não é muito eficiente em reconhecer objetos com ramos tipo arvores, mãos ou objetos camuflados ou contendo pouca textura, contorno e sub-regiões que variam em cor e iluminação \cite{drmathew_java_programming}.
+Um classificador Haar pode ser treinado para detectar vários tipos de objetos rígidos, definidos, como carros, motos ou partes do corpo humano como olhos ou boca, com altas taxas de sucesso. Não é muito eficiente em reconhecer objetos com ramos tipo arvores, mãos ou objetos camuflados ou contendo pouca textura, contorno e sub-regiões que variam em cor e iluminação \cite{drmathew_java_programming}.
 
-Um classificador bem treinado pode envolver \textit{milhares} de fotos de alta qualidade com imagens positivas. Para a detecção de faces, isto significa imagens de reostos tiradas de perto que devem ter posições similares com muito pouca variação de fundo (\textit{background} \textit{variation}). Olhos bocas e narizes devem estar na mesma posição em todas as fotos, e estas devem ser do mesmo tamanho. Também é necessário treinar o classificador com um número similar de imagens negativas (isto é, sem rostos).
+Um classificador bem treinado pode envolver milhares de fotos de alta qualidade com imagens positivas. Para a detecção de faces, isto significa imagens de rostos tiradas de perto que devem ter posições similares com muito pouca variação de fundo (\textit{background} \textit{variation}). Olhos bocas e narizes devem estar na mesma posição em todas as fotos, e estas devem ser do mesmo tamanho. Também é necessário treinar o classificador com um número similar de imagens negativas (isto é, sem rostos).
 
 Existem diversas bibliotecas com classificadores pré-treinados para diferentes objetos, incluindo faces.
 
 
-\subsection{As Características Haar (\textit{Haar Features}) }\label{subsubsec:elem_haar}
+\subsection{Os Classificadores Haar (\textit{Haar Features}) }\label{subsubsec:elem_haar}
 
 Os classificadores Haar (ou cacarcterísticas de haar, ou filtro haar) recebem esse nome pela sua similaridade com a \textit{Haar wavelet} (ou ondulação Haar), que consiste em uma sequência de funções quadradas redimensionadas que formam uma familia de ondulações das mais simples possíveis.
 
@@ -198,7 +228,7 @@ Os classificadores Haar (ou cacarcterísticas de haar, ou filtro haar) recebem e
  	\centering
  	\includegraphics[width=.6\textwidth]{haarwavelet}
  	\caption{Um exemplo de \textit{Haar wavelet}}
- 	%	\fonte{\cite{lapix_escala}}
+	\fonte{Adaptado de \cite{gonzalez_woods}}
  	\label{fig:haarwavelet}
  \end{figure}
 
@@ -223,13 +253,13 @@ O \textit{framework} de detecção de objetos Viola-Jones, apelidado em inglês 
 
 Com a utilização das características Haar, o objetivo a ser alcançado é classificar corretamente um dado objeto a partir do conjunto de suas principais características. 
 
-De acordo com \cite{drmathew_java_programming}, o algoritmo funciona com o uso de integrais que são rápidas e eficientes, possibilitando ainda reduzir drasticamente o número de atributos que precisam ser testados para decidir se a imagem contem um objeto (por exemplo uma face). O teste de atributos da imagem são organizados em "cascatas" (também pode ser representado por uma árvore binária), representando o uso das integrais iterativas.
+De acordo com \cite{drmathew_java_programming}, o algoritmo funciona com o uso de integrais que são rápidas e eficientes, possibilitando ainda reduzir drasticamente o número de atributos que precisam ser testados para decidir se a imagem contem um objeto (por exemplo uma face). Os testes de atributos da imagem são organizados em "cascatas" também pode ser representado por uma árvore binária, representando o uso das integrais iterativas.
 
-O nó-raiz da árvore binária deve contér um valor representando o teste que se provou ser o melhor em encontrar um objeto durante o treino. Se uma imagem não é rejeitada por este valor teste entao a imagem segue para o nó com o segundo melhor valor de teste, e assim sucessivamente. Apenas se a imagem alcançar o fim de todos os nós (o fim da cascata ou da árvore) sem ser rejeitado, a imagem certamente deverá conter o objeto característico.
+O nó-raiz da árvore binária deve contér um valor representando o teste que se provou ser o melhor em encontrar um objeto durante o treino. Se uma imagem não é rejeitada por este valor teste então a imagem segue para o nó com o segundo melhor valor de teste, e assim sucessivamente. Apenas se a imagem alcançar o fim de todos os nós (ou fim da cascata ou da árvore) sem ser rejeitada, a imagem certamente deverá conter o objeto característico.
 
-O grande ponto negativo é que este algoritmo também detecta os objetos que não são realmente os objetos que se tinha a intenção de detectar\cite{drmathew_java_programming}. Por exemplo, o desenho de um rosto certamente vai ser detectado com uma face original, e este desenho não precisa ser muito bem elaborado. As vezes uma disposição de sombras e regiões luminosas aleatórias podem er detectadas como objetos característicos .
+O grande ponto negativo é que este algoritmo também detecta os objetos que não são realmente os objetos que se tinha a intenção de detectar \cite{drmathew_java_programming}. Por exemplo, o desenho de um rosto certamente vai ser detectado com uma face, e este desenho não precisa ser muito bem elaborado. As vezes uma disposição de sombras e regiões luminosas aleatórias podem ser detectadas como objetos característicos .
 
-Segundo \cite{gustavo_cascata}, os estágios dentro de uma cascata são criados através da combinação de funções de classificadores Haar previamente treinados. O principal objetivo do uso de cascatas é fazer com que seus estágios iniciais descartem um grande numero de regiões que contem o objetivo desejado, e estágios mais avançados sejam melhores em evitar um falso positivo na região analisada. 
+Segundo \cite{gustavo_cascata}, os estágios dentro de uma cascata são criados através da combinação de funções de classificadores Haar previamente treinados. O principal objetivo do uso de cascatas é fazer com que seus estágios iniciais descartem um grande numero de regiões que \textbf{não contém} o objetivo desejado, e estágios mais avançados sejam melhores em evitar um falso positivo na região analisada. 
 
 A \autoref{fig:cascata} representa os $N$ estágios de uma cascata de classificadores. Cada um deles deve descartar ao máximo o número de regiões da imagem que não contém o objeto, a fim de diminuir a quantidade de processamento de outras sub-áreas da imagem original \cite{gustavo_cascata}.
 
@@ -243,11 +273,11 @@ A \autoref{fig:cascata} representa os $N$ estágios de uma cascata de classifica
 
 O processo para geração da cascata é guiado por um conjunto de metas de detecção e de desempenho. Na prática, uma arquitetura muito simples pode ser usada para produzir uma eficiente cascata de classificadores. O usuário pode informar as taxas mínimas aceitáveis e cada estágio da cascata é treinada junto ao conjunto de características Haar contando com cada vez mais elementos até que se atinjam as taxas de detecção de sucesso e falsos positivos. As taxas são encontradas testando o detector corrente sobre um conjunto de validação. Se a taxa de falsos positivos ainda não for atendida, então um novo estágio subsequente é ativado, coletando todas as falsas detecções encontradas \cite{gustavo_cascata}.
 
-Para que o algoritmo possa detectar o objeto de interesse, é necessário que a imagem seja percorrida diversas vezes em várias direções, assim a cada iteração é analisado uma região de tamanho diferente, chamada \textbf{janela de busca} \cite{gustavo_cascata}. 
+Para que o algoritmo possa detectar o objeto de interesse, é necessário que a imagem seja percorrida diversas vezes em várias direções, assim a cada iteração é analisada uma região de tamanho diferente, chamada \textbf{janela de busca} \cite{gustavo_cascata}. 
 
-O usuário pode definir o tamanho desta janela que deve ser maior ou igual ao tamanho das imagens que foram treinadas na cascata, ou seja, se a cascata foi treinada com imagens positivas de 24x24 pixels, o tamanho mínimo da janela de busca deve seguir a mesma resolução \cite{gustavo_cascata}. As janelas devem funcionar em \textit{thread} (multiplas locações), sendo que \textit{n} janelas devem se deslocar no eixo X da imagem e \textit{m} janelas no eixo Y. A quantidade de janelas deve ser o suficiente para ocupar todo o espaço da imagem.
+O usuário pode definir o tamanho desta janela que deve ser maior ou igual ao tamanho das imagens que foram treinadas na cascata, ou seja, se a cascata foi treinada com imagens positivas de 24x24 pixels, o tamanho mínimo da janela de busca deve seguir a mesma resolução \cite{gustavo_cascata}. As janelas devem funcionar em \textit{threads}, sendo que \textit{n} janelas devem se deslocar no eixo X da imagem e \textit{m} janelas no eixo Y. A quantidade de janelas deve ser o suficiente para ocupar todo o espaço da imagem.
 
-Outro valor que o usuário pode informar é número de detecções subsequentes necessários para que a região seja considerada a ter o objeto alvo. Reduzir este valor pode aumentar a velocidade de processamento, mas também aumenta as chances de taxas de falsos positivos \cite{drmathew_java_programming}.
+Outro valor que o usuário pode informar é o número de detecções subsequentes necessários para que a região seja considerada a ter o objeto alvo. Reduzir este valor pode aumentar a velocidade de processamento, mas também aumenta as chances de taxas de falsos positivos \cite{drmathew_java_programming}.
 
 O resultado do algoritmo são as posições dos objetos classificados com as características as quais se recebeu treinamento, podendo ser identificados na imagem.
 
@@ -262,15 +292,13 @@ O processo de reconhecimento de faces depende de uma fase de treinamento precede
 	\centering
 	\includegraphics[width=.7\textwidth]{trein_img}
 	\caption{Exemplo de imagens típicas de treinamento.}
-	%	\fonte{\cite{img-digital-willians}}
+	\fonte{elaborado pelo autor}
 	\label{fig:trein_img}
 \end{figure}
 
-É importante que as imagens sejam todas colhidas e orientadas de maneira similar, para que as variações entre as imagens sejam causadas por diferenças entre as faces e não por diferenças  em plano de fundo ou posição facial. Também deve haver uniformidade na posição, clareamento, tamanho e resolução da imagem. É recomendado incluir várias imagens da mesma face mostrando diferentes expressões, como sorrindo ou abrindo a boca. A relação da imagem com o indivíduo pode ser feita de diversas maneiras, uma delas é codificar alguma chave único para o indivíduo junto ao nome da imagem \cite{drmathew_java_programming}. 
+É importante que as imagens sejam todas colhidas e orientadas de maneira similar, para que as variações entre as imagens sejam causadas por diferenças entre as faces e não por diferenças  em plano de fundo ou posição facial. Também deve haver uniformidade na posição, clareamento, tamanho e resolução da imagem. É recomendado incluir várias imagens da mesma face mostrando diferentes expressões, como sorrindo ou abrindo a boca. A relação da imagem com o indivíduo pode ser feita de diversas maneiras, uma delas é codificar alguma chave única para o indivíduo junto ao nome da imagem \cite{drmathew_java_programming}. 
 
-
-
-O processo de treinamento cria as \textit{EigenFaces}, como mostra a \autoref{someeigen} explicada na  \autoref{subsec:treinrecface}, que são composições das imagens de treinamento que tem a propriedade de acentuar elementos que podem ser distinguidos mais facilmente pelo algoritmo. Uma imagem de face pode gerar várias \textit{Eigenfaces}. As imagens de treino da face podem ser representadas por uma sequência de "pesos" (p1, p2, p3, p4, p5, p6), como ilustra a figura \autoref{fig:eigenpeso}.
+O processo de treinamento cria as \textit{EigenFaces}, como mostra a \autoref{someeigen} explicada na  \autoref{subsec:treinrecface}, que são composições das imagens de treinamento que tem a propriedade de acentuar elementos que podem ser distinguidos mais facilmente pelo algoritmo. Uma imagem de face pode gerar várias \textit{EigenFaces}. As imagens de treino da face podem ser representadas por uma sequência de "pesos" (p1, p2, p3, p4, p5, p6), como ilustra a \autoref{fig:eigenpeso}.
 
 \begin{figure}[h]
 	\centering
@@ -280,11 +308,11 @@ O processo de treinamento cria as \textit{EigenFaces}, como mostra a \autoref{so
 	\label{fig:eigenpeso}
 \end{figure}
 
-O objetivo é que a imagem de treinamento pode ser decomposta por uma soma dos pesos das multiplas \textit{engeifaces}, sendo todos estes pesos salvos como uma sequência.
+O objetivo é que a imagem de treinamento pode ser decomposta por uma soma dos pesos das multiplas \textit{EigenFaces}, sendo todos estes pesos salvos como uma sequência.
 
-Nem todas as eigenfaces são igualmente importantes - algumas pode contar elementos faciais mais importantes para distinguir faces. Isto quer dizer que não é necessário utilizar todas as eigenfaces para reconhecer uma face, o que permite que uma imagem seja representada por uma pequena quantidade de eigenfaces, o que ocupa menos espaço e torna a execução do algoritmo mais rápida. O ponto negativo é que com menos pesos, a probabilidade de se perder importantes elementos faciais também aumenta\cite{drmathew_java_programming}.
+Nem todas as \textit{EigenFaces} são igualmente importantes - algumas pode contar elementos faciais mais importantes para distinguir faces. Isto quer dizer que não é necessário utilizar todas as eigenfaces para reconhecer uma face, o que permite que uma imagem seja representada por uma pequena quantidade de \textit{EigenFaces}, o que ocupa menos espaço e torna a execução do algoritmo mais rápida. O ponto negativo é que com menos pesos, a probabilidade de se perder importantes elementos faciais também aumenta \cite{drmathew_java_programming}.
 
-Outra maneira de se entender a relação entre eigenfaces e as imagens é representa-las em um plano cartesiado multidimensional (ou um \textit{eigenspace}), como mostra a \autoref{fig:eigenpeso_axis}.
+Outra maneira de se entender a relação entre \textit{EigenFaces} e as imagens é representa-las em um espaço cartesiado multidimensional (ou um \textit{\textit{EigenSpace}}), como mostra a \autoref{fig:eigenpeso_axis}.
 
 \begin{figure}[h]
 	\centering
@@ -294,20 +322,18 @@ Outra maneira de se entender a relação entre eigenfaces e as imagens é repres
 	\label{fig:eigenpeso_axis}
 \end{figure}
 
-Os pesos agora podem ser observados como as coordenadas da imagem de treinamento em um plano cartesiano multidimensional (\textit{eigenspace}). Na \autoref{fig:eigenpeso_axis}, existem apenas 3 eixos representando as eigenfaces p1, p2 e p3, porém se houvessem 10 eigenfaces, haveria 10 eixos neste plano cartesiano.
+Os pesos agora podem ser observados como as coordenadas da imagem de treinamento em um plano cartesiano multidimensional (\textit{EigenSpace}). Na \autoref{fig:eigenpeso_axis}, existem apenas 3 eixos representando as \textit{EigenFaces} p1, p2 e p3, porém se houvessem 10 \textit{EigenFaces}, haveriam 10 eixos neste espaço.
 
-Após o processo de treinamento das faces vem o processo de reconhecimento. Neste novo processo, uma nova imagem para reconhecimento deve ser decomposta em eigenfaces (na mesma maneira da \autoref{fig:eigenpeso}). A sequência de pesos resultante é comparada com cada sequência de pesos que foram treinadas previamente, e o nome associado com o as características mais próximas dos eigenfaces treinados é associado \cite{drmathew_java_programming}.
+Após o processo de treinamento das faces vem o processo de reconhecimento. Neste novo processo, uma nova imagem para reconhecimento deve ser decomposta em \textit{EigenFaces}. A sequência de pesos resultante é comparada com cada sequência de pesos que foram previamente disponibilizadas no espaço multidimensional, e o nome associado com o as características mais próximas dos \textit{EigenFaces} treinados é associado \cite{drmathew_java_programming}.
 
-Em outras palavras, em termos de \textit{engenspaces}, a nova imagem é posicionada no plano cartesiano com suas próprias coordenadas (pesos). Então uma técnica de medida de distância (usualmente a distância Euclidiana, que será abordada na \autoref{subsec:eigenacp}) é utilizada para encontrar e figura de treinamento correspondente mais próxima. Sendo assim, uma distância Zero seria uma correspondência (reconhecimento) perfeita \cite{drmathew_java_programming}. A \autoref{eigencartesiano} na \autoref{subsec:treinrecface} ilustra este processo.
-
-As Eigenfaces são geradas utilizando um procedimento matemático chamado Análise de Componentes Principais - ACP (em inglês Principal Components Analysis - PCA). Esta técnica acentua as similaridades e as diferenças nos dados. 
+Em outras palavras, em termos de espaço multidimensional, a nova imagem é posicionada no plano cartesiano com suas próprias coordenadas (pesos). Então uma técnica de medida de distância (geralmente a distância Euclidiana, que será abordada na \autoref{subsec:eigenacp}) é utilizada para encontrar o vetor de valores correspondente mais próxima. Sendo assim, uma distância zero seria uma correspondência (reconhecimento) perfeita \cite{drmathew_java_programming}. A \autoref{eigencartesiano} na \autoref{subsec:treinrecface} ilustra este processo.
 
 
 %=======================================================================================================================
 
 \subsection{Análise de Componentes Principais (ACP)}\label{subsec:acp}
 
-Para que esta técnica seja explicada, será utilizado vetores de valores numéricos: o vetor \textit{x} e \textit{y}, como mostra a \autoref{tabelaxy}.
+Para que esta técnica seja explicada, serão utilizados vetores de valores numéricos: o vetor \textit{x} e \textit{y}, como mostra a \autoref{tabelaxy}.
 
 \begin{table}[h]
 	\centering
@@ -338,7 +364,7 @@ Contudo, a média e a variância fornecem informação apenas sobre a forma dos 
 	\includegraphics[width=.3\textwidth]{covariancia}
 	%	\caption{Exemplo de eigenfaces representadas em um plano cartesiano (\textit{eigenspace})de 3 dimensões. }
 	%	\fonte{Adapdato de \cite{drmathew_java_programming}}
-	\label{fig:variancia}
+	\label{fig:covariancia}
 \end{figure}
 
 Se a fórmula da covariância for aplicada nos dados dos vetores \textit{x} e \textit{y} dados na \autoref{tabelaxy}, o resultado será 0.6154. A parte em que se deve estar atendo é o sinal: se for negativo significa que quando um vetor aumenta em dados, o outro diminui. Quando o valor é positivo, que é o caso, então os dois conjuntos de dados aumentam juntas. Para ilustrar este conceito, na \autoref{fig:graphxy} plota-se os valores correspondentes dos vetores \textit{x} e \textit{y} como pontos em um gráfico \cite{drmathew_java_programming}.

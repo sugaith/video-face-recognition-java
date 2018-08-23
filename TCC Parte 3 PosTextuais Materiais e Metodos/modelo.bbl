@@ -69,8 +69,7 @@ Dispon{\'\i}vel em: \url{http://dst.lbl.gov/ACSSoftware/colt/}. Acesso em:
 \bibitem[César 2011]{fluxogramalivro}
 \abntrefinfo{César}{CéSAR}{2011}
 {CéSAR, F. I.~G.
-In:  \underline{\ \ \ \ \ \ \ \ }. \textbf{Ferramentas Básicas de Qualidade,
-  1a Ed. 2011}. [S.l.]: Biblioteca 24hrs, 2011.}
+Biblioteca 24hrs, 2011.}
 
 \bibitem[Davison 2013]{drmathew_java_programming}
 \abntrefinfo{Davison}{DAVISON}{2013}
@@ -97,8 +96,7 @@ Dispon{\'\i}vel em:
 \bibitem[FACHIN 2017]{fachin-metodos}
 \abntrefinfo{FACHIN}{FACHIN}{2017}
 {FACHIN, O.
-In:  \underline{\ \ \ \ \ \ \ \ }. \textbf{Fundamentos De Metodologia - 6a Ed.
-  2017}. [S.l.]: Saraiva, 2017.}
+Saraiva, 2017.}
 
 \bibitem[Farias 2017]{img_compact}
 \abntrefinfo{Farias}{FARIAS}{2017}
@@ -116,6 +114,13 @@ Devmedia, 2014.
 Dispon{\'\i}vel em:
   \url{https://www.devmedia.com.br/os-4-pilares-da-programacao-orientada-a-objetos/9264}.
   Acesso em: 06.2018.}
+
+\bibitem[Giassa 2009]{giassa_escalona}
+\abntrefinfo{Giassa}{GIASSA}{2009}
+{GIASSA, M. Upsampling and interpolation.
+GIASSA.NET, 2009.
+Dispon{\'\i}vel em: \url{http://www.giassa.net/?page\_id=200}. Acesso em:
+  06.2018.}
 
 \bibitem[Git 2018]{git}
 \abntrefinfo{Git}{GIT}{2018}
@@ -160,6 +165,13 @@ Dispon{\'\i}vel em:
 In:  \underline{\ \ \ \ \ \ \ \ }. \textbf{Stephen Johnson on Digital
   Photography}. [S.l.]: O'Reilly Media, Incorporated, 2006.}
 
+\bibitem[Jr 2013]{luiz_vizinho}
+\abntrefinfo{Jr}{JR}{2013}
+{JR, L. O.~M. Interpolação em imagens.
+FFCLRP/USP, 2013.
+Dispon{\'\i}vel em: \url{http://dcm.ffclrp.usp.br/~murta/PIM/PIM\_10.pdf}.
+  Acesso em: 06.2018.}
+
 \bibitem[Kim Joon Hyung~Shim 2003]{final_project_stanford}
 \abntrefinfo{Kim Joon Hyung~Shim}{KIM JOON HYUNG~SHIM}{2003}
 {KIM JOON HYUNG~SHIM, J.~Y. I.
@@ -169,14 +181,21 @@ Disserta\c{c}\~{a}o (Mestrado) --- Stanford University, Stanford, California,
 Dispon{\'\i}vel em:
   \url{https://web.stanford.edu/class/ee368/Project\_03/Project/reports/ee368group02.pdf}.}
 
-\bibitem[Kitani]{tutorial_pt}
-\abntrefinfo{Kitani}{KITANI}{}
+\bibitem[Kitani 2018]{tutorial_pt}
+\abntrefinfo{Kitani}{KITANI}{2018}
 {KITANI, C. E.~T. E.~C. Um tutorial sobre análise de componentes principais
   para o reconhecimento automático de faces.
-\textbf{Departamente de Engenharia Elétrica}, Centro Universitário da FEI.
+\textbf{Departamente de Engenharia Elétrica}, Centro Universitário da FEI,
+  2018.
 Dispon{\'\i}vel em:
   \url{http://fei.edu.br/~cet/Tutorial\_ReconhecimentoFaces.pdf}. Acesso em:
   05.2018.}
+
+\bibitem[Melo 2016]{gabriel_histograma}
+\abntrefinfo{Melo}{MELO}{2016}
+{MELO, G. Processamento digital de imagens.
+UFRN, 2016.
+Dispon{\'\i}vel em: \url{https://melosgabriel.github.io/}. Acesso em: 06.2018.}
 
 \bibitem[Moreira 2008]{gustavo_cascata}
 \abntrefinfo{Moreira}{MOREIRA}{2008}
@@ -194,6 +213,23 @@ Dispon{\'\i}vel em:
 Dicio, 2018.
 Dispon{\'\i}vel em: \url{https://www.dicio.com.br/metodo/}. Acesso em:
   06.2018.}
+
+\bibitem[Nearest Neighbor Image Scaling 2007]{tech_algo_scaling}
+\abntrefinfo{Nearest\ldots}{NEAREST\ldots}{2007}
+{NEAREST Neighbor Image Scaling.
+2007.
+Dispon{\'\i}vel em:
+  \url{http://tech-algorithm.com/articles/nearest-neighbor-image-scaling/}.
+  Acesso em: 06.2018.}
+
+\bibitem[Nogueira 2016]{ricardo_pdi}
+\abntrefinfo{Nogueira}{NOGUEIRA}{2016}
+{NOGUEIRA, R.~C. de A.
+\textbf{Análise de Conversão de Imagem Colorida para Tons de Cinza Via
+  Contraste Percebido}.
+Disserta\c{c}\~{a}o (Mestrado) --- Universidade Federal de Pernambuco - Centro
+  de Engenharia da Computação, Recife - Pernambuco, 2016.
+Dispon{\'\i}vel em: \url{http://www.cin.ufpe.br/~tg/2016-1/rcan.pdf}.}
 
 \bibitem[OpenCV - Open Source Computer Vision 2018]{opencv}
 \abntrefinfo{OpenCV\ldots}{OPENCV\ldots}{2018}

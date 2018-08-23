@@ -22,7 +22,7 @@
 %%
 
 \NeedsTeXFormat{LaTeX2e}
-\ProvidesClass{cc-udc-abntex2}[2017/03/30 v1.1 Modelo do Curso de Ciência do Centro Universitário União Dinâmica das Cataratas (UDC), baseado em abnTeX2]
+%\ProvidesClass{cc-udc-abntex2}[2017/03/30 v1.1 Modelo do Curso de Ciência do Centro Universitário União Dinâmica das Cataratas (UDC), baseado em abnTeX2]
 
 %
 % Repassa todos os parametros a classe abntex2, 
