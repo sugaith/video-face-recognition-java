@@ -285,7 +285,9 @@ O resultado do algoritmo são as posições dos objetos classificados com as car
 %============================================================================================================
 
 
-\section{\textit{EigenFaces} e Análise de Componentes Principais (ACP) }\label{sec:recog_faces}
+\section{PROCESSO DA ANÁLISE DE COMPONENTES PRINCIPAIS (ACP) OU \textit{EIGENFACES} } \label{sec:recog_faces}
+
+A técnica PCA (Análise de Componentes Principais) foi descrita inicialmente por Karl Pearson em 1901 como solução para alguns problemas biométricos da época, mas ele não propôs nenhuma implementação dessa técnica para um caso com mais de duas variáveis. Em 1933 essa técnica foi descrita por Hotteling, mas os cálculos ainda eram complexos quando se tratava de um problema com dezenas de variáveis. Apenas com o surgimento dos computadores atuais, a técnica ficou mais difundida (\cite{geysilva}). 
 
 O processo de reconhecimento de faces depende de uma fase de treinamento precedente envolvendo imagens faciais com suas identidades associadas. Imagens típicas de treinamento são mostradas na \autoref{fig:trein_img}.
 \begin{figure}[h]
@@ -302,7 +304,7 @@ O processo de treinamento cria as \textit{EigenFaces}, como mostra a \autoref{so
 
 \begin{figure}[h]
 	\centering
-	\includegraphics[width=.7\textwidth]{eigenpeso}
+	\includegraphics[width=.4\textwidth]{eigenpeso}
 	\caption{Exemplo de uma imagem de treinamento representada em uma sequência de pesos de engenfaces.}
 	\fonte{Adapdato de \cite{drmathew_java_programming}}
 	\label{fig:eigenpeso}
@@ -316,13 +318,13 @@ Outra maneira de se entender a relação entre \textit{EigenFaces} e as imagens 
 
 \begin{figure}[h]
 	\centering
-	\includegraphics[width=.7\textwidth]{eigenpeso_axis}
-	\caption{Exemplo de eigenfaces representadas em um plano cartesiano (\textit{eigenspace})de 3 dimensões. }
+	\includegraphics[width=.4\textwidth]{eigenpeso_axis}
+	\caption{Exemplo de eigenfaces representadas em um plano cartesiano (\textit{eigenspace}) de 3 dimensões. }
 	\fonte{Adapdato de \cite{drmathew_java_programming}}
 	\label{fig:eigenpeso_axis}
 \end{figure}
 
-Os pesos agora podem ser observados como as coordenadas da imagem de treinamento em um plano cartesiano multidimensional (\textit{EigenSpace}). Na \autoref{fig:eigenpeso_axis}, existem apenas 3 eixos representando as \textit{EigenFaces} p1, p2 e p3, porém se houvessem 10 \textit{EigenFaces}, haveriam 10 eixos neste espaço.
+Os pesos agora podem ser observados como as coordenadas da imagem de treinamento em um espaço cartesiano multidimensional (\textit{EigenSpace}). Na \autoref{fig:eigenpeso_axis}, existem apenas 3 eixos representando as \textit{EigenFaces} p1, p2 e p3, porém se houvessem 10 \textit{EigenFaces}, haveriam 10 eixos neste espaço.
 
 Após o processo de treinamento das faces vem o processo de reconhecimento. Neste novo processo, uma nova imagem para reconhecimento deve ser decomposta em \textit{EigenFaces}. A sequência de pesos resultante é comparada com cada sequência de pesos que foram previamente disponibilizadas no espaço multidimensional, e o nome associado com o as características mais próximas dos \textit{EigenFaces} treinados é associado \cite{drmathew_java_programming}.
 
@@ -331,9 +333,16 @@ Em outras palavras, em termos de espaço multidimensional, a nova imagem é posi
 
 %=======================================================================================================================
 
-\subsection{Análise de Componentes Principais (ACP)}\label{subsec:acp}
+\subsection{O Cálculo da Análise de Componentes Principais (ACP)}\label{subsec:acp}
 
-Para que esta técnica seja explicada, serão utilizados vetores de valores numéricos: o vetor \textit{x} e \textit{y}, como mostra a \autoref{tabelaxy}.
+Segundo \cite{geysilva}, o algoritmo da ACP pode ser dividida em duas fases: a fase de treinamento e a de reconhecimento. Cada fase consiste na realização de processos, descitos as seções abaixo.
+
+\subsubsection{Fase de Treinamento} \label{subsec:treinamento}
+
+Esta fase consiste no procedimento de cinco passos:
+
+%PASSO 1
+\textbf{Passo 1 - Preparação dos dados:}  neste passo deve-se preparar os dados das imagens aquisitadas nas condições descritas na seção \autoref{sec:recog_faces} e disponibilizá-las na forma de vetores de \textbf{bytes} para serem manipulados. A \autoref{tabelaxy} exemplifica 2 conjuntos (vetores) de dados que poderiam ser utilizados: o vetor \textit{x} e \textit{y}.
 
 \begin{table}[h]
 	\centering
@@ -343,6 +352,83 @@ Para que esta técnica seja explicada, serão utilizados vetores de valores num�
 	\label{tabelaxy}
 \end{table}
 
+Na \autoref{fig:graphxy} plota-se os valores correspondentes dos vetores \textit{x} e \textit{y} como pontos em um gráfico \cite{drmathew_java_programming}.
+
+
+\begin{figure}[h]
+	\centering
+	\includegraphics[width=.4\textwidth]{graphxy}
+	\caption{Plotagem dos valores de \textit{x} e \textit{y}.}
+	\fonte{Adapdato de \cite{drmathew_java_programming}}
+	\label{fig:graphxy}
+\end{figure}
+
+%PASSO 2
+\textbf{Passo 2 - Subtração da Face Média:} neste passo deve-se calcular a face média do conjunto de dados definidos no "Passo 1". A face média ($\Psi$) é definida por:
+\begin{center}
+	$\Psi = \frac{1}{n} \sum_{1}^{n} X_n$
+\end{center}
+onde $X_n$ são os conjuntos de dados do "passo 1", sendo $n$ a contagem desses conjuntos. Coma face média calculada  ($\Psi$), deve-se subtraí-la do conjunto de dados ($X_n$):
+\begin{center}
+	$\Phi_n = X_n - \Psi$
+\end{center}
+onde $\Phi_n$ é o vetor resultante, tendendo a obter características distintas das imagens. 
+
+%PASSO 3
+\textbf{Passo 3 - Cálculo da matriz de covariância:} a covariância é uma medida estatística, generalizada da variância, que compara dois conjuntos de dados. Neste passo deve-se calcular a matriz de covariância para quantificar as diferenças \textbf{entre} os conjutos de dados \cite{drmathew_java_programming}.  Realiza-se o cálculo atravez da formula: 
+\begin{center}
+	$C = \Phi^T . \Phi$	
+\end{center}
+onde $\Phi$ é o vetor resultante do "passo 2", $\Phi^T$ é seu equivalente transversal e $C$ é a matriz de covariância resultante \cite{geysilva}.
+
+%Se a fórmula da covariância for aplicada nos dados dos vetores \textit{x} e \textit{y} dados na \autoref{tabelaxy}, o resultado será 0.6154. A parte em que se deve estar atendo é o sinal: se for negativo significa que quando um vetor aumenta em dados, o outro diminui. Quando o valor é positivo, que é o caso, então os dois conjuntos de dados aumentam juntas. Para ilustrar este conceito, 
+
+
+
+%Se houverem mais de dois vetores (por exemplo o vetor \textit{x}, \textit{y} e \textit{z}) então a covariância deve ser calculada entra todas os conjuntos de dados, ou seja, calculando cov(x, y), cov(x, z) e cov(y, z). Não há necessidade de calcular cov(y, x), cov(z, x) e cov(z, y) sendo que a definição da equação garante que cov(A, B) é igual a cov(B, A) .
+
+Se a fórmula da covariância for aplicada nos dados dos vetores \textit{x} e \textit{y} dados na \autoref{tabelaxy}, teriam como resultado uma matriz de covariância de dimensões 2x2:
+\begin{center}
+	$\begin{pmatrix} 0.6166 & 0.6154 \\ 0.6154 & 0.7166 \end{pmatrix}$
+\end{center}
+
+%PASSO 4
+\textbf{Passo 4 - Cálculo dos auto-vetores e auto-valores:} para que as \textit{eigenfaces} sejam geradas, deve-se decompor a matriz de covariância em outros conjuntos de dados chamados de auto-vetores (ou \textit{eigenvectors}) e auto-valores (ou \textit{eigenvalues}).
+
+Segundo \cite{drmathew_java_programming}, o auto-vetor é um vetor de valores ordinário que quando multiplicado por uma dada matriz, muda de magnitude, enquanto que auto-valor é o valor desta magnitude. Calcula-se os auto-valores atraves de 
+ \begin{center}
+ 	$|\Phi - \lambda I| = 0$	
+ \end{center}
+onde $\Phi$ é o vetor resultante do "passo 2", $I$ é a matriz identidade da matriz de covariância e $\lambda$ é o auto-valor \cite{geysilva}. Calcula-se os auto-vetores atraves de 
+\begin{center}
+	$\Phi e = \lambda e$	
+\end{center}
+onde $\Phi$ é o vetor resultante do "passo 2", $e$ é o auto-vetor e $\lambda$ é o auto-valor \cite{geysilva}.
+Neste passo também ordena-se os auto-vetores por ordem de auto-valores (ou seja, por ordem de significância) para facilitar possível futuro descarte \cite{geysilva}.
+
+pode-se observar que o resultado da decomposição da matriz de covariância gereda acima no exempo, como é uma matriz 2x2, possui dois auto-vetores e dois auto-valores:
+\begin{center}
+	$\begin{pmatrix} -0.7352 \\ 0.6779 \end{pmatrix}$  e 0.049
+	
+	$\begin{pmatrix} 0.6779 \\ 0.7352 \end{pmatrix}$  e 1.284
+\end{center}
+Ambos os eigenvetores possuem tamanho unitário.
+
+
+%PASSO 5!
+\textbf{Passo 5 - Projeção dos auto-vetores ao espaço multidimensional:}  neste último passo de treinamento, cada imagem (ou conjunto de dados) de treinamento é projetada no espaço multidimensional de auto-vetores. O Espaço é criado calculando-se através de uma combinação linear de auto-vetores com os vetores originais \cite{geysilva}:
+\begin{center}
+	$W_n = {e_n}^n (X - \Phi)$	
+\end{center}
+onde $e$ são os auto-vetores, $X$ é o vetor original de faces de treinamento, $\Phi$ é a face média e $W$ seria o espaço multidimensional resultante.
+
+
+
+
+
+
+
+\begin{comment}
 Os dados de \textit{x} e \textit{y} poderiam representar a altura de estudantes, preços de frutas, ou valores numéricos extraídos de uma imagem, por exemplo. O objetivo da demonstração é acentuar as diferenças e similaridades entre os dois vetores de dados em uma abordagem numérica \cite{drmathew_java_programming}. 
 
 Para tal, medidas estatísticas como média e desvio padrão (uma medida que tem o objetivo de espalhar valores acerca da média). Variância é outra medida de espalhamento, que é igual ao desvio padrão ao quadrado:
@@ -367,20 +453,7 @@ Contudo, a média e a variância fornecem informação apenas sobre a forma dos 
 	\label{fig:covariancia}
 \end{figure}
 
-Se a fórmula da covariância for aplicada nos dados dos vetores \textit{x} e \textit{y} dados na \autoref{tabelaxy}, o resultado será 0.6154. A parte em que se deve estar atendo é o sinal: se for negativo significa que quando um vetor aumenta em dados, o outro diminui. Quando o valor é positivo, que é o caso, então os dois conjuntos de dados aumentam juntas. Para ilustrar este conceito, na \autoref{fig:graphxy} plota-se os valores correspondentes dos vetores \textit{x} e \textit{y} como pontos em um gráfico \cite{drmathew_java_programming}.
 
-
-\begin{figure}[h]
-	\centering
-	\includegraphics[width=.4\textwidth]{graphxy}
-	\caption{Plotagem dos valores de \textit{x} e \textit{y}.}
-	\fonte{Adapdato de \cite{drmathew_java_programming}}
-	\label{fig:graphxy}
-\end{figure}
-
-Se houverem mais de dois vetores (por exemplo o vetor \textit{x}, \textit{y} e \textit{z}) então a covariância deve ser calculada entra todas os conjuntos de dados, ou seja, calculando cov(x, y), cov(x, z) e cov(y, z). 
-
-Não há necessidade de calcular cov(y, x), cov(z, x) e cov(z, y) sendo que a definição da equação garante que cov(A, B) é igual a cov(B, A) .
 
 A maneira padrão de armazenar a covariância entre múltiplos vetores de dados é por uma matriz onde os conjuntos de dados tornam-se os índices das colunas e linhas. Por exemplo, a covariância para os conjuntos de dados x,y e z se tornariam uma matriz de dimensões 3x3 \cite{drmathew_java_programming}:
 
@@ -393,12 +466,6 @@ A maneira padrão de armazenar a covariância entre múltiplos vetores de dados 
 \end{figure}
 
 Na diagonal principal, pode-se observar que a covariância é entre o conjunto de dados a própria covariância, que é equivalente à variância nestes dados. Podemos provar isto comparando a variância de x ( var(x) ) e a covariância de x com x ( cov(x) ). A matriz também apresenta simetria em volta da diagonal principal. 
-
-Os conjuntos de dados \textit{x} e \textit{y} da \autoref{tabelaxy} seriam representados em uma matriz de dimensões 2x2:
-
-\begin{center}
-	$\begin{pmatrix} 0.6166 & 0.6154 \\ 0.6154 & 0.7166 \end{pmatrix}$
-\end{center}
 
 
 A matriz de covariância é um meio útil de demonstrar a relação entre os conjuntos de dados, mas deve-se obter ainda mais informações para que sejam geradas as \textit{eigenfaces} calculando dois vetores que serão contemplados na seção seguinte: \textit{eigenvectors} e \textit{eigenvalues}.
@@ -456,7 +523,10 @@ $\begin{pmatrix} 0.6779 \\ 0.7352 \end{pmatrix}$  e 1.284
 
 Ambos os eigenvetores possuem unidade de tamanho.
 
+
 \subsubsection{Utilizando Eigenfaces como Componente Principal}\label{subsec:eigenacp}
+\end{comment}
+
 
 Observando novamente a plotagem dos vetores x e y contemplados na \autoref{fig:graphxy}, se a média destes conjuntos de dados ($\bar{x}$ e $\bar{y}$) for subtraído de seus valores, estes dados então seriam \textbf{normalizados}. Isto também quer dizer que as linhas que representam os vetores \textit{x} e \textit{y} são transladados para o centro como mostra a \autoref{fig:graphxy2}. 
 
@@ -468,20 +538,20 @@ Observando novamente a plotagem dos vetores x e y contemplados na \autoref{fig:g
 	\label{fig:graphxy2}
 \end{figure}
 
-Os dois engenvetores pode ser adicionados ao gráfico como linhas convertendo os vetores em equações. 
+Os dois auto-vetores pode ser adicionados ao gráfico como linhas convertendo os vetores em equações. 
 $\begin{pmatrix} -0.7352 \\ 0.6779 \end{pmatrix}$ torna-se $y$ $=$ $\frac{-0.7352}{0.6779}$$x$  e $\begin{pmatrix} 0.6779 \\ 0.7352 \end{pmatrix}$ torna-se $y$ $=$ $\frac{0.6779}{0.7352}$$x$.
 
 Os dados normalizados e as duas equações são ilustradas na \autoref{fig:graphxy2} como linhas azuis. 
 
-Observa-se que na \autoref{fig:graphxy2} demonstra como os eigenvectores acentuam as relações entre os conjuntos de dados- os vetores indicam como os conjuntos de dados se espalham nas coordenadas do espaço cartesiano. Este espalhamento facilita a distinção dos dados \cite{drmathew_java_programming}.
+Observa-se que na \autoref{fig:graphxy2} demonstra como os auto-vetores acentuam as relações entre os conjuntos de dadose indicam como estes se espalham nas coordenadas do espaço multidimensional. Este espalhamento facilita a distinção dos dados \cite{drmathew_java_programming}.
 
-Dos dois eigenvetores marcados em azul, a linha $\frac{0.6779}{0.7352}$$x$ é a mais útil, pois os dados estão mais espalhados acerca do trajeto desta linha. Isto pode ser confirmado numericamente observando o eigenvalue associado com seu eigenvetor: o eigenvalue (1.284) é um melhor indicador de espalhamento pois é o maior dentre os dois eigenvalues.
+Dos dois auto-vetores marcados em azul, a linha $\frac{0.6779}{0.7352}$$x$ é a mais útil, pois os dados estão mais espalhados acerca do trajeto desta linha. Isto pode ser confirmado numericamente observando o auto-valor associado com seu auto-vetor: o auto-valor (1.284) é um melhor indicador de espalhamento pois é o maior dentre os dois auto-valores.
 
-A outra linha, $\frac{-0.7352}{0.6779}$$x$, contribui com a informação demonstrando como os dados são espaçados para direita ou esquerda do eigenvetor principal (a linha $\frac{0.6779}{0.7352}$$x$). Entretanto, trata-se de um componente menos importante no espalhamento de dados, assim como indica seu eigenvalue (0.049) \cite{drmathew_java_programming}.
+A outra linha, $\frac{-0.7352}{0.6779}$$x$, contribui com a informação demonstrando como os dados são espaçados para direita ou esquerda do auto-vetor principal (a linha $\frac{0.6779}{0.7352}$$x$). Entretanto, trata-se de um componente menos importante no espalhamento de dados, assim como indica seu auto-valor (0.049) \cite{drmathew_java_programming}.
 
-O eigenvetor com o maior eigenvalue (no caso a linha $\frac{0.6779}{0.7352}$$x$, ou o vetor $\begin{pmatrix} 0.6779 \\ 0.7352 \end{pmatrix}$) é chamado de \textbf{componente principal} do conjunto de dados. Isto é, os eigenvetores e eigenvalues são efetivamente utilizados para performar uma análise de componente principal nos conjuntos de dados \cite{drmathew_java_programming}.
+O auto-vetor com o maior auto-valor (no caso a linha $\frac{0.6779}{0.7352}$$x$, ou o vetor $\begin{pmatrix} 0.6779 \\ 0.7352 \end{pmatrix}$) é chamado de \textbf{componente principal} do conjunto de dados. Isto é, os auto-vetores e auto-valores são efetivamente utilizados para performar uma análise de componente principal nos conjuntos de dados \cite{drmathew_java_programming}.
 
-Todos os eigenvetores extraídos da matriz são perpendiculares. Isto significa que é possível rotacionar (talvez refletir) os dados para que os eigenvetores tornem-se alinhados com os eixos. Se este componente principal $\begin{pmatrix} 0.6779 \\ 0.7352 \end{pmatrix}$ for rotacionado e refletido para que seja alinhado com o eixo y, resulta-se em uma plotagem mostrada na \autoref{fig:graphxy3}:
+Todos os auto-vetores extraídos da matriz são perpendiculares. Isto significa que é possível rotacionar (talvez refletir) os dados para que os eigenvetores tornem-se alinhados com os eixos. Se este componente principal $\begin{pmatrix} 0.6779 \\ 0.7352 \end{pmatrix}$ for rotacionado e refletido para que seja alinhado com o eixo y, resulta-se em uma plotagem mostrada na \autoref{fig:graphxy3}:
 
 \begin{figure}[h]
 	\centering
@@ -491,13 +561,28 @@ Todos os eigenvetores extraídos da matriz são perpendiculares. Isto significa 
 	\label{fig:graphxy3}
 \end{figure}
 
-Observando a \autoref{fig:graphxy3}, o ponto mais próximo da origem se situa na coordenada (0.13, 0.27). Pode-se afirmar que também que este ponto tem uma sequência de pesos relativos a cada eigenvetor, no caso, a sequência {0.13, 0.27}.
+Observando a \autoref{fig:graphxy3}, o ponto mais próximo da origem se situa na coordenada (0.13, 0.27). Pode-se afirmar que também que este ponto tem uma sequência de pesos relativos a cada auto-vetor, no caso, a sequência {0.13, 0.27}.
 
-Tanto a denotação de coordenadas quanto a de pesos pode ser usada para representar as eigenfaces - como contemplado anteriormente, na \autoref{fig:eigenpeso} foi dado o exemplo em que uma imagem é uma sequência de pesos de seis eigenfaces, enquanto que, alternativamente, na  \autoref{fig:eigenpeso_axis} é representada em coordenadas de um plano cartesiado de 3 dimensões, sendo que cada eixo é definido por uma \textit{eigenface} (ou \textit{eigenvector}).
+Tanto a denotação de coordenadas quanto a de pesos pode ser usada para representar as \textit{eigenfaces} - como contemplado anteriormente, na \autoref{fig:eigenpeso} foi dado o exemplo em que uma imagem é uma sequência de pesos de seis \textit{eigenfaces}, enquanto que, alternativamente, na  \autoref{fig:eigenpeso_axis} é representada em coordenadas de um espaço de 3 dimensões, sendo que cada eixo é definido por uma \textit{eigenface} (ou \textit{auto-vetor}) \cite{drmathew_java_programming}.
+
+
 
 \subsubsection{O Reconhecimento}\label{subsec:reconhecimento}
 
-O processo de reconhecimento consiste em recolher novos conjutos de dados (no caso, uma nova face), e utilizando os dados processados até agora e representados na \autoref{fig:graphxy3}, deve-se comparar os dois novos conjuntos de dados (a nova face e os eigenfaces ou eigenvetores) fazendo uso de medidas de distância. 
+O processo de reconhecimento pode ser dividido em 3 passos:
+
+\textbf{Passo 1 - Preparação dos dados:} converter a imagem da nova face em um vetor de consulta $Q$.
+
+
+\textbf{Passo 2 - Projeção do novo vetor no espaço:} neste passo realiza-se a combinação linear de auto-vetores com o novo vetor de consulta $Q$ por:
+\begin{center}
+	$W_n = {e^T_n} (Q - \Phi)$
+\end{center}
+sendo $e$ os auto-vetores, $Q$ o vetor de consulta, e $\Phi$ a face média.
+
+\textbf{O terceiro passo} é comparar a distância entre o descitor do vetor de consulta com cada um dos descitores armazenados na vase de dados. 
+
+%O processo de reconhecimento consiste em recolher novos conjutos de dados (no caso, uma nova face), e utilizando os dados processados até agora e representados na \autoref{fig:graphxy3}, deve-se comparar os dois novos conjuntos de dados (a nova face e os eigenfaces ou eigenvetores) fazendo uso de medidas de distância. 
 
 Existem algumas técnicas de medidas de distância, dentre elas, há uma simples chamada \textbf{Distância Euclidiana}. Esta medida nada mais é do que a distância mínima entre dois pontos no espaço (uma linha reta). A distância euclidiana entre os pontos $P = (p_1, p_2, ..., p_n)$ $Q = (q_1, q_2, ..., q_n)$ é definida como:
 
@@ -507,26 +592,27 @@ Existem algumas técnicas de medidas de distância, dentre elas, há uma simples
 
 O resultado desta medida é utilizada para calcular a taxa de sucesso de uma comparação, sendo assim uma distância nula representaria uma equivalência perfeita.
 
-Contudo, em aplicações na vida real, deve-se reduzir o tamanho dos dados, pois existem informações irrelevantes e a tarefa de reconhecimento pode ser executada mais rapidamente enquanto retém informações suficientes para distinguir entre os pontos quando comparados com os novos conjuntos de dados.
+%Contudo, em aplicações na vida real, deve-se reduzir o tamanho dos dados, pois existem informações irrelevantes e a tarefa de reconhecimento pode ser executada mais rapidamente enquanto retém informações suficientes para distinguir entre os pontos quando comparados com os novos conjuntos de dados.
 
+\begin{comment}
 A técnica consiste em reter todas as coordenadas dos dados, mas reduzir a dimensionalidade do eigenspace, isto é, subtrair o número de eixos do plano cartesiano. Este processo é equivalente a subtrair algumas eingenfaces, mas como citado anteriormente, os enigenvalues de menor intensidade não tem influência no espalhamentos dos dados no plano, sendo pouco significativos para o reconhecimento, e portanto podem ser removidos.
 
 Portanto, os dados mostrados na  \autoref{fig:graphxy3} possuem os seguintes eigenvetores e eigenvalores:
 
 \begin{center}
-	$\begin{pmatrix} -0.7352 \\ 0.6779 \end{pmatrix}$  e 0.049
-	
-	$\begin{pmatrix} 0.6779 \\ 0.7352 \end{pmatrix}$  e 1.284
+$\begin{pmatrix} -0.7352 \\ 0.6779 \end{pmatrix}$  e 0.049
+
+$\begin{pmatrix} 0.6779 \\ 0.7352 \end{pmatrix}$  e 1.284
 \end{center}
 
 Observando que o primeiro \textit{eigenvector} foi rotacionado em direção ao eixo $x$, e o segundo \textit{eigenvector} em direção ao eixo $y$, se o primeiro \textit{eigenvector} que contribui muito pouco para a informação de espalhamento (devido ao seu pequeno \textit{eigenvalue}) for descartado junto ao seu eixo, os dados deste \textit{eigenvcetors} são projetados para o eixo $y$, resultando na plotagem da \autoref{fig:graphxy4}
 
 \begin{figure}[h]
-	\centering
-	\includegraphics[width=.2\textwidth]{graphxy4}
-	\caption{Dados da \autoref{fig:graphxy3} projetados em direção ao eixo y.}
-	\fonte{\cite{drmathew_java_programming}}
-	\label{fig:graphxy4}
+\centering
+\includegraphics[width=.2\textwidth]{graphxy4}
+\caption{Dados da \autoref{fig:graphxy3} projetados em direção ao eixo y.}
+\fonte{\cite{drmathew_java_programming}}
+\label{fig:graphxy4}
 \end{figure}
 
 
@@ -535,11 +621,11 @@ Apesar dos eixos serem eliminados, seus dados ainda estão presentes e espalhado
 Considerando que um novo conjunto de dados adicionado com os valores do vetor \textit{z} = (2.511, 2.411), e estes conjuntos passarem pelos mesmos processos que os vetores \textit{x} e \textit{y}, e por fim normalizado e projetado assim como mostra a \autoref{fig:graphxy2} e \autoref{fig:graphxy3}, plotando-o no mesmo espaço resulta na \autoref{fig:graphxy5}.
 
 \begin{figure}[h]
-	\centering
-	\includegraphics[width=.5\textwidth]{graphxy5}
-	\caption{Plotagem dos novos dados com os dados de treino transformados.}
-	\fonte{\cite{drmathew_java_programming}}
-	\label{fig:graphxy5}
+\centering
+\includegraphics[width=.5\textwidth]{graphxy5}
+\caption{Plotagem dos novos dados com os dados de treino transformados.}
+\fonte{\cite{drmathew_java_programming}}
+\label{fig:graphxy5}
 \end{figure}
 
 A \autoref{fig:graphxy5} é a mesma que a \autoref{fig:graphxy3} com a adição de um novo ponto vermelho que indica a ccoordenada do novo conjunto de dados do vetor \textit{z}, posicionada logo acima do ponto (-0.1751, 0.8280), que por sua vez começou como um ponto de treinamento de pesos (2.5, 2.4), informada nos conjuntos de dados \textit{x} e \textit{y}. Isto quer dizer que o novo conjunto de dados \textit{z} (2.511, 2.411) possui a menor distância euclidiana com o conjunto de treinamento (2.5, 2.4). 
@@ -549,11 +635,11 @@ A real vantagem dos eigenvetores é quando a dimensionalidade do espaço (eigens
 Com tamanha dimensão e portanto, quantidade de eixos, como citado anteriormente, pode-se eliminar alguns eixos dependendo de seus valores eingenvalues (se forem pequenos, podem ser considerados dispensáveis). Se por uma hipótese isto for feito neste exemplo incluindo o novo conjunto dados \textit{z}, a plotagem do resultado seria como na \autoref{fig:graphxy6} abaixo:
 
 \begin{figure}[h]
-	\centering
-	\includegraphics[width=.2\textwidth]{graphxy6}
-	\caption{Plotagem dos conjuntos de dados \textit{x}, \textit{y} e \textit{z}, trasnformados e projetados no eixo do Componente Principal}
-	\fonte{\cite{drmathew_java_programming}}
-	\label{fig:graphxy6}
+\centering
+\includegraphics[width=.2\textwidth]{graphxy6}
+\caption{Plotagem dos conjuntos de dados \textit{x}, \textit{y} e \textit{z}, trasnformados e projetados no eixo do Componente Principal}
+\fonte{\cite{drmathew_java_programming}}
+\label{fig:graphxy6}
 \end{figure}
 
 A \autoref{fig:graphxy6} é similar à \autoref{fig:graphxy4} com exceção do ponto vermelho (novo dado). Pode-se observar nesta figura o problema potencial em se reduzir a dimensionalidade: a probabilidade de erros aumenta tornando difícil de decidir qual ponto de treinamento é que possui a menor distância euclidiana. Outro fator da equação da distância euclidiana é que se utiliza de um parâmetro para definir quando dois pontos estão perto. Se um valor alto é definido então diversos pontos podem estar dentro do alcance aceitável do novo dado \cite{drmathew_java_programming}.
@@ -567,11 +653,11 @@ O transformação dos valores numéricos gerados na ACP para imagens EigenFaces 
 Essencialmente, deve-se converter a imagem para um conjunto de dados, como os vetores $ x $ e $ y $ apresentados na \autoref{tabelaxy}, e performar o algoritmo ACP como descrito anteriormente. A translação de uma imagem para um conjunto de dados é feita tratando esta como um vetor de duas dimensões, e em seguida mapear para um vetor unidimensional como sugere a \autoref{fig:2dto1d}:
 
 \begin{figure}[h]
-	\centering
-	\includegraphics[width=.38\textwidth]{2dto1d}
-	\caption{Conversão de imagem para conjunto de dados. A variável $P$ seria a representação de um pixel.}
-	\fonte{\cite{drmathew_java_programming}}
-	\label{fig:2dto1d}
+\centering
+\includegraphics[width=.38\textwidth]{2dto1d}
+\caption{Conversão de imagem para conjunto de dados. A variável $P$ seria a representação de um pixel.}
+\fonte{\cite{drmathew_java_programming}}
+\label{fig:2dto1d}
 \end{figure}
 
 Supondo que a imagem tem o tamanho de 200x200 pixels em escala de cinza, o conjunto de dados resultante residirá em um \textit{eigenspace} de 40 mil dimensões, o que acarretará na geração de 40 mil \textit{eigenvectors}, cuja a maioria possui um \textit{eigenvalue} desconsiderável ou insignificante, podendo assim ser descartados. Isto facilitará o processamento da imagem e a utilização da técnica. 
@@ -579,6 +665,10 @@ Supondo que a imagem tem o tamanho de 200x200 pixels em escala de cinza, o conju
 Em geral, supondo que uma imagem quadrada em escala de cinza tem o tamanho de  $ N $ pixels, então $N^2$ eigenvetors serão criados. No seguinte exemplo, será assumido que existem $ M $ imagens:
 
 A técnica consiste em "dividir" a matriz de covariância que é ($ N^2 x N^2 $) em duas matrizes de ($ N^2 x M $) e ($ M x N^2 $). 
+
+
+\end{comment}
+
 
 
 

@@ -26,36 +26,37 @@
 \contentsline {section}{\numberline {2.2}Detec\IeC {\c c}\IeC {\~a}o de Faces com Classificadores Haar}{21}{section.2.2}
 \contentsline {subsection}{\numberline {2.2.1}Os Classificadores Haar (\textit {Haar Features}) }{22}{subsection.2.2.1}
 \contentsline {subsection}{\numberline {2.2.2}Algoritmo Viola-Jones (\textit {Haar Cascades Classifier}) }{23}{subsection.2.2.2}
-\contentsline {section}{\numberline {2.3}\textit {EigenFaces} e An\IeC {\'a}lise de Componentes Principais (ACP) }{25}{section.2.3}
-\contentsline {subsection}{\numberline {2.3.1}An\IeC {\'a}lise de Componentes Principais (ACP)}{28}{subsection.2.3.1}
-\contentsline {subsection}{\numberline {2.3.2}ACP E \textit {Eigenfaces}}{30}{subsection.2.3.2}
-\contentsline {subsubsection}{\numberline {2.3.2.1}Utilizando Eigenfaces como Componente Principal}{31}{subsubsection.2.3.2.1}
-\contentsline {subsubsection}{\numberline {2.3.2.2}O Reconhecimento}{33}{subsubsection.2.3.2.2}
-\contentsline {subsection}{\numberline {2.3.3}EigenVectors para EigenFaces}{35}{subsection.2.3.3}
-\contentsline {section}{\numberline {2.4}Considera\IeC {\c c}\IeC {\~o}es Finais}{36}{section.2.4}
+\contentsline {section}{\numberline {2.3}PROCESSO DA AN\IeC {\'A}LISE DE COMPONENTES PRINCIPAIS (ACP) OU \textit {EIGENFACES} }{25}{section.2.3}
+\contentsline {subsection}{\numberline {2.3.1}O C\IeC {\'a}lculo da An\IeC {\'a}lise de Componentes Principais (ACP)}{27}{subsection.2.3.1}
+\contentsline {subsubsection}{\numberline {2.3.1.1}Fase de Treinamento}{28}{subsubsection.2.3.1.1}
+\contentsline {subsubsection}{\numberline {2.3.1.2}O Reconhecimento}{32}{subsubsection.2.3.1.2}
+\contentsline {section}{\numberline {2.4}Considera\IeC {\c c}\IeC {\~o}es Finais}{32}{section.2.4}
 \setlength {\cftchapterindent }{0em} \setlength {\cftchapternumwidth }{\cftlastnumwidth }
-\contentsline {chapter}{\chapternumberline {3}\MakeTextUppercase {MATERIAIS E M\IeC {\'E}TODOS}}{37}{chapter.3}
-\contentsline {section}{\numberline {3.1}Materiais}{37}{section.3.1}
-\contentsline {subsection}{\numberline {3.1.1}Hardwares}{37}{subsection.3.1.1}
-\contentsline {subsection}{\numberline {3.1.2}Softwares}{37}{subsection.3.1.2}
-\contentsline {subsubsection}{\numberline {3.1.2.1}Linguagem Java}{38}{subsubsection.3.1.2.1}
-\contentsline {subsubsection}{\numberline {3.1.2.2}Biblioteca OpenCV, JavaCV e JavaCPP}{38}{subsubsection.3.1.2.2}
-\contentsline {subsubsection}{\numberline {3.1.2.3}Biblioteca Colt}{41}{subsubsection.3.1.2.3}
-\contentsline {subsubsection}{\numberline {3.1.2.4}NetBeans IDE}{41}{subsubsection.3.1.2.4}
-\contentsline {subsubsection}{\numberline {3.1.2.5}LaTex e TeXstudio}{41}{subsubsection.3.1.2.5}
-\contentsline {subsubsection}{\numberline {3.1.2.6}Sistema GIT}{42}{subsubsection.3.1.2.6}
-\contentsline {subsubsection}{\numberline {3.1.2.7}Sistemas Linux e Windows}{42}{subsubsection.3.1.2.7}
-\contentsline {section}{\numberline {3.2}M\IeC {\'e}todos}{42}{section.3.2}
-\contentsline {subsection}{\numberline {3.2.1}M\IeC {\'e}todo Experimental}{42}{subsection.3.2.1}
-\contentsline {subsection}{\numberline {3.2.2}Desenvolvimento \IeC {\'A}gil}{42}{subsection.3.2.2}
-\contentsline {subsubsection}{\numberline {3.2.2.1}XP (\textit {eXtremeProgramming})}{43}{subsubsection.3.2.2.1}
-\contentsline {subsection}{\numberline {3.2.3}Modelagem UML}{43}{subsection.3.2.3}
-\contentsline {section}{\numberline {3.3}Considera\IeC {\c c}\IeC {\~o}es Finais}{44}{section.3.3}
+\contentsline {chapter}{\chapternumberline {3}\MakeTextUppercase {MATERIAIS E M\IeC {\'E}TODOS}}{33}{chapter.3}
+\contentsline {section}{\numberline {3.1}Materiais}{33}{section.3.1}
+\contentsline {subsection}{\numberline {3.1.1}Hardwares}{33}{subsection.3.1.1}
+\contentsline {subsection}{\numberline {3.1.2}Softwares}{33}{subsection.3.1.2}
+\contentsline {subsubsection}{\numberline {3.1.2.1}Linguagem Java}{34}{subsubsection.3.1.2.1}
+\contentsline {subsubsection}{\numberline {3.1.2.2}Biblioteca OpenCV, JavaCV e JavaCPP}{34}{subsubsection.3.1.2.2}
+\contentsline {subsubsection}{\numberline {3.1.2.3}Biblioteca Colt}{37}{subsubsection.3.1.2.3}
+\contentsline {subsubsection}{\numberline {3.1.2.4}NetBeans IDE}{37}{subsubsection.3.1.2.4}
+\contentsline {subsubsection}{\numberline {3.1.2.5}LaTex e TeXstudio}{37}{subsubsection.3.1.2.5}
+\contentsline {subsubsection}{\numberline {3.1.2.6}Sistema GIT}{38}{subsubsection.3.1.2.6}
+\contentsline {subsubsection}{\numberline {3.1.2.7}Sistemas Linux e Windows}{38}{subsubsection.3.1.2.7}
+\contentsline {section}{\numberline {3.2}M\IeC {\'e}todos}{38}{section.3.2}
+\contentsline {subsection}{\numberline {3.2.1}M\IeC {\'e}todo Experimental}{38}{subsection.3.2.1}
+\contentsline {subsection}{\numberline {3.2.2}Desenvolvimento \IeC {\'A}gil}{38}{subsection.3.2.2}
+\contentsline {subsubsection}{\numberline {3.2.2.1}XP (\textit {eXtremeProgramming})}{39}{subsubsection.3.2.2.1}
+\contentsline {subsection}{\numberline {3.2.3}Modelagem UML}{39}{subsection.3.2.3}
+\contentsline {section}{\numberline {3.3}Considera\IeC {\c c}\IeC {\~o}es Finais}{40}{section.3.3}
 \setlength {\cftchapterindent }{0em} \setlength {\cftchapternumwidth }{\cftlastnumwidth }
-\contentsline {chapter}{\chapternumberline {4}\MakeTextUppercase {IMPLEMENTA\IeC {\c C}\IeC {\~A}O}}{45}{chapter.4}
-\contentsline {section}{\numberline {4.1}An\IeC {\'a}lise de Requisitos}{45}{section.4.1}
-\contentsline {section}{\numberline {4.2}Diagrama de Fluxo de Dados}{46}{section.4.2}
-\contentsline {section}{\numberline {4.3}Diagrama de Classes}{47}{section.4.3}
+\contentsline {chapter}{\chapternumberline {4}\MakeTextUppercase {IMPLEMENTA\IeC {\c C}\IeC {\~A}O}}{41}{chapter.4}
+\contentsline {section}{\numberline {4.1}An\IeC {\'a}lise de Requisitos}{41}{section.4.1}
+\contentsline {section}{\numberline {4.2}Diagrama de Fluxo de Dados}{42}{section.4.2}
+\contentsline {section}{\numberline {4.3}Diagrama de Pacotes}{43}{section.4.3}
+\contentsline {section}{\numberline {4.4}Diagrama de Classes - Pacote \textit {\textbf {gui}}}{43}{section.4.4}
+\contentsline {section}{\numberline {4.5}Diagrama de Classes - Pacote \textit {\textbf {eigenfaces}}}{45}{section.4.5}
+\contentsline {section}{\numberline {4.6}Diagrama de Classes - Pacote \textit {\textbf {utils}}}{45}{section.4.6}
 \vspace {\cftbeforechapterskip }
 \setlength {\cftchapterindent }{\cftlastnumwidth } \setlength {\cftchapternumwidth }{2em}
 \contentsline {chapter}{\uppercase {REFER{\^ E}NCIAS}}{48}{section*.4}
