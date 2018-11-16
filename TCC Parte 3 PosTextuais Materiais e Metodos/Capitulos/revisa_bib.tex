@@ -287,7 +287,7 @@ O resultado do algoritmo são as posições dos objetos classificados com as car
 
 \section{PROCESSO DA ANÁLISE DE COMPONENTES PRINCIPAIS (ACP) OU \textit{EIGENFACES} } \label{sec:recog_faces}
 
-A técnica PCA (Análise de Componentes Principais) foi descrita inicialmente por Karl Pearson em 1901 como solução para alguns problemas biométricos da época, mas ele não propôs nenhuma implementação dessa técnica para um caso com mais de duas variáveis. Em 1933 essa técnica foi descrita por Hotteling, mas os cálculos ainda eram complexos quando se tratava de um problema com dezenas de variáveis. Apenas com o surgimento dos computadores atuais, a técnica ficou mais difundida (\cite{geysilva}). 
+A técnica PCA (Análise de Componentes Principais) foi descrita inicialmente por Karl Pearson em 1901 como solução para alguns problemas biométricos da época, mas ele não propôs nenhuma implementação dessa técnica para um caso com mais de duas variáveis. Em 1933 essa técnica foi descrita por Hotteling, mas os cálculos ainda eram complexos quando se tratava de um problema com dezenas de variáveis. Apenas com o surgimento dos computadores atuais, a técnica ficou mais difundida \cite{geysilva}. 
 
 O processo de reconhecimento de faces depende de uma fase de treinamento precedente envolvendo imagens faciais com suas identidades associadas. Imagens típicas de treinamento são mostradas na \autoref{fig:trein_img}.
 \begin{figure}[h]
@@ -364,7 +364,7 @@ Na \autoref{fig:graphxy} plota-se os valores correspondentes dos vetores \textit
 \end{figure}
 
 %PASSO 2
-\textbf{Passo 2 - Subtração da Face Média:} neste passo deve-se calcular a face média do conjunto de dados definidos no "Passo 1". A face média ($\Psi$) é definida por:
+\textbf{Passo 2 - Subtração da Face Média:} neste passo deve-se calcular a face média do conjunto de dados definidos no "Passo 1". A face média ($\Psi$) é definida por \cite{geysilva}:
 \begin{center}
 	$\Psi = \frac{1}{n} \sum_{1}^{n} X_n$
 \end{center}
@@ -375,11 +375,11 @@ onde $X_n$ são os conjuntos de dados do "passo 1", sendo $n$ a contagem desses 
 onde $\Phi_n$ é o vetor resultante, tendendo a obter características distintas das imagens. 
 
 %PASSO 3
-\textbf{Passo 3 - Cálculo da matriz de covariância:} a covariância é uma medida estatística, generalizada da variância, que compara dois conjuntos de dados. Neste passo deve-se calcular a matriz de covariância para quantificar as diferenças \textbf{entre} os conjutos de dados \cite{drmathew_java_programming}.  Realiza-se o cálculo atravez da formula: 
+\textbf{Passo 3 - Cálculo da matriz de covariância:} a covariância é uma medida estatística, generalizada da variância, que compara dois conjuntos de dados. Neste passo deve-se calcular a matriz de covariância para quantificar as diferenças \textbf{entre} os conjutos de dados \cite{drmathew_java_programming}.  Realiza-se o cálculo atravez da formula \cite{geysilva}: 
 \begin{center}
 	$C = \Phi^T . \Phi$	
 \end{center}
-onde $\Phi$ é o vetor resultante do "passo 2", $\Phi^T$ é seu equivalente transversal e $C$ é a matriz de covariância resultante \cite{geysilva}.
+onde $\Phi$ é o vetor resultante do "passo 2", $\Phi^T$ é seu equivalente transposta e $C$ é a matriz de covariância resultante \cite{geysilva}.
 
 %Se a fórmula da covariância for aplicada nos dados dos vetores \textit{x} e \textit{y} dados na \autoref{tabelaxy}, o resultado será 0.6154. A parte em que se deve estar atendo é o sinal: se for negativo significa que quando um vetor aumenta em dados, o outro diminui. Quando o valor é positivo, que é o caso, então os dois conjuntos de dados aumentam juntas. Para ilustrar este conceito, 
 
@@ -393,7 +393,7 @@ Se a fórmula da covariância for aplicada nos dados dos vetores \textit{x} e \t
 \end{center}
 
 %PASSO 4
-\textbf{Passo 4 - Cálculo dos auto-vetores e auto-valores:} para que as \textit{eigenfaces} sejam geradas, deve-se decompor a matriz de covariância em outros conjuntos de dados chamados de auto-vetores (ou \textit{eigenvectors}) e auto-valores (ou \textit{eigenvalues}).
+\textbf{Passo 4 - Cálculo dos auto-vetores e auto-valores:} para que as \textit{eigenfaces} sejam geradas, deve-se decompor a matriz de covariância em outros conjuntos de dados chamados de auto-vetores (ou \textit{eigenvectors}) e auto-valores (ou \textit{eigenvalues}) \cite{geysilva}.
 
 Segundo \cite{drmathew_java_programming}, o auto-vetor é um vetor de valores ordinário que quando multiplicado por uma dada matriz, muda de magnitude, enquanto que auto-valor é o valor desta magnitude. Calcula-se os auto-valores atraves de 
  \begin{center}
@@ -416,9 +416,9 @@ Ambos os eigenvetores possuem tamanho unitário.
 
 
 %PASSO 5!
-\textbf{Passo 5 - Projeção dos auto-vetores ao espaço multidimensional:}  neste último passo de treinamento, cada imagem (ou conjunto de dados) de treinamento é projetada no espaço multidimensional de auto-vetores. O Espaço é criado calculando-se através de uma combinação linear de auto-vetores com os vetores originais \cite{geysilva}:
+\textbf{Passo 5 - Projeção dos auto-vetores ao espaço multidimensional:}  neste último passo de treinamento, cada imagem (ou conjunto de dados) de treinamento é projetada no espaço multidimensional de auto-vetores. O descritor ACP é calculado por uma combinação linear de auto-vetores com os vetores originais \cite{geysilva}:
 \begin{center}
-	$W_n = {e_n}^n (X - \Phi)$	
+	$W_n = {e_n}^T (X - \Phi)$	
 \end{center}
 onde $e$ são os auto-vetores, $X$ é o vetor original de faces de treinamento, $\Phi$ é a face média e $W$ seria o espaço multidimensional resultante.
 
@@ -571,16 +571,16 @@ Tanto a denotação de coordenadas quanto a de pesos pode ser usada para represe
 
 O processo de reconhecimento pode ser dividido em 3 passos:
 
-\textbf{Passo 1 - Preparação dos dados:} converter a imagem da nova face em um vetor de consulta $Q$.
+\textbf{Passo 1 - Preparação dos dados:} converter a imagem da nova face em um vetor de consulta $Q$ \cite{geysilva}.
 
 
-\textbf{Passo 2 - Projeção do novo vetor no espaço:} neste passo realiza-se a combinação linear de auto-vetores com o novo vetor de consulta $Q$ por:
+\textbf{Passo 2 - Projeção do novo vetor no espaço:} neste passo realiza-se a combinação linear de auto-vetores com o novo vetor de consulta $Q$ por \cite{geysilva}:
 \begin{center}
 	$W_n = {e^T_n} (Q - \Phi)$
 \end{center}
 sendo $e$ os auto-vetores, $Q$ o vetor de consulta, e $\Phi$ a face média.
 
-\textbf{O terceiro passo} é comparar a distância entre o descitor do vetor de consulta com cada um dos descitores armazenados na vase de dados. 
+\textbf{O terceiro passo} é comparar a distância entre o descitor do vetor de consulta com cada um dos descitores armazenados na vase de dados \cite{geysilva}. 
 
 %O processo de reconhecimento consiste em recolher novos conjutos de dados (no caso, uma nova face), e utilizando os dados processados até agora e representados na \autoref{fig:graphxy3}, deve-se comparar os dois novos conjuntos de dados (a nova face e os eigenfaces ou eigenvetores) fazendo uso de medidas de distância. 
 

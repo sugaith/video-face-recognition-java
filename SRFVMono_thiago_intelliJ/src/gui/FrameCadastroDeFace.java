@@ -152,7 +152,7 @@ public class FrameCadastroDeFace extends javax.swing.JFrame {
             public void run() {
                 panelVideo.setSalvaFace(true);//se nao der certo, adicionar bloco 'sincronized'
                 long startTime = System.currentTimeMillis();
-                FileUtils.salvarEigenSpace(panelVideo.getFaceRecog().getEspaco_multidimensional());
+                FileUtils.salvarEigenSpace(panelVideo.getFaceRecog().getEigenSpace());
                 System.out.println("BUNDLE SALVO EM " + (System.currentTimeMillis() - startTime) + "ms");
                 panelVideo.setSalvaFace(false);
             }

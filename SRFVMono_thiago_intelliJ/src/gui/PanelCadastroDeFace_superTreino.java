@@ -504,7 +504,7 @@ private BufferedImage retornaFaceBufferedImg(IplImage img){
                             setSalvaFace(false);//desliga o treino
                             long startTime = System.currentTimeMillis();
                             //update facebundle
-                            EigenSpace novoEigenSpace = ACP_Treinamento.atualiza_EigenSpace(getFaceRecog().getEspaco_multidimensional(), facesParaTreino, listaNomeFaces);
+                            EigenSpace novoEigenSpace = ACP_Treinamento.atualiza_EigenSpace(getFaceRecog().getEigenSpace(), facesParaTreino, listaNomeFaces);
                             getFaceRecog().setNovoEspaco(novoEigenSpace, 20);
                             System.out.println("BUNDLE ATUALIZADO EM " + (System.currentTimeMillis() - startTime) + "ms");            
                             //zera vetor de faces e de nomes
@@ -520,7 +520,7 @@ private BufferedImage retornaFaceBufferedImg(IplImage img){
                                 public void run() {
                                     salvandoBase = true; 
                                     long startTime = System.currentTimeMillis();
-                                    FileUtils.salvarEigenSpace(faceRecog.getEspaco_multidimensional());
+                                    FileUtils.salvarEigenSpace(faceRecog.getEigenSpace());
                                     System.out.println("BUNDLE SALVO EM " + (System.currentTimeMillis() - startTime) + "ms");                                
                                     salvandoBase = false;
                                 }
@@ -702,7 +702,7 @@ private BufferedImage retornaFaceBufferedImg(IplImage img){
     double widthScale = FACE_WIDTH / ((double) im.getWidth());
     double heightScale = FACE_HEIGHT / ((double) im.getHeight());
     double scale = (widthScale > heightScale) ? widthScale : heightScale;
-    return ImageUtils.toScaledGray(im, scale);
+    return ImageUtils.escalaImagemCinza(im, scale);
   }  // end of resizeImage()
 
 

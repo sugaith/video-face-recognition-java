@@ -23,7 +23,7 @@ package eigenfaces;
 import java.awt.image.*;
 import java.util.*;
 
-import utils.AutoVetor_descomposicao;
+import utils.AutoVetor_decomp;
 import utils.FileUtils;
 import utils.Matriz2D;
 import utils.Utilitarios;
@@ -57,10 +57,9 @@ public class ACP_Treinamento {
         - cria auto-vetores e auto-valores das imagens de treinamento
         - Gera EigenFaces espaço multidimensional
 
-
          Sajan Joseph, sajanjoseph@gmail.com
          Modified by Andrew Davison, April 2011, ad@fivedots.coe.psu.ac.th
-         Adaptado por Thiago C L da Silva, cls.thiago@gmail.com
+         Modified by Thiago C L da Silva, 2018, cls.thiago@gmail.com
      */
     private static EigenSpace gerar_EigenSpace(ArrayList<String> fnms){
         //PASSO 1 :: DADOS!
@@ -70,26 +69,25 @@ public class ACP_Treinamento {
         Matriz2D matriz_imgs = buffImage2Matriz2D(ims);
 
         //PASSO 2:: CALCULAR A MÉDIA DE CADA IMAGEM E APLICAR SUBTRAÇÃO COM AS MESMAS
-        double[] avgImage = matriz_imgs.calculaMediaPorColuna();
-        matriz_imgs.subtrairMedia();   // cada linha agora contém caracs distintas das imagens
+        double[] avgImage = matriz_imgs.calcMedia_cols();
+        matriz_imgs.subtrairMedia();//imagens de treino com a face média subtraída
 
         //PASSO 3:: CALCULAR A MATRIZ DE COVARIÂNCIA
         Matriz2D imsDataTr = matriz_imgs.transpose();
         Matriz2D covarMat = matriz_imgs.multiply(imsDataTr);
 
         //PASSO 4:: CALCULAR OS AUTOVETORES E AUTOVALORES DA MATRIZ DE COVARIANCIA
-        AutoVetor_descomposicao egValDecomp = covarMat.getEigenvalueDecomp();
+        AutoVetor_decomp egValDecomp = covarMat.getEigenvalueDecomp();
         double[] egVals = egValDecomp.getEigenValues();
         double[][] egVecs = egValDecomp.getEigenVectors();
 
         //PASSO 4.1:: ordenar o vetor de autovetores por ordem de autovalores (para futuro possivel descarte)
-        sortEigenInfo(egVals, egVecs);
+        ordenaEgVecs(egVals, egVecs);
 
         //PASSO 5:: No último passo cada imagem de treinamento é projetada no espaço face.
-        // "O descritor PCA (ou engeifaces, normalizados) é calculado por uma combinação linear de Auto-vetores com os vetores originais."
-        // multiplicando de autovetores com o vetor das faces de treinamento com a face média já subtraida
-        Matriz2D egFaces = getNormEgFaces(matriz_imgs, new Matriz2D(egVecs));
-
+        // "O descritor PCA (ou engeifaces, normalizados) é calculado por uma combinação linear
+        // de Auto-vetores com os vetores originais."
+        Matriz2D egFaces = calcEspaco(matriz_imgs, new Matriz2D(egVecs));
 
         System.out.println("::: Salvando EigenFaces como imagens...");
         FileUtils.salvarEigenfaces_imgs(egFaces, ims[0].getWidth());
@@ -122,7 +120,7 @@ public class ACP_Treinamento {
         Matriz2D imsMat = new Matriz2D(facesConcatenadas);
 
         ////refaz processo de criacao
-        double[] avgImage = imsMat.calculaMediaPorColuna();
+        double[] avgImage = imsMat.calcMedia_cols();
         imsMat.subtrairMedia();   // subtrair média de cada face
         // cada linha contem agora apenas caracteriasticas distinguidas das imagens de treinamento
 
@@ -131,17 +129,17 @@ public class ACP_Treinamento {
         Matriz2D covarMat = imsMat.multiply(imsDataTr);
 
         // calcula coordenadas (pesos) para autovetores e autovalores para matriz de covariancia
-        AutoVetor_descomposicao egValDecomp = covarMat.getEigenvalueDecomp();
+        AutoVetor_decomp egValDecomp = covarMat.getEigenvalueDecomp();
         //imsDataTr = covarMat = null;
 
         double[] egVals = egValDecomp.getEigenValues();
         double[][] egVecs = egValDecomp.getEigenVectors();
 
         // ordena os autovetores e valores
-        sortEigenInfo(egVals, egVecs);
+        ordenaEgVecs(egVals, egVecs);
 
         //normaliza matriz
-        Matriz2D egFaces = getNormEgFaces(imsMat, new Matriz2D(egVecs));
+        Matriz2D egFaces = calcEspaco(imsMat, new Matriz2D(egVecs));
 
         ////retorna novo face bundle
         return new EigenSpace(listaNovosNomes, imsMat.toArray(), avgImage,
@@ -170,26 +168,25 @@ public class ACP_Treinamento {
 
 
 
-    private static Matriz2D getNormEgFaces(Matriz2D imsMat, Matriz2D egVecs)
-  /* calculate normalized Eigenfaces for the training images by multiplying the 
-     eigenvectors to the training images matrix */ {
+    private static Matriz2D calcEspaco(Matriz2D imsMat, Matriz2D egVecs){
         Matriz2D egVecsTr = egVecs.transpose();
         Matriz2D egFaces = egVecsTr.multiply(imsMat);
         double[][] egFacesData = egFaces.toArray();
 
+        //normalizacao
         for (int row = 0; row < egFacesData.length; row++) {
-            double norm = Matriz2D.norm(egFacesData[row]);   // get normal
+            double norm = Matriz2D.norm(egFacesData[row]);   // valor normal
             for (int col = 0; col < egFacesData[row].length; col++)
-                egFacesData[row][col] = egFacesData[row][col] / norm;
+                egFacesData[row][col] = egFacesData[row][col] / norm;//normaliza
         }
         return new Matriz2D(egFacesData);
-    }  // end of getNormEgFaces()
+    }
 
 
     // ---------------------- sort the EigenVectors --------------------------
 
 
-    private static void sortEigenInfo(double[] egVals, double[][] egVecs)
+    private static void ordenaEgVecs(double[] egVals, double[][] egVecs)
   /* sort the Eigenvalues and Eigenvectors arrays into descending order
      by eigenvalue. Add them to a table so the sorting of the values adjusts the
      corresponding vectors
@@ -213,7 +210,7 @@ public class ACP_Treinamento {
         for (int i = 0; i < sortedKeys.length; i++)
             egVals[i] = sortedKeys[i].doubleValue();
 
-    }  // end of sortEigenInfo()
+    }  // end of ordenaEgVecs()
 
 
     private static Double[] getEgValsAsDoubles(double[] egVals)
@@ -289,7 +286,7 @@ public class ACP_Treinamento {
   */ {
         double[] egDValsSub = egValsSubMat.flatten();
         Matriz2D tempEvalsMat = new Matriz2D(weights.length, egDValsSub.length);
-        tempEvalsMat.replaceRowsWithArray(egDValsSub);
+        tempEvalsMat.replaceRows_array(egDValsSub);
 
         Matriz2D tempMat = new Matriz2D(weights);
         tempMat.multiplyElementWise(tempEvalsMat);

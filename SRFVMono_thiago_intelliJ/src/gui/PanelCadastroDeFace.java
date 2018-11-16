@@ -113,7 +113,7 @@ public class PanelCadastroDeFace extends JPanel implements Runnable {
     private ExecutorService executor;
     private AtomicInteger numTasks;
 
-    private long detectStartTime = 0;// grava o numero de tarefas de deteccao
+    private long detectStartTime = 0;// grava o momento do começo dca detecçao
 
     private Rectangle faceRect;     // FACE DETECTADA / REGONHECIDA
     private BufferedImage imagem_rosto;
@@ -122,6 +122,8 @@ public class PanelCadastroDeFace extends JPanel implements Runnable {
     private volatile boolean reconhecerFace = false, salvaFace = false, treinandoFace = false, criandoBase = false;
     private ACP_Reconhecimento faceRecog;   // this class comes from the javaFaces example
     private String nomeDaFace = null;      // nome da ultima face reconhecida
+
+    private static final double MIN_DIST = 0.666;
 
     private FrameCadastroDeFace pai;
 
@@ -189,14 +191,7 @@ public class PanelCadastroDeFace extends JPanel implements Runnable {
 
 
     public void run()
-  /* display the current webcam image every DELAY ms
-     The time statistics gathered here will NOT include the time taken to
-     find a face, which are farmed out to a separate thread in trackFace().
-
-     Tracking is only started at least every DETECT_DELAY (1000) ms, and only
-     if the number of tasks is < MAX_TASKS (one will be executing, the others
-     waiting)
-  */ {
+  {
         FrameGrabber grabber = initGrabber(CAMERA_ID);
         if (grabber == null)
             return;
@@ -221,9 +216,11 @@ public class PanelCadastroDeFace extends JPanel implements Runnable {
 
             duration = System.currentTimeMillis() - startTime;
             totalTime += duration;
+
+            // espera até passar o tempo de delay
             if (duration < DELAY) {
                 try {
-                    Thread.sleep(DELAY - duration);  // wait until DELAY time has passed
+                    Thread.sleep(DELAY - duration);
                 } catch (Exception ex) {
                 }
             }
@@ -427,7 +424,13 @@ public class PanelCadastroDeFace extends JPanel implements Runnable {
     }
 
     // ------------------------- face tracking / regognin ----------------------------
-    private int ultimoIndexNomeFace = 0, countFacesParaTreino = 0, NUM_FACES_TREINO = 5;
+    //constrantes controladas
+    private int NUM_FACES_TREINO = 5;
+    private int NUM_EF_treino = 10;
+    private int NUM_EF_recog = 10;
+
+
+    private int ultimoIndexNomeFace = 0, countFacesParaTreino = 0;
     private boolean pegouOIndexDoNome = false;
 
     private void trackFace(final IplImage img)
@@ -437,31 +440,29 @@ public class PanelCadastroDeFace extends JPanel implements Runnable {
           
           atualizacao: cadastro de face e treino adicionados 
   */ {
-        grayIm = escalaImagemCinza(img);
+        grayIm = ImageUtils.escalaImagemCinza(img);
         numTasks.getAndIncrement();     // increment no. of tasks before entering queue
         executor.execute(new Runnable() {
             public void run() {
                 detectStartTime = System.currentTimeMillis();
 
                 CvRect faceDetectada = detectarFace(grayIm);
-
                 if (faceDetectada != null) //detectou a face:
-                {   //salva posicao da face achada na variavel global
+                {   //salva posiçào da face detectada na variável global
                     setRectangle(faceDetectada);
+                    //abre campos para identificação
                     pai.setSalvarFaceVisible(true);
 
+                    //se está em estado de treinamento
                     if (isSalvaTreinaFace()) {
                         String nomeFace = pai.getNomeFaceField();
                         if (!pegouOIndexDoNome) {
                             ultimoIndexNomeFace = getUltimoIndexNomeFace(nomeFace);
                             pegouOIndexDoNome = true;
                         }
-
                         if (salvaFace_trainingImages(img, nomeFace, ultimoIndexNomeFace++))
                             countFacesParaTreino++;
-
-
-                        if (countFacesParaTreino > NUM_FACES_TREINO) {//TREINA ATÉ TER 'countFacesParaTreino'x NUMERO DE FACES
+                        if (countFacesParaTreino > NUM_FACES_TREINO) {//TREINA ATÉ TER NUM_FACES_TREINO
                             setSalvaFace(false);//desliga o treino
 
                             //reseta vars de controle
@@ -476,17 +477,17 @@ public class PanelCadastroDeFace extends JPanel implements Runnable {
                                 public void run() {
                                     criandoBase = true;
                                     long startTime = System.currentTimeMillis();
-                                    ACP_Treinamento.construirEspaco(10);//cria novo bundle
+                                    ACP_Treinamento.construirEspaco(NUM_EF_treino);//cria novo bundle
                                     System.out.println("BUNDLE CRIADO EM " + (System.currentTimeMillis() - startTime) + "ms");
-                                    faceRecog = new ACP_Reconhecimento(20);//usa novo bundle
+                                    faceRecog = new ACP_Reconhecimento(NUM_EF_recog);//usa novo bundle
                                     criandoBase = false;
                                 }
                             });
                         }
                     } else {
+                        //reconhece face
                         recogFace(img);
                     }
-            
                     /* colocar esse reconhecimento numa thread
                     if(recogFace(img))//reconhecer a face
                     {//se sim: treinar mais a face?
@@ -511,25 +512,7 @@ public class PanelCadastroDeFace extends JPanel implements Runnable {
         });
     }  // end of trackFace()
 
-    private IplImage escalaImagemCinza(IplImage img)
-  /* Scale the image and convert it to grayscale. Scaling makes
-     the image smaller and so faster to process, and Haar detection
-     requires a grayscale image as input
-  */ {
-        // convert to grayscale
-        IplImage grayImg = cvCreateImage(cvGetSize(img), IPL_DEPTH_8U, 1);
-        cvCvtColor(img, grayImg, CV_BGR2GRAY);
 
-        // scale the grayscale (to speed up face detection)
-        IplImage smallImg = IplImage.create(grayImg.width() / IM_SCALE,
-                grayImg.height() / IM_SCALE, IPL_DEPTH_8U, 1);
-        cvResize(grayImg, smallImg, CV_INTER_LINEAR);
-
-        cvReleaseImage(grayImg);
-        // equalize the small grayscale
-        cvEqualizeHist(smallImg, smallImg);
-        return smallImg;
-    }  // end of scaleGray()
 
 
     private CvRect detectarFace(IplImage grayIm)
@@ -578,18 +561,10 @@ public class PanelCadastroDeFace extends JPanel implements Runnable {
             int widthNew = r.width() * IM_SCALE;
             int heightNew = r.height() * IM_SCALE;
 
-            // calculate movement of the new rectangle compared to the previous one
-            // int xMove = (xNew + widthNew/2) - (faceRect.x + faceRect.width/2);
-            // int yMove = (yNew + heightNew/2) - (faceRect.y + faceRect.height/2);
-
-            // report movement only if it is 'significant'
-            // if ((Math.abs(xMove)> SMALL_MOVE) || (Math.abs(yMove) > SMALL_MOVE))
-            //  System.out.println("Movement (x,y): (" + xMove + "," + yMove + ")" );
-
             faceRect.setRect(xNew, yNew, widthNew, heightNew);
             // System.out.println("Rectangle: " + faceRect);
         }
-    }  // end of setRectangle()
+    }
 
 
     // ---------------- face recognition -------------------------
@@ -625,6 +600,7 @@ public class PanelCadastroDeFace extends JPanel implements Runnable {
         System.out.println("COMPARANDO SNAP...");
         BufferedImage faceIm = resizeToFaceWH(resizeImageAndGrayIt(clipIm));
         //FileUtils.saveImage(faceIm, FACE_FNM);
+        //processa reconhecimento
         ResultadoReconhecimento result = faceRecog.match(faceIm);
         System.out.println("tempo de recog: " + (System.currentTimeMillis() - startTime) + " ms");
 
@@ -634,9 +610,8 @@ public class PanelCadastroDeFace extends JPanel implements Runnable {
         } else {
             double distancia = result.getMatchDistance();
             String distStr = String.format("%.4f", distancia);
-            //String nomeDaFaceBanco = new DaoFuncionario(conexao).consultaPK(Integer.valueOf(result.getName())).getNome();
             String nomeDaFaceBanco = result.getName();
-            if (distancia < 0.36) { //se for menor q 0.36 = nota boa aparece o nome
+            if (distancia < MIN_DIST) { //se for menor q MIN_DIST = sucesso
                 nomeDaFace = nomeDaFaceBanco;
 
                 System.out.println("  RECONHECIDO: " + nomeDaFace + " (" + distStr + ")");
@@ -660,7 +635,7 @@ public class PanelCadastroDeFace extends JPanel implements Runnable {
         double widthScale = FACE_WIDTH / ((double) im.getWidth());
         double heightScale = FACE_HEIGHT / ((double) im.getHeight());
         double scale = (widthScale > heightScale) ? widthScale : heightScale;
-        return ImageUtils.toScaledGray(im, scale);
+        return ImageUtils.escalaImagemCinza(im, scale);
     }  // end of resizeImage()
 
 

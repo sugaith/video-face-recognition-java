@@ -80,7 +80,7 @@ public class FileUtils {
             try {
                 System.out.println(":: Carregando imagem -> " + fnm);
                 im = ImageIO.read(new File(fnm));
-                ims[i++] = ImageUtils.toScaledGray(im, 1.0);
+                ims[i++] = ImageUtils.escalaImagemCinza(im, 1.0);
             } catch (Exception e) {
                 System.out.println("Falha ao carregar imagen -> " + fnm);
             }

@@ -27,20 +27,20 @@ public class ACP_Reconhecimento {
     private static final float FACES_FRAC = 0.75f;
     // default fraction of eigenfaces used in a match
 
-    private EigenSpace espaco_multidimensional = null;
+    private EigenSpace eigenSpace = null;
     private double[][] coordenadas_eigenfaces = null;    // coordenadas das imagens de treinamento no espaço
     private int num_eigenfaces = 0;     // num de eigenfaces usado para o reconhecimento (maximo sendo o valor q o espaço foi iniciado)
 
 
     public ACP_Reconhecimento(int num_eigenFaces) {
-        espaco_multidimensional = FileUtils.carregaEigenSpace2RAM();
-        if (espaco_multidimensional == null) {
+        eigenSpace = FileUtils.carregaEigenSpace2RAM();
+        if (eigenSpace == null) {
             System.out.println("Espaço (bundle) não encontrado.. deve-se construir o espaço e salvá-lo em arquivo.");
             System.exit(1);
         }
 
         //num. de eigenfaces dave ser menor ou igual au numero de eigenfaces criada inicialmente no espaço
-        int numFaces = espaco_multidimensional.getNumEigenFaces();
+        int numFaces = eigenSpace.getNumEigenFaces();
         System.out.println("::: Max num. Eigenfaces para Reconhecimento -> " + numFaces);
 
         this.num_eigenfaces = num_eigenFaces;
@@ -51,7 +51,7 @@ public class ACP_Reconhecimento {
         } else
             System.out.println("Utilizando: " + num_eigenfaces);
 
-        coordenadas_eigenfaces = espaco_multidimensional.calculaCoordenadas(num_eigenfaces);
+        coordenadas_eigenfaces = eigenSpace.calculaCoordenadas(num_eigenfaces);
     }
 
 
@@ -64,8 +64,8 @@ public class ACP_Reconhecimento {
         if (f == null)
             return;
 
-        this.setEspaco_multidimensional(f);
-        int numFaces = getEspaco_multidimensional().getNumEigenFaces();
+        this.setEigenSpace(f);
+        int numFaces = getEigenSpace().getNumEigenFaces();
 
         num_eigenfaces = numEigenFaces;
         if ((num_eigenfaces < 1) || (num_eigenfaces > numFaces - 1)) {
@@ -75,7 +75,7 @@ public class ACP_Reconhecimento {
         } else
             System.out.println("numero de  eigenfaces: " + num_eigenfaces);
 
-        coordenadas_eigenfaces = getEspaco_multidimensional().calculaCoordenadas(num_eigenfaces);
+        coordenadas_eigenfaces = getEigenSpace().calculaCoordenadas(num_eigenfaces);
     }
 
     public ResultadoReconhecimento match(String imFnm)
@@ -98,7 +98,7 @@ public class ACP_Reconhecimento {
     // match loaded image against training images
 
     {
-        if (getEspaco_multidimensional() == null) {
+        if (getEigenSpace() == null) {
             System.out.println("Deve-se iniciar um eigenspace antes de processar o reconhecimento");
             return null;
         }
@@ -114,54 +114,55 @@ public class ACP_Reconhecimento {
         //PASSO 1:: CONVERTE IMAGEM PARA VETOR E NORMALIZA
         //converte imagem para vetor
         double[] imArr = ImageUtils.createArrFromIm(im);
-        // normaliza o vator
         Matriz2D imMat = new Matriz2D(imArr, 1);
+        // normaliza o vator
         imMat.normalise();
 
         //PASSO 2:: PROJETAR O VETOR DE CONSULTA NO ESPAÇO
         /// multiplicando de autovetores com o vetor DE CONSULTA com a face média já subtraida
-        imMat.subtract( new Matriz2D( this.getEspaco_multidimensional().getImagem_media(), 1) );  // subtracao da face media
-        // projetar o vetor de consulta no espaço face, retornando suas coordenadas do espa'co
-        // limitar o uso das eigenfaces "autovetores" por num EF
-        Matriz2D imWeights = getImageWeights(num_eigenfaces, imMat);
 
-        //consulta as coordenadas (ou pesos) das eigenfaces pre treinadas
-        double[] dists = this.getDists(imWeights);
+        // subtracao da face media
+        imMat.subtract( new Matriz2D( this.getEigenSpace().getImagem_media(), 1) );
+        // projetar o vetor de consulta no espaço face, retornando suas coordenadas do espa'co
+        // limitar o uso das eigenfaces "autovetores" por NUM_EF_recog previamente fornecida
+        Matriz2D espaco = calcEspaco(num_eigenfaces, imMat);
+
         //PASSO 3:: calcula a distancia euclidiana entre a nova imagem e as imagens pre treinadas (eigenfaces)
-        InfoDistancia distInfo = getDistanciaEuclidiana(dists);
+        double[] dists = this.getEucDists(espaco);
+        InfoDistancia distInfo = getMenorDist(dists);
 
         //consulta o nome da imagem
-        ArrayList<String> imageFNms = this.getEspaco_multidimensional().getListaPath_imagens();
+        ArrayList<String> imageFNms = this.getEigenSpace().getListaPath_imagens();
         String matchingFNm = imageFNms.get(distInfo.getIndex());
 
-        //eleva ao quadrado
+        //extrai raiz quadrada
         double minDist = Math.sqrt(distInfo.getValue());
 
         //salva no objeto
         return new ResultadoReconhecimento(matchingFNm, minDist);
     }
 
-
-    private Matriz2D getImageWeights(int numEFs, Matriz2D imMat)
-  /* map image onto num_eigenfaces eigenfaces returning its coordenadas_eigenfaces
-     (i.e. its coordinates in eigenspace)
-  */ {
-        Matriz2D egFacesMat = new Matriz2D(getEspaco_multidimensional().getAuto_vetores());
+    /* mapeia a imagem para espaco limitando o numero de eigenfaces (autovetores)
+     *   por numEFs retornando suas coordenadas do espaço
+     */
+    private Matriz2D calcEspaco(int numEFs, Matriz2D imMat)
+   {
+        Matriz2D egFacesMat = new Matriz2D(getEigenSpace().getAuto_vetores());
         Matriz2D egFacesMatPart = egFacesMat.getSubMatrix(numEFs);
         Matriz2D egFacesMatPartTr = egFacesMatPart.transpose();
 
         return imMat.multiply(egFacesMatPartTr);
-    }  // end of getImageWeights()
+    }
 
 
-    private double[] getDists(Matriz2D imWeights)
+    private double[] getEucDists(Matriz2D imWeights)
   /* return an array of the sum of the squared Euclidian distance
      between the input image imWeights and all the training image coordenadas_eigenfaces */ {
         Matriz2D tempWt = new Matriz2D(coordenadas_eigenfaces);
         double[] wts = imWeights.flatten();
 
         tempWt.subtracaoPorColuna(wts);
-        tempWt.multiplyElementWise(tempWt);
+        tempWt.multiplyElementWise(tempWt);//ao quadrado
         double[][] sqrWDiffs = tempWt.toArray();
         double[] dists = new double[sqrWDiffs.length];
 
@@ -175,7 +176,7 @@ public class ACP_Reconhecimento {
     }  // end of getDists()
 
 
-    private InfoDistancia getDistanciaEuclidiana(double[] dists) {
+    private InfoDistancia getMenorDist(double[] dists) {
         double minDist = Double.MAX_VALUE;
         int index = 0;
         for (int i = 0; i < dists.length; i++)
@@ -184,7 +185,7 @@ public class ACP_Reconhecimento {
                 index = i;
             }
         return new InfoDistancia(dists[index], index);
-    }      // end of getDistanciaEuclidiana()
+    }      // end of getMenorDist()
 
 
     // PARA TESTE
@@ -225,17 +226,17 @@ public class ACP_Reconhecimento {
 
 
     /**
-     * @return the espaco_multidimensional
+     * @return the eigenSpace
      */
-    public EigenSpace getEspaco_multidimensional() {
-        return espaco_multidimensional;
+    public EigenSpace getEigenSpace() {
+        return eigenSpace;
     }
 
     /**
-     * @param espaco_multidimensional the espaco_multidimensional to set
+     * @param eigenSpace the eigenSpace to set
      */
-    public void setEspaco_multidimensional(EigenSpace espaco_multidimensional) {
-        this.espaco_multidimensional = espaco_multidimensional;
+    public void setEigenSpace(EigenSpace eigenSpace) {
+        this.eigenSpace = eigenSpace;
     }
 
 

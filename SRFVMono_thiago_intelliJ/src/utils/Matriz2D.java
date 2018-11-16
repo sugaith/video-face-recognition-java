@@ -49,11 +49,11 @@ public class Matriz2D extends DenseDoubleMatrix2D {
 
 
     public void subtrairMedia(){
-        this.subtracaoPorColuna( this.calculaMediaPorColuna() );
+        this.subtracaoPorColuna( this.calcMedia_cols() );
     }
 
 
-    public double[] calculaMediaPorColuna(){
+    public double[] calcMedia_cols(){
         double[][] data = this.toArray();
         double total;
         double[] avgValues = new double[this.columns];
@@ -68,7 +68,7 @@ public class Matriz2D extends DenseDoubleMatrix2D {
     }
 
 
-    public void replaceRowsWithArray(double[] data) {
+    public void replaceRows_array(double[] data) {
         if (this.columns != data.length)
             throw new RuntimeException(
                     "matrix columns not matching number of input array elements");
@@ -158,8 +158,8 @@ public class Matriz2D extends DenseDoubleMatrix2D {
 
 
 
-    public AutoVetor_descomposicao getEigenvalueDecomp() {
-        return new AutoVetor_descomposicao(this);
+    public AutoVetor_decomp getEigenvalueDecomp() {
+        return new AutoVetor_decomp(this);
     }
 
 }

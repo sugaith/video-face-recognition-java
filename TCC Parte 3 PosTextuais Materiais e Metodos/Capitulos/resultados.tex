@@ -1,12 +1,160 @@
 % !TeX encoding = UTF-8
 
-\chapter{ANÁLISE DOS RESULTADOS}\label{ch:resultados}
+\chapter{TESTES E ANÁLISE DOS RESULTADOS}\label{ch:resultados}
 
-Este capítulo tem como finalidade apresentar os resultados obtidos através das implementações demonstrados no \autoref{ch:implementacao}.
+Este capítulo tem como finalidade apresentar os testes realizados através da manipulação das constantes definidas na \autoref{sec:consts}, seus resultados e posteriormente, a análise dos mesmos.
 
-\section{APRESENTAÇÃO DOS RESULTADOS}
+\section{Ambiente de Testes}\label{sec:ambtest}
 
-Após o mapeamento das informações do \textit{DataFrame},  ... conjunto de dados coletados, \autoref{lingua}.
+Os testes foram realizados no local de trabalho do autor e os objetos de testes foram as faces dos funcionários do escritório do mesmo, dentro os quais a participação variava diariamente entre 6 a 10 participantes, incluindo o autor. Tomou-se cuidado para que as faces relacionadas fossem sempre as mesmas. Ou seja, a "face 1" seria a mesma face em todos os dias de treino.
+
+Os equipamentos (\textit{hardwares}), descritos na \autoref{sub-hardw}, foram postos em um local de saída dos funcionários do escritóio, onde as condições luminosas eram sempre as mesmas.
+
+A interface do sistema, como se pode ver na ????, dispõe de uma máscara que indica o local em que a face deve ser posicionada corretamente em frente a câmera, e a câmera posicionada no mesmo local em todos os testes. A cada dia, caso o resultado de correspondência fosse considerada ruim (muito acima do valor mínimo \textit{MIN\_DIST}), ou caso o objeto de teste tenha se movido no momento do treino interrompendo o processo, a face poderia ser treinada novamente, o que acumularia as faces de treino do objeto de teste.
+
+As faces dos objetos de testes são expostas durante o tempo necessário para o sistema coletar a quantidade estabelecida pela constante \textit{NUM\_FACES\_TREINO}. O sistema é configurado para fazer cerca de 3 a 4 deteções por segundo.
+
+Os testes documentados foram realizados em 5 (cinco) dias e divididos em três fases: duas fases de dois e uma fase de um dias. Para cada fase uma configuração distinta das constantes de controle contempladas na \autoref{sec:consts} foram definidas, as quais são detalhadas na seção seguinte.
+
+Apresentam-se os resultados dos testes do sistema nas condições de cada fase em tabelas: uma para cada dia de teste. Todas apresentam as contagens das quantidades de reconhecimento realizadas por pessoa, bem como a nota média das distâncias correspodentes aos resultados de cada reconhecimento, tanto na falha quanto no sucesso, e a contagem de falsos positivos e falsos negativos.
+
+A contagem dos resultados falsos positivos e falsos negativos foram feitos a olho nú e devidamente registrados pelo analista, comparando os resultados registrados pelo sistema no momento dos testes, como descreve a \autoref{sec:defsucregoc}.
+
+\section{Testes e Resultados}\label{ch:testresult}
+
+Esta sessão de testes, podendo ser considerado pela metodologia Ágil, uma \textit{sprint} (ou iteração de desenvolvimento), foi dividida em três fases: uma para cada configuração das constantes de controle. A finalidade de cada constante é contemplada na \autoref{sec:consts} e suas interações com o código descritas durante \autoref{sec:codigo}.
+
+
+\subsection{Fase 1}\label{ch:testresultfaz1}
+Para a primeira fase da \textit{sprint} testes, feita em dois dias, os valores das constantes de controle foram configuradas como define a lista abaixo.
+
+\begin{itemize}	
+	\item \textbf{NUM\_FACES\_TREINO = 2}
+	\begin{itemize}	
+		\item esta constante é resposável por controlar o número de faces a ser usado no treinamento, foi configurado para o valor 2 (dois) esperando-se manter um número reduzido de faces para treinamento, e consequentemente do tamanho do espaço multidimensional a ser gerado;
+	\end{itemize}
+
+	\item \textbf{NUM\_EF\_recog = 5}
+	\begin{itemize}	
+		\item esta constante é resposável por controlar o número de \textit{eigenfaces} ou auto-vetores a serem usadas no reconhecimento, foi configurado para o valor 5 (cinco), para se observar os resultados iniciais do experimento;
+	\end{itemize}
+
+	\item \textbf{MIN\_DIST = 0.433}
+	\begin{itemize}	
+		\item esta constante define se a distância encontrada na fase de reconhecimento pode ser considerada um resultado de sucesso ou falha, foi definida para o valor 0.433, para se observer os resultados iniciais.
+	\end{itemize}
+\end{itemize}
+
+Estes valores iniciais foram julgados um bom resultado pelo desenvolvedor a partir de testes unitários não documentados em \textit{sprints} anteriores durante o desenvolvimento, onde os objetos de teste eram a face do próprio desenvolvedor, voluntários esporádicos, ou imagens de faces.
+
+Os resultados do primeiro dia de teste desta fase é descrito na \autoref{tab-res-fase1dia1}. Neste dia Houveram 18 imagens de treinamento coletadas, com destaque para a "face 5", que por alguma razão, talvez sua pele muito branca e oleosa, refletia as luzes do ambiente dificultando o processo e apresentando maus resultados, e assim foi efetuada a coleta de mais imagens de treino deste usuário.
+
+\begin{table}[h]
+	\centering
+	\caption{Resultado dos testes (Fase 1 - Primeiro dia) }
+	\includegraphics[width=1\textwidth]{tab-res-fase1dia1}
+	\fonte{Elaborado pelo autor.}
+	\label{tab-res-fase1dia1}
+\end{table}
+
+Os resultados do segundo dia de teste apresenta-se na \autoref{tab-res-fase1dia2}. O esperado era que os usuários fossem reconhecidos com resultados parecidos. Observa-se que a "face 2 e 3"\ obtiveram maus resultados e tiveram que ser treinadas, possivelmente por fazerem uso de maquiagem. A "face 5" continuou obtendo os maus resultados de anteriormente. Mais 4 faces foram adicionadas, acumulando um total de 22 imagens usadas para o treinamento.
+
+\begin{table}[h]
+	\centering
+	\caption{Resultado dos testes (Fase 1 - Segundo dia) }
+	\includegraphics[width=1\textwidth]{tab-res-fase1dia2}
+	\fonte{Elaborado pelo autor.}
+	\label{tab-res-fase1dia2}
+\end{table}
+
+
+
+\subsection{Fase 2}\label{ch:testresultfaz2}
+Para a segunda fase da \textit{sprint} testes, feita em dois dias, os valores das constantes de controle foram configuradas como define a lista abaixo.
+
+\begin{itemize}	
+	\item \textbf{NUM\_FACES\_TREINO = 1}
+	\begin{itemize}	
+		\item esta constante é resposável por controlar o número de faces a ser usado no treinamento, foi configurado para o valor 1 (um) esperando-se reduzir ainda mais o espeço (em 50\%) para observar se diminui o numero de falsos positivos;
+	\end{itemize}
+	
+	\item \textbf{NUM\_EF\_recog = 2}
+	\begin{itemize}	
+		\item esta constante foi configurado para o valor 2 (2), para priozirar as \textit{eigenfaces} com mais probabilidade de ter atributos distintos entre as faces de treinamento, esperando-se observar um numero menor de falsos positivos
+	\end{itemize}
+	
+	\item \textbf{MIN\_DIST = 0.55}
+	\begin{itemize}	
+		\item esta constante foi definida para o valor "0.55", esperando-se obervar uma melhor taxa de sucesso no reconhecimento.
+	\end{itemize}
+\end{itemize}
+
+Os resultados do primeiro dia de teste desta fase é descrito na \autoref{tab-res-fase2dia1}. Neste dia coletou-se imagens de treino apenas de novos usuários, acumulando um total de 28 imagens de treino. 
+
+
+\begin{table}[h]
+	\centering
+	\caption{Resultado dos testes (Fase 2 - Primeiro dia) }
+	\includegraphics[width=1\textwidth]{tab-res-fase2dia1}
+	\fonte{Elaborado pelo autor.}
+	\label{tab-res-fase2dia1}
+\end{table}
+
+
+Os resultados do segundo dia de teste desta fase é descrito na \autoref{tab-res-fase2dia2}. Neste dia coletou-se uma imagem de cada usuário, acumulando um total de 35 imagens de treino. Foram feitos mais iterações de reconhecimento no usuário "face 5" pois este continuara a apresentar resultados maus (valores muito altos).
+
+
+\begin{table}[h]
+	\centering
+	\caption{Resultado dos testes (Fase 2 - Segundo dia) }
+	\includegraphics[width=1\textwidth]{tab-res-fase2dia2}
+	\fonte{Elaborado pelo autor.}
+	\label{tab-res-fase2dia2}
+\end{table}
+
+
+
+\subsection{Fase 3}\label{ch:testresultfaz2}
+Para a terceira e últimas fase com apenas uma oportunidade para teste, as faces de treino foram deletadas para que se comece o teste com o espaço \textit{eigenspace} limpo/ Os valores das constantes de controle foram configuradas como define a lista abaixo.
+
+\begin{itemize}	
+	\item \textbf{NUM\_FACES\_TREINO = 7}
+	\begin{itemize}	
+		\item esta constante é resposável por controlar o número de faces a ser usado no treinamento, foi configurado para o valor 7 (sete) nesta fase, obter um valor maior de \textit{eigenfaces} geradas;
+	\end{itemize}
+	
+	\item \textbf{NUM\_EF\_recog = 1}
+	\begin{itemize}	
+		\item esta constante foi configurado para o valor 1 (um), para descartar o máximo de \textit{eigenfaces} possível, afim de diminuir o número de falsos positivos;
+	\end{itemize}
+	
+	\item \textbf{MIN\_DIST = 0.69}
+	\begin{itemize}	
+		\item esta constante foi definida para o valor "0.69", pois ao observar o teste anterior, analisou-se que em geral os resultados estavam piorando a medida que o número de imagens de treno aumentavam, e em muitos casos haviam muitos falsos negativos que poderiam ser confimação de sucesso.
+	\end{itemize}
+\end{itemize}
+
+Os resultados desta fase de teste são apresentos na \autoref{tab-res-fase3}. Neste dia coletou-se 14 imagem de cada usuário, acumulando um total de 98 imagens de treino. Foram feitos mais iterações de reconhecimento para se ter uma melhor amostragem.
+
+\begin{table}[h]
+	\centering
+	\caption{Resultado dos testes (Fase 3) }
+	\includegraphics[width=1\textwidth]{tab-res-fase3}
+	\fonte{Elaborado pelo autor.}
+	\label{tab-res-fase3}
+\end{table}
+
+
+
+
+
+\section{Análise dos Resultados}\label{ch:analresult}
+
+
+
+
+
+
 
 \begin{grafico}[h]
 	\centering

@@ -8,12 +8,19 @@ package utils;
 // Adaptado por Thiago C L da Silva, cls.thiago@gmail.com
 
 
+import org.bytedeco.javacpp.opencv_core;
+
 import java.util.*;
 import java.awt.*;
 import java.awt.image.*;
 
+import static org.bytedeco.javacpp.opencv_core.*;
+import static org.bytedeco.javacpp.opencv_imgproc.*;
+import static org.bytedeco.javacpp.opencv_imgproc.cvEqualizeHist;
+
 
 public class ImageUtils {
+    private static final int IM_SCALE = 4;
 
     public static BufferedImage createImFromArr(double[] imData, int width) {
         BufferedImage im = null;
@@ -49,9 +56,28 @@ public class ImageUtils {
         return imArr;
     }  // end of createArrFromIm()
 
+    public static opencv_core.IplImage escalaImagemCinza(opencv_core.IplImage img)
+  /* Scale the image and convert it to grayscale. Scaling makes
+     the image smaller and so faster to process, and Haar detection
+     requires a grayscale image as input
+  */ {
+        // convert to grayscale
+        opencv_core.IplImage grayImg = cvCreateImage(cvGetSize(img), IPL_DEPTH_8U, 1);
+        cvCvtColor(img, grayImg, CV_BGR2GRAY);
+
+        // scale the grayscale (to speed up face detection)
+        opencv_core.IplImage smallImg = opencv_core.IplImage.create(grayImg.width() / IM_SCALE,
+                grayImg.height() / IM_SCALE, IPL_DEPTH_8U, 1);
+        cvResize(grayImg, smallImg, CV_INTER_LINEAR);
+
+        cvReleaseImage(grayImg);
+        // equalize the small grayscale
+        cvEqualizeHist(smallImg, smallImg);
+        return smallImg;
+    }  // end of scaleGray()
 
     // public static BufferedImage convertToGray(BufferedImage im)
-    public static BufferedImage toScaledGray(BufferedImage im, double scale)
+    public static BufferedImage escalaImagemCinza(BufferedImage im, double scale)
     // scale and convert to grayscale
     {
         int imWidth = im.getWidth();
