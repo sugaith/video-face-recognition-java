@@ -22,7 +22,7 @@
 \contentsline {figure}{\numberline {21}{\ignorespaces Vers\IeC {\~a}o rotacionada e refletida da \autoref {fig:graphxy2}}}{39}{figure.2.21}
 \contentsline {figure}{\numberline {22}{\ignorespaces Ilustra\IeC {\c c}\IeC {\~a}o do processo do sistema.}}{50}{figure.4.22}
 \contentsline {figure}{\numberline {23}{\ignorespaces Diagrama de pacotes (UML) do sistema proposto.}}{51}{figure.4.23}
-\contentsline {figure}{\numberline {24}{\ignorespaces Diagrama de classes (UML) do pacote \textbf {\textit {gui}}.}}{52}{figure.4.24}
+\contentsline {figure}{\numberline {24}{\ignorespaces Diagrama de classes (UML) do pacote \textbf {\textit {gui}}.}}{51}{figure.4.24}
 \contentsline {figure}{\numberline {25}{\ignorespaces Diagrama de classes (UML) do pacote \textbf {\textit {eigenfaces}}.}}{54}{figure.4.25}
 \contentsline {figure}{\numberline {26}{\ignorespaces Diagrama de classes (UML) do pacote \textbf {\textit {utils}}.}}{56}{figure.4.26}
 \contentsline {figure}{\numberline {27}{\ignorespaces Bloco de c\IeC {\'o}digo do m\IeC {\'e}todo \textit {trackFace()} da classe \textit {PanelCadastroDeFace}}}{59}{figure.4.27}
@@ -31,3 +31,6 @@
 \contentsline {figure}{\numberline {30}{\ignorespaces Bloco de c\IeC {\'o}digo do m\IeC {\'e}todo \textit {processaReconhecimento()} da classe \textit {ACP\_Reconhecimento}}}{62}{figure.4.30}
 \contentsline {figure}{\numberline {31}{\ignorespaces Bloco de c\IeC {\'o}digo do m\IeC {\'e}todo \textit {calcEspaco()} da classe \textit {ACP\_Treinamento}}}{63}{figure.4.31}
 \contentsline {figure}{\numberline {32}{\ignorespaces Bloco de c\IeC {\'o}digo do m\IeC {\'e}todo \textit {negocioReconhecerClip()} da classe \textit {PanelCadastroDeFace}}}{64}{figure.4.32}
+\contentsline {figure}{\numberline {33}{\ignorespaces \textit {Screenshot} do Sistema em Funcionamento.}}{65}{figure.5.33}
+\contentsline {figure}{\numberline {34}{\ignorespaces \textbf {Gr\IeC {\'a}fico "A"}: Reconhecimentos de sucesso (eixo Y) por quantidade de imagens usadas para o treino (eixo X). \textbf {Gr\IeC {\'a}fico "B"}: Falhas no reconhecimentos (eixo Y) por quantidade de imagens usadas para o treino (eixo X). Referentes as fases de teste "1" e "2".}}{72}{figure.5.34}
+\contentsline {figure}{\numberline {35}{\ignorespaces \textbf {Gr\IeC {\'a}fico "A"}: Reconhecimentos de sucesso (eixo Y) por quantidade de imagens usadas para o treino (eixo X). \textbf {Gr\IeC {\'a}fico "B"}: Falhas no reconhecimentos (eixo Y) por quantidade de imagens usadas para o treino (eixo X). Referentes as fases de teste "3".}}{72}{figure.5.35}

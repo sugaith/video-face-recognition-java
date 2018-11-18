@@ -10,15 +10,13 @@ Para que se possa iniciar o planejamento da implementação do sistema aqui prop
 \begin{enumerate}
 	\item \textbf{entrada:} uma câmera do tipo \textit{webcam} descrita na \autoref{sec: tec-ferramenta} deve estar filmando uma área com iluminação controlada, produzindo o fluxo de \textit{frames} e disponibilizando em formado digital para o sistema;
 	
-	\item \textbf{processamento:} o sistema adquire controle do fluxo de \textit{frames} da \textit{webcam}, manipulando-o para que se possa ser exibido na tela do microcomputador e realiza a detecção de uma face, em tempo real, utilizando o algoritmo descrito na \autoref{subsubsec:violajones} com os materiais contemplados na \autoref{subsec:bib_opencv};
+	\item \textbf{processamento/saída:} o sistema adquire controle do fluxo de \textit{frames} da \textit{webcam}, manipulando-o para que se possa ser exibido na tela do microcomputador e separa um quadro para a detecção, em tempo real, utilizando o algoritmo descrito na \autoref{subsubsec:violajones} com os materiais contemplados na \autoref{subsec:bib_opencv};
 	
-	\item \textbf{saída:} o sistema exibe, em tempo real, o fluxo de \textit{frames} processado como define o item acima, na tela do microcoputador. Ao mesmo tempo, caso seja detectada uma face, o sistema deverá desenhar um retângulo em volta da face detectada neste fluxo de \textit{frames}, ativando um campo para que o usuário possa entrar com uma identificação da face detectada;
+	\item \textbf{processamento:} o sistema processo a detecção da face na imagem, e caso seja detectada uma face, o sistema deverá desenhar um retângulo em volta da face detectada neste fluxo de \textit{frames}, e a partir daí se inicia o processo de reconhecimento;
 	
-	\item \textbf{entrada:} o usuário entra com uma identificação da face detectada, caso haja, em um campo disponibilidado pelo sistema (por exemplo, um nome);
+	\item \textbf{processamento/saída:} o processo de reconhecimento é acionado e caso a face não seja reconhecida, o sistema disponibiliza campos para que o usuário entre com uma identificação. Caso haja alguma equivalência, o sistema identifica o usuário escrevendo seu nome logo abaixo do retângulo desenhado pelo processo de detecção;
 	
-	\item \textbf{processamento:} o sistema inicia o processo de treinamento da face definido na \autoref{sec:recog_faces}, criando um \textit{eigenspace}, e no momento seguinte à criação deste "plano cartesiado", o sistema já deve realizar o processo de reconhecimento descrito na \autoref{subsec:reconhecimento};
-	
-	\item \textbf{saída:} caso seja reconhecida uma face no fluxo de \textit{frames}, tal como descrito no item acima, o sistema deve exibir a identificação introduzida pelo usuário com define o item "4";
+	\item \textbf{entrada/processamento:} se o usuário identifica a face a partir do item acima descrito, o sistema inicia o processo de treinamento da face definido na \autoref{sec:recog_faces}, criando um \textit{eigenspace}, e no momento seguinte à criação deste "espaço", o sistema começa a utilizar-lo para os novos processos de reconhecimento.
 \end{enumerate}
 
 Para melhor entendimento, ilustra-se o processo desta seção na \autoref{fig:ilustracao}.
@@ -32,15 +30,7 @@ Para melhor entendimento, ilustra-se o processo desta seção na \autoref{fig:il
 \end{figure}
 
 
-
-EXPLICAR A FIGURA ACIMA E MUDAR AS ESCRITAS PARA A MONOGRAFIA.
-EXPLICAR A FIGURA ACIMA E MUDAR AS ESCRITAS PARA A MONOGRAFIA.
-EXPLICAR A FIGURA ACIMA E MUDAR AS ESCRITAS PARA A MONOGRAFIA.
-EXPLICAR A FIGURA ACIMA E MUDAR AS ESCRITAS PARA A MONOGRAFIA.
-
-
 \section{Diagrama de Pacotes}\label{sec:diagpacs}
-Nesta seção, os pacotes criados implementação do sistema aqui proposto serão apresentadas em forma de diagrama de pacotes (UML). A \autoref{fig:SRFV_diagramaPacotes} ilustra tal diagrama:
 
 \begin{figure}[h]
 	\centering
@@ -49,6 +39,10 @@ Nesta seção, os pacotes criados implementação do sistema aqui proposto serã
 	\fonte{Elaborado pelo autor.}
 	\label{fig:SRFV_diagramaPacotes}
 \end{figure}
+
+Nesta seção, os pacotes criados implementação do sistema aqui proposto serão apresentadas em forma de diagrama de pacotes (UML). A \autoref{fig:SRFV_diagramaPacotes} ilustra tal diagrama:
+
+
 
 O pacote \textit{"gui"} possui classes responsáveis pela interface com o usuário e regras do sistema como controle de fluxo de quadros e execução de tarefas. O pacote \textit{"eigenfaces"} possui as classes responsáveis pelo execuçao do algoritmo ACP e a geração do espaço multidimensional de \textit{EigenFaces}. Por fim, o pacote de nome \textit{"utils"}, possui classes utilitárias resposáveis por manipular arquivos (carregar, salvar e deletar) e conversões de formatos de imagens. 
 
@@ -100,7 +94,7 @@ A classe \textbf{\textit{PanelCadastroDeFace}} também é responsávem pelo cont
 		
 		\item \textbf{void drawRect():} desenha um quadrado em volta do rosto aquisitado de acordo com as coordenadas do objeto \textbf{faceRect};
 		
-		\item \textbf{void salvaface\_treinamento()}: este método salva a face continda no objeto \textbf{imagem\_rosto} para futuro processo de treinamento;
+		\item \textbf{void salvaface\_traininImages()}: este método salva a face continda no objeto \textbf{imagem\_rosto} para futuro processo de treinamento;
 		
 		\item \textbf{void trackFace():} método chamado dentro da \textit{thread} ExecutorService executor que contém os processos e os controles de estado de detecção, treinamento e reconhecmento da face;
 		
@@ -183,9 +177,9 @@ A classe \textit{\textbf{ACP\_Reconhecimento}} contem a implementação respons�
 		
 		\item \textbf{Matriz2D calcEspaco(int nEF, Matriz2D imMat)}:
 		
-		\item \textbf{double[] getDists(BufferedImage im)}: método que calcula a distancia euclidiana de todas as faces treinadas (eu auto-valores) contidos no espaço com a nova face;
+		\item \textbf{double[] getEucDists(Matriz2D im)}: método que calcula a distancia euclidiana de todas as faces treinadas (eu auto-valores) contidos no espaço com a nova face;
 		
-		\item \textbf{ResultadoReconhecimento getDistanciaEuclidiana(double[] dists)}: método que retorna qual das distancias calculadas acima é a menor, construindo um objeto da classe \textit{\textbf{ResultadoReconhecimento}};
+		\item \textbf{ResultadoReconhecimento getMenorDist(double[] dists)}: método que retorna qual das distancias calculadas acima é a menor, construindo um objeto da classe \textit{\textbf{ResultadoReconhecimento}};
 		
 		\item esta classe também contem métodos para conversões de tipos, dentre outros.
 		
@@ -202,9 +196,9 @@ A classe \textit{\textbf{ResultadoReconhecimento}} representa o resultado do rec
 \begin{itemize}	
 	\item Métodos:
 	\begin{itemize}
-		\item \textbf{String getName():} método que retorna no nome da face que corresponde com o resultado.		
-		\item \textbf{String getMatchFileName():} método que retorna o caminho do arquivo que corresponde ã imagem da face resultante.
-		\item \textbf{BufferedImage getImgMatch():} método que retorna a imagem que corresponde com o resultado, representada pela classe \textit{BufferedImage}.
+		\item \textbf{String getName():} método que retorna a identificação da face previsamente informada pelo usuário, correspondente com o resultado;		
+		\item \textbf{String getMatchFileName():} método que retorna o caminho do arquivo que corresponde ao resultante.
+		\item \textbf{BufferedImage getMatchDist():} método que retorna distância corresponde com o resultado;
 	\end{itemize}
 \end{itemize}
 
@@ -217,7 +211,7 @@ As classes do pacote \textbf{\textit{utils}} são representadas pelo diagrama (U
 
 \begin{figure}[h]
 	\centering
-	\includegraphics[width=.7\textwidth]{SRFV_diagramaClassse_utils}
+	\includegraphics[width=1\textwidth]{SRFV_diagramaClassse_utils}
 	\caption{Diagrama de classes (UML) do pacote \textbf{\textit{utils}}.}
 	\fonte{Elaborado pelo autor.}
 	\label{figSRFV_diagramaClassse_utils}
@@ -390,7 +384,7 @@ Para o terceiro e último passo da implementação desta fase de reconhecimento,
 
 Como visto na definição do algoritmo \textit{EigenFaces}, disposta na \autoref{subsec:acp}, este apenas apresenta como resultado a menor distância entre os auto-vetores e o novo vetor de consulta, sendo responsabilidade de outro processo a análise deste resultado para definir se efetivamente este valor corresponte a uma reconhecimento de sucesso ou uma falha.
 
-A constante \textit{MIN\_DIST}, definida na \autoref{sec:consts}, é a responsável pelo resultado final de sucesso ou falha, a qual é controlada e nos testes da ????? posterior. Como mostra o bloco de código da \autoref{snippet-reconh-resultadofim}, a checagem desta constante contra a distancia encontrada na fase de reconhecimento pode ser vista na linha \textit{614}.
+A constante \textit{MIN\_DIST}, definida na \autoref{sec:consts}, é a responsável pelo resultado final de sucesso ou falha, a qual é controlada e nos testes da \autoref{ch:resultados} posterior. Como mostra o bloco de código da \autoref{snippet-reconh-resultadofim}, a checagem desta constante contra a distancia encontrada na fase de reconhecimento pode ser vista na linha \textit{614}.
 
 \begin{figure}[h]
 	\centering
@@ -400,7 +394,7 @@ A constante \textit{MIN\_DIST}, definida na \autoref{sec:consts}, é a responsá
 	\label{snippet-reconh-resultadofim}
 \end{figure}
 
-Caso a menor ditância calculada seja menor do que a constante \textit{MIN\_DIST}, o resultado é considerado sucesso e os dados correspondentes a este são passados como parâmetro para a interface (linha \textit{619}) para que seja exibido. Tando em caso de sucesso ou de erro, um registro do resultado juntamente com a foto correspondente e a distância é realizado (linhas \textit{617}, \textit{618}, \textit{624} e \textit{625}) para futura análise dos resultados, que são apresentados no capitulo ???.
+Caso a menor ditância calculada seja menor do que a constante \textit{MIN\_DIST}, o resultado é considerado sucesso e os dados correspondentes a este são passados como parâmetro para a interface (linha \textit{619}) para que seja exibido. Tando em caso de sucesso ou de erro, um registro do resultado juntamente com o caminho da imagem correspondente e a distância resultante é realizado (linhas \textit{617}, \textit{618}, \textit{624} e \textit{625}) para futura análise dos resultados, que são apresentados no capitulo \autoref{ch:resultados}.
 
 
 

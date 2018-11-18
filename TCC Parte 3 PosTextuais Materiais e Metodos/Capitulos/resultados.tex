@@ -10,9 +10,19 @@ Os testes foram realizados no local de trabalho do autor e os objetos de testes 
 
 Os equipamentos (\textit{hardwares}), descritos na \autoref{sub-hardw}, foram postos em um local de saída dos funcionários do escritóio, onde as condições luminosas eram sempre as mesmas.
 
-A interface do sistema, como se pode ver na ????, dispõe de uma máscara que indica o local em que a face deve ser posicionada corretamente em frente a câmera, e a câmera posicionada no mesmo local em todos os testes. A cada dia, caso o resultado de correspondência fosse considerada ruim (muito acima do valor mínimo \textit{MIN\_DIST}), ou caso o objeto de teste tenha se movido no momento do treino interrompendo o processo, a face poderia ser treinada novamente, o que acumularia as faces de treino do objeto de teste.
 
-As faces dos objetos de testes são expostas durante o tempo necessário para o sistema coletar a quantidade estabelecida pela constante \textit{NUM\_FACES\_TREINO}. O sistema é configurado para fazer cerca de 3 a 4 deteções por segundo.
+\begin{figure}[h]
+	\centering
+	\includegraphics[width=1\textwidth]{screenshot-sys}
+	\caption{\textit{Screenshot} do Sistema em Funcionamento.}
+	\fonte{Elaborado pelo autor.}
+	\label{screenshot-sys}
+\end{figure}
+
+
+A interface do sistema, como se pode ver na \autoref{screenshot-sys}, dispõe de uma máscara que indica o local em que a face deve ser posicionada corretamente em frente a câmera, e a câmera posicionada no mesmo local em todos os testes. A cada dia, caso o resultado de correspondência fosse considerada ruim (muito acima do valor mínimo \textit{MIN\_DIST}), ou caso o objeto de teste tenha se movido no momento do treino interrompendo o processo, a face poderia ser treinada novamente, o que acumularia as faces de treino do objeto de teste.
+
+Os usuários foram sujeitos ao teste sempre na mesma ordem. As faces dos objetos de testes foram expostas durante o tempo necessário para o sistema coletar a quantidade estabelecida pela constante \textit{NUM\_FACES\_TREINO}. O sistema é configurado para fazer cerca de 3 a 4 deteções por segundo.
 
 Os testes documentados foram realizados em 5 (cinco) dias e divididos em três fases: duas fases de dois e uma fase de um dias. Para cada fase uma configuração distinta das constantes de controle contempladas na \autoref{sec:consts} foram definidas, as quais são detalhadas na seção seguinte.
 
@@ -114,7 +124,7 @@ Os resultados do segundo dia de teste desta fase é descrito na \autoref{tab-res
 
 
 
-\subsection{Fase 3}\label{ch:testresultfaz2}
+\subsection{Fase 3}\label{ch:testresultfaz3}
 Para a terceira e últimas fase com apenas uma oportunidade para teste, as faces de treino foram deletadas para que se comece o teste com o espaço \textit{eigenspace} limpo/ Os valores das constantes de controle foram configuradas como define a lista abaixo.
 
 \begin{itemize}	
@@ -150,19 +160,75 @@ Os resultados desta fase de teste são apresentos na \autoref{tab-res-fase3}. Ne
 
 \section{Análise dos Resultados}\label{ch:analresult}
 
+Ao decorrer dos testes e se analisar os resultados iniciais, pode-se perceber logo de início que a técnica é extremamente sensível a luzes/sombras, poses e expressões. Algo que pode variar muito a reflexão da luz na face do usuário é a cor da pele, oleosidade, maquiagem e acessórios como boné ou chapéu. Um mínimo movimento no momento da coleta das imagens de treino pode causar uma grande diferença no resultado.
 
+Como se pode verificar na \autoref{taxarecogfases}, na primeira faze foram feitos 310 reconhecimentos sendo que 149 foram considerados pelo sistema como sucesso. Destes, apenas 103 foram de fato equivalentes. Sendo assim, apresentando a taxa real de reconhecimento com \textbf{33.22\%} de sucesso. Dos reconhecimentos considerados como falha somaram o total de 161, dos quais 92 eram falsos negativos, pois se tratava de uma real equivalência. Sendo assim 55\% das falhas deveriam ser reconhecimento de sucesso. 
 
-
-
-
-
-\begin{grafico}[h]
+\begin{table}[h]
 	\centering
-	\fbox{\includegraphics[width=1\textwidth]{linguas}}
-	\caption{Idiomas que mais realizaram \textit{tweets}}
-	\fonte{Elaborado pelo autor}
-	\label{lingua}
-\end{grafico}
+	\caption{Taxas de sucesso reais dos reconhecimentos nas fases de teste.}
+	\includegraphics[width=.8\textwidth]{taxarecogfases}
+	\fonte{Elaborado pelo autor.}
+	\label{taxarecogfases}
+\end{table}
+
+Observou-se que dependendo da face e suas condições as médias das distâncias euclidianas poderiam varias muito. Algumas faces tinham um resultado razoável enquanto outras os apresentavam péssimos. O grande número de falsos negativos apresentados incentivaram a reconfiguração da constante \textit{MIN\_DIST} para um valor maior, \textit{NUM\_FACES\_TREINO} foi reduzido para que o espaço não sofresse muita adição de tamanh, \textit{NUM\_EF} foi reduzido para priorizar \textit{eigenfaces}, e apenas treinos de novas faces foram realizadas, esperando-se que os resultados de reconhecimento melhorassem ou se mantessem.
+
+
+Na segunda faze foram feitos 340 reconhecimentos sendo que 185 foram considerados pelo sistema como sucesso. Destes, 96 foram de fato equivalentes. Sendo assim, apresentando a taxa real de reconhecimento de \textbf{28.3\%} de sucesso. Dos reconhecimentos considerados como falha, que somaram o total de 195, 124 se tratavam de uma real equivalência. Sendo assim 63.5\% das falhas deveriam ser reconhecimento de sucesso.
+
+Observa-se que os resultados da segunda fase foram piores que o da anterior, porém as contagens de falsos positivos e negativos ainda se apresentavam elevadas. Reconfigurou-se então as variáveis como conta na \autoref{ch:testresultfaz3} levando em conta lógica de que se um maior número de possível da coleta de imagens de uma face para o treino, combinado com o descarte de auto-vetores por auto-valores, "filtraria"\ melhor as caracteristicas da face e suas variáveis (sombras e reflexoes, movimentos, feiçoes ou enquadramento da face) melhor registradas. A constante \textit{MIN\_DIST} também sofreu adição de valores para que se diminuíse ainda mais os falsos negativos que poderiam ser reconhecimentos de sucesso, com cautela para não provocar resultados falsos positivos.
+
+Segundo os resultados da terceira fase, foram feitos 280 reconhecimentos sendo que 136 foram considerados pelo sistema como sucesso. Destes, apenas 94 foram de fato equivalentes, apresentando a taxa real de reconhecimento com \textbf{33.57\%} de sucesso. Dos reconhecimentos considerados como falha (total de 144), 99 se tratava de uma real equivalência. Sendo assim 50\% das falhas deveriam ser reconhecimento de sucesso.
+
+Observou-se então uma melhora considerável nos resultados, levando em conta que o espaço de eigenfaces era muito maior relacionada às duas primeiras fases, porém ainda é um valor que não apresenta precisão e confiabilidade. 
+
+Não obstante, desconsiderando a constante \textit{MIN\_DIST} e analisando apenas a contagem de resultados de sucesso (com falsos positivos já subtraídos) somandos com a contagem dos falsos negativos, verificamos que na maioria das vezes o algoritmo \textit{Eigenfaces} conseguiu equivalência de sucesso, como mostram os resultados dos testes apresentados.
+
+
+\begin{figure}[h]
+	\centering
+	\includegraphics[width=1\textwidth]{grafab-fase12}
+	\caption{\textbf{Gráfico "A"}: Reconhecimentos de sucesso (eixo Y) por quantidade de imagens usadas para o treino (eixo X). \textbf{Gráfico "B"}: Falhas no reconhecimentos (eixo Y) por quantidade de imagens usadas para o treino (eixo X). Referentes as fases de teste "1" e "2".}
+	\fonte{Elaborado pelo autor.}
+	\label{grafab-fase12}
+\end{figure}
+
+\begin{figure}[h]
+	\centering
+	\includegraphics[width=1\textwidth]{grafab-fase3}
+	\caption{\textbf{Gráfico "A"}: Reconhecimentos de sucesso (eixo Y) por quantidade de imagens usadas para o treino (eixo X). \textbf{Gráfico "B"}: Falhas no reconhecimentos (eixo Y) por quantidade de imagens usadas para o treino (eixo X). Referentes as fases de teste "3".}
+	\fonte{Elaborado pelo autor.}
+	\label{grafab-fase3}
+\end{figure}
+
+
+As \autoref{grafab-fase12} e \autoref{grafab-fase3} apresentam dois gráficos: os gráficos "\textit{A}" são às contagens de reconhecimentos de sucesso (eixo \textit{Y}) a medida em que a quantidade de imagens de treino cresce (eixo \textit{X}), e os gráficos "\textit{B}", são as contagens de falhas de reconhecimento a medida em que as imagens de treinamento crescem. A \autoref{grafab-fase12} se refere aos resultados da fase "1" e "2" e \autoref{grafab-fase3} é referente à fase "3". Foram divididos desta forma pelo fato de quem o espaço foi resetado no terceiro dia, como descreve a \autoref{ch:testresultfaz3}. 
+
+Analisando-os, observa-se que nos dois gráficos "A", as linhas de quantidade de sucesso e falsos positivos tendem a se encontram enquanto que nos gráficos "B" das duas figuras, o contrário acontece: as linhas de quantidade de falhas e de falsos negativos tendem a se afastar, apesar de não estar tão evidenciado no gráfico "B" da \autoref{grafab-fase12}, podendo-se concluir que à medida em que o espaço multidimensional de \textit{eigenfaces} (\textit{eigenspace}) cresce, o método ACP apresenta distâncias falsas e verdadeiras similares, imprecisando seu veridito final.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+%GRAFICOSSS PARA
+
+%\begin{grafico}[h]
+%	\centering
+%	\fbox{\includegraphics[width=1\textwidth]{linguas}}
+%	\caption{Idiomas que mais realizaram \textit{tweets}}
+%	\fonte{Elaborado pelo autor}
+%	\label{lingua}
+%\end{grafico}
 
 
 

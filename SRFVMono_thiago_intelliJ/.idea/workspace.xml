@@ -2,94 +2,18 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="418e7f84-7618-4fe2-a97b-b4b68e45d5f1" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/eigenfaces/eigen_0.png" beforeDir="false" afterPath="$PROJECT_DIR$/eigenfaces/eigen_0.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/eigenfaces/eigen_1.png" beforeDir="false" afterPath="$PROJECT_DIR$/eigenfaces/eigen_1.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/eigenfaces/eigen_10.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/eigenfaces/eigen_11.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/eigenfaces/eigen_12.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/eigenfaces/eigen_13.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/eigenfaces/eigen_14.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/eigenfaces/eigen_15.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/eigenfaces/eigen_16.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/eigenfaces/eigen_17.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/eigenfaces/eigen_18.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/eigenfaces/eigen_19.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/eigenfaces/eigen_2.png" beforeDir="false" afterPath="$PROJECT_DIR$/eigenfaces/eigen_2.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/eigenfaces/eigen_20.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/eigenfaces/eigen_21.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/eigenfaces/eigen_22.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/eigenfaces/eigen_23.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/eigenfaces/eigen_24.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/eigenfaces/eigen_25.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/eigenfaces/eigen_3.png" beforeDir="false" afterPath="$PROJECT_DIR$/eigenfaces/eigen_3.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/eigenfaces/eigen_4.png" beforeDir="false" afterPath="$PROJECT_DIR$/eigenfaces/eigen_4.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/eigenfaces/eigen_5.png" beforeDir="false" afterPath="$PROJECT_DIR$/eigenfaces/eigen_5.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/eigenfaces/eigen_6.png" beforeDir="false" afterPath="$PROJECT_DIR$/eigenfaces/eigen_6.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/eigenfaces/eigen_7.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/eigenfaces/eigen_8.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/eigenfaces/eigen_9.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/eigenspace.cache" beforeDir="false" afterPath="$PROJECT_DIR$/eigenspace.cache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/imagensTreinamento/10_1.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/imagensTreinamento/10_3.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/imagensTreinamento/13_1.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/imagensTreinamento/14_0.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/imagensTreinamento/14_2.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/imagensTreinamento/206_0.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/imagensTreinamento/206_1.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/imagensTreinamento/2_0.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/imagensTreinamento/2_1.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/imagensTreinamento/3_2.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/imagensTreinamento/6_1.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/imagensTreinamento/6_2.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/imagensTreinamento/6_3.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/imagensTreinamento/_0.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/imagensTreinamento/sjajajajaj_0.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/imagensTreinamento/sjajajajaj_1.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/imagensTreinamento/sjajajajaj_2.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/imagensTreinamento/sjajajajaj_3.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/imagensTreinamento/sjajajajaj_4.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/imagensTreinamento/sjajajajaj_5.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/imagensTreinamento/thi_0.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/imagensTreinamento/thi_1.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/imagensTreinamento/thi_2.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/imagensTreinamento/thi_3.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/imagensTreinamento/thi_4.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/imagensTreinamento/thi_5.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/SRFVMono_thiago_intelliJ/eigenfaces/ACP_Reconhecimento.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/SRFVMono_thiago_intelliJ/eigenfaces/ACP_Reconhecimento.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/SRFVMono_thiago_intelliJ/eigenfaces/ACP_Treinamento.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/SRFVMono_thiago_intelliJ/eigenfaces/ACP_Treinamento.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/SRFVMono_thiago_intelliJ/eigenfaces/AutoVetor_descomposicao.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/SRFVMono_thiago_intelliJ/eigenfaces/EigenSpace.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/SRFVMono_thiago_intelliJ/eigenfaces/EigenSpace.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/SRFVMono_thiago_intelliJ/eigenfaces/EqualizarHistograma$1.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/SRFVMono_thiago_intelliJ/eigenfaces/EqualizarHistograma.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/SRFVMono_thiago_intelliJ/eigenfaces/Matriz2D.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/SRFVMono_thiago_intelliJ/gui/FrameCadastroDeFace$5.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/SRFVMono_thiago_intelliJ/gui/FrameCadastroDeFace$5.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/SRFVMono_thiago_intelliJ/gui/PanelCadastroDeFace$1$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/SRFVMono_thiago_intelliJ/gui/PanelCadastroDeFace$1$1.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/SRFVMono_thiago_intelliJ/gui/PanelCadastroDeFace$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/SRFVMono_thiago_intelliJ/gui/PanelCadastroDeFace$1.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/SRFVMono_thiago_intelliJ/gui/PanelCadastroDeFace.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/SRFVMono_thiago_intelliJ/gui/PanelCadastroDeFace.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/SRFVMono_thiago_intelliJ/gui/PanelCadastroDeFace_superTreino$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/SRFVMono_thiago_intelliJ/gui/PanelCadastroDeFace_superTreino$1.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/SRFVMono_thiago_intelliJ/gui/PanelCadastroDeFace_superTreino.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/SRFVMono_thiago_intelliJ/gui/PanelCadastroDeFace_superTreino.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/SRFVMono_thiago_intelliJ/utils/FileUtils$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/SRFVMono_thiago_intelliJ/utils/FileUtils$1.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/SRFVMono_thiago_intelliJ/utils/FileUtils.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/SRFVMono_thiago_intelliJ/utils/FileUtils.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/SRFVMono_thiago_intelliJ/utils/ImageUtils.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/SRFVMono_thiago_intelliJ/utils/ImageUtils.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/eigenfaces/ACP_Reconhecimento.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/eigenfaces/ACP_Reconhecimento.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/eigenfaces/ACP_Treinamento.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/eigenfaces/ACP_Treinamento.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/gui/FrameCadastroDeFace.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/gui/FrameCadastroDeFace.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/gui/PanelCadastroDeFace.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/gui/PanelCadastroDeFace.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/gui/PanelCadastroDeFace_superTreino.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/gui/PanelCadastroDeFace_superTreino.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/utils/AutoVetor_descomposicao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/utils/AutoVetor_decomp.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/utils/FileUtils.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/utils/FileUtils.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/utils/ImageUtils.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/utils/ImageUtils.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/utils/Matriz2D.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/utils/Matriz2D.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TCC Parte 3 PosTextuais Materiais e Metodos/.~lock.tabelateste_analise.ods#" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TCC Parte 3 PosTextuais Materiais e Metodos/Capitulos/conclusao.tex" beforeDir="false" afterPath="$PROJECT_DIR$/../TCC Parte 3 PosTextuais Materiais e Metodos/Capitulos/conclusao.tex" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../TCC Parte 3 PosTextuais Materiais e Metodos/Capitulos/implementacao.tex" beforeDir="false" afterPath="$PROJECT_DIR$/../TCC Parte 3 PosTextuais Materiais e Metodos/Capitulos/implementacao.tex" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../TCC Parte 3 PosTextuais Materiais e Metodos/Capitulos/materiais_metodo.tex" beforeDir="false" afterPath="$PROJECT_DIR$/../TCC Parte 3 PosTextuais Materiais e Metodos/Capitulos/materiais_metodo.tex" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../TCC Parte 3 PosTextuais Materiais e Metodos/Capitulos/revisa_bib.tex" beforeDir="false" afterPath="$PROJECT_DIR$/../TCC Parte 3 PosTextuais Materiais e Metodos/Capitulos/revisa_bib.tex" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../TCC Parte 3 PosTextuais Materiais e Metodos/Imagens/SRFV_diagramaPacotes.png" beforeDir="false" afterPath="$PROJECT_DIR$/../TCC Parte 3 PosTextuais Materiais e Metodos/Imagens/SRFV_diagramaPacotes.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TCC Parte 3 PosTextuais Materiais e Metodos/Capitulos/resultados.tex" beforeDir="false" afterPath="$PROJECT_DIR$/../TCC Parte 3 PosTextuais Materiais e Metodos/Capitulos/resultados.tex" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TCC Parte 3 PosTextuais Materiais e Metodos/Imagens/ilustracao_tcc_sistema.png" beforeDir="false" afterPath="$PROJECT_DIR$/../TCC Parte 3 PosTextuais Materiais e Metodos/Imagens/ilustracao_tcc_sistema.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../TCC Parte 3 PosTextuais Materiais e Metodos/modelo.aux" beforeDir="false" afterPath="$PROJECT_DIR$/../TCC Parte 3 PosTextuais Materiais e Metodos/modelo.aux" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TCC Parte 3 PosTextuais Materiais e Metodos/modelo.lof" beforeDir="false" afterPath="$PROJECT_DIR$/../TCC Parte 3 PosTextuais Materiais e Metodos/modelo.lof" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../TCC Parte 3 PosTextuais Materiais e Metodos/modelo.log" beforeDir="false" afterPath="$PROJECT_DIR$/../TCC Parte 3 PosTextuais Materiais e Metodos/modelo.log" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../TCC Parte 3 PosTextuais Materiais e Metodos/modelo.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/../TCC Parte 3 PosTextuais Materiais e Metodos/modelo.pdf" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../TCC Parte 3 PosTextuais Materiais e Metodos/modelo.synctex.gz" beforeDir="false" afterPath="$PROJECT_DIR$/../TCC Parte 3 PosTextuais Materiais e Metodos/modelo.synctex.gz" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../TCC Parte 3 PosTextuais Materiais e Metodos/modelo.toc" beforeDir="false" afterPath="$PROJECT_DIR$/../TCC Parte 3 PosTextuais Materiais e Metodos/modelo.toc" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TCC Parte 3 PosTextuais Materiais e Metodos/tabelateste_analise.ods" beforeDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -156,9 +80,9 @@
         <counts>
           <entry key="project.closed" value="4" />
           <entry key="project.open.time.5" value="3" />
-          <entry key="project.open.time.6" value="1" />
+          <entry key="project.open.time.6" value="2" />
           <entry key="project.open.time.7" value="1" />
-          <entry key="project.opened" value="5" />
+          <entry key="project.opened" value="6" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
@@ -194,14 +118,10 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/eigenfaces/ACP_Reconhecimento.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="244">
+            <state relative-caret-position="1547">
               <caret line="96" column="35" selection-start-line="96" selection-start-column="35" selection-end-line="96" selection-end-column="35" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="e#8602#8603#0" expanded="true" />
-                <element signature="e#8635#8636#0" expanded="true" />
-                <element signature="e#8754#8755#0" expanded="true" />
-                <element signature="e#8798#8799#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -219,7 +139,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/eigenfaces/EigenSpace.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="426">
+            <state relative-caret-position="1020">
               <caret line="79" column="22" selection-start-line="79" selection-start-column="22" selection-end-line="79" selection-end-column="22" />
               <folding>
                 <element signature="imports" expanded="true" />
@@ -233,8 +153,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/gui/PanelCadastroDeFace.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="40">
-              <caret line="595" column="41" selection-start-line="595" selection-start-column="20" selection-end-line="595" selection-end-column="41" />
+            <state relative-caret-position="159">
+              <caret line="602" column="33" lean-forward="true" selection-start-line="602" selection-start-column="33" selection-end-line="602" selection-end-column="33" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -257,8 +177,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/eigenfaces/ACP_Treinamento.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="216">
-              <caret line="165" column="22" lean-forward="true" selection-start-line="165" selection-start-column="22" selection-end-line="165" selection-end-column="22" />
+            <state relative-caret-position="2703">
+              <caret line="165" column="22" selection-start-line="165" selection-start-column="22" selection-end-line="165" selection-end-column="22" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -286,8 +206,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/utils/FileUtils.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="295">
-              <caret line="37" column="34" lean-forward="true" selection-start-line="37" selection-start-column="34" selection-end-line="37" selection-end-column="34" />
+            <state relative-caret-position="544">
+              <caret line="37" column="34" selection-start-line="37" selection-start-column="34" selection-end-line="37" selection-end-column="34" />
             </state>
           </provider>
         </entry>
@@ -295,7 +215,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/utils/ImageUtils.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="244">
+            <state relative-caret-position="1581">
               <caret line="101" column="32" selection-start-line="101" selection-start-column="32" selection-end-line="101" selection-end-column="32" />
               <folding>
                 <element signature="imports" expanded="true" />
@@ -307,7 +227,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/utils/Matriz2D.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="244">
+            <state relative-caret-position="1190">
               <caret line="82" column="16" selection-start-line="82" selection-start-column="16" selection-end-line="82" selection-end-column="16" />
               <folding>
                 <element signature="imports" expanded="true" />
@@ -387,9 +307,9 @@
       <select />
     </treeState>
   </component>
-  <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="-1175" />
-    <option name="y" value="53" />
+  <component name="ProjectFrameBounds" extendedState="7">
+    <option name="x" value="376" />
+    <option name="y" value="-19" />
     <option name="width" value="1400" />
     <option name="height" value="1031" />
   </component>
@@ -399,7 +319,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="PackagesPane" />
       <pane id="AndroidView" />
       <pane id="ProjectPane">
@@ -436,11 +355,12 @@
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="SearchEverywhereHistoryKey" value="panel&#9;FILE&#9;file://E:/FACULDADE/TCC/em desenvolvimento/mono_rfv_thiago/SRFVMono_thiago_intelliJ/src/gui/PanelCadastroDeFace.java&#10;equal&#9;FILE&#9;file://E:/FACULDADE/TCC/em desenvolvimento/mono_rfv_thiago/SRFVMono_thiago_intelliJ/src/utils/EqualizarHistograma.java" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1542383452926" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1542570553825" />
     <property name="com.intellij.ide.scratch.LRUPopupBuilder$1/New Scratch File" value="JAVA" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="project.structure.last.edited" value="Modules" />
@@ -536,10 +456,9 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-1546" y="62" width="1554" height="916" extended-state="6" />
-    <editor active="true" />
+    <frame x="54" y="-8" width="1874" height="1096" extended-state="6" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.4189189" visible="true" weight="0.20883535" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.4189189" visible="true" weight="0.17420067" />
       <window_info id="Image Layers" order="1" />
       <window_info id="Designer" order="2" />
       <window_info id="UI Designer" order="3" />
@@ -547,7 +466,7 @@
       <window_info id="Favorites" order="5" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32822478" />
-      <window_info anchor="bottom" x="104" y="525" width="1614" height="520" id="Run" order="2" type="WINDOWED" weight="0.32952183" />
+      <window_info anchor="bottom" x="104" y="525" width="1614" height="520" id="Run" order="2" type="WINDOWED" visible="true" weight="0.32952183" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.23180874" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -564,7 +483,7 @@
       <window_info anchor="right" id="Capture Analysis" order="5" />
       <window_info anchor="right" id="Theme Preview" order="6" />
       <window_info anchor="right" id="Palette&#9;" order="7" />
-      <window_info anchor="right" id="Structure" order="8" sideWeight="0.5810811" visible="true" weight="0.17202142" />
+      <window_info anchor="right" id="Structure" order="8" sideWeight="0.5810811" visible="true" weight="0.14167586" />
       <window_info anchor="right" id="Maven Projects" order="9" sideWeight="0.4992248" weight="0.3296582" />
       <window_info anchor="right" id="simpleUML" order="10" show_stripe_button="false" weight="0.50689465" />
     </layout>
@@ -706,10 +625,49 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/eigenfaces/ACP_Reconhecimento.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1547">
+          <caret line="96" column="35" selection-start-line="96" selection-start-column="35" selection-end-line="96" selection-end-column="35" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/eigenfaces/InfoDistancia.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="238">
+          <caret line="14" column="11" selection-start-line="14" selection-start-column="11" selection-end-line="14" selection-end-column="11" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/eigenfaces/EigenSpace.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1020">
+          <caret line="79" column="22" selection-start-line="79" selection-start-column="22" selection-end-line="79" selection-end-column="22" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#1109#1110#0" expanded="true" />
+            <element signature="e#1145#1146#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$APPLICATION_CONFIG_DIR$/scratches/scratch.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="289">
           <caret line="22" column="49" selection-start-line="22" selection-start-column="49" selection-end-line="22" selection-end-column="49" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/eigenfaces/ACP_Treinamento.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2703">
+          <caret line="165" column="22" selection-start-line="165" selection-start-column="22" selection-end-line="165" selection-end-column="22" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -733,14 +691,24 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/utils/FileUtils.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="295">
-          <caret line="37" column="34" lean-forward="true" selection-start-line="37" selection-start-column="34" selection-end-line="37" selection-end-column="34" />
+        <state relative-caret-position="544">
+          <caret line="37" column="34" selection-start-line="37" selection-start-column="34" selection-end-line="37" selection-end-column="34" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/utils/ImageUtils.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1581">
+          <caret line="101" column="32" selection-start-line="101" selection-start-column="32" selection-end-line="101" selection-end-column="32" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/utils/Matriz2D.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="244">
+        <state relative-caret-position="1190">
           <caret line="82" column="16" selection-start-line="82" selection-start-column="16" selection-end-line="82" selection-end-column="16" />
           <folding>
             <element signature="imports" expanded="true" />
@@ -758,63 +726,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/eigenfaces/ACP_Treinamento.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="216">
-          <caret line="165" column="22" lean-forward="true" selection-start-line="165" selection-start-column="22" selection-end-line="165" selection-end-column="22" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/utils/ImageUtils.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="244">
-          <caret line="101" column="32" selection-start-line="101" selection-start-column="32" selection-end-line="101" selection-end-column="32" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/eigenfaces/EigenSpace.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="426">
-          <caret line="79" column="22" selection-start-line="79" selection-start-column="22" selection-end-line="79" selection-end-column="22" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#1109#1110#0" expanded="true" />
-            <element signature="e#1145#1146#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/eigenfaces/InfoDistancia.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="238">
-          <caret line="14" column="11" selection-start-line="14" selection-start-column="11" selection-end-line="14" selection-end-column="11" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/eigenfaces/ACP_Reconhecimento.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="244">
-          <caret line="96" column="35" selection-start-line="96" selection-start-column="35" selection-end-line="96" selection-end-column="35" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#8602#8603#0" expanded="true" />
-            <element signature="e#8635#8636#0" expanded="true" />
-            <element signature="e#8754#8755#0" expanded="true" />
-            <element signature="e#8798#8799#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/gui/PanelCadastroDeFace.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="40">
-          <caret line="595" column="41" selection-start-line="595" selection-start-column="20" selection-end-line="595" selection-end-column="41" />
+        <state relative-caret-position="159">
+          <caret line="602" column="33" lean-forward="true" selection-start-line="602" selection-start-column="33" selection-end-line="602" selection-end-column="33" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>

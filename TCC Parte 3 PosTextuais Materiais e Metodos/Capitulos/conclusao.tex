@@ -2,21 +2,35 @@
 
 \chapter{CONCLUSÕES E SUGESTÕES PARA FUTUROS TRABALHOS}\label{ch:conclusao}
 \section{CONCLUSÕES} 
-O uso das bibliotecas que Python oferece para a mineração de dados...
 
-- Resgatar o objetivo
+De acordo com os resultados apresentados no \autoref{ch:resultados}, conclue-se que o sistema desenvolvido não pode ser considerado eficaz como um sistema de reconhecimento biométrico de digitais, por exemplo, sendo incapaz por si só de identificar o usuário com precisão. Todavia, poderia ser utilizado como uma ferramenta de auxílio, já que de 3 reconhecimentos, pelo menos 1, aproximadamente, apresentou ser verdadeiro.
 
-- Comentar as ferramentas estudadas
+Todos os conceitos abordados no trabalho aqui proposto e a experiência proporcionada pela pesquisa e pelo desenvolvimento do sistema em suas \textit{sprints} foram considerados essenciais para conclusão de seus objetivos tal como para evolução técnica e acadêmica do autor. 
 
-- Comentar as ferramentas utilizadas
-
-- Breve resumo dos resultados
-
-- Pontos positivos e negativos (O fato de não ter o perfil real)
+De acordo com os resultas observados na execução e resultado deste trabalho e de outros, tal como novas técnicas que estão sendo criadas atualmente, pode-se especular que o problema de reconhecimento de faces não poderá ser resolvido com apenas um algoritimo ou outro, mas sim com a cooperaçào e integração de vários algoritimos e métodos.
 
 
 \section{SUGESTÕES PARA FUTUROS TRABALHOS}
 
-%
-%7.2
-%Pensar em outra API (Aplicação para previsão de resultados) ou rede social, baseando-se numa pergunta específica
+
+Este trabalho e todo o código de sua implementação, como consta nos objetivos, será aberto para o público desenvolvedor e acadêmico que tiver interesse em abordar o assunto. 
+
+Lista-se abaixo algumas sugestões de trabalhos futuros que poderiam ser feitos a partir deste:
+
+
+\begin{itemize}	
+	\item \textbf{Apicação de outras métricas de distância na Análise de Componentes Principais}
+	\begin{itemize}	
+		\item como contempla a \autoref{subsec:acp}, é possível se usar outras medidas de distância no lugar da Distância Euclidina, como a distância de Manhatan ou de Mahalanobis;
+	\end{itemize}
+	
+	\item \textbf{Definição de Sucesso do Reconhecimento}
+	\begin{itemize}	
+		\item como pode-se constatar na \autoref{sec:defsucregoc} e no \autoref{ch:resultados}, a maniulação de constantes pode ter alta influencia sobre o veredito final do reconhecimento. Em especial, a manipulaçào da constante \textit{MIN\_DIST} que limita a distancia máxima para que uma equivalencia seja considerada verdadeira pode ser feita de diversas formas. O sistema pode ser evoluido com uma sub-rotina que itera vários reconhecimentos de uma face analisa os resultados de \textit{n} distâncias, ao contrário de com foi implementado;
+	\end{itemize}
+	
+	\item \textbf{Melhorias no Treinamento}
+	\begin{itemize}	
+		\item o treinamento sendo parte essencial do processo, pode ser evoluido através melhores técnicas processamentos de imagens, ou por manipulação de constantes, por exemplo, descartando imagens treinadas que tem maus resultados subsequentes de reconhecimento, forçando automaticamente um retreinamento.
+	\end{itemize}
+\end{itemize}
