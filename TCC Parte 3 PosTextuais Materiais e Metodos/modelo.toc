@@ -59,19 +59,19 @@
 \contentsline {section}{\numberline {4.3}Diagrama de Classes - Pacote \textit {\textbf {gui}}}{50}{section.4.3}
 \contentsline {section}{\numberline {4.4}Diagrama de Classes - Pacote \textit {\textbf {eigenfaces}}}{53}{section.4.4}
 \contentsline {section}{\numberline {4.5}Diagrama de Classes - Pacote \textit {\textbf {utils}}}{56}{section.4.5}
-\contentsline {section}{\numberline {4.6}C\IeC {\'o}digo}{58}{section.4.6}
+\contentsline {section}{\numberline {4.6}Implementa\IeC {\c c}\IeC {\~a}o do C\IeC {\'o}digo}{58}{section.4.6}
 \contentsline {subsection}{\numberline {4.6.1}Constantes Controladas}{58}{subsection.4.6.1}
-\contentsline {subsection}{\numberline {4.6.2}Processo Principal do Sistema}{58}{subsection.4.6.2}
+\contentsline {subsection}{\numberline {4.6.2}Processo Principal do Sistema}{59}{subsection.4.6.2}
 \contentsline {subsection}{\numberline {4.6.3}Fase de Treinamento}{60}{subsection.4.6.3}
 \contentsline {subsection}{\numberline {4.6.4}Fase de Reconhecimento}{61}{subsection.4.6.4}
 \contentsline {subsection}{\numberline {4.6.5}Defini\IeC {\c c}\IeC {\~a}o de Sucesso do Reconhecimento}{63}{subsection.4.6.5}
-\contentsline {section}{\numberline {4.7}Considera\IeC {\c c}\IeC {\~o}es Finais}{63}{section.4.7}
+\contentsline {section}{\numberline {4.7}Considera\IeC {\c c}\IeC {\~o}es Finais}{64}{section.4.7}
 \setlength {\cftchapterindent }{0em} \setlength {\cftchapternumwidth }{\cftlastnumwidth }
 \contentsline {chapter}{\chapternumberline {5}\MakeTextUppercase {TESTES E AN\IeC {\'A}LISE DOS RESULTADOS}}{65}{chapter.5}
 \contentsline {section}{\numberline {5.1}Ambiente de Testes}{65}{section.5.1}
 \contentsline {section}{\numberline {5.2}Testes e Resultados}{66}{section.5.2}
 \contentsline {subsection}{\numberline {5.2.1}Fase 1}{66}{subsection.5.2.1}
-\contentsline {subsection}{\numberline {5.2.2}Fase 2}{68}{subsection.5.2.2}
+\contentsline {subsection}{\numberline {5.2.2}Fase 2}{67}{subsection.5.2.2}
 \contentsline {subsection}{\numberline {5.2.3}Fase 3}{69}{subsection.5.2.3}
 \contentsline {section}{\numberline {5.3}An\IeC {\'a}lise dos Resultados}{70}{section.5.3}
 \setlength {\cftchapterindent }{0em} \setlength {\cftchapternumwidth }{\cftlastnumwidth }

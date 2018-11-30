@@ -22,17 +22,17 @@ Os equipamentos (\textit{hardwares}), descritos na \autoref{sub-hardw}, foram po
 
 A interface do sistema, como se pode ver na \autoref{screenshot-sys}, dispõe de uma máscara que indica o local em que a face deve ser posicionada corretamente em frente a câmera, e a câmera posicionada no mesmo local em todos os testes. A cada dia, caso o resultado de correspondência fosse considerada ruim (muito acima do valor mínimo \textit{MIN\_DIST}), ou caso o objeto de teste tenha se movido no momento do treino interrompendo o processo, a face poderia ser treinada novamente, o que acumularia as faces de treino do objeto de teste.
 
-Os usuários foram sujeitos ao teste sempre na mesma ordem. As faces dos objetos de testes foram expostas durante o tempo necessário para o sistema coletar a quantidade estabelecida pela constante \textit{NUM\_FACES\_TREINO}. O sistema é configurado para fazer cerca de 3 a 4 deteções por segundo.
+Os usuários foram sujeitos ao teste sempre na mesma ordem. As faces dos objetos de testes foram expostas durante o tempo necessário para o sistema coletar a quantidade estabelecida pela constante \textit{NUM\_FACES\_TREINO}. O sistema foi configurado para fazer cerca de 3 a 4 deteções por segundo.
 
 Os testes documentados foram realizados em 5 (cinco) dias e divididos em três fases: duas fases de dois e uma fase de um dias. Para cada fase uma configuração distinta das constantes de controle contempladas na \autoref{sec:consts} foram definidas, as quais são detalhadas na seção seguinte.
 
-Apresentam-se os resultados dos testes do sistema nas condições de cada fase em tabelas: uma para cada dia de teste. Todas apresentam as contagens das quantidades de reconhecimento realizadas por pessoa, bem como a nota média das distâncias correspodentes aos resultados de cada reconhecimento, tanto na falha quanto no sucesso, e a contagem de falsos positivos e falsos negativos.
+Apresentm-se os resultados dos testes do sistema nas condições de cada fase em tabelas: uma para cada dia de teste. Todas apresentam as contagens das quantidades de reconhecimento realizadas por pessoa, bem como a nota média das distâncias correspodentes aos resultados de cada reconhecimento, tanto na falha quanto no sucesso, e a contagem de falsos positivos e falsos negativos.
 
 A contagem dos resultados falsos positivos e falsos negativos foram feitos a olho nú e devidamente registrados pelo analista, comparando os resultados registrados pelo sistema no momento dos testes, como descreve a \autoref{sec:defsucregoc}.
 
 \section{Testes e Resultados}\label{ch:testresult}
 
-Esta sessão de testes, podendo ser considerado pela metodologia Ágil, uma \textit{sprint} (ou iteração de desenvolvimento), foi dividida em três fases: uma para cada configuração das constantes de controle. A finalidade de cada constante é contemplada na \autoref{sec:consts} e suas interações com o código descritas durante \autoref{sec:codigo}.
+Esta sessão de testes, foi dividida em três fases: uma para cada configuração das constantes de controle. A finalidade de cada constante é contemplada na \autoref{sec:consts} e suas interações com o código descritas durante \autoref{sec:codigo}.
 
 
 \subsection{Fase 1}\label{ch:testresultfaz1}
@@ -55,9 +55,9 @@ Para a primeira fase da \textit{sprint} testes, feita em dois dias, os valores d
 	\end{itemize}
 \end{itemize}
 
-Estes valores iniciais foram julgados um bom resultado pelo desenvolvedor a partir de testes unitários não documentados em \textit{sprints} anteriores durante o desenvolvimento, onde os objetos de teste eram a face do próprio desenvolvedor, voluntários esporádicos, ou imagens de faces.
+Estes valores iniciais foram definidos pelo desenvolvedor a partir de testes unitários não documentados em \textit{sprints} anteriores durante o desenvolvimento do sistema, onde os objetos de teste eram a face do próprio desenvolvedor, voluntários esporádicos ou imagens de faces.
 
-Os resultados do primeiro dia de teste desta fase é descrito na \autoref{tab-res-fase1dia1}. Neste dia Houveram 18 imagens de treinamento coletadas, com destaque para a "face 5", que por alguma razão, talvez sua pele muito branca e oleosa, refletia as luzes do ambiente dificultando o processo e apresentando maus resultados, e assim foi efetuada a coleta de mais imagens de treino deste usuário.
+Os resultados do primeiro dia de teste desta fase é descrito na \autoref{tab-res-fase1dia1}. Neste dia houveram 18 imagens de treinamento coletadas, com destaque para a "face 5", que por alguma razão, talvez sua pele muito branca e oleosa, refletia as luzes do ambiente dificultando o processo e apresentando maus resultados, e assim foi efetuada a coleta de mais imagens de treino deste usuário.
 
 \begin{table}[h]
 	\centering
@@ -172,14 +172,14 @@ Como se pode verificar na \autoref{taxarecogfases}, na primeira faze foram feito
 	\label{taxarecogfases}
 \end{table}
 
-Observou-se que dependendo da face e suas condições as médias das distâncias euclidianas poderiam varias muito. Algumas faces tinham um resultado razoável enquanto outras os apresentavam péssimos. O grande número de falsos negativos apresentados incentivaram a reconfiguração da constante \textit{MIN\_DIST} para um valor maior, \textit{NUM\_FACES\_TREINO} foi reduzido para que o espaço não sofresse muita adição de tamanh, \textit{NUM\_EF} foi reduzido para priorizar \textit{eigenfaces}, e apenas treinos de novas faces foram realizadas, esperando-se que os resultados de reconhecimento melhorassem ou se mantessem.
+Observou-se que dependendo da face e suas condições as médias das distâncias euclidianas poderiam variar consideravelmente de forma imprevisível. Algumas faces tinham um resultado razoável enquanto outras os apresentavam péssimos. O grande número de falsos negativos apresentados incentivaram a reconfiguração da constante \textit{MIN\_DIST} para um valor maior, \textit{NUM\_FACES\_TREINO} foi reduzido para que o espaço não sofresse muita adição de tamanh, \textit{NUM\_EF} foi reduzido para priorizar \textit{eigenfaces}, e apenas treinos de novas faces foram realizadas, esperando-se que os resultados de reconhecimento melhorassem ou se mantessem.
 
 
 Na segunda faze foram feitos 340 reconhecimentos sendo que 185 foram considerados pelo sistema como sucesso. Destes, 96 foram de fato equivalentes. Sendo assim, apresentando a taxa real de reconhecimento de \textbf{28.3\%} de sucesso. Dos reconhecimentos considerados como falha, que somaram o total de 195, 124 se tratavam de uma real equivalência. Sendo assim 63.5\% das falhas deveriam ser reconhecimento de sucesso.
 
 Observa-se que os resultados da segunda fase foram piores que o da anterior, porém as contagens de falsos positivos e negativos ainda se apresentavam elevadas. Reconfigurou-se então as variáveis como conta na \autoref{ch:testresultfaz3} levando em conta lógica de que se um maior número de possível da coleta de imagens de uma face para o treino, combinado com o descarte de auto-vetores por auto-valores, "filtraria"\ melhor as caracteristicas da face e suas variáveis (sombras e reflexoes, movimentos, feiçoes ou enquadramento da face) melhor registradas. A constante \textit{MIN\_DIST} também sofreu adição de valores para que se diminuíse ainda mais os falsos negativos que poderiam ser reconhecimentos de sucesso, com cautela para não provocar resultados falsos positivos.
 
-Segundo os resultados da terceira fase, foram feitos 280 reconhecimentos sendo que 136 foram considerados pelo sistema como sucesso. Destes, apenas 94 foram de fato equivalentes, apresentando a taxa real de reconhecimento com \textbf{33.57\%} de sucesso. Dos reconhecimentos considerados como falha (total de 144), 99 se tratava de uma real equivalência. Sendo assim 50\% das falhas deveriam ser reconhecimento de sucesso.
+Segundo os resultados da terceira fase, foram feitos 280 reconhecimentos sendo que 136 foram considerados pelo sistema como sucesso. Destes, apenas 94 foram de fato equivalentes, apresentando a taxa real de reconhecimento com \textbf{33.57\%} de sucesso. Dos reconhecimentos considerados como falha (total de 144), 99 se tratava de uma real equivalência. Sendo assim cerca de 50\% das falhas deveriam ser reconhecimento de sucesso.
 
 Observou-se então uma melhora considerável nos resultados, levando em conta que o espaço de eigenfaces era muito maior relacionada às duas primeiras fases, porém ainda é um valor que não apresenta precisão e confiabilidade. 
 
@@ -188,7 +188,7 @@ Não obstante, desconsiderando a constante \textit{MIN\_DIST} e analisando apena
 
 \begin{figure}[h]
 	\centering
-	\includegraphics[width=1\textwidth]{grafab-fase12}
+	\includegraphics[width=1.1\textwidth]{grafab-fase12}
 	\caption{\textbf{Gráfico "A"}: Reconhecimentos de sucesso (eixo Y) por quantidade de imagens usadas para o treino (eixo X). \textbf{Gráfico "B"}: Falhas no reconhecimentos (eixo Y) por quantidade de imagens usadas para o treino (eixo X). Referentes as fases de teste "1" e "2".}
 	\fonte{Elaborado pelo autor.}
 	\label{grafab-fase12}
@@ -196,7 +196,7 @@ Não obstante, desconsiderando a constante \textit{MIN\_DIST} e analisando apena
 
 \begin{figure}[h]
 	\centering
-	\includegraphics[width=1\textwidth]{grafab-fase3}
+	\includegraphics[width=1.1\textwidth]{grafab-fase3}
 	\caption{\textbf{Gráfico "A"}: Reconhecimentos de sucesso (eixo Y) por quantidade de imagens usadas para o treino (eixo X). \textbf{Gráfico "B"}: Falhas no reconhecimentos (eixo Y) por quantidade de imagens usadas para o treino (eixo X). Referentes as fases de teste "3".}
 	\fonte{Elaborado pelo autor.}
 	\label{grafab-fase3}

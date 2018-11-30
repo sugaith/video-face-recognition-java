@@ -66,11 +66,6 @@ Dispon{\'\i}vel em:
 Dispon{\'\i}vel em: \url{http://dst.lbl.gov/ACSSoftware/colt/}. Acesso em:
   05.2018.}
 
-\bibitem[César 2011]{fluxogramalivro}
-\abntrefinfo{César}{CéSAR}{2011}
-{CéSAR, F. I.~G.
-Biblioteca 24hrs, 2011.}
-
 \bibitem[Davison 2013]{drmathew_java_programming}
 \abntrefinfo{Davison}{DAVISON}{2013}
 {DAVISON, D.~A.
@@ -85,9 +80,9 @@ Dispon{\'\i}vel em: \url{hhttp://fivedots.coe.psu.ac.th/~ad/index.html}.}
 \textbf{Proceedings of the IEEE ( Volume: 85, Issue: 9, Sep 1997 )}, 1997.
 Dispon{\'\i}vel em: \url{http://ieeexplore.ieee.org/document/628712/}.}
 
-\bibitem[Eymar Laércio 2018]{inpe_proc_img}
-\abntrefinfo{Eymar Laércio}{EYMAR LAéRCIO}{2018}
-{EYMAR LAéRCIO, R. Teoria : Processamento de imagens.
+\bibitem[Eymar Laercio 2018]{inpe_proc_img}
+\abntrefinfo{Eymar Laercio}{EYMAR LAERCIO}{2018}
+{EYMAR LAERCIO, R. Teoria : Processamento de imagens.
 \textbf{Instituto Nacional de Pesquisas Espaciais - INPE}, 2018.
 Dispon{\'\i}vel em:
   \url{http://www.dpi.inpe.br/spring/teoria/realce/realce.htm}. Acesso em:
@@ -206,13 +201,6 @@ Disserta\c{c}\~{a}o (Mestrado) --- Pontifícia Universidade Católica do Rio de
   Janeiro - PUCRJ, Rio de Janeiro, 2008.
 Dispon{\'\i}vel em:
   \url{https://www.maxwell.vrac.puc-rio.br/13069/13069\_1.PDF}.}
-
-\bibitem[Método 2018]{dicio-metodo}
-\abntrefinfo{Método}{MéTODO}{2018}
-{MéTODO.
-Dicio, 2018.
-Dispon{\'\i}vel em: \url{https://www.dicio.com.br/metodo/}. Acesso em:
-  06.2018.}
 
 \bibitem[Nearest Neighbor Image Scaling 2007]{tech_algo_scaling}
 \abntrefinfo{Nearest\ldots}{NEAREST\ldots}{2007}

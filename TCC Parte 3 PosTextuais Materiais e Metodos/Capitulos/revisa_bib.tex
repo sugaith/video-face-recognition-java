@@ -77,14 +77,13 @@ Na aquisição de vídeos, o mesmo processo descrito acima para imagens é utili
 
 \subsection{Processamento da Imagem}\label{subsec:processamento}
 
-O processamento de imagem é todo o processo que tem uma imagem como entrada e saída, tais como fotografia ou quadros de vídeo \cite{inpe_proc_img}. 
+O processamento de imagem é todo o processo que tem uma imagem como entrada e saída, tais como fotografia ou quadros de vídeo .
 
 Usa-se para melhorar o aspecto visual de certas feições estruturais para o analista humano ou para performance e para fornecer outros subsídios para a sua interpretação, inclusive gerando produtos que possam ser posteriormente submetidos a outros processamentos \cite{inpe_proc_img}.
 
 O processamento de imagens pode ser dividido em 3 fases básicas: pré-processamento, realce e classificação.
 Pré-processamento refere-se ao processamento inicial de dados brutos para calibração radiométrica da imagem, correção de distorções geométricas e remoção de ruído.
-Realce visa melhorar a qualidade da imagem, permitindo uma melhor discriminação dos objetos presentes na imagem.
-Na classificação são atribuídas classes aos objetos presentes na imagem \cite{inpe_proc_img}.
+Realce visa melhorar a qualidade da imagem, permitindo uma melhor discriminação dos objetos presentes na imagem. Na classificação são atribuídas classes aos objetos presentes na imagem \cite{inpe_proc_img}.
 
 Nas próximas seções algumas técnicas de processamento de imagens serão abordadas pela sua importância e sua necessidade de uso em algoritmos de detecção e reconhecimento de faces. São elas:
 
@@ -122,7 +121,7 @@ No Método \textbf{Máximos Canal}, considerando uma imagem RBG, cada pixel "\te
 \end{figure}	
 
 	
-No Método de \textbf{Coversão Clássico} utiliza-se de "pesos" sobre os valores RGB para calcular a resultante "$r$" pela equação $r = 0.29R + 0.59G + 0.11B$. A \autoref{conversao_classica} ilustra o resultado do uso deste método. 
+No Método de \textbf{CoNversão Clássico} utiliza-se de "pesos" sobre os valores RGB para calcular a resultante "$r$"\ pela equação $r = 0.29R + 0.59G + 0.11B$. A \autoref{conversao_classica} ilustra o resultado do uso deste método. 
 \begin{figure}[h]
 	\centering
 	\includegraphics[width=.4\textwidth]{conversao_classica}
@@ -131,7 +130,7 @@ No Método de \textbf{Coversão Clássico} utiliza-se de "pesos" sobre os valore
 	\label{conversao_classica}
 \end{figure}
 
-Já o Método \textbf{Média de Canal} consiste em calcular a média dos valores RGB de cada pixel e atribuir o resultado ao pixel novamente para cada valor R, G e B, como mostra a \autoref{media_canal}
+Já o Método \textbf{Média de Canal} consiste em calcular a média dos valores RGB de cada pixel e atribuir o resultado ao pixel novamente para cada valor R, G e B, como mostra a \autoref{media_canal}.
 \begin{figure}[h]
 	\centering
 	\includegraphics[width=.4\textwidth]{media_canal}
@@ -149,7 +148,7 @@ Converter a imagem em escala de cinza torna mais eficientes os subsequente proce
 \subsubsection{Escalonamento}\label{subsubsec:escalonamento}
 
 No âmbito de Computação Gráfica e Imagens Digitais e referindo-se a imagens do tipo \textit{raster} (matriciais), o escalonamentro de imagens pode ser interpretado como uma reamostragem ou reconstrução da imagem. A imagem reconstruída pode ser maior ou menor dependendo do fator de escala. Quando uma imagem é diminuida de seu tamanho original, os dados da imagem (pixels) são descartados, e quanto o tamaho da imagem é aumentada, novos dados devem ser inseridos na imagem.
-Basicamente esses  novos dados a principio são espaços "vazios" como mosta a \autoref{escalabasico}. 
+Basicamente esses  novos dados a principio são espaços "vazios"\ como mosta a \autoref{escalabasico}. 
 
 \begin{figure}[h]
 	\centering
@@ -159,7 +158,7 @@ Basicamente esses  novos dados a principio são espaços "vazios" como mosta a \
 	\label{escalabasico}
 \end{figure}
 
-A principal função de um algoritmo de escalonamento é de prenecher estes espaços "vazios" com pixels de valores coerentes. Para tal utiliza-se técnicas matemáticas de interpolação com os dados da imagem. Interpolação é o processo de estimar valores intermediários de uma função ou sinal discreto amostrado em posições no espaço contínuo \cite{luiz_vizinho}.
+A principal função de um algoritmo de escalonamento é de preencher estes espaços "vazios" com pixels de valores coerentes. Para tal utiliza-se técnicas matemáticas de interpolação com os dados da imagem. Interpolação é o processo de estimar valores intermediários de uma função ou sinal discreto amostrado em posições no espaço contínuo \cite{luiz_vizinho}.
 
 Existem várias técnicas de interpolação, dentre elas:
 
@@ -167,7 +166,7 @@ Existem várias técnicas de interpolação, dentre elas:
 	\item Interpolação do vizinho mais próximo;
 	\item Interpolação Bilinear;
 	\item Interpolação Bicúbica;
-	\item Interpolação Bicúbica Generalizada;	
+	\item Interpolação Bicúbica Generalizada.
 \end{itemize}
 
 A interpolação do Vizinho Mais Próximo por exemplo, é a maneira mais simples de abordar a problemática da interpolação e consiste em determinar o pixel vizinho mais próximo e assumir um valor de intensidade à este \cite{giassa_escalona}, operado pelo arredondamento da coordenada $x$ pelo inteiro mais próximo $u_0$ e usa a amostra em como estimativa de $g(x)$, como ilustra a \autoref{vizinho_interp}.
@@ -205,7 +204,7 @@ Como resultado, cada um dos pixels em uma mesma região é similar com referênc
 
 \subsubsection{Classificação}\label{subsubsec:classificacao}
 
-Segundo \cite{edinburgh_classifier}, classificação de imagem contextual é um tópico de reconhecimento de padrões em  Visão Computacional. Chama-se "contextual" pois significa que esta abordagem é focada na proximidade com os pixels e sua relação com o "classificador", (contemplado na seção \autoref{subsubsec:elem_haar}). É utilizado efetivamente na detecção de objetos e também pode ser aplicado para a detecção de faces em uma imagem.
+Segundo \cite{edinburgh_classifier}, classificação de imagem contextual é um tópico de reconhecimento de padrões em  Visão Computacional. Chama-se "contextual"\ pois significa que esta abordagem é focada na proximidade com os pixels e sua relação com o "classificador", (contemplado na seção \autoref{subsubsec:elem_haar}). É utilizado efetivamente na detecção de objetos e também pode ser aplicado para a detecção de faces em uma imagem.
 
 
 %============================================================================================================
@@ -328,7 +327,7 @@ Os pesos agora podem ser observados como as coordenadas da imagem de treinamento
 
 Após o processo de treinamento das faces vem o processo de reconhecimento. Neste novo processo, uma nova imagem para reconhecimento deve ser decomposta em \textit{EigenFaces}. A sequência de pesos resultante é comparada com cada sequência de pesos que foram previamente disponibilizadas no espaço multidimensional, e o nome associado com o as características mais próximas dos \textit{EigenFaces} treinados é associado \cite{drmathew_java_programming}.
 
-Em outras palavras, em termos de espaço multidimensional, a nova imagem é posicionada no plano cartesiano com suas próprias coordenadas (pesos). Então uma técnica de medida de distância (geralmente a distância Euclidiana, que será abordada na \autoref{subsec:eigenacp}) é utilizada para encontrar o vetor de valores correspondente mais próxima. Sendo assim, uma distância zero seria uma correspondência (reconhecimento) perfeita \cite{drmathew_java_programming}. A \autoref{eigencartesiano} na \autoref{subsec:treinrecface} ilustra este processo.
+Em outras palavras, em termos de espaço multidimensional, a nova imagem é posicionada no plano cartesiano com suas próprias coordenadas (pesos). Então uma técnica de medida de distância (geralmente a distância Euclidiana, que será abordada na \autoref{subsec:reconhecimento}) é utilizada para encontrar o vetor de valores correspondente mais próxima. Sendo assim, uma distância zero seria uma correspondência (reconhecimento) perfeita \cite{drmathew_java_programming}. A \autoref{eigencartesiano} na \autoref{subsec:treinrecface} ilustra este processo.
 
 
 %=======================================================================================================================
@@ -406,7 +405,7 @@ onde $\Phi$ é o vetor resultante do "passo 2", $I$ é a matriz identidade da ma
 onde $\Phi$ é o vetor resultante do "passo 2", $e$ é o auto-vetor e $\lambda$ é o auto-valor \cite{geysilva}.
 Neste passo também ordena-se os auto-vetores por ordem de auto-valores (ou seja, por ordem de significância) para facilitar possível futuro descarte \cite{geysilva}.
 
-pode-se observar que o resultado da decomposição da matriz de covariância gereda acima no exempo, como é uma matriz 2x2, possui dois auto-vetores e dois auto-valores:
+Pode-se observar que o resultado da decomposição da matriz de covariância gereda acima no exempo, como é uma matriz 2x2, possui dois auto-vetores e dois auto-valores:
 \begin{center}
 	$\begin{pmatrix} -0.7352 \\ 0.6779 \end{pmatrix}$  e 0.049
 	
@@ -543,7 +542,7 @@ $\begin{pmatrix} -0.7352 \\ 0.6779 \end{pmatrix}$ torna-se $y$ $=$ $\frac{-0.735
 
 Os dados normalizados e as duas equações são ilustradas na \autoref{fig:graphxy2} como linhas azuis. 
 
-Observa-se que na \autoref{fig:graphxy2} demonstra como os auto-vetores acentuam as relações entre os conjuntos de dadose indicam como estes se espalham nas coordenadas do espaço multidimensional. Este espalhamento facilita a distinção dos dados \cite{drmathew_java_programming}.
+Observa-se que na \autoref{fig:graphxy2} demonstra como os auto-vetores acentuam as relações entre os conjuntos de dados indicam como estes se espalham nas coordenadas do espaço multidimensional. Este espalhamento facilita a distinção dos dados \cite{drmathew_java_programming}.
 
 Dos dois auto-vetores marcados em azul, a linha $\frac{0.6779}{0.7352}$$x$ é a mais útil, pois os dados estão mais espalhados acerca do trajeto desta linha. Isto pode ser confirmado numericamente observando o auto-valor associado com seu auto-vetor: o auto-valor (1.284) é um melhor indicador de espalhamento pois é o maior dentre os dois auto-valores.
 

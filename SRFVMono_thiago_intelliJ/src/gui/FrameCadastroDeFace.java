@@ -31,6 +31,7 @@ public class FrameCadastroDeFace extends javax.swing.JFrame {
     public FrameCadastroDeFace() {
         super("Reconhecedor de Face");
         initComponents();
+        jButton1.setVisible(false);
         this.setLocationRelativeTo(null);
 
 //        conexao = new ConexaoDAO();

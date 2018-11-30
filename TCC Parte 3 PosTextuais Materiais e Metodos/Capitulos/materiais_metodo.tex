@@ -16,17 +16,17 @@ Lista-se a seguir, os equipamentos necessários para a realização deste trabal
 	
 	\item Câmera digital do tipo \textit{Webcam} de 720p de resolução (ou 1280x720 \textit{pixels});
 	\begin{itemize}
-		\item será utilizada para captar o vídeo disponibilizá-lo no formato digital
+		\item utilizada para captar o vídeo disponibilizá-lo no formato digital
 	\end{itemize}
 
 	\item Microcomputador pessoal com processador Intel i7, 32 gigabytes de memória, e placa de vídeo de 32 megabytes (alto rendimento);
 	\begin{itemize}
-		\item será utilizado como principal instrumento de desenvolvimento
+		\item utilizado como principal instrumento de desenvolvimento
 	\end{itemize}
 	
 	\item Microcomputador pessoal do tipo notebook com processador Intel i3, 2 gigabytes de memória (baixo à médio rendimento);
 	\begin{itemize}
-		\item será utilizado como instrumento de desenvolvimento secundário, para testar questões de consumo de memória e processamento (desempenho)	
+		\item utilizado como instrumento de desenvolvimento secundário, para testar questões de consumo de memória e processamento (desempenho)	
 	\end{itemize}
 	
 \end{itemize}
@@ -34,7 +34,7 @@ Lista-se a seguir, os equipamentos necessários para a realização deste trabal
 Estes \textit{hadwares} são considerados suficientes para a realização deste trabalho.
 
 \subsection{Softwares}\label{sub-softw}
-As subseções seguintes citam e detalham as tecnologias que serão utilizadas para a implementação do trabalho aqui proposto,  descrevendo a maneira que serão utilizados.
+As subseções seguintes citam e detalham as tecnologias utilizadas para a implementação do trabalho aqui proposto,  descrevendo a maneira que foram utilizados.
 
 \subsubsection{Linguagem Java}\label{subsec:java}
 A tecnologia Java é usada para desenvolver aplicativos para uma ampla variedade de ambientes, de dispositivos consumidores a sistemas corporativos heterogêneos \cite{ibm_java}. 
@@ -71,7 +71,7 @@ Por sua vez, a biblioteca \textbf{JavaCV}, inicialmente desenvolvida pela Google
 
 Estas três bibliotecas funcionam de maneira conjunta para resolver a problemática de aquisição, processamento de imagens, e classificação de objetos, e será utilizada neste trabalho. 
 
-A lista a seguir disponibiliza e detalha os principais pacotes, classes e métodos ou funções que se fará uso destas bibliotecas de desenvolvimento. As definições de suas funções foram retiradas das documentações dispostas em \cite{opencv}, \cite{javacv} e \cite{javacpp}: 
+A lista a seguir disponibiliza e detalha os principais pacotes, classes e métodos ou funções que s~ao utilizadas destas bibliotecas de desenvolvimento. As definições de suas funções foram retiradas das documentações dispostas em \cite{opencv}, \cite{javacv} e \cite{javacpp}: 
 
 \begin{itemize}
 	\item Pacotes/classes:
@@ -92,7 +92,7 @@ A lista a seguir disponibiliza e detalha os principais pacotes, classes e métod
 		
 		\item \textbf{\textit{javacv.OpenCVFrameConverter}}: tem a função de converter as classes de representações de imagens \textit{IplImage} e \textit{javacv.Frame}, disponibilizada pela classe \textit{FrameGrabber} acima listada;
 		
-		\item \textbf{\textit{javacpp.opencv\_objdetect.CvHaarClassifierCascade}}: classe que contém as configurações e o algoritmo de classificação Haar-Cascades, utilizado para a detecção de objetos (ou faces);
+		\item \textbf{\textit{javacpp.opencv\_objdetect.CvHaarClassifierCascade}}: classe que contém as configurações e o algoritmo de classificação Haar-Cascades, utilizado para a detecção de objetos (ou faces).
 	\end{itemize}
 
 	\item Métodos ou funções:
@@ -115,14 +115,14 @@ A lista a seguir disponibiliza e detalha os principais pacotes, classes e métod
 
 		\item \textbf{\textit{javacpp.helper.opencv\_objdetect.cvHaarDetectObjects}}: este método recebe um objeto do tipo \textit{CvHaarClassifierCascade}, uma imagem do tipo \textit{IplImage}, dentre outros parâmetros, e efetivamente detecta objetos (no caso, face) na imagem retornando objetos da classe \textit{CvSeq} ou \textit{CvRect};
 		
-		\item outras funções ou métodos para manipular ou converter classes de objetos irão eventualmente ser utilizadas;
+		\item outras funções ou métodos para manipular ou converter classes de objetos irão eventualmente ser utilizadas.
 	\end{itemize}	
 \end{itemize}
 
 Estas três bibliotecas também possuem um conjunto de parâmetros e constantes pré estabelecidas para facilitar o estabelecimento do ambiente desenvolvimento que irão ser utilizadas.
 
 \subsubsection{Biblioteca Colt}\label{subsec:bib_colt}
-A biblioteca Colt foi desenvovida pela CERN (sigla francesa que corresponde à \textit{Conseil Européen Pour la Recherche Nucléaire}, em portugês Conselho Europeu de Pesquisas Nucleares) e provê uma gama de bibliotecas para Computação Científica e Técnica de Alta Performance em Java \cite{colt}. Será utilizada na implementação do algoritmo \textit{EigenFaces} para performar as operações necessárias descritas na \autoref{subsec:acp} e \autoref{subsec:acp-eigen}. Lista-se a seguir as classes que serão utilizadas desta biblioteca \cite{colt}:
+A biblioteca Colt desenvovida pela CERN (sigla francesa que corresponde à \textit{Conseil Européen Pour la Recherche Nucléaire}, em portugês Conselho Europeu de Pesquisas Nucleares) e provê uma gama de bibliotecas para Computação Científica e Técnica de Alta Performance em Java \cite{colt}. Será utilizada na implementação do algoritmo \textit{EigenFaces} para performar as operações necessárias descritas na \autoref{subsec:acp}. Lista-se a seguir as classes que serão utilizadas desta biblioteca \cite{colt}:
 
 
 \begin{itemize}
@@ -132,7 +132,7 @@ A biblioteca Colt foi desenvovida pela CERN (sigla francesa que corresponde à \
 			
 	\item \textbf{\textit{cern.jet.math.Functions}}:  contém classes métodos que definem funções matemáticas a serem aplicadas em matrizes respresentadas pela classe \textit{DenseDoubleMatrix2D}, como soma, multiplicação, subtração de matrizes, etc;
 	
-	\item \textbf{\textit{cern.colt.matrix.linalg.EigenvalueDecomposition}}: classe que contém métodos para a extração dos auto-vetores (\textit{EigenValues}) e auto-valores (\textit{EigenVectors}) de uma matriz recebida, necessários para certas etapas do algorítio \textit{EigenFaces} ou ACP descrito na \autoref{subsec:acp};
+	\item \textbf{\textit{cern.colt.matrix.linalg.EigenvalueDecomposition}}: classe que contém métodos para a extração dos auto-vetores (\textit{EigenValues}) e auto-valores (\textit{EigenVectors}) de uma matriz recebida, necessários para certas etapas do algorítio \textit{EigenFaces} ou ACP descrito na \autoref{subsec:acp}.
 \end{itemize}		
 
 \subsubsection{NetBeans IDE}\label{subsec:netbeans}
@@ -147,25 +147,25 @@ LaTeX é um conjunto de macros para o programa de diagramação de textos TeX, u
 Git é um sistema de gerenciamento e controle de código livre criado pelos desenvolvedores Linus Tornalds e Junio Hamano sob a licensa GNU (GPLv2) \cite{git}. Este sistema é extremamente útil para se ter cada etapa da escrita do código salva, com possibilidade de reversão de ações, criação de ramos de desenvolvimento dentre outras utilidades, e é utilizado tando na escrita desta monografia quanto na escrita do código do sistema de reconhecimento aqui proposto.
 
 \subsubsection{Sistemas Linux e Windows}\label{subsec:linux}
-O ambiente de desenvolvimento deste trabalho será configurado sob o sistema operacional Linux, que estará executando na máquina de alto rendimento descrita na \autoref{sub-hardw}, item "2". Já o sistema operacional Windows se executará na maquina de baixo à medio rendimento descrito também na \autoref{sub-hardw}, item "3", para testes e apresentação.
+O ambiente de desenvolvimento deste trabalho foi configurado sob o sistema operacional Linux, executando na máquina de alto rendimento descrita na \autoref{sub-hardw}, item "2". Já o sistema operacional Windows executa-se na maquina de baixo descrito também na \autoref{sub-hardw}, item "3", para testes e apresentação.
 
 
 \section{Métodos}\label{sec:metodos}
-Este trabalho será uma abordagem experimental, descrita na seção a seguir \cite{fachin-metodos}.
+Este trabalho adota uma abordagem experimental, descrita na seção a seguir \cite{fachin-metodos}.
 
 
 \subsection{Método Experimental}\label{metex}
 
-No método experimental, variáveis são tratadas de maneira pré estabelecida e seus efeitos suficientemente controlados  e conhecidos pelos pesquisador. O princípio central da aplicação do método experimental é que deve-se aceitar os resultados como eles são apresentados, com tudo de imprevisto e acidental que possa haver diante dos resulatos obtidos, ignorando as próprias opiniões e também as alheias \cite{fachin-metodos}.
+No método experimental, variáveis são tratadas de maneira pré estabelecida e seus efeitos suficientemente controlados  e conhecidos pelos pesquisador. O princípio central da aplicação do método experimental é que deve-se aceitar os resultados como eles são apresentados, com imprevistos e acidentes que possam haver diante dos resulatos obtidos, ignorando as próprias opiniões e também as alheias \cite{fachin-metodos}.
 
 \subsection{Desenvolvimento Ágil}\label{subsec:devagil}
 O Desenvolvimento Ágil foi padronizado pelo Manifesto Ágil como um método independente que reúne características de outras metodologias. Este manifesto foi criado para valorizar os seguintes pontos \cite{dev-agil}:
 
 \begin{itemize}
-	\item Indivíduos e suas interações são mais importantes que processos e ferramentas
-	\item Software que funciona importa mais que uma documentação abrangente
-	\item Colaboração com o cliente vale mais do que negociação de contratos
-	\item Responder às mudanças é melhor do que seguir planos
+	\item Indivíduos e suas interações são mais importantes que processos e ferramentas;
+	\item Software que funciona importa mais que uma documentação abrangente;
+	\item Colaboração com o cliente vale mais do que negociação de contratos;
+	\item Responder às mudanças é melhor do que seguir planos.
 \end{itemize}
 
 No desenvolvimento ágil, os projetos adotam o modelo iterativo e em espiral. Neste processo, as fases do projeto são executadas diversas vezes, produzindo ciclos curtos que se repetem ao longo de todo o desenvolvimento, sendo que, ao final de cada ciclo, sempre se tem um software funcional. Os ciclos são chamados de iterações e crescem em número de funcionalidades a cada repetição, sendo que, no último ciclo, todas as funcionalidades desejadas estariam implementadas, testadas e aprovadas \cite{dev-agil2}.
@@ -182,21 +182,20 @@ A \textbf{XP} será utilizada neste projeto por ser incremental, focar-se no des
 
 A modelagem UML (\textit{Unified Modeling Language}, em português Linguagem de Modelagem Unificada), por vezes chamada de linguagem UML, procura fornecer meios para auxiliar no levantamento dos requisitos que irão constituir um sistema, além de recursos para a modelagem de estruturas que farão parte do mesmo. O fato da UML ser um padrão de grande aceitação no mercado também se deve, em grande parte, à forte integração desta com conceitos da Orientação a Objetos (OO) \cite{uml}. Como este trabalho propõe a implementação na liguagem Java que é orientada a objetos, este padrão de modelagem será utilizado na elaboração de documentos modelando os componentes esperados para o funcionamento do sistema.
 
-Três dos diagramas que fazem parte da l inguagem UML serão utilizados \cite{uml}:
-
+Dois dos diagramas que fazem parte da linguagem UML foram utilizados \cite{uml}:
 
 
 \begin{itemize}
 	\item Diagrama de Pacotes: Demonstra as interações entre diferentes pacotes os quais contém conjunto classes que compartilham finalizades semelhantes;
 	
-	\item Diagrama de Classes: Permite a visualização do conjunto de classes, detalhando atributos e operações (métodos) presentes, assim como prováveis relacionamentos entre essas estruturas. Considerado um diagrama estrutural;	
+	\item Diagrama de Classes: Permite a visualização do conjunto de classes, detalhando atributos e operações (métodos) presentes, assim como prováveis relacionamentos entre essas estruturas. Considerado um diagrama estrutural.
 
 \end{itemize}
 
-Estes dois diagramas serão utilizados para ilustrar as classes Java que serão implementadas, as interações de seus objetos e os processos do sistema que consiste na aquisição do vídeo, deteção e reconhecimento da face, ou seja, toda a entrada, processamento e saida de dados do sistema detalhando seus componentes e interações.
+Estes dois diagramas foram utilizados para ilustrar as classes Java que serão implementadas, as interações de seus objetos e os processos do sistema que consiste na aquisição do vídeo, deteção e reconhecimento da face, ou seja, toda a entrada, processamento e s'ida de dados do sistema detalhando seus componentes e interações.
 
 \section{Considerações Finais}\label{sec:consfin}
-Neste capítulo foram abordados os materiais e métodos necessários para o desenvolvimento do sistema de reconhecimento de faces em vídeo, utilizando o algorítimo \textit{EigenFaces}. Pode-se destacar a modelagem que trará esclarecimento quanto à estrutura do sistema e ao processo que deve ser percorrido, o desenvolimento ágil considerado essencial para se ter resultados rápidos para que sejam analizados e iterados num ciclo de desenvolvimento espiral com melhoras a cada iteração. Outro destaque são as bibliotecas OpenCV, JavaCV e Colt, que juntamente com suas documentações facilitarão o processo de implementação do algorítimo \textit{EigenFaces} e o desenvolvimento do sistema como um todo e por fim, o sistema GIT que grava e assegura cada etapa do processo de escrita da monografia e do cógido.
+Neste capítulo foram abordados os materiais e métodos necessários para o desenvolvimento do sistema de reconhecimento de faces em vídeo, utilizando o algorítimo \textit{EigenFaces}. Pode-se destacar a modelagem que trouxe esclarecimento quanto à estrutura do sistema e ao processo que deve ser percorrido, o desenvolvimento ágil considerado essencial para se ter resultados rápidos para que sejam analisados e iterados num ciclo de desenvolvimento espiral com melhoras a cada iteração. Outro destaque são as bibliotecas OpenCV, JavaCV e Colt, que juntamente com suas documentações facilitaram o processo de implementação do algorítimo \textit{EigenFaces} e o desenvolvimento do sistema como um todo e por fim, o sistema GIT que grava e assegura cada etapa do processo de escrita da monografia e do cógido.
 
 
 

@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.19 (MiKTeX 2.9.6730 64-bit) (preloaded format=pdflatex 2018.8.18)  18 NOV 2018 18:11
+This is pdfTeX, Version 3.14159265-2.6-1.40.19 (MiKTeX 2.9.6730 64-bit) (preloaded format=pdflatex 2018.8.18)  19 NOV 2018 15:26
 entering extended mode
 **./modelo.tex
 (modelo.tex
@@ -1467,127 +1467,124 @@ File: ./Imagens/pixel-img.png Graphic file (type png)
 Package pdftex.def Info: ./Imagens/pixel-img.png  used on input line 32.
 (pdftex.def)             Requested size: 273.00278pt x 264.34962pt.
  [22 <./Imagens/pixel-img.png>] [23]
-Overfull \hbox (10.10889pt too wide) in paragraph at lines 84--88
+Overfull \hbox (10.10889pt too wide) in paragraph at lines 84--87
 []\T1/cmr/m/n/12 O pro-ces-sa-mento de ima-gens pode ser di-vi-dido em 3 fa-ses
  bá-si-cas: pré-processamento,
  []
 
 [24]
-<./Imagens/escalacinza.png, id=547, 850.17625pt x 930.47626pt>
+<./Imagens/escalacinza.png, id=545, 850.17625pt x 930.47626pt>
 File: ./Imagens/escalacinza.png Graphic file (type png)
 <use ./Imagens/escalacinza.png>
-Package pdftex.def Info: ./Imagens/escalacinza.png  used on input line 106.
+Package pdftex.def Info: ./Imagens/escalacinza.png  used on input line 105.
 (pdftex.def)             Requested size: 295.74722pt x 323.68385pt.
  [25 <./Imagens/escalacinza.png>]
-<./Imagens/maximo_canal.png, id=565, 334.24875pt x 335.2525pt>
+<./Imagens/maximo_canal.png, id=563, 334.24875pt x 335.2525pt>
 File: ./Imagens/maximo_canal.png Graphic file (type png)
 <use ./Imagens/maximo_canal.png>
-Package pdftex.def Info: ./Imagens/maximo_canal.png  used on input line 118.
+Package pdftex.def Info: ./Imagens/maximo_canal.png  used on input line 117.
 (pdftex.def)             Requested size: 181.99722pt x 182.54785pt.
-<./Imagens/conversao_classica.png, id=571, 328.22626pt x 329.23pt>
+<./Imagens/conversao_classica.png, id=569, 328.22626pt x 329.23pt>
 File: ./Imagens/conversao_classica.png Graphic file (type png)
 <use ./Imagens/conversao_classica.png>
 Package pdftex.def Info: ./Imagens/conversao_classica.png  used on input line 1
-28.
+27.
 (pdftex.def)             Requested size: 181.99722pt x 182.554pt.
-<./Imagens/media_canal.png, id=577, 332.24126pt x 330.23375pt>
+<./Imagens/media_canal.png, id=575, 332.24126pt x 330.23375pt>
 File: ./Imagens/media_canal.png Graphic file (type png)
 <use ./Imagens/media_canal.png>
-Package pdftex.def Info: ./Imagens/media_canal.png  used on input line 137.
+Package pdftex.def Info: ./Imagens/media_canal.png  used on input line 136.
 (pdftex.def)             Requested size: 181.99722pt x 180.89847pt.
  [26 <./Imagens/maximo_canal.png> <./Imagens/conversao_classica.png>]
-<./Imagens/escalabasico.png, id=591, 643.40375pt x 204.765pt>
+<./Imagens/escalabasico.png, id=589, 643.40375pt x 204.765pt>
 File: ./Imagens/escalabasico.png Graphic file (type png)
 <use ./Imagens/escalabasico.png>
-Package pdftex.def Info: ./Imagens/escalabasico.png  used on input line 156.
+Package pdftex.def Info: ./Imagens/escalabasico.png  used on input line 155.
 (pdftex.def)             Requested size: 364.00139pt x 115.84865pt.
  [27 <./Imagens/media_canal.png> <./Imagens/escalabasico.png>]
-<./Imagens/vizinho_interp.png, id=608, 701.62125pt x 273.02pt>
+<./Imagens/vizinho_interp.png, id=606, 701.62125pt x 273.02pt>
 File: ./Imagens/vizinho_interp.png Graphic file (type png)
 <use ./Imagens/vizinho_interp.png>
-Package pdftex.def Info: ./Imagens/vizinho_interp.png  used on input line 177.
+Package pdftex.def Info: ./Imagens/vizinho_interp.png  used on input line 176.
 (pdftex.def)             Requested size: 318.49861pt x 123.94101pt.
-<./Imagens/histograma.png, id=619, 289.08pt x 138.5175pt>
+<./Imagens/histograma.png, id=617, 289.08pt x 138.5175pt>
 File: ./Imagens/histograma.png Graphic file (type png)
 <use ./Imagens/histograma.png>
-Package pdftex.def Info: ./Imagens/histograma.png  used on input line 192.
+Package pdftex.def Info: ./Imagens/histograma.png  used on input line 191.
 (pdftex.def)             Requested size: 364.00139pt x 174.42728pt.
 
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
 [28 <./Imagens/vizinho_interp.png>] [29 <./Imagens/histograma.png>]
-<./Imagens/haarwavelet.png, id=642, 200.24812pt x 151.3153pt>
+<./Imagens/haarwavelet.png, id=640, 200.24812pt x 151.3153pt>
 File: ./Imagens/haarwavelet.png Graphic file (type png)
 <use ./Imagens/haarwavelet.png>
-Package pdftex.def Info: ./Imagens/haarwavelet.png  used on input line 229.
+Package pdftex.def Info: ./Imagens/haarwavelet.png  used on input line 228.
 (pdftex.def)             Requested size: 273.00278pt x 206.31943pt.
-<./Imagens/haarfeatures.png, id=650, 682.80093pt x 347.04657pt>
+<./Imagens/haarfeatures.png, id=648, 682.80093pt x 347.04657pt>
 File: ./Imagens/haarfeatures.png Graphic file (type png)
 <use ./Imagens/haarfeatures.png>
-Package pdftex.def Info: ./Imagens/haarfeatures.png  used on input line 241.
+Package pdftex.def Info: ./Imagens/haarfeatures.png  used on input line 240.
 (pdftex.def)             Requested size: 409.49722pt x 208.13951pt.
 
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
 [30 <./Imagens/haarwavelet.png>] [31 <./Imagens/haarfeatures.png>]
-<./Imagens/cascata.png, id=672, 357.58594pt x 120.45pt>
+<./Imagens/cascata.png, id=670, 357.58594pt x 120.45pt>
 File: ./Imagens/cascata.png Graphic file (type png)
 <use ./Imagens/cascata.png>
-Package pdftex.def Info: ./Imagens/cascata.png  used on input line 268.
+Package pdftex.def Info: ./Imagens/cascata.png  used on input line 267.
 (pdftex.def)             Requested size: 364.00139pt x 122.61842pt.
  [32 <./Imagens/cascata.png>]
-<./Imagens/trein_img.png, id=692, 401.24907pt x 353.82187pt>
+<./Imagens/trein_img.png, id=690, 401.24907pt x 353.82187pt>
 File: ./Imagens/trein_img.png Graphic file (type png)
 <use ./Imagens/trein_img.png>
-Package pdftex.def Info: ./Imagens/trein_img.png  used on input line 295.
+Package pdftex.def Info: ./Imagens/trein_img.png  used on input line 294.
 (pdftex.def)             Requested size: 318.49861pt x 280.87132pt.
 
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-<./Imagens/eigenpeso.png, id=698, 402.00188pt x 365.86688pt>
+<./Imagens/eigenpeso.png, id=696, 402.00188pt x 365.86688pt>
 File: ./Imagens/eigenpeso.png Graphic file (type png)
 <use ./Imagens/eigenpeso.png>
-Package pdftex.def Info: ./Imagens/eigenpeso.png  used on input line 307.
+Package pdftex.def Info: ./Imagens/eigenpeso.png  used on input line 306.
 (pdftex.def)             Requested size: 181.99722pt x 165.63786pt.
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
 [33]
-<./Imagens/eigenpeso_axis.png, id=710, 336.50719pt x 339.51843pt>
+<./Imagens/eigenpeso_axis.png, id=708, 336.50719pt x 339.51843pt>
 File: ./Imagens/eigenpeso_axis.png Graphic file (type png)
 <use ./Imagens/eigenpeso_axis.png>
-Package pdftex.def Info: ./Imagens/eigenpeso_axis.png  used on input line 321.
+Package pdftex.def Info: ./Imagens/eigenpeso_axis.png  used on input line 320.
 (pdftex.def)             Requested size: 181.99722pt x 183.62733pt.
- [34 <./Imagens/trein_img.png> <./Imagens/eigenpeso.png>]
-
-LaTeX Warning: Reference `subsec:eigenacp' on page 35 undefined on input line 3
-31.
-
-[35 <./Imagens/eigenpeso_axis.png>]
+ [34 <./Imagens/trein_img.png> <./Imagens/eigenpeso.png>] [35 <./Imagens/eigenp
+eso_axis.png>]
 <./Imagens/tabelaxy.png, id=737, 128.73094pt x 325.96782pt>
 File: ./Imagens/tabelaxy.png Graphic file (type png)
 <use ./Imagens/tabelaxy.png>
-Package pdftex.def Info: ./Imagens/tabelaxy.png  used on input line 350.
+Package pdftex.def Info: ./Imagens/tabelaxy.png  used on input line 349.
 (pdftex.def)             Requested size: 68.24722pt x 172.81682pt.
 <./Imagens/graphxy.png, id=745, 280.79906pt x 246.1697pt>
 File: ./Imagens/graphxy.png Graphic file (type png)
 <use ./Imagens/graphxy.png>
-Package pdftex.def Info: ./Imagens/graphxy.png  used on input line 360.
+Package pdftex.def Info: ./Imagens/graphxy.png  used on input line 359.
 (pdftex.def)             Requested size: 181.99722pt x 159.55013pt.
- [36 <./Imagens/tabelaxy.png> <./Imagens/graphxy.png>] [37]
+ [36 <./Imagens/tabelaxy.png> <./Imagens/graphxy.png>]
+[37]
 <./Imagens/graphxy2.png, id=783, 376.40625pt x 243.91125pt>
 File: ./Imagens/graphxy2.png Graphic file (type png)
 <use ./Imagens/graphxy2.png>
-Package pdftex.def Info: ./Imagens/graphxy2.png  used on input line 535.
+Package pdftex.def Info: ./Imagens/graphxy2.png  used on input line 534.
 (pdftex.def)             Requested size: 227.5pt x 147.42346pt.
  [38 <./Imagens/graphxy2.png>]
 <./Imagens/graphxy3.png, id=802, 347.79938pt x 251.43938pt>
 File: ./Imagens/graphxy3.png Graphic file (type png)
 <use ./Imagens/graphxy3.png>
-Package pdftex.def Info: ./Imagens/graphxy3.png  used on input line 558.
+Package pdftex.def Info: ./Imagens/graphxy3.png  used on input line 557.
 (pdftex.def)             Requested size: 227.5pt x 164.46954pt.
  [39 <./Imagens/graphxy3.png>])
 (Capitulos/materiais_metodo.tex [40] [41
@@ -1616,14 +1613,10 @@ Overfull \hbox (0.38043pt too wide) in paragraph at lines 112--113
 ção com a ha-bi-li-dade de per-
  []
 
-
-LaTeX Warning: Reference `subsec:acp-eigen' on page 44 undefined on input line 
-125.
-
 [44] [45] [46]
-Overfull \hbox (3.47748pt too wide) in paragraph at lines 185--186
-[]\T1/cmr/m/n/12 Três dos di-a-gra-mas que fa-zem parte da l in-gua-gem UML se-
-rão uti-li-za-dos ([][]GROFFE[][],
+Overfull \hbox (5.20479pt too wide) in paragraph at lines 185--186
+[]\T1/cmr/m/n/12 Dois dos di-a-gra-mas que fa-zem parte da lin-gua-gem UML fo-r
+am uti-li-za-dos ([][]GROFFE[][],
  []
 
 [47]) (Capitulos/implementacao.tex [48]
@@ -1651,68 +1644,84 @@ File: ./Imagens/SRFV_diagramaClassse_gui.png Graphic file (type png)
 <use ./Imagens/SRFV_diagramaClassse_gui.png>
 Package pdftex.def Info: ./Imagens/SRFV_diagramaClassse_gui.png  used on input 
 line 56.
-(pdftex.def)             Requested size: 409.49722pt x 217.75728pt.
+(pdftex.def)             Requested size: 500.50278pt x 266.15471pt.
+
+Overfull \hbox (45.50278pt too wide) in paragraph at lines 56--57
+ [][] 
+ []
+
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-[50 <./Imagens/ilustracao_tcc_sistema.png>] [51 <./Imagens/SRFV_diagramaPacotes
-.png> <./Imagens/SRFV_diagramaClassse_gui.png (PNG copy)>]
+[50 <./Imagens/ilustracao_tcc_sistema.png>]
 Overfull \hbox (9.8613pt too wide) in paragraph at lines 69--70
 []\T1/cmr/bx/n/12 CvHaarClassifierCascade clas-si-fier\T1/cmr/m/n/12 : clas-si-
 fi-ca-do-res pré trei-na-dos, as-sim como
  []
 
-
+[51 <./Imagens/SRFV_diagramaPacotes.png>] [52 <./Imagens/SRFV_diagramaClassse_g
+ui.png (PNG copy)>]
 Overfull \hbox (23.45009pt too wide) in paragraph at lines 101--102
 \T1/cmr/m/n/12 tado de re-co-nhe-ci-mento, onde a ima-gem passa por pro-ces-sa-
 mento, redimensionando-
  []
 
-[52]
 <./Imagens/SRFV_diagramaClassse_eigenfaces.png, id=961, 652.68843pt x 642.90187
 pt>
 File: ./Imagens/SRFV_diagramaClassse_eigenfaces.png Graphic file (type png)
 <use ./Imagens/SRFV_diagramaClassse_eigenfaces.png>
 Package pdftex.def Info: ./Imagens/SRFV_diagramaClassse_eigenfaces.png  used on
  input line 112.
-(pdftex.def)             Requested size: 455.0pt x 448.19379pt.
+(pdftex.def)             Requested size: 500.50278pt x 493.01514pt.
+
+Overfull \hbox (45.50278pt too wide) in paragraph at lines 112--113
+ [][] 
+ []
 
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-[53] [54 <./Imagens/SRFV_diagramaClassse_eigenfaces.png>]
-<./Imagens/SRFV_diagramaClassse_utils.png, id=985, 671.50874pt x 563.10374pt>
+[53] [54 <./Imagens/SRFV_diagramaClassse_eigenfaces.png>] [55]
+<./Imagens/SRFV_diagramaClassse_utils.png, id=990, 671.50874pt x 563.10374pt>
 File: ./Imagens/SRFV_diagramaClassse_utils.png Graphic file (type png)
 <use ./Imagens/SRFV_diagramaClassse_utils.png>
 Package pdftex.def Info: ./Imagens/SRFV_diagramaClassse_utils.png  used on inpu
 t line 214.
-(pdftex.def)             Requested size: 455.0pt x 381.5479pt.
- [55] [56 <./Imagens/SRFV_diagramaClassse_utils.png>] [57]
-<./Imagens/snippet-mainthread.png, id=1017, 610.53094pt x 536.75531pt>
+(pdftex.def)             Requested size: 500.50278pt x 419.70613pt.
+
+Overfull \hbox (45.50278pt too wide) in paragraph at lines 214--215
+ [][] 
+ []
+
+[56 <./Imagens/SRFV_diagramaClassse_utils.png>] [57] [58]
+<./Imagens/snippet-mainthread.png, id=1020, 610.53094pt x 536.75531pt>
 File: ./Imagens/snippet-mainthread.png Graphic file (type png)
 <use ./Imagens/snippet-mainthread.png>
 Package pdftex.def Info: ./Imagens/snippet-mainthread.png  used on input line 2
 98.
 (pdftex.def)             Requested size: 455.0pt x 400.0347pt.
-
-
-LaTeX Warning: `h' float specifier changed to `ht'.
-
-[58] [59 <./Imagens/snippet-mainthread.png>]
-<./Imagens/snippet-treiamento.png, id=1032, 581.92406pt x 476.53032pt>
+ [59 <./Imagens/snippet-mainthread.png>]
+<./Imagens/snippet-treiamento.png, id=1031, 581.92406pt x 476.53032pt>
 File: ./Imagens/snippet-treiamento.png Graphic file (type png)
 <use ./Imagens/snippet-treiamento.png>
 Package pdftex.def Info: ./Imagens/snippet-treiamento.png  used on input line 3
 17.
 (pdftex.def)             Requested size: 455.0pt x 372.60106pt.
- [60 <./Imagens/snippet-treiamento.png>]
-<./Imagens/snippet-treiamento-calcesp.png, id=1043, 437.38406pt x 167.87718pt>
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+<./Imagens/snippet-treiamento-calcesp.png, id=1037, 437.38406pt x 167.87718pt>
 File: ./Imagens/snippet-treiamento-calcesp.png Graphic file (type png)
 <use ./Imagens/snippet-treiamento-calcesp.png>
 Package pdftex.def Info: ./Imagens/snippet-treiamento-calcesp.png  used on inpu
 t line 338.
 (pdftex.def)             Requested size: 364.00139pt x 139.712pt.
-<./Imagens/snippet-reconh.png, id=1047, 563.10374pt x 396.7322pt>
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+[60]
+<./Imagens/snippet-reconh.png, id=1046, 563.10374pt x 396.7322pt>
 File: ./Imagens/snippet-reconh.png Graphic file (type png)
 <use ./Imagens/snippet-reconh.png>
 Package pdftex.def Info: ./Imagens/snippet-reconh.png  used on input line 356.
@@ -1725,19 +1734,15 @@ Overfull \hbox (22.75139pt too wide) in paragraph at lines 356--357
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-[61 <./Imagens/snippet-treiamento-calcesp.png>]
-<./Imagens/snippet-reconh-calcesp.png, id=1063, 450.18187pt x 104.64093pt>
+[61 <./Imagens/snippet-treiamento.png>] [62 <./Imagens/snippet-treiamento-calce
+sp.png> <./Imagens/snippet-reconh.png>]
+<./Imagens/snippet-reconh-calcesp.png, id=1067, 450.18187pt x 104.64093pt>
 File: ./Imagens/snippet-reconh-calcesp.png Graphic file (type png)
 <use ./Imagens/snippet-reconh-calcesp.png>
 Package pdftex.def Info: ./Imagens/snippet-reconh-calcesp.png  used on input li
 ne 373.
 (pdftex.def)             Requested size: 386.75278pt x 89.90161pt.
-
-
-LaTeX Warning: `h' float specifier changed to `ht'.
-
-[62 <./Imagens/snippet-reconh.png>]
-<./Imagens/snippet-reconh-resultadofim.png, id=1077, 507.39563pt x 295.1025pt>
+<./Imagens/snippet-reconh-resultadofim.png, id=1076, 507.39563pt x 295.1025pt>
 File: ./Imagens/snippet-reconh-resultadofim.png Graphic file (type png)
 <use ./Imagens/snippet-reconh-resultadofim.png>
 Package pdftex.def Info: ./Imagens/snippet-reconh-resultadofim.png  used on inp
@@ -1747,23 +1752,24 @@ ut line 391.
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-) (Capitulos/resultados.tex [63 <./Imagens/snippet-reconh-calcesp.png>]
-[64 <./Imagens/snippet-reconh-resultadofim.png>]
-<./Imagens/screenshot-sys.png, id=1090, 733.99219pt x 515.67656pt>
+[63 <./Imagens/snippet-reconh-calcesp.png>]) (Capitulos/resultados.tex [64 <./I
+magens/snippet-reconh-resultadofim.png>]
+<./Imagens/screenshot-sys.png, id=1089, 733.99219pt x 515.67656pt>
 File: ./Imagens/screenshot-sys.png Graphic file (type png)
 <use ./Imagens/screenshot-sys.png>
 Package pdftex.def Info: ./Imagens/screenshot-sys.png  used on input line 16.
 (pdftex.def)             Requested size: 455.0pt x 319.66895pt.
  [65
 
- <./Imagens/screenshot-sys.png>] [66]
-<./Imagens/tab-res-fase1dia1.png, id=1107, 577.40718pt x 144.54pt>
+ <./Imagens/screenshot-sys.png>]
+[66]
+<./Imagens/tab-res-fase1dia1.png, id=1105, 577.40718pt x 144.54pt>
 File: ./Imagens/tab-res-fase1dia1.png Graphic file (type png)
 <use ./Imagens/tab-res-fase1dia1.png>
 Package pdftex.def Info: ./Imagens/tab-res-fase1dia1.png  used on input line 65
 .
 (pdftex.def)             Requested size: 455.0pt x 113.90303pt.
-<./Imagens/tab-res-fase1dia2.png, id=1109, 578.16pt x 143.03438pt>
+<./Imagens/tab-res-fase1dia2.png, id=1107, 578.16pt x 143.03438pt>
 File: ./Imagens/tab-res-fase1dia2.png Graphic file (type png)
 <use ./Imagens/tab-res-fase1dia2.png>
 Package pdftex.def Info: ./Imagens/tab-res-fase1dia2.png  used on input line 75
@@ -1774,57 +1780,63 @@ Package pdftex.def Info: ./Imagens/tab-res-fase1dia2.png  used on input line 75
 LaTeX Warning: `h' float specifier changed to `ht'.
 
 [67 <./Imagens/tab-res-fase1dia1.png>]
-<./Imagens/tab-res-fase2dia1.png, id=1116, 578.16pt x 194.22563pt>
+<./Imagens/tab-res-fase2dia1.png, id=1114, 578.16pt x 194.22563pt>
 File: ./Imagens/tab-res-fase2dia1.png Graphic file (type png)
 <use ./Imagens/tab-res-fase2dia1.png>
 Package pdftex.def Info: ./Imagens/tab-res-fase2dia1.png  used on input line 10
 8.
 (pdftex.def)             Requested size: 455.0pt x 152.84975pt.
-
-
-LaTeX Warning: `h' float specifier changed to `ht'.
-
-<./Imagens/tab-res-fase2dia2.png, id=1118, 577.40718pt x 194.22563pt>
+ [68 <./Imagens/tab-res-fase1dia2.png> <./Imagens/tab-res-fase2dia1.png>]
+<./Imagens/tab-res-fase2dia2.png, id=1122, 577.40718pt x 194.22563pt>
 File: ./Imagens/tab-res-fase2dia2.png Graphic file (type png)
 <use ./Imagens/tab-res-fase2dia2.png>
 Package pdftex.def Info: ./Imagens/tab-res-fase2dia2.png  used on input line 12
 0.
 (pdftex.def)             Requested size: 455.0pt x 153.0572pt.
-
-LaTeX Warning: `h' float specifier changed to `ht'.
-
-[68 <./Imagens/tab-res-fase1dia2.png>] [69 <./Imagens/tab-res-fase2dia1.png> <.
-/Imagens/tab-res-fase2dia2.png>]
-<./Imagens/tab-res-fase3.png, id=1130, 577.40718pt x 194.22563pt>
+<./Imagens/tab-res-fase3.png, id=1124, 577.40718pt x 194.22563pt>
 File: ./Imagens/tab-res-fase3.png Graphic file (type png)
 <use ./Imagens/tab-res-fase3.png>
 Package pdftex.def Info: ./Imagens/tab-res-fase3.png  used on input line 152.
 (pdftex.def)             Requested size: 455.0pt x 153.0572pt.
-<./Imagens/taxarecogfases.png, id=1132, 398.99063pt x 52.69687pt>
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+[69 <./Imagens/tab-res-fase2dia2.png>]
+<./Imagens/taxarecogfases.png, id=1130, 398.99063pt x 52.69687pt>
 File: ./Imagens/taxarecogfases.png Graphic file (type png)
 <use ./Imagens/taxarecogfases.png>
 Package pdftex.def Info: ./Imagens/taxarecogfases.png  used on input line 170.
 (pdftex.def)             Requested size: 364.00139pt x 48.07803pt.
  [70 <./Imagens/tab-res-fase3.png> <./Imagens/taxarecogfases.png>]
-<./Imagens/grafab-fase12.png, id=1139, 854.44218pt x 269.50688pt>
+<./Imagens/grafab-fase12.png, id=1137, 697.8572pt x 269.50688pt>
 File: ./Imagens/grafab-fase12.png Graphic file (type png)
 <use ./Imagens/grafab-fase12.png>
 Package pdftex.def Info: ./Imagens/grafab-fase12.png  used on input line 191.
-(pdftex.def)             Requested size: 455.0pt x 143.51237pt.
+(pdftex.def)             Requested size: 500.50278pt x 193.29224pt.
+
+Overfull \hbox (45.50278pt too wide) in paragraph at lines 191--192
+ [][] 
+ []
 
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-<./Imagens/grafab-fase3.png, id=1140, 859.71187pt x 261.22594pt>
+<./Imagens/grafab-fase3.png, id=1138, 676.02562pt x 261.22594pt>
 File: ./Imagens/grafab-fase3.png Graphic file (type png)
 <use ./Imagens/grafab-fase3.png>
 Package pdftex.def Info: ./Imagens/grafab-fase3.png  used on input line 199.
-(pdftex.def)             Requested size: 455.0pt x 138.25375pt.
+(pdftex.def)             Requested size: 500.50278pt x 193.40779pt.
+
+Overfull \hbox (45.50278pt too wide) in paragraph at lines 199--200
+ [][] 
+ []
+
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-[71]) (Capitulos/conclusao.tex [72 <./Imagens/grafab-fase12.png> <./Imagens/gra
-fab-fase3.png>] [73
+) (Capitulos/conclusao.tex [71] [72 <./Imagens/grafab-fase12.png> <./Imagens/gr
+afab-fase3.png>] [73
 
 ]) (modelo.bbl [74]
 
@@ -1851,13 +1863,13 @@ ov / ACSSoftware / colt / >[]$[][]. Acesso em:
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 112--117
+Underfull \hbox (badness 10000) in paragraph at lines 107--112
 []\T1/cmr/m/n/12 GASPAROTTO, H. M. Os 4 pi-la-res da pro-gra-ma-ção ori-en-tada
  a ob-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 112--117
+Underfull \hbox (badness 10000) in paragraph at lines 107--112
 \T1/cmr/m/n/12 je-tos. Dev-me-dia, 2014. Dis-po-ní-vel em: [][]$<[]https : / / 
 www . devmedia . com . br /
  []
@@ -1865,64 +1877,64 @@ www . devmedia . com . br /
 [75
 
 ]
-Underfull \hbox (badness 6332) in paragraph at lines 139--144
+Underfull \hbox (badness 6332) in paragraph at lines 134--139
 []\T1/cmr/m/n/12 GROFFE, R. J. Ar-tigo mo-de-la-gem de sis-te-mas atra-vés de u
 ml: uma vi-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 139--144
+Underfull \hbox (badness 10000) in paragraph at lines 134--139
 \T1/cmr/m/n/12 são ge-ral. Dev-me-dia, 2013. Dis-po-ní-vel em: [][]$<[]https : 
 / / www . devmedia . com . br /
  []
 
 [76]
-Underfull \hbox (badness 1565) in paragraph at lines 274--281
+Underfull \hbox (badness 1565) in paragraph at lines 262--269
 []\T1/cmr/m/n/12 SILVA, G. N. da. \T1/cmr/bx/n/12 Es-tudo das Téc-ni-cas PCA (A
 ná-lise de Com-po-nen-tes
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 274--281
+Underfull \hbox (badness 10000) in paragraph at lines 262--269
 \T1/cmr/m/n/12 Ma-rí-lia, 2009. Dis-po-ní-vel em: [][]$<[]http : / / aberto . u
 nivem . edu . br / bitstream / handle /
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 274--281
+Underfull \hbox (badness 10000) in paragraph at lines 262--269
 \T1/cmr/m/n/12 11077 / 284 / Estudo + da + t % E9cnica + PCA + (An % E1lise + d
 e + Componentes + Principais )
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 274--281
+Underfull \hbox (badness 10000) in paragraph at lines 262--269
 \T1/cmr/m/n/12 +e + Auto-[]faces + aplicadas + ao + reconhecimento + de + faces
  + humanas . pdf ; jsessionid =
  []
 
 
-Underfull \hbox (badness 1609) in paragraph at lines 292--296
+Underfull \hbox (badness 1609) in paragraph at lines 280--284
 []\T1/cmr/m/n/12 SMITH, L. I. Ví-deo di-gi-tal. 2018. Dis-po-ní-vel em: [][]$<[
 ]https : / / br . ccm . net / contents /
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 315--322
+Underfull \hbox (badness 10000) in paragraph at lines 303--310
 \T1/cmr/m/n/12 computacao-[]graca / transformacoes-[]geometricas-[]2d-[]e-[]co
 ordenadas-[]homogeneas>[]$[][].
  []
 
 
-Overfull \hbox (16.14395pt too wide) in paragraph at lines 325--330
+Overfull \hbox (16.14395pt too wide) in paragraph at lines 313--318
 \T1/cmr/m/n/12 face-[]recognition-[]semisupervised-[]classication-[]subspace-[
 ]projection-[]and-[]evaluation-[]methods /
  []
 
-) [77] [78]
+) [77]
 No file modelo.ind.
 
 AED: lastpage setting LastPage
-[79]
+[78]
 \tf@lof=\write6
 \openout6 = `modelo.lof'.
 
@@ -1939,18 +1951,15 @@ Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 256.
 Package atveryend Info: Empty hook `AtEndAfterFileList' on input line 256.
 
 
-LaTeX Warning: There were undefined references.
-
-
 LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
 
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 256.
  ) 
 Here is how much of TeX's memory you used:
- 36470 strings out of 492973
- 824424 string characters out of 3135935
- 1075113 words of memory out of 3000000
- 39354 multiletter control sequences out of 15000+200000
+ 36457 strings out of 492973
+ 824185 string characters out of 3135935
+ 1074113 words of memory out of 3000000
+ 39344 multiletter control sequences out of 15000+200000
  18798 words of font info for 47 fonts, out of 3000000 for 9000
  1147 hyphenation exceptions out of 8191
  78i,13n,136p,1157b,609s stack positions out of 5000i,500n,10000p,200000b,50000s
@@ -1976,9 +1985,9 @@ c/amsfonts/cm/cmmi8.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfont
 s/cm/cmr12.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr8
 .pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:
 /Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy8.pfb>
-Output written on modelo.pdf (80 pages, 4800383 bytes).
+Output written on modelo.pdf (79 pages, 4797913 bytes).
 PDF statistics:
- 2194 PDF objects out of 2487 (max. 8388607)
- 261 named destinations out of 1000 (max. 500000)
+ 2186 PDF objects out of 2487 (max. 8388607)
+ 258 named destinations out of 1000 (max. 500000)
  864 words of extra memory for PDF output out of 10000 (max. 10000000)
 

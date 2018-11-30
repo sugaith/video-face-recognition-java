@@ -2,10 +2,10 @@
 
 \chapter{IMPLEMENTAÇÃO}\label{ch:implementacao}
 
-Neste capítulo serão abordadas questões do planejamento e da implementação do sistema de reconhecimento de faces em vídeo. Primeiramente, os requisitos do sistemas serão analisados e descritos, seguidos da modelagem destes requisitos em forma de fluxograma, seguidos da modelagem das classes que serão criadas por meio dos diagramas descritos na \autoref{subsec:uml}, e por fim, as questõs de configuração do ambiente de desenvolvimento e a implementação efetiva do código. Todo este processo é feito seguindo conceitos da metodologia ágil XP, descrita na \autoref{subsec:devagil}.
+Neste capítulo serão abordadas questões do planejamento e da implementação do sistema de reconhecimento de faces em vídeo. Primeiramente, os requisitos do sistemas serão analisados e descritos, seguidos da modelagem destes requisitos em forma de fluxograma, seguidos da modelagem das classes que foram criadas por meio dos diagramas descritos na \autoref{subsec:uml}, e por fim, as questõs de configuração do ambiente de desenvolvimento e a implementação efetiva do código. Todo este processo é feito seguindo conceitos da metodologia ágil XP, descrita na \autoref{subsec:devagil}.
 
 \section{Análise de Requisitos}\label{sec:analiserec}
-Para que se possa iniciar o planejamento da implementação do sistema aqui proposto por meio de diagramação, deve-se colher os requisitos necessários para o funcionamento do sistema. Ou seja, analisar o problema descrevendo entredas e saidas de dados, todas as situações e seus fluxos de informações. Sendo assim lista-se por ordem de execução os requisitos que atendem à proposta do sistema, discriminados por \textbf{entrada}, \textbf{processamento} e \textbf{saída} de dados ou informações:
+Para que se possa iniciar o planejamento da implementação do sistema aqui proposto por meio de diagramação, deve-se colher os requisitos necessários para o funcionamento do sistema. Ou seja, analisar o problema descrevendo entradas e saídas de dados, todas as situações e seus fluxos de informações. Sendo assim lista-se por ordem de execução os requisitos que atendem à proposta do sistema, discriminados por \textbf{entrada}, \textbf{processamento} e \textbf{saída} de dados ou informações:
 
 \begin{enumerate}
 	\item \textbf{entrada:} uma câmera do tipo \textit{webcam} descrita na \autoref{sec: tec-ferramenta} deve estar filmando uma área com iluminação controlada, produzindo o fluxo de \textit{frames} e disponibilizando em formado digital para o sistema;
@@ -53,7 +53,7 @@ As classes do pacote \textbf{\textit{gui}} são representadas pelo diagrama (UML
 
 \begin{figure}[h]
 	\centering
-	\includegraphics[width=.9\textwidth]{SRFV_diagramaClassse_gui}
+	\includegraphics[width=1.1\textwidth]{SRFV_diagramaClassse_gui}
 	\caption{Diagrama de classes (UML) do pacote \textbf{\textit{gui}}.}
 	\fonte{Elaborado pelo autor.}
 	\label{figSRFV_diagramaClassse_gui}
@@ -109,7 +109,7 @@ As classes do pacote \textbf{\textit{eigenfaces}} são representadas pelo diagra
 
 \begin{figure}[h]
 	\centering
-	\includegraphics[width=1\textwidth]{SRFV_diagramaClassse_eigenfaces}
+	\includegraphics[width=1.1\textwidth]{SRFV_diagramaClassse_eigenfaces}
 	\caption{Diagrama de classes (UML) do pacote \textbf{\textit{eigenfaces}}.}
 	\fonte{Elaborado pelo autor.}
 	\label{figSRFV_diagramaClassse_eigenfaces}
@@ -211,7 +211,7 @@ As classes do pacote \textbf{\textit{utils}} são representadas pelo diagrama (U
 
 \begin{figure}[h]
 	\centering
-	\includegraphics[width=1\textwidth]{SRFV_diagramaClassse_utils}
+	\includegraphics[width=1.1\textwidth]{SRFV_diagramaClassse_utils}
 	\caption{Diagrama de classes (UML) do pacote \textbf{\textit{utils}}.}
 	\fonte{Elaborado pelo autor.}
 	\label{figSRFV_diagramaClassse_utils}
@@ -270,7 +270,7 @@ Por fim, a classe \textit{\textbf{Matriz2D}} herda a propriedades da classe \tex
 
 
 %CODIGO!!!
-\section{Código}\label{sec:codigo}
+\section{Implementação do Código}\label{sec:codigo}
 
 Nesta seção será abordado a implementação do código, definindo quais foram as variáveis (ou constantes em termos de programação) pré-estabelecidas e constroladas para o obter diversos efeitos ou resultados, como define o método experimentao descrito na \autoref{metex}.
 
@@ -278,7 +278,7 @@ Também serão contemplados os \textit{snippets} (ou blocos de código) referent
 
 \subsection{Constantes Controladas}\label{sec:consts}
 
-De acordo com o método experimental, utilizou-se três constantes controladas como variáveis do experimento, para que sejam manipulados e seus efeitos obervados. Existem outras constantes no sitema para constrole de quadros analisados ou do tamanho padrão da imagem que têm efeito na performance ou em outros aspectos do sistema, porém os três principais listados abaixo influem na taxa de sucesso/falha do reconhecimento, os quais serão contemplados no ???, referente aos testes e resultados.
+De acordo com o método experimental, utilizou-se três constantes controladas como variáveis do experimento, para que sejam manipulados e seus efeitos obervados. Existem outras constantes no sitema para constrole de quadros analisados ou do tamanho padrão da imagem que têm efeito na performance ou em outros aspectos do sistema, porém os três principais listados abaixo influem na taxa de sucesso/falha do reconhecimento, os quais serão contemplados no \autoref{ch:resultados}, referente aos testes e resultados.
 
 \begin{itemize}	
 		\item \textbf{NUM\_FACES\_TREINO:} esta constante é resposável por controlar o número de faces q ser usado no treinamento, acionado quando o usuário informa sua identificação. Apresenta-se sua lógica no código na \autoref{sec:mainthread};
@@ -301,11 +301,11 @@ O bloco de código da \autoref{snippet-mainthread} corresponde a \textit{Thread}
 	\label{snippet-mainthread}
 \end{figure}
 
-Este bloco está contido do método \textit{trackFace()} da classe \textit{PanelCadastroDeFace}, descritas na \autoref{sec:diagclasses}, que é chamado a cada captura de quadros, atribuindo como parâmetro a image já redimensionada e transformada para cores d escala cinza, como mostra a  \autoref{snippet-mainthread}
+Este bloco está contido do método \textit{trackFace()} da classe \textit{PanelCadastroDeFace}, descritas na \autoref{sec:diagclasses}, que é chamado a cada captura de quadros, atribuindo como parâmetro a image já redimensionada e transformada para cores d escala cinza, como mostra a  \autoref{snippet-mainthread}.
 
-A linha de número 447, o método \textit{detectarFace(grayIm)} recebe uma imagem já redimensionada e transformada em escala da cinza pelo método \textit{escalaImagemCinza()}, descrito na \autoref{sec:ituls}, e processa a detecção da face utilizando o algoritmo de Viola-Jones (descritos na \autoref{subsubsec:violajones}). Se a face não for detectada, nada acontece. Caso a face seja detectada na imagem, as coordenadas desta são salvas em uma variável global e os campos de identificação contidos na classe \textit{FrameCadastroFace} para identificação do usuário são ativados  (linha 450 e 452, respectivamente). 
+A linha de número \textit{447}, o método \textit{detectarFace(grayIm)} recebe uma imagem já redimensionada e transformada em escala da cinza pelo método \textit{escalaImagemCinza()}, descrito na \autoref{sec:ituls}, e processa a detecção da face utilizando o algoritmo de Viola-Jones (descritos na \autoref{subsubsec:violajones}). Se a face não for detectada, nada acontece. Caso a face seja detectada na imagem, as coordenadas desta são salvas em uma variável global e os campos de identificação contidos na classe \textit{FrameCadastroFace} para identificação do usuário são ativados  (linha \textit{450} e \textit{452}, respectivamente). 
 
-Caso o usuário se identifique atravez dos campos de entrada, o sistema se encontrará em "estado de treinamento", controlado pelo método \textit{isSalvaTreinaFace()} da linha 455. Neste bloco salva-se a imagem da face para treino quantas vezes for definida pela constante \textit{NUM\_FACES\_TREINO}, definidas na \autoref{sec:consts}. Quando atingir este valor, o "estado de treinamento"\ do sistema, bem como os campos de entrada são desativados e começa a rotina de construção do espaço (\textit{eingenspace}), executada pelo método \textit{ACP\_Treinamento.construirEspaco()}, que será detalhado sem seguida nesta seção.
+Caso o usuário se identifique atravez dos campos de entrada, o sistema se encontrará em "estado de treinamento", controlado pelo método \textit{isSalvaTreinaFace()} da linha 455. Neste bloco salva-se a imagem da face para treino quantas vezes for definida pela constante \textit{NUM\_FACES\_TREINO}, definidas na \autoref{sec:consts}. Quando atingir este valor, o "estado de treinamento"\ do sistema, bem como os campos de entrada são desativados e começa a rotina de construção do espaço (\textit{eingenspace}), executada pelo método \textit{ACP\_Treinamento.construirEspaco()}, que será detalhado em seguida nesta seção.
 
 Se o sistema não se encontra em "estado de treinamento", controlado pelo método \textit{isSalvaTreinaFace()} da linha \textit{445}, o método \textit{recogFace()} (linha \textit{487}) é executado, o qual será detalhado na \autoref{sec:implrecog}.
 
@@ -394,7 +394,7 @@ A constante \textit{MIN\_DIST}, definida na \autoref{sec:consts}, é a responsá
 	\label{snippet-reconh-resultadofim}
 \end{figure}
 
-Caso a menor ditância calculada seja menor do que a constante \textit{MIN\_DIST}, o resultado é considerado sucesso e os dados correspondentes a este são passados como parâmetro para a interface (linha \textit{619}) para que seja exibido. Tando em caso de sucesso ou de erro, um registro do resultado juntamente com o caminho da imagem correspondente e a distância resultante é realizado (linhas \textit{617}, \textit{618}, \textit{624} e \textit{625}) para futura análise dos resultados, que são apresentados no capitulo \autoref{ch:resultados}.
+Caso a menor ditância calculada seja menor do que a constante \textit{MIN\_DIST}, o resultado é considerado sucesso e os dados correspondentes a este são passados como parâmetro para a interface (linha \textit{619}) para que seja exibido. Tando em caso de sucesso ou de erro, um registro do resultado juntamente com o caminho da imagem correspondente e a distância resultante é realizado (linhas \textit{617}, \textit{618}, \textit{624} e \textit{625}) para futura análise dos resultados, que são apresentados no  \autoref{ch:resultados}.
 
 
 
