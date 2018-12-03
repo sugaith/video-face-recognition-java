@@ -3,7 +3,7 @@
 \setlength{\labelsep}{0pt}\begin{thebibliography}{}
 \providecommand{\abntrefinfo}[3]{}
 \providecommand{\abntbstabout}[1]{}
-\abntbstabout{v-1.9.6 }
+\abntbstabout{v-1.9.7 }
 
 \bibitem[ARAUJO 2016]{dev-agil}
 \abntrefinfo{ARAUJO}{ARAUJO}{2016}
@@ -68,9 +68,8 @@ Dispon{\'\i}vel em: \url{http://dst.lbl.gov/ACSSoftware/colt/}. Acesso em:
 
 \bibitem[Davison 2013]{drmathew_java_programming}
 \abntrefinfo{Davison}{DAVISON}{2013}
-{DAVISON, D.~A.
-In:  \underline{\ \ \ \ \ \ \ \ }. \textbf{Java Prog. Techniques for Games}.
-  Vienna: Universidade Prince of Songkla, Thailândia, 2013.
+{DAVISON, D.~A. Java prog. techniques for games.
+Universidade Prince of Songkla, Thailândia, Vienna, 2013.
 Dispon{\'\i}vel em: \url{hhttp://fivedots.coe.psu.ac.th/~ad/index.html}.}
 
 \bibitem[Electrical e IEEE 1997]{stats_face_detection_IEEE}
@@ -90,7 +89,7 @@ Dispon{\'\i}vel em:
 
 \bibitem[FACHIN 2017]{fachin-metodos}
 \abntrefinfo{FACHIN}{FACHIN}{2017}
-{FACHIN, O.
+{FACHIN, O. Fundamentos de metodologia - 6a ed. 2017.
 Saraiva, 2017.}
 
 \bibitem[Farias 2017]{img_compact}
@@ -101,14 +100,6 @@ Saraiva, 2017.}
 Dispon{\'\i}vel em:
   \url{https://resultadosdigitais.com.br/blog/compactar-imagens-sem-perder-qualidade/}.
   Acesso em: 05.2018.}
-
-\bibitem[Gasparotto 2014]{dev_poo}
-\abntrefinfo{Gasparotto}{GASPAROTTO}{2014}
-{GASPAROTTO, H.~M. Os 4 pilares da programação orientada a objetos.
-Devmedia, 2014.
-Dispon{\'\i}vel em:
-  \url{https://www.devmedia.com.br/os-4-pilares-da-programacao-orientada-a-objetos/9264}.
-  Acesso em: 06.2018.}
 
 \bibitem[Giassa 2009]{giassa_escalona}
 \abntrefinfo{Giassa}{GIASSA}{2009}
@@ -160,13 +151,6 @@ Dispon{\'\i}vel em:
 In:  \underline{\ \ \ \ \ \ \ \ }. \textbf{Stephen Johnson on Digital
   Photography}. [S.l.]: O'Reilly Media, Incorporated, 2006.}
 
-\bibitem[Jr 2013]{luiz_vizinho}
-\abntrefinfo{Jr}{JR}{2013}
-{JR, L. O.~M. Interpolação em imagens.
-FFCLRP/USP, 2013.
-Dispon{\'\i}vel em: \url{http://dcm.ffclrp.usp.br/~murta/PIM/PIM\_10.pdf}.
-  Acesso em: 06.2018.}
-
 \bibitem[Kim Joon Hyung~Shim 2003]{final_project_stanford}
 \abntrefinfo{Kim Joon Hyung~Shim}{KIM JOON HYUNG~SHIM}{2003}
 {KIM JOON HYUNG~SHIM, J.~Y. I.
@@ -202,12 +186,11 @@ Disserta\c{c}\~{a}o (Mestrado) --- Pontifícia Universidade Católica do Rio de
 Dispon{\'\i}vel em:
   \url{https://www.maxwell.vrac.puc-rio.br/13069/13069\_1.PDF}.}
 
-\bibitem[Nearest Neighbor Image Scaling 2007]{tech_algo_scaling}
-\abntrefinfo{Nearest\ldots}{NEAREST\ldots}{2007}
-{NEAREST Neighbor Image Scaling.
-2007.
-Dispon{\'\i}vel em:
-  \url{http://tech-algorithm.com/articles/nearest-neighbor-image-scaling/}.
+\bibitem[Murta 2013]{luiz_vizinho}
+\abntrefinfo{Murta}{MURTA}{2013}
+{MURTA, L.~O. Interpolação em imagens.
+FFCLRP/USP, 2013.
+Dispon{\'\i}vel em: \url{http://dcm.ffclrp.usp.br/~murta/PIM/PIM\_10.pdf}.
   Acesso em: 06.2018.}
 
 \bibitem[Nogueira 2016]{ricardo_pdi}
@@ -219,9 +202,9 @@ Disserta\c{c}\~{a}o (Mestrado) --- Universidade Federal de Pernambuco - Centro
   de Engenharia da Computação, Recife - Pernambuco, 2016.
 Dispon{\'\i}vel em: \url{http://www.cin.ufpe.br/~tg/2016-1/rcan.pdf}.}
 
-\bibitem[OpenCV - Open Source Computer Vision 2018]{opencv}
-\abntrefinfo{OpenCV\ldots}{OPENCV\ldots}{2018}
-{OPENCV - Open Source Computer Vision.
+\bibitem[OpenCV 2018]{opencv}
+\abntrefinfo{OpenCV}{OPENCV}{2018}
+{OPENCV. Opencv - open source computer vision.
 2018.
 Dispon{\'\i}vel em: \url{https://opencv.org/about.html}. Acesso em: 05.2018.}
 
@@ -248,15 +231,6 @@ Dispon{\'\i}vel em:
 Dispon{\'\i}vel em: \url{http://www.libpng.org/pub/png/pngintro.html}. Acesso
   em: 05.2018.}
 
-\bibitem[Science e (NSTC) 2009]{nstc_homeland}
-\abntrefinfo{Science e (NSTC)}{SCIENCE; (NSTC)}{2009}
-{SCIENCE, N.; (NSTC), T.~C. Face recognition.
-\textbf{National Science and Technology Consil (NSTC)}, National Science and
-  Technology Consil (NSTC), p. 92--99, 2009.
-Dispon{\'\i}vel em:
-  \url{https://www.fbi.gov/file-repository/about-us-cjis-fingerprints\_biometrics-biometric-center-of-}.
-  Acesso em: 04.2018.}
-
 \bibitem[Silva 2009]{geysilva}
 \abntrefinfo{Silva}{SILVA}{2009}
 {SILVA, G.~N. da.
@@ -266,6 +240,13 @@ Disserta\c{c}\~{a}o (Mestrado) --- Centro Universitário Eurípides Soares -
   UNIVEM, Marília, 2009.
 Dispon{\'\i}vel em:
   \url{http://aberto.univem.edu.br/bitstream/handle/11077/284/Estudo+da+t\%E9cnica+PCA+(An\%E1lise+de+Componentes+Principais)+e+Auto-faces+aplicadas+ao+reconhecimento+de+faces+humanas.pdf;jsessionid=2D900F25381260DCCB85EC832736A216?sequence=1}.}
+
+\bibitem[Smith Arun~Ross 2009]{nstc_homeland}
+\abntrefinfo{Smith Arun~Ross}{SMITH ARUN~ROSS}{2009}
+{SMITH ARUN~ROSS, D.~C. K. Face recognition.
+\textbf{National Science and Technology Consil - NSTC}, NSTC, p. 92--99, 2009.
+Dispon{\'\i}vel em: \url{https://www.hsdl.org/?view&did=463904}. Acesso em:
+  04.2018.}
 
 \bibitem[Smith 2002]{tutorial_en_smith}
 \abntrefinfo{Smith}{SMITH}{2002}
@@ -281,6 +262,11 @@ Dispon{\'\i}vel em:
 2018.
 Dispon{\'\i}vel em: \url{https://br.ccm.net/contents/739-video-digital}. Acesso
   em: 05.2018.}
+
+\bibitem[Tech-Algorithm 2007]{tech_algo_scaling}
+\abntrefinfo{Tech-Algorithm}{TECH-ALGORITHM}{2007}
+{TECH-ALGORITHM. Nearest neighbor image scaling.
+2007.}
 
 \bibitem[Velasquez 2017]{edinburgh_classifier}
 \abntrefinfo{Velasquez}{VELASQUEZ}{2017}
@@ -308,9 +294,9 @@ Dispon{\'\i}vel em:
   \url{http://www.lapix.ufsc.br/ensino/computacao-grafica/transformacoes-geometricas-2d-e-coordenadas-homogeneas}.
   Acesso em: 05.2018.}
 
-\bibitem[Wójcik Konrad~Gromaszek 2016]{issues_methods_FR}
-\abntrefinfo{Wójcik Konrad~Gromaszek}{WóJCIK KONRAD~GROMASZEK}{2016}
-{WóJCIK KONRAD~GROMASZEK, M.~J. W. Face recognition: Issues, methods and
+\bibitem[Wojcik Konrad~Gromaszek 2016]{issues_methods_FR}
+\abntrefinfo{Wojcik Konrad~Gromaszek}{WOJCIK KONRAD~GROMASZEK}{2016}
+{WOJCIK KONRAD~GROMASZEK, M.~J. W. Face recognition: Issues, methods and
   alternative applications.
 2016.
 Dispon{\'\i}vel em:

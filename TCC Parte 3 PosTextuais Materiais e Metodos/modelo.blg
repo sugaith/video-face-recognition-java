@@ -2,13 +2,16 @@ This is BibTeX, Version 0.99dThe top-level auxiliary file: modelo.aux
 The style file: abntex2-alf.bst
 Database file #1: abntex2-options.bib
 Database file #2: Configuracoes/citacoes.bib
-Warning--campo title vazio em drmathew_java_programming
-Warning--campo title vazio em fachin-metodos
+I was expecting a `,' or a `}'---line 45 of file Configuracoes/citacoes.bib
+ :  
+ :  url={http://tech-algorithm.com/articles/nearest-neighbor-image-scaling/},
+(Error may have been on previous line)
+I'm skipping whatever remains of this entry
 Warning--campo title vazio em gonzalez_woods
 Warning--campo title vazio em stephen_greyscale
 +---------------------------------------------------------+
-| Estilo bibliográfico abntex2-alf.bst versão v-1.9.6           |
+| Estilo bibliográfico abntex2-alf.bst versão v-1.9.7           |
 | Em caso de dúvidas ou problemas com este estilo procure |
 | http://www.abntex.net.br/                               |
 +---------------------------------------------------------+
-(There were 4 warnings)
+(There was 1 error message)

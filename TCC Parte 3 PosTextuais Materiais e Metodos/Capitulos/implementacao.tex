@@ -2,28 +2,28 @@
 
 \chapter{IMPLEMENTAÇÃO}\label{ch:implementacao}
 
-Neste capítulo serão abordadas questões do planejamento e da implementação do sistema de reconhecimento de faces em vídeo. Primeiramente, os requisitos do sistemas serão analisados e descritos, seguidos da modelagem destes requisitos em forma de fluxograma, seguidos da modelagem das classes que foram criadas por meio dos diagramas descritos na \autoref{subsec:uml}, e por fim, as questõs de configuração do ambiente de desenvolvimento e a implementação efetiva do código. Todo este processo é feito seguindo conceitos da metodologia ágil XP, descrita na \autoref{subsec:devagil}.
+Neste capítulo serão abordadas questões do planejamento e da implementação do sistema de reconhecimento de faces em vídeo. Primeiramente, os requisitos do sistemas serão analisados e descritos, depois a modelagem destes requisitos em forma de fluxograma, e a modelagem das classes que foram criadas por meio dos diagramas descritos na \autoref{subsec:uml}, e por fim, as questõs de configuração do ambiente de desenvolvimento e a implementação efetiva do código. Todo este processo é feito seguindo conceitos da metodologia ágil XP, descrita na \autoref{subsec:devagil}.
 
 \section{Análise de Requisitos}\label{sec:analiserec}
-Para que se possa iniciar o planejamento da implementação do sistema aqui proposto por meio de diagramação, deve-se colher os requisitos necessários para o funcionamento do sistema. Ou seja, analisar o problema descrevendo entradas e saídas de dados, todas as situações e seus fluxos de informações. Sendo assim lista-se por ordem de execução os requisitos que atendem à proposta do sistema, discriminados por \textbf{entrada}, \textbf{processamento} e \textbf{saída} de dados ou informações:
+Para que se possa iniciar o planejamento da implementação do sistema, aqui proposto, por meio de diagramação, deve-se colher os requisitos necessários para o funcionamento do sistema, ou seja, analisar o problema descrevendo entradas e saídas de dados, todas as situações e seus fluxos de informações. Sendo assim lista-se por ordem de execução os requisitos que atendem à proposta do sistema, discriminados por \textbf{entrada}, \textbf{processamento} e \textbf{saída} de dados ou informações:
 
 \begin{enumerate}
-	\item \textbf{entrada:} uma câmera do tipo \textit{webcam} descrita na \autoref{sec: tec-ferramenta} deve estar filmando uma área com iluminação controlada, produzindo o fluxo de \textit{frames} e disponibilizando em formado digital para o sistema;
+	\item \textbf{entrada:} uma câmera do tipo \textit{webcam}, descrita na \autoref{sec: tec-ferramenta}, deve estar filmando uma área com iluminação controlada, produzindo o fluxo de \textit{frames} e disponibilizando em formado digital para o sistema;
 	
-	\item \textbf{processamento/saída:} o sistema adquire controle do fluxo de \textit{frames} da \textit{webcam}, manipulando-o para que se possa ser exibido na tela do microcomputador e separa um quadro para a detecção, em tempo real, utilizando o algoritmo descrito na \autoref{subsubsec:violajones} com os materiais contemplados na \autoref{subsec:bib_opencv};
+	\item \textbf{processamento/saída:} o sistema adquire controle do fluxo de \textit{frames} da \textit{webcam}, manipulando-o para que se possa ser exibido na tela do microcomputador e separa um quadro para a detecção, em tempo real, utilizando o algoritmo, descrito na \autoref{subsubsec:violajones}, com os materiais contemplados na \autoref{subsec:bib_opencv};
 	
 	\item \textbf{processamento:} o sistema processo a detecção da face na imagem, e caso seja detectada uma face, o sistema deverá desenhar um retângulo em volta da face detectada neste fluxo de \textit{frames}, e a partir daí se inicia o processo de reconhecimento;
 	
 	\item \textbf{processamento/saída:} o processo de reconhecimento é acionado e caso a face não seja reconhecida, o sistema disponibiliza campos para que o usuário entre com uma identificação. Caso haja alguma equivalência, o sistema identifica o usuário escrevendo seu nome logo abaixo do retângulo desenhado pelo processo de detecção;
 	
-	\item \textbf{entrada/processamento:} se o usuário identifica a face a partir do item acima descrito, o sistema inicia o processo de treinamento da face definido na \autoref{sec:recog_faces}, criando um \textit{eigenspace}, e no momento seguinte à criação deste "espaço", o sistema começa a utilizar-lo para os novos processos de reconhecimento.
+	\item \textbf{entrada/processamento:} se o usuário identifica a face a partir do item acima descrito, o sistema inicia o processo de treinamento da face definido na \autoref{sec:recog_faces}, criando um \textit{eigenspace}, e no momento seguinte à criação deste "espaço", o sistema começa a utiliza-lo para os novos processos de reconhecimento.
 \end{enumerate}
 
 Para melhor entendimento, ilustra-se o processo desta seção na \autoref{fig:ilustracao}.
 
 \begin{figure}[h]
 	\centering
-	\includegraphics[width=1\textwidth]{ilustracao_tcc_sistema}
+	\includegraphics[width=1.3\textwidth]{ilustracao_tcc_sistema}
 	\caption{Ilustração do processo do sistema.}
 	\fonte{Elaborado pelo autor.}
 	\label{fig:ilustracao}
@@ -35,26 +35,25 @@ Para melhor entendimento, ilustra-se o processo desta seção na \autoref{fig:il
 \begin{figure}[h]
 	\centering
 	\includegraphics[width=.6\textwidth]{SRFV_diagramaPacotes}
-	\caption{Diagrama de pacotes (UML) do sistema proposto.}
+	\caption{Diagrama de pacotes UML do sistema proposto.}
 	\fonte{Elaborado pelo autor.}
 	\label{fig:SRFV_diagramaPacotes}
 \end{figure}
 
-Nesta seção, os pacotes criados implementação do sistema aqui proposto serão apresentadas em forma de diagrama de pacotes (UML). A \autoref{fig:SRFV_diagramaPacotes} ilustra tal diagrama:
+Nesta seção, os pacotes criados para implementação do sistema aqui proposto serão apresentados em forma de diagrama de pacotes UML. A \autoref{fig:SRFV_diagramaPacotes} ilustra tal diagrama:
 
 
-
-O pacote \textit{"gui"} possui classes responsáveis pela interface com o usuário e regras do sistema como controle de fluxo de quadros e execução de tarefas. O pacote \textit{"eigenfaces"} possui as classes responsáveis pelo execuçao do algoritmo ACP e a geração do espaço multidimensional de \textit{EigenFaces}. Por fim, o pacote de nome \textit{"utils"}, possui classes utilitárias resposáveis por manipular arquivos (carregar, salvar e deletar) e conversões de formatos de imagens. 
+O pacote \textit{"gui"} possui classes responsáveis pela interface com o usuário e regras do sistema como controle de fluxo de quadros e execução de tarefas. O pacote \textit{"eigenfaces"} possui as classes responsáveis pela execução do algoritmo ACP e a geração do espaço multidimensional de \textit{eigenfaces}. Por fim, o pacote de nome \textit{"utils"}, possui classes utilitárias resposáveis por manipular arquivos (carregar, salvar e deletar) e conversões de formatos de imagens. 
 
 Na seção seguinte, cada pacote será descrito com seus respectivos diagramas de classe.
 
 \section{Diagrama de Classes - Pacote \textit{\textbf{gui}}}\label{sec:diagclasses}
-As classes do pacote \textbf{\textit{gui}} são representadas pelo diagrama (UML) na \autoref{figSRFV_diagramaClassse_gui}.
+As classes do pacote \textbf{\textit{gui}} são representadas pelo diagrama UML na \autoref{figSRFV_diagramaClassse_gui}.
 
 \begin{figure}[h]
 	\centering
 	\includegraphics[width=1.1\textwidth]{SRFV_diagramaClassse_gui}
-	\caption{Diagrama de classes (UML) do pacote \textbf{\textit{gui}}.}
+	\caption{Diagrama de classes UML do pacote \textbf{\textit{gui}}.}
 	\fonte{Elaborado pelo autor.}
 	\label{figSRFV_diagramaClassse_gui}
 \end{figure}
@@ -68,7 +67,7 @@ A classe \textbf{\textit{PanelCadastroDeFace}} também é responsávem pelo cont
 	\begin{itemize}
 		\item \textbf{CvHaarClassifierCascade classifier}: classificadores pré treinados, assim como descritos na \autoref{subsubsec:violajones}, para o processo de detecção da face;
 		
-		\item \textbf{ExecutorService executor:} este objeto é uma \textit{thread}. responsável por executar e controlar o processo de aquisiçao de quadros, deteção treinamento e reconecimento;
+		\item \textbf{ExecutorService executor:} este objeto é uma \textit{thread}, responsável por executar e controlar o processo de aquisiçao de quadros, deteção treinamento e reconecimento;
 		
 		\item \textbf{Rectangle faceRect:} objeto contendo a posição da face recem detectada em relação ao quadro retirado do vídeo;
 		
@@ -80,7 +79,7 @@ A classe \textbf{\textit{PanelCadastroDeFace}} também é responsávem pelo cont
 		
 		\item \textbf{ACP\_Reconhecimento faceRecog:} objeto que instancia a classe responsável por executar o algoritmo de reconhecimento ACP, contido no pacote \textbf{\textit{eigenfaces}};
 		
-		\item \textbf{ACP\_Treinamento:} esta classe, contida no pacote \textbf{eigenfaces}, nao é instanciada como objeto porém é chamada de forma estática para produzir o espaço multidimensional a partir das imagens de treinamnto salvas em uma pasta especifica;
+		\item \textbf{ACP\_Treinamento:} esta classe, contida no pacote \textbf{eigenfaces}, não é instanciada como objeto, porém é chamada de forma estática para produzir o espaço multidimensional a partir das imagens de treinamnto salvas em uma pasta especifica;
 		
 	\end{itemize}
 	
@@ -105,19 +104,19 @@ A classe \textbf{\textit{PanelCadastroDeFace}} também é responsávem pelo cont
 \end{itemize}
 
 \section{Diagrama de Classes - Pacote \textit{\textbf{eigenfaces}}}\label{sec:eigenfacesclass}
-As classes do pacote \textbf{\textit{eigenfaces}} são representadas pelo diagrama (UML) da \autoref{figSRFV_diagramaClassse_eigenfaces} e descritas em seguida. 
+As classes do pacote \textbf{\textit{eigenfaces}} são representadas pelo diagrama UML da \autoref{figSRFV_diagramaClassse_eigenfaces} e descritas em seguida. 
 
 \begin{figure}[h]
 	\centering
 	\includegraphics[width=1.1\textwidth]{SRFV_diagramaClassse_eigenfaces}
-	\caption{Diagrama de classes (UML) do pacote \textbf{\textit{eigenfaces}}.}
+	\caption{Diagrama de classes UML do pacote \textbf{\textit{eigenfaces}}.}
 	\fonte{Elaborado pelo autor.}
 	\label{figSRFV_diagramaClassse_eigenfaces}
 \end{figure}
 
 %CLASSE EIGENSPACE
 
-A classe \textit{\textbf{EigenSpace}} representa o espaço multidimensional citado e descrito na  \autoref{sec:recog_faces}. Possui métodos de extração de informações contidas neste espaço. Seus objetos são matrizes que representam os auto-valores e auto-vetores contemplados na \autoref{subsec:treinamento}. També possui objetos que relacionam os auto-vetores gerados com as suas respectivas imagens de treinamento.
+A classe \textit{\textbf{EigenSpace}} representa o espaço multidimensional citado e descrito na  \autoref{sec:recog_faces}. Possui métodos de extração de informações contidas neste espaço. Seus objetos são matrizes que representam os autovalores e autovetores contemplados na \autoref{subsec:treinamento}. També possui objetos que relacionam os autovetores gerados com as suas respectivas imagens de treinamento.
 
 
 \begin{itemize}	
@@ -125,31 +124,31 @@ A classe \textit{\textbf{EigenSpace}} representa o espaço multidimensional cita
 	\begin{itemize}
 		\item \textbf{double[][] getImages():} método que retorna as imagens de treinamento em forma de matriz de bytes de duas dimensões. Cada linha representa uma imagem, e o número de colunas representa os pixels de cada imagem;
 		
-		\item \textbf{double[][] getAutoVetores():} método que retorna os auto-vetores gerados a partir das imagens de treinamento;
+		\item \textbf{double[][] getAutoVetores():} método que retorna os autovetores gerados a partir das imagens de treinamento;
 		
-		\item \textbf{int getNumEigenFaces():} este método retorna o número de eigenfaces presentes no espaço multidimensional \textit{EigenSpace}.
+		\item \textbf{int getNumEigenFaces():} este método retorna o número de \textit{eigenfaces} presentes no espaço multidimensional \textit{EigenSpace}.
 		
-		\item \textbf{double[] getImagem\_media():} este método retorna o número de eigenfaces presentes no espaço multidimensional \textit{EigenSpace}.
+		\item \textbf{double[] getImagem\_media():} este método retorna o número de \textit{eigenfaces} presentes no espaço multidimensional \textit{EigenSpace}.
 		
-		\item \textbf{double[] getAuto\_valores():} retorna os auto-valores correspondentes com os auto-vetores existentes no espaço;
+		\item \textbf{double[] getAuto\_valores():} retorna os autovalores correspondentes com os autovetores existentes no espaço;
 		
 		
 		\item \textbf{ArrayList<String> getListaPath\_images():} returna uma lista com o caminho completo dos arquivos que representam as imagens de treinamento;
 		
-		\item \textbf{double[][] calculaCoordenadas(int numEFs):} este método recebe o número de eigenfaces a se priorizar para analise, como explica a \autoref{subsec:treinamento}, e retorna as coordenadas (ou pesos) respectivos a cada imagem de treinamento;		
+		\item \textbf{double[][] calculaCoordenadas(int numEFs):} este método recebe o número de \textit{eigenfaces} a se priorizar para analise, como explica a \autoref{subsec:treinamento}, e retorna as coordenadas (ou pesos) respectivos a cada imagem de treinamento;		
 	
 	\end{itemize}
 \end{itemize}
 
 %CLASSE ACP_TREINAMENTO
 
-A classe \textit{\textbf{ACP\_Treinamento}} contem a implementação responsável pelo processo de treinamento do ACP descrito na \autoref{subsec:treinamento}. Portanto esta classe gera um objeto da classe \textbf{EigenSpace} descrita acima. Seus principais métodos são contamplados abaixo:
+A classe \textit{\textbf{ACP\_Treinamento}} contém a implementação responsável pelo processo de treinamento do ACP descrito na \autoref{subsec:treinamento}. Portanto esta classe gera um objeto da classe \textbf{EigenSpace} descrita acima. Seus principais métodos são contemplados abaixo:
 
 
 \begin{itemize}	
 	\item Métodos:
 	\begin{itemize}
-		\item \textbf{EigenSpace gerar\_EigenSpace():} este método engloba os cálculos do algoritmo ACP, especificamente os passos da fase de treinamento da \autoref{subsec:treinamento}, retornando um objeto da classe \textit{EigenSpace} detalhada anteriormente. Seus detalhes serão aprodundados na seção ???.
+		\item \textbf{EigenSpace gerar\_EigenSpace():} este método engloba os cálculos do algoritmo ACP, especificamente os passos da fase de treinamento da \autoref{subsec:treinamento}, retornando um objeto da classe \textit{EigenSpace} detalhada anteriormente. 
 		
 		\item \textbf{Matriz2D calcEspaco():} este método engloba especificamente o passos '5' da fase de treinamento referente ao cálculo do espaço, contempladas na \autoref{subsec:treinamento}.
 		
@@ -161,7 +160,7 @@ A classe \textit{\textbf{ACP\_Treinamento}} contem a implementação responsáve
 
 %CLASSE ACP_RECONHECIMENTO
 
-A classe \textit{\textbf{ACP\_Reconhecimento}} contem a implementação responsável pelo processo de reconhecimento da ACP descrito na \autoref{subsec:reconhecimento}. Portanto esta classe gera um objeto da classe \textbf{ResultadoReconhecimento} posteriormente nesta seção. Seus principais métodos são contamplados abaixo:
+A classe \textit{\textbf{ACP\_Reconhecimento}} contém a implementação responsável pelo processo de reconhecimento da ACP descrito na \autoref{subsec:reconhecimento}. Portanto esta classe gera um objeto da classe \textbf{ResultadoReconhecimento} posteriormente nesta seção. Seus principais métodos são contemplados abaixo:
 
 
 \begin{itemize}	
@@ -173,15 +172,15 @@ A classe \textit{\textbf{ACP\_Reconhecimento}} contem a implementação respons�
 	
 	\item Métodos:
 	\begin{itemize}
-		\item \textbf{void processa\_Reconhecimento():} este método engloba os cálculos do algoritmo ACP, especificamente os passos da fase de reconhecimento da \autoref{subsec:reconhecimento}. Seus detalhes serão aprodundados na seção ???.
+		\item \textbf{void processa\_Reconhecimento():} este método engloba os cálculos do algoritmo ACP, especificamente os passos da fase de reconhecimento da \autoref{subsec:reconhecimento}.
 		
 		\item \textbf{Matriz2D calcEspaco(int nEF, Matriz2D imMat)}:
 		
-		\item \textbf{double[] getEucDists(Matriz2D im)}: método que calcula a distancia euclidiana de todas as faces treinadas (eu auto-valores) contidos no espaço com a nova face;
+		\item \textbf{double[] getEucDists(Matriz2D im)}: método que calcula a distância euclidiana de todas as faces treinadas (autovalores) contidos no espaço com a nova face;
 		
-		\item \textbf{ResultadoReconhecimento getMenorDist(double[] dists)}: método que retorna qual das distancias calculadas acima é a menor, construindo um objeto da classe \textit{\textbf{ResultadoReconhecimento}};
+		\item \textbf{ResultadoReconhecimento getMenorDist(double[] dists)}: método que retorna qual das distâncias calculadas acima é a menor, construindo um objeto da classe \textit{\textbf{ResultadoReconhecimento}};
 		
-		\item esta classe também contem métodos para conversões de tipos, dentre outros.
+		\item esta classe também contém métodos para conversões de tipos, dentre outros.
 		
 		
 	\end{itemize}
@@ -207,40 +206,40 @@ A classe \textit{\textbf{ResultadoReconhecimento}} representa o resultado do rec
 
 
 \section{Diagrama de Classes - Pacote \textit{\textbf{utils}}}\label{sec:ituls}
-As classes do pacote \textbf{\textit{utils}} são representadas pelo diagrama (UML) da \autoref{figSRFV_diagramaClassse_utils}. 
+As classes do pacote \textbf{\textit{utils}} são representadas pelo diagrama UML da \autoref{figSRFV_diagramaClassse_utils}. 
 
 \begin{figure}[h]
 	\centering
 	\includegraphics[width=1.1\textwidth]{SRFV_diagramaClassse_utils}
-	\caption{Diagrama de classes (UML) do pacote \textbf{\textit{utils}}.}
+	\caption{Diagrama de classes UML do pacote \textbf{\textit{utils}}.}
 	\fonte{Elaborado pelo autor.}
 	\label{figSRFV_diagramaClassse_utils}
 \end{figure}
 
 %CLASSE FileUtils
-A classe \textit{\textbf{FileUtils}} contem métodos que carregam arquivos do disco rígido para a memória, conversão entre classes de imagem, e também que salvam as imagens contidas na memória para o disco rígido, dentro outros como remoção de arquivos e manipulação de pastas.
+A classe \textit{\textbf{FileUtils}} contém métodos que carregam arquivos do disco rígido para a memória, conversão entre classes de imagem, e também que salvam as imagens contidas na memória para o disco rígido, dentro outros como remoção de arquivos e manipulação de pastas.
 
 
 %CLASSE ImageUtils
-A classe \textit{\textbf{ImageUtils}} contem métodos que responsáveis por algumas rotinas de processamento de imagens. Seus principais métodos são descritos abaixo:
+A classe \textit{\textbf{ImageUtils}} contém métodos que responsáveis por algumas rotinas de processamento de imagens. Seus principais métodos são descritos abaixo:
 
 
 \begin{itemize}	
 	\item Métodos:
 	\begin{itemize}
-		\item \textbf{String clipToRectangle(BufferedImage, int, int, int, int):} este método recebe uma imagem e quatro pontos, e segmenta a imagem de acordo com estes parâmetros
+		\item \textbf{String clipToRectangle(BufferedImage, int, int, int, int):} este método recebe uma imagem e quatro pontos, e segmenta a imagem de acordo com estes parâmetros;
 		
-		\item \textbf{BufferedImage escalaImagemCinza(BufferedImage, double ):} recebe uma imagem, a escalona para proporcionalmente de acordo com um parâmetro constante de escala e retorna outra imagem representada pela classe BufferedImage, já transformada para escala de cores cinza.
+		\item \textbf{BufferedImage escalaImagemCinza(BufferedImage, double ):} recebe uma imagem, a escalona para proporcionalmente de acordo com um parâmetro constante de escala e retorna outra imagem representada pela classe BufferedImage, já transformada para escala de cores cinza;
 		
-		\item \textbf{BufferedImage escalaImagemCinza(IpiImage)}: apresenta a mesma finalizade do método acima porém recebendo um objeto da classe IpiImage da biblioteca OpenCV descrita na \autoref{subsec:bib_opencv}, retornando outra imagem representada pela classe BufferedImage, já transformada para escala de cores cinza.
+		\item \textbf{BufferedImage escalaImagemCinza(IpiImage)}: apresenta a mesma finalizade do método acima porém recebendo um objeto da classe IpiImage da biblioteca OpenCV descrita na \autoref{subsec:bib_opencv}, retornando outra imagem representada pela classe BufferedImage, já transformada para escala de cores cinza;
 		
-		\item esta classe também possui métodos de conversão de vetores para o tipo \textit{BufferedImage }e vice-versa;
+		\item esta classe também possui métodos de conversão de vetores para o tipo \textit{BufferedImage }e vice-versa.
 	\end{itemize}
 \end{itemize}
 
 
 %CLASSE Auto vetod decomposicao
-A classe \textit{\textbf{AutoVetor\_decomp}} herda as propriedades da classe \textit{EigenvalueDecomposition} da biblioteca \textit{COLT} contemplada na \autoref{subsec:bib_colt}, responsável por decompor uma matriz de covariância em auto-valores e auto-vetores, como detalha a \autoref{subsec:treinamento}.
+A classe \textit{\textbf{AutoVetor\_decomp}} herda as propriedades da classe \textit{EigenvalueDecomposition} da biblioteca \textit{COLT} contemplada na \autoref{subsec:bib_colt}, responsável por decompor uma matriz de covariância em autovalores e autovetores, como detalha a \autoref{subsec:treinamento}.
 
 
 %CLASSE equ histogra
@@ -278,12 +277,12 @@ Também serão contemplados os \textit{snippets} (ou blocos de código) referent
 
 \subsection{Constantes Controladas}\label{sec:consts}
 
-De acordo com o método experimental, utilizou-se três constantes controladas como variáveis do experimento, para que sejam manipulados e seus efeitos obervados. Existem outras constantes no sitema para constrole de quadros analisados ou do tamanho padrão da imagem que têm efeito na performance ou em outros aspectos do sistema, porém os três principais listados abaixo influem na taxa de sucesso/falha do reconhecimento, os quais serão contemplados no \autoref{ch:resultados}, referente aos testes e resultados.
+De acordo com o método experimental, utilizou-se três constantes controladas como variáveis do experimento, para que sejam manipulados e seus efeitos obervados. Existem outras constantes no sitema para constrole de quadros analisados ou do tamanho padrão da imagem que tem efeito no desempenho ou em outros aspectos do sistema, porém os três principais listados abaixo influem na taxa de sucesso/falha do reconhecimento, os quais serão contemplados no \autoref{ch:resultados}, referente aos testes e resultados.
 
 \begin{itemize}	
-		\item \textbf{NUM\_FACES\_TREINO:} esta constante é resposável por controlar o número de faces q ser usado no treinamento, acionado quando o usuário informa sua identificação. Apresenta-se sua lógica no código na \autoref{sec:mainthread};
+		\item \textbf{NUM\_FACES\_TREINO:} esta constante é resposável por controlar o número de faces a ser usado no treinamento, acionado quando o usuário informa sua identificação. Apresenta-se sua lógica no código na \autoref{sec:mainthread};
 		
-		\item \textbf{NUM\_EF\_recog:} esta constante é responsável por definir quantos auto-vetores serão utilizados para o reconhecimento, pois seu descarte é possível devido a ordenação por auto-valores, como contempla a \autoref{subsec:treinamento}, passo quatro, e a \autoref{sec:implrecog}. Sua lógica é apresentada na \autoref{sec:implrecog};
+		\item \textbf{NUM\_EF\_recog:} esta constante é responsável por definir quantos autovetores serão utilizados para o reconhecimento, pois seu descarte é possível devido a ordenação por autovalores, como contempla a \autoref{subsec:treinamento}, passo quatro, e a \autoref{sec:implrecog}. Sua lógica é apresentada na \autoref{sec:implrecog};
 		
 		\item \textbf{MIN\_DIST:} esta constante define se a distância encontrada na fase de reconhecimento pode ser considerada um resultado de sucesso ou falha. Sua lógica apresentada na \autoref{sec:defsucregoc}.
 \end{itemize}
@@ -301,11 +300,11 @@ O bloco de código da \autoref{snippet-mainthread} corresponde a \textit{Thread}
 	\label{snippet-mainthread}
 \end{figure}
 
-Este bloco está contido do método \textit{trackFace()} da classe \textit{PanelCadastroDeFace}, descritas na \autoref{sec:diagclasses}, que é chamado a cada captura de quadros, atribuindo como parâmetro a image já redimensionada e transformada para cores d escala cinza, como mostra a  \autoref{snippet-mainthread}.
+Este bloco está contido do método \textit{trackFace()} da classe \textit{PanelCadastroDeFace}, descritas na \autoref{sec:diagclasses}, que é chamado a cada captura de quadros, atribuindo como parâmetro a image já redimensionada e transformada para cores da escala cinza, como mostra a  \autoref{snippet-mainthread}.
 
 A linha de número \textit{447}, o método \textit{detectarFace(grayIm)} recebe uma imagem já redimensionada e transformada em escala da cinza pelo método \textit{escalaImagemCinza()}, descrito na \autoref{sec:ituls}, e processa a detecção da face utilizando o algoritmo de Viola-Jones (descritos na \autoref{subsubsec:violajones}). Se a face não for detectada, nada acontece. Caso a face seja detectada na imagem, as coordenadas desta são salvas em uma variável global e os campos de identificação contidos na classe \textit{FrameCadastroFace} para identificação do usuário são ativados  (linha \textit{450} e \textit{452}, respectivamente). 
 
-Caso o usuário se identifique atravez dos campos de entrada, o sistema se encontrará em "estado de treinamento", controlado pelo método \textit{isSalvaTreinaFace()} da linha 455. Neste bloco salva-se a imagem da face para treino quantas vezes for definida pela constante \textit{NUM\_FACES\_TREINO}, definidas na \autoref{sec:consts}. Quando atingir este valor, o "estado de treinamento"\ do sistema, bem como os campos de entrada são desativados e começa a rotina de construção do espaço (\textit{eingenspace}), executada pelo método \textit{ACP\_Treinamento.construirEspaco()}, que será detalhado em seguida nesta seção.
+Caso o usuário se identifique atravéz dos campos de entrada, o sistema se encontrará em "estado de treinamento", controlado pelo método \textit{isSalvaTreinaFace()} da linha 455. Neste bloco salva-se a imagem da face para treino quantas vezes for definida pela constante \textit{NUM\_FACES\_TREINO}, definidas na \autoref{sec:consts}. Quando atingir este valor, o "estado de treinamento"\ do sistema, bem como os campos de entrada são desativados e começa a rotina de construção do espaço (\textit{eingenspace}), executada pelo método \textit{ACP\_Treinamento.construirEspaco()}, que será detalhado em seguida nesta seção.
 
 Se o sistema não se encontra em "estado de treinamento", controlado pelo método \textit{isSalvaTreinaFace()} da linha \textit{445}, o método \textit{recogFace()} (linha \textit{487}) é executado, o qual será detalhado na \autoref{sec:implrecog}.
 
@@ -321,7 +320,7 @@ Se o sistema não se encontra em "estado de treinamento", controlado pelo métod
 \end{figure}
 
 
-O método \textit{gerar\_EigenSpace()} da \autoref{snippet-treiamento} é chamado pelo método \textit{ACP\_Treinamento.construirEspaco()}, contemplado no bloco de código anterior, que por sua vez resgata todas as imagens de treino salvar em disco rígido e retorna os caminhos destes arquivos.
+O método \textit{gerar\_EigenSpace()} da \autoref{snippet-treiamento} é chamado pelo método \textit{ACP\_Treinamento.construirEspaco()}, contemplado no bloco de código anterior, que por sua vez resgata todas as imagens de treino, salvar em disco rígido e retorna os caminhos destes arquivos.
 
 Este bloco é o responsável por executar a fase de treinamento do algoritimo ACP (ou \textit{EigenFaces}), contemplada na seção \autoref{subsec:treinamento}, e seus cinco passos:
 
@@ -329,9 +328,9 @@ No primeiro passo, carrega-se as imagens do disco rígido para a memória e as c
 
 Para o segundo passo, o cálculo da face média é executado e subtrai-se esta com a matriz criada no primeiro passo, como está nas linhas \textit{72} e \textit{73} da  \autoref{snippet-treiamento}.
 
-No terceiro passo, o vetor de covariância é calculada multiplicando a matriz gerada no passo anterior com sua equivalente transposta, como contampla a \autoref{subsec:treinamento} (linhas \textit{76} e \textit{77}).
+No terceiro passo, o vetor de covariância é calculado multiplicando a matriz gerada no passo anterior com sua equivalente transposta, como contempla a \autoref{subsec:treinamento} (linhas \textit{76} e \textit{77}).
 
-No quarto passo deve-se decompor a matriz de covariância em auto-valores (\textit{eigenvalues}) e auto-vetores (\textit{eigenvectors}). Isto é feito atravéz dos métodos \textit{getEigenValues()} e \textit{getEigenVectors()} (linhas \textit{81} e \textit{82}, respectivamente) da classe \textit{AutoValor\_decomp}, descritas na \autoref{sec:ituls}, e posteriormenter ordenados por ordem de auto-valores (linha \textit{85}).
+No quarto passo deve-se decompor a matriz de covariância em autovalores (\textit{eigenvalues}) e autovetores (\textit{eigenvectors}). Isto é feito atravéz dos métodos \textit{getEigenValues()} e \textit{getEigenVectors()} (linhas \textit{81} e \textit{82}, respectivamente) da classe \textit{AutoValor\_decomp}, descritas na \autoref{sec:ituls}, e posteriormenter ordenados por ordem de autovalores (linha \textit{85}).
 
 \begin{figure}[h]
 	\centering
@@ -341,7 +340,7 @@ No quarto passo deve-se decompor a matriz de covariância em auto-valores (\text
 	\label{snippet-treiamento-calcesp}
 \end{figure}
 
-Para o quinto e ultimo passo desta fase de treinamento, o cálculo do espaço (\textit{eigenspace}) é executado atravéz do método \textit{calcEspaco()}, descritos no bloco de código da \autoref{snippet-treiamento-calcesp}. 
+Para o quinto e último passo desta fase de treinamento, o cálculo do espaço (\textit{eigenspace}) é executado atravéz do método \textit{calcEspaco()}, descritos no bloco de código da \autoref{snippet-treiamento-calcesp}. 
 
 
 
@@ -364,9 +363,9 @@ O método \textit{regocFace()} da classe \textit{PanelCadastroDeFace}, como desc
 
 Para o primeiro passo da fase de reconhecimento, prepara-se os dados para o cálculo fazendo conversão entre classes (linha \textit{116} e \textit{117}), e normaliza a matriz que representa a nova imagem com a média dos próprios valores (linha \textit{119}).
 
-No segundo passo projeta-se o novo vetor de consulta ao espaço previamente criado na fase de treinamento. Para isto é necessário extrair a face média do espaço, previamente salva no objeto da classe \textit{EigenSpace}, e subtraí-la do vetor de consulta (linha \textit{125} da \autoref{snippet-reconh}) para que seja atendida a equação de definição do espaço com o novo vetor de consulta, detallhada  na \autoref{subsec:reconhecimento}. 
+No segundo passo projeta-se o novo vetor de consulta ao espaço previamente criado na fase de treinamento. Para isto, é necessário extrair a face média do espaço, previamente salva no objeto da classe \textit{eigenspace}, e subtraí-la do vetor de consulta (linha \textit{125} da \autoref{snippet-reconh}) para que seja atendida a equação de definição do espaço com o novo vetor de consulta, detallhada  na \autoref{subsec:reconhecimento}. 
 
-O método \textit{calcEspaco()} (linha \textit{128} da \autoref{snippet-reconh}), semelhante ao método \textit{calcEspaco()} da classe \textit{ACP\_Treiamento}, é responsável pelo cálculo do novo espaço com o novo vetor de consulta, detalhado e ilustrado no bloco de código da \autoref{snippet-reconh-calcesp}. Nele recupara-se os auto-valores contidos no espaço previamente criado pela fase de treinamento (linha \textit{150} - \autoref{snippet-reconh-calcesp} ) e se extrai a submatriz determinada de auto-valores pela constante \textit{NUM\_EF\_recog}, especificada na \autoref{sec:consts} (linha \textit{151} - \autoref{snippet-reconh-calcesp}), seguidas das operações de transposição e multiplicação (linhas \textit{152} e \textit{154} da \autoref{snippet-reconh-calcesp}), para que se atenda a equação de criação do espaço (\textit{eigenspace}) com o novo vetor de consulta (\autoref{subsec:reconhecimento}).
+O método \textit{calcEspaco()} (linha \textit{128} da \autoref{snippet-reconh}), semelhante ao método \textit{calcEspaco()} da classe \textit{ACP\_Treiamento}, é responsável pelo cálculo do novo espaço com o novo vetor de consulta, detalhado e ilustrado no bloco de código da \autoref{snippet-reconh-calcesp}. Nele recupara-se os autovalores contidos no espaço previamente criado pela fase de treinamento (linha \textit{150} - \autoref{snippet-reconh-calcesp} ) e se extrai a submatriz determinada de autovalores pela constante \textit{NUM\_EF\_recog}, especificada na \autoref{sec:consts} (linha \textit{151} - \autoref{snippet-reconh-calcesp}), seguidas das operações de transposição e multiplicação (linhas \textit{152} e \textit{154} da \autoref{snippet-reconh-calcesp}), para que se atenda a equação de criação do espaço (\textit{eigenspace}) com o novo vetor de consulta (\autoref{subsec:reconhecimento}).
 
 \begin{figure}[h]
 	\centering
@@ -377,14 +376,14 @@ O método \textit{calcEspaco()} (linha \textit{128} da \autoref{snippet-reconh})
 \end{figure}
 
 
-Para o terceiro e último passo da implementação desta fase de reconhecimento, a Distância Euclidiana entre as coordanadas de cada auto-vetor (\textit{eigenface}) geradas na faze de treinamento e as coordenadas dos mesmos no novo espaço gerados nesta faze são calculados (linha \textit{131} da \autoref{snippet-reconh}), subtraíndo-as e elevando-as ao quadrado. A menor delas é elegida (linha \textit{132} da \autoref{snippet-reconh}) e é calculada sua raiz quadrada para completar a equação da Distância Euclidiana, contemplada na \autoref{subsec:reconhecimento}, criando um objeto da classe \textit{ResultadoReconhecimento}, detalhado na \autoref{sec:eigenfacesclass}, que salva o resultado da melhor distância obtida e a identificação da imagem de treinamento correspondente (a face).
+Para o terceiro e último passo da implementação desta fase de reconhecimento, a Distância Euclidiana entre as coordanadas de cada autovetor (\textit{eigenface}) geradas na faze de treinamento e as coordenadas dos mesmos no novo espaço gerados nesta faze são calculados (linha \textit{131} da \autoref{snippet-reconh}), subtraíndo-as e elevando-as ao quadrado. A menor delas é elegida (linha \textit{132} da \autoref{snippet-reconh}) e é calculada sua raiz quadrada para completar a equação da Distância Euclidiana, contemplada na \autoref{subsec:reconhecimento}, criando um objeto da classe \textit{ResultadoReconhecimento}, detalhado na \autoref{sec:eigenfacesclass}, que salva o resultado da melhor distância obtida e a identificação da imagem de treinamento correspondente (a face).
 
 
 \subsection{Definição de Sucesso do Reconhecimento}\label{sec:defsucregoc}
 
-Como visto na definição do algoritmo \textit{EigenFaces}, disposta na \autoref{subsec:acp}, este apenas apresenta como resultado a menor distância entre os auto-vetores e o novo vetor de consulta, sendo responsabilidade de outro processo a análise deste resultado para definir se efetivamente este valor corresponte a uma reconhecimento de sucesso ou uma falha.
+Como visto na definição do algoritmo \textit{EigenFaces}, disposta na \autoref{subsec:acp}, este apenas apresenta como resultado a menor distância entre os autovetores e o novo vetor de consulta, sendo responsabilidade de outro processo a análise deste resultado para definir se efetivamente este valor corresponte a uma reconhecimento de sucesso ou uma falha.
 
-A constante \textit{MIN\_DIST}, definida na \autoref{sec:consts}, é a responsável pelo resultado final de sucesso ou falha, a qual é controlada e nos testes da \autoref{ch:resultados} posterior. Como mostra o bloco de código da \autoref{snippet-reconh-resultadofim}, a checagem desta constante contra a distancia encontrada na fase de reconhecimento pode ser vista na linha \textit{614}.
+A constante \textit{MIN\_DIST}, definida na \autoref{sec:consts}, é a responsável pelo resultado final de sucesso ou falha, a qual é controlada e nos testes da \autoref{ch:resultados} posterior. Como mostra o bloco de código da \autoref{snippet-reconh-resultadofim}, a checagem desta constante contra a distância encontrada na fase de reconhecimento pode ser vista na linha \textit{614}.
 
 \begin{figure}[h]
 	\centering
@@ -398,8 +397,8 @@ Caso a menor ditância calculada seja menor do que a constante \textit{MIN\_DIST
 
 
 
-\section{Considerações Finais}\label{sec:consfin-impl}
-Neste capítulo foi apresentado a implementação do código, focando no fluxo de processo do sistema ilustrado da, e na implementação do algoritmo \textit{EigenFaces}, detalhando suas fases de treinamento e reconhecimento, e a definição do resultado como sucesso ou falha.
+
+Neste capítulo foi apresentado a implementação do código, focando no fluxo de processo do sistema ilustrado e a implementação do algoritmo \textit{EigenFaces}, detalhando suas fases de treinamento e reconhecimento, e a definição do resultado como sucesso ou falha.
 
 No próximo capítulo será apresentado a maneria de como foram controladas as constantes (definidas na \autoref{sec:consts}) nas sessões de testes e seus efeitos como resultados deste experimento.
 

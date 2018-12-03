@@ -16,34 +16,28 @@ Lista-se a seguir, os equipamentos necessários para a realização deste trabal
 	
 	\item Câmera digital do tipo \textit{Webcam} de 720p de resolução (ou 1280x720 \textit{pixels});
 	\begin{itemize}
-		\item utilizada para captar o vídeo disponibilizá-lo no formato digital
+		\item utilizada para captar o vídeo e disponibilizá-lo no formato digital.
 	\end{itemize}
 
-	\item Microcomputador pessoal com processador Intel i7, 32 gigabytes de memória, e placa de vídeo de 32 megabytes (alto rendimento);
+	\item Microcomputador pessoal com processador Intel i7, 32 gigabytes de memória e placa de vídeo de 32MB (alto rendimento);
 	\begin{itemize}
-		\item utilizado como principal instrumento de desenvolvimento
+		\item utilizado como principal instrumento de desenvolvimento.
 	\end{itemize}
 	
-	\item Microcomputador pessoal do tipo notebook com processador Intel i3, 2 gigabytes de memória (baixo à médio rendimento);
+	\item Microcomputador pessoal do tipo \textit{notebook}, com processador Intel i3, 2 gigabytes de memória (baixo à médio rendimento);
 	\begin{itemize}
-		\item utilizado como instrumento de desenvolvimento secundário, para testar questões de consumo de memória e processamento (desempenho)	
+		\item utilizado como instrumento de desenvolvimento secundário, para testar questões de consumo de memória e processamento (desempenho).
 	\end{itemize}
 	
 \end{itemize}
 
-Estes \textit{hadwares} são considerados suficientes para a realização deste trabalho.
+
 
 \subsection{Softwares}\label{sub-softw}
-As subseções seguintes citam e detalham as tecnologias utilizadas para a implementação do trabalho aqui proposto,  descrevendo a maneira que foram utilizados.
+As subseções seguintes citam e detalham as tecnologias utilizadas para a implementação do trabalho aqui proposto.
 
 \subsubsection{Linguagem Java}\label{subsec:java}
 A tecnologia Java é usada para desenvolver aplicativos para uma ampla variedade de ambientes, de dispositivos consumidores a sistemas corporativos heterogêneos \cite{ibm_java}. 
-
-A linguagem Java deriva da linguagem C, portanto suas regras de sintaxe assemelham-se às regras de C. Por exemplo, os blocos de códigos são modularizados em métodos e delimitados por chaves e variáveis são declaradas antes que sejam usadas (tipagem forte) \cite{ibm_java}. 
-
-Estruturalmente, a linguagem Java começa com pacotes. Um pacote é o mecanismo de \textit{namespace} da linguagem Java. Dentro dos pacotes estão as classes e dentro das classes estão métodos, variáveis, constantes e mais \cite{ibm_java}.
-
-Java é uma linguagem Orientada a Objetos. A Programação Orientada a Objetos (POO) diz respeito a um padrão de desenvolvimento que consiste na representação de cada elemento em termos de um objeto, ou classe. Esse tipo de representação procura aproximar o sistema que está sendo criado ao que é observado no mundo real, e um objeto contém características e ações, assim como vemos na realidade \cite{dev_poo}. 
 
 O Java possui classes prontas para a solução dos mais diversos problemas. A seguinte lista apresenta algumas das classes ou pacotes que este trabalho fará uso:
 
@@ -61,17 +55,17 @@ O Java possui classes prontas para a solução dos mais diversos problemas. A se
 
 \subsubsection{Biblioteca OpenCV, JavaCV e JavaCPP}\label{subsec:bib_opencv}
 
-A biblioteca \textbf{OpenCV} (Open Source Computer Vision Library) foi originalmente desenvolvida pela Intel em 2000 e hoje é uma biblioteca multiplataforma, totalmente livre ao uso acadêmico e comercial, para o desenvolvimento de aplicativos na área de Visão computacional \cite{opencv}.
+A biblioteca OpenCV (\textit{Open Source Computer Vision Library}) foi originalmente desenvolvida pela Intel em 2000 e hoje é uma biblioteca multiplataforma, totalmente livre ao uso acadêmico e comercial, para o desenvolvimento de aplicativos na área de Visão computacional \cite{opencv}.
 
-Seu código foi escrito em nas linguagens C e C++, porém possui interface para várias outras linguagens como Python, Visual Basic, Java, dentre outras. Incorpora algoritmos para a resolução de vários problemas na área de visão computacional, inclusive o algoritmo \textit{Haar-Cascades} descrito na \autoref{subsubsec:violajones}.
+Seu código foi escrito nas linguagens C e C++, porém possui interface para várias outras linguagens como Python, Visual Basic, Java, dentre outras. Incorpora algoritmos para a resolução de vários problemas na área de visão computacional, inclusive o algoritmo \textit{Haar-Cascades} descrito na \autoref{subsubsec:violajones}.
 
-A biblioteca \textbf{JavaCPP}, atualmente mantida pelo grupo ByteDeco, é considerada uma \textit{bridge} ("ponte") entre a linguagem C++ e Java, disponibilizando classes de configurações e interfaces para várias bibliotecas escritas em C++, inclusive a OpenCV \cite{javacpp}.
+A biblioteca JavaCPP, atualmente mantida pelo grupo ByteDeco, é considerada uma \textit{bridge} ("ponte") entre a linguagem C++ e Java, disponibilizando classes de configurações e interfaces para várias bibliotecas escritas em C++, inclusive a OpenCV \cite{javacpp}.
 
-Por sua vez, a biblioteca \textbf{JavaCV}, inicialmente desenvolvida pela Google e agora mantida pelo grupo ByteDeco, utiliza as interfaces e \textit{wrapers} da biblioteca JavaCPP e provê classes que podem ser usadas para manipular a  OpenCV de maneira mais fácil pra plataforma Java \cite{javacv}. Também oferece drivers de aceleração gráfica que otimizam o funcionamento da OpenCV na plataforma Java, dentre outras utilizades.
+Por sua vez, a biblioteca JavaCV, inicialmente desenvolvida pela Google e agora mantida pelo grupo ByteDeco, utiliza as interfaces e \textit{wrapers} da biblioteca JavaCPP e provê classes que podem ser usadas para manipular a  OpenCV de maneira mais fácil na plataforma Java \cite{javacv}. Também oferece drivers de aceleração gráfica que otimizam o funcionamento da OpenCV na plataforma Java, dentre outras utilizades.
 
 Estas três bibliotecas funcionam de maneira conjunta para resolver a problemática de aquisição, processamento de imagens, e classificação de objetos, e será utilizada neste trabalho. 
 
-A lista a seguir disponibiliza e detalha os principais pacotes, classes e métodos ou funções que s~ao utilizadas destas bibliotecas de desenvolvimento. As definições de suas funções foram retiradas das documentações dispostas em \cite{opencv}, \cite{javacv} e \cite{javacpp}: 
+A lista a seguir disponibiliza e detalha os principais pacotes, classes e métodos ou funções destas bibliotecas de desenvolvimento que são utilizadas. As definições de suas funções foram retiradas das documentações dispostas em \citeonline{opencv}, \citeonline{javacv} e \citeonline{javacpp}: 
 
 \begin{itemize}
 	\item Pacotes/classes:
@@ -119,10 +113,10 @@ A lista a seguir disponibiliza e detalha os principais pacotes, classes e métod
 	\end{itemize}	
 \end{itemize}
 
-Estas três bibliotecas também possuem um conjunto de parâmetros e constantes pré estabelecidas para facilitar o estabelecimento do ambiente desenvolvimento que irão ser utilizadas.
+Estas três bibliotecas também possuem um conjunto de parâmetros e constantes pré-estabelecidas para facilitar o desenvolvimento, e irão ser utilizadas.
 
 \subsubsection{Biblioteca Colt}\label{subsec:bib_colt}
-A biblioteca Colt desenvovida pela CERN (sigla francesa que corresponde à \textit{Conseil Européen Pour la Recherche Nucléaire}, em portugês Conselho Europeu de Pesquisas Nucleares) e provê uma gama de bibliotecas para Computação Científica e Técnica de Alta Performance em Java \cite{colt}. Será utilizada na implementação do algoritmo \textit{EigenFaces} para performar as operações necessárias descritas na \autoref{subsec:acp}. Lista-se a seguir as classes que serão utilizadas desta biblioteca \cite{colt}:
+A biblioteca Colt desenvovida pela CERN (sigla francesa que corresponde à \textit{Conseil Européen Pour la Recherche Nucléaire}, em portugês Conselho Europeu de Pesquisas Nucleares) provê uma gama de bibliotecas para Computação Científica e Técnica de Alta Performance em Java \cite{colt}. Será utilizada na implementação do algoritmo \textit{EigenFaces} para performar as operações necessárias descritas na \autoref{subsec:acp}. Lista-se a seguir as classes que serão utilizadas desta biblioteca \cite{colt}:
 
 
 \begin{itemize}
@@ -140,26 +134,23 @@ O NetBeans é um IDE (\textit{Integrated Development Environment}, ou em portugu
 
 Este editor de código tráz facilidades como auto-complemento de código, desenho visual de interface, atalhos de teclados para maior produtividade na escrita, \textit{debugger}, dentre outras vantagens, e foi escolhido para a implementação neste trabalho.
 
-\subsubsection{LaTex e TeXstudio}\label{subsec:latex}
-LaTeX é um conjunto de macros para o programa de diagramação de textos TeX, utilizado amplamente na produção de textos matemáticos e científicos, devido a sua alta qualidade tipográfica. Esta tecnologia juntamente com o IDE TeXstudio (editor de textos para o formato LaTex) foram escolhidos e são utilizados neste trabalho para a escrita da monografia.
-
 \subsubsection{Sistema GIT}\label{subsec:git}
-Git é um sistema de gerenciamento e controle de código livre criado pelos desenvolvedores Linus Tornalds e Junio Hamano sob a licensa GNU (GPLv2) \cite{git}. Este sistema é extremamente útil para se ter cada etapa da escrita do código salva, com possibilidade de reversão de ações, criação de ramos de desenvolvimento dentre outras utilidades, e é utilizado tando na escrita desta monografia quanto na escrita do código do sistema de reconhecimento aqui proposto.
+Git é um sistema de gerenciamento e controle de código livre criado pelos desenvolvedores Linus Tornalds e Junio Hamano sob a licensa GNU (GPLv2) \cite{git}. Este sistema é extremamente útil para se ter cada etapa da escrita do código salva, com possibilidade de reversão de ações, criação de ramos de desenvolvimento dentre outras utilidades, e é utilizado tanto na escrita desta monografia quanto na escrita do código do sistema de reconhecimento aqui proposto.
 
 \subsubsection{Sistemas Linux e Windows}\label{subsec:linux}
-O ambiente de desenvolvimento deste trabalho foi configurado sob o sistema operacional Linux, executando na máquina de alto rendimento descrita na \autoref{sub-hardw}, item "2". Já o sistema operacional Windows executa-se na maquina de baixo descrito também na \autoref{sub-hardw}, item "3", para testes e apresentação.
+O ambiente de desenvolvimento deste trabalho foi configurado sob o sistema operacional Linux, executando na máquina de alto rendimento descrita na \autoref{sub-hardw}, item "2". Já o sistema operacional Windows executa-se na maquina de baixo rendimento descrito também na \autoref{sub-hardw}, item "3", para testes e apresentação.
 
 
 \section{Métodos}\label{sec:metodos}
-Este trabalho adota uma abordagem experimental, descrita na seção a seguir \cite{fachin-metodos}.
+Este trabalho adota uma abordagem experimental, descrita na seção a seguir.
 
 
 \subsection{Método Experimental}\label{metex}
 
-No método experimental, variáveis são tratadas de maneira pré estabelecida e seus efeitos suficientemente controlados  e conhecidos pelos pesquisador. O princípio central da aplicação do método experimental é que deve-se aceitar os resultados como eles são apresentados, com imprevistos e acidentes que possam haver diante dos resulatos obtidos, ignorando as próprias opiniões e também as alheias \cite{fachin-metodos}.
+No método experimental, variáveis são tratadas de maneira pré-estabelecida e seus efeitos suficientemente controlados  e conhecidos pelos pesquisador. O princípio central da aplicação do método experimental é que deve-se aceitar os resultados como eles são apresentados, com imprevistos e acidentes que possam haver diante dos resultados obtidos, ignorando as próprias opiniões e também as alheias \cite{fachin-metodos}.
 
 \subsection{Desenvolvimento Ágil}\label{subsec:devagil}
-O Desenvolvimento Ágil foi padronizado pelo Manifesto Ágil como um método independente que reúne características de outras metodologias. Este manifesto foi criado para valorizar os seguintes pontos \cite{dev-agil}:
+O Desenvolvimento Ágil foi padronizado pelo Manifesto Ágil, como um método independente que reúne características de outras metodologias. Este manifesto foi criado para valorizar os seguintes pontos \cite{dev-agil}:
 
 \begin{itemize}
 	\item Indivíduos e suas interações são mais importantes que processos e ferramentas;
@@ -172,7 +163,7 @@ No desenvolvimento ágil, os projetos adotam o modelo iterativo e em espiral. Ne
 
 \subsubsection{XP (\textit{eXtremeProgramming})}
 
-Faz parte dos métodos ágeis, já que se encaixa no que define o que é um método ágil, conforme o Manifesto Ágil. Ela é baseada em três pilares: \textbf{agilidade no desenvolvimento, economia de recursos e qualidade do produto final} \cite{dev-agil2}.
+Faz parte dos métodos ágeis, já que se encaixa no que define o que é um método ágil, conforme o Manifesto Ágil. Ela é baseada em três pilares: agilidade no desenvolvimento, economia de recursos e qualidade do produto final \cite{dev-agil2}.
 
 A \textbf{XP} será utilizada neste projeto por ser incremental, focar-se no desenvolvimento ao invés da documentação e gerar, a cada iteração, um protótipo, essencial para testes e refinamento até que se chegue à um resultado satisfatório.
 
@@ -186,15 +177,15 @@ Dois dos diagramas que fazem parte da linguagem UML foram utilizados \cite{uml}:
 
 
 \begin{itemize}
-	\item Diagrama de Pacotes: Demonstra as interações entre diferentes pacotes os quais contém conjunto classes que compartilham finalizades semelhantes;
+	\item Diagrama de Pacotes: Demonstra as interações entre diferentes pacotes os quais contém conjunto classes que compartilham finalidades semelhantes;
 	
-	\item Diagrama de Classes: Permite a visualização do conjunto de classes, detalhando atributos e operações (métodos) presentes, assim como prováveis relacionamentos entre essas estruturas. Considerado um diagrama estrutural.
+	\item Diagrama de Classes: Permite a visualização do conjunto de classes, detalhando atributos e operações (métodos) presentes, assim como prováveis relacionamentos entre essas estruturas.
 
 \end{itemize}
 
-Estes dois diagramas foram utilizados para ilustrar as classes Java que serão implementadas, as interações de seus objetos e os processos do sistema que consiste na aquisição do vídeo, deteção e reconhecimento da face, ou seja, toda a entrada, processamento e s'ida de dados do sistema detalhando seus componentes e interações.
+Estes dois diagramas foram utilizados para ilustrar as classes Java que serão implementadas, as interações de seus objetos e os processos do sistema que consiste na aquisição do vídeo, deteção e reconhecimento da face, ou seja, toda a entrada, processamento e saída de dados do sistema detalhando seus componentes e interações.
 
-\section{Considerações Finais}\label{sec:consfin}
+
 Neste capítulo foram abordados os materiais e métodos necessários para o desenvolvimento do sistema de reconhecimento de faces em vídeo, utilizando o algorítimo \textit{EigenFaces}. Pode-se destacar a modelagem que trouxe esclarecimento quanto à estrutura do sistema e ao processo que deve ser percorrido, o desenvolvimento ágil considerado essencial para se ter resultados rápidos para que sejam analisados e iterados num ciclo de desenvolvimento espiral com melhoras a cada iteração. Outro destaque são as bibliotecas OpenCV, JavaCV e Colt, que juntamente com suas documentações facilitaram o processo de implementação do algorítimo \textit{EigenFaces} e o desenvolvimento do sistema como um todo e por fim, o sistema GIT que grava e assegura cada etapa do processo de escrita da monografia e do cógido.
 
 

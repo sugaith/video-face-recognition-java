@@ -4,6 +4,7 @@
 \setlength {\cftchapterindent }{\cftlastnumwidth } \setlength {\cftchapternumwidth }{2em}
 \setlength {\cftchapterindent }{\cftlastnumwidth } \setlength {\cftchapternumwidth }{2em}
 \setlength {\cftchapterindent }{\cftlastnumwidth } \setlength {\cftchapternumwidth }{2em}
+\setlength {\cftchapterindent }{\cftlastnumwidth } \setlength {\cftchapternumwidth }{2em}
 \setlength {\cftchapterindent }{0em} \setlength {\cftchapternumwidth }{\cftlastnumwidth }
 \contentsline {chapter}{\chapternumberline {1}\MakeTextUppercase {INTRODU\IeC {\c C}\IeC {\~A}O}}{12}{chapter.1}
 \contentsline {section}{\numberline {1.1}Breve Hist\IeC {\'o}ria}{12}{section.1.1}
@@ -14,49 +15,46 @@
 \contentsline {subsection}{\numberline {1.3.1}Objetivos Espec\IeC {\'\i }ficos}{17}{subsection.1.3.1}
 \contentsline {section}{\numberline {1.4}Justificativa}{18}{section.1.4}
 \setlength {\cftchapterindent }{0em} \setlength {\cftchapternumwidth }{\cftlastnumwidth }
-\contentsline {chapter}{\chapternumberline {2}\MakeTextUppercase {REVIS\IeC {\~A}O BIBLIOGR\IeC {\'A}FICA}}{21}{chapter.2}
-\contentsline {section}{\numberline {2.1}Conceitos de Aquisi\IeC {\c c}\IeC {\~a}o e Processamento de Imagens}{21}{section.2.1}
-\contentsline {subsection}{\numberline {2.1.1}Imagem Digital}{21}{subsection.2.1.1}
-\contentsline {subsection}{\numberline {2.1.2}Formato PNG}{23}{subsection.2.1.2}
-\contentsline {subsection}{\numberline {2.1.3}V\IeC {\'\i }deo Digital}{23}{subsection.2.1.3}
-\contentsline {subsection}{\numberline {2.1.4}Aquisi\IeC {\c c}\IeC {\~a}o da Imagem e de V\IeC {\'\i }deo}{24}{subsection.2.1.4}
-\contentsline {subsection}{\numberline {2.1.5}Processamento da Imagem}{24}{subsection.2.1.5}
-\contentsline {subsubsection}{\numberline {2.1.5.1}Convers\IeC {\~a}o em Escala de Cinza}{25}{subsubsection.2.1.5.1}
-\contentsline {subsubsection}{\numberline {2.1.5.2}Escalonamento}{27}{subsubsection.2.1.5.2}
-\contentsline {subsubsection}{\numberline {2.1.5.3}Equaliza\IeC {\c c}\IeC {\~a}o de Histograma}{28}{subsubsection.2.1.5.3}
-\contentsline {subsubsection}{\numberline {2.1.5.4}Segmenta\IeC {\c c}\IeC {\~a}o}{29}{subsubsection.2.1.5.4}
-\contentsline {subsubsection}{\numberline {2.1.5.5}Classifica\IeC {\c c}\IeC {\~a}o}{29}{subsubsection.2.1.5.5}
-\contentsline {section}{\numberline {2.2}Detec\IeC {\c c}\IeC {\~a}o de Faces com Classificadores Haar}{29}{section.2.2}
-\contentsline {subsection}{\numberline {2.2.1}Os Classificadores Haar (\textit {Haar Features}) }{30}{subsection.2.2.1}
-\contentsline {subsection}{\numberline {2.2.2}Algoritmo Viola-Jones (\textit {Haar Cascades Classifier}) }{31}{subsection.2.2.2}
-\contentsline {section}{\numberline {2.3}PROCESSO DA AN\IeC {\'A}LISE DE COMPONENTES PRINCIPAIS (ACP) OU \textit {EIGENFACES} }{33}{section.2.3}
-\contentsline {subsection}{\numberline {2.3.1}O C\IeC {\'a}lculo da An\IeC {\'a}lise de Componentes Principais (ACP)}{35}{subsection.2.3.1}
-\contentsline {subsubsection}{\numberline {2.3.1.1}Fase de Treinamento}{36}{subsubsection.2.3.1.1}
-\contentsline {subsubsection}{\numberline {2.3.1.2}O Reconhecimento}{40}{subsubsection.2.3.1.2}
-\contentsline {section}{\numberline {2.4}Considera\IeC {\c c}\IeC {\~o}es Finais}{40}{section.2.4}
+\contentsline {chapter}{\chapternumberline {2}\MakeTextUppercase {REVIS\IeC {\~A}O BIBLIOGR\IeC {\'A}FICA}}{22}{chapter.2}
+\contentsline {section}{\numberline {2.1}Conceitos de Aquisi\IeC {\c c}\IeC {\~a}o e Processamento de Imagens}{22}{section.2.1}
+\contentsline {subsection}{\numberline {2.1.1}Imagem Digital}{22}{subsection.2.1.1}
+\contentsline {subsection}{\numberline {2.1.2}Formato PNG}{24}{subsection.2.1.2}
+\contentsline {subsection}{\numberline {2.1.3}V\IeC {\'\i }deo Digital}{24}{subsection.2.1.3}
+\contentsline {subsection}{\numberline {2.1.4}Aquisi\IeC {\c c}\IeC {\~a}o da Imagem e de V\IeC {\'\i }deo}{25}{subsection.2.1.4}
+\contentsline {subsection}{\numberline {2.1.5}Processamento da Imagem}{25}{subsection.2.1.5}
+\contentsline {subsubsection}{\numberline {2.1.5.1}Convers\IeC {\~a}o em Escala de Cinza}{26}{subsubsection.2.1.5.1}
+\contentsline {subsubsection}{\numberline {2.1.5.2}Escalonamento}{28}{subsubsection.2.1.5.2}
+\contentsline {subsubsection}{\numberline {2.1.5.3}Equaliza\IeC {\c c}\IeC {\~a}o de Histograma}{29}{subsubsection.2.1.5.3}
+\contentsline {subsubsection}{\numberline {2.1.5.4}Segmenta\IeC {\c c}\IeC {\~a}o}{30}{subsubsection.2.1.5.4}
+\contentsline {subsubsection}{\numberline {2.1.5.5}Classifica\IeC {\c c}\IeC {\~a}o}{30}{subsubsection.2.1.5.5}
+\contentsline {section}{\numberline {2.2}Detec\IeC {\c c}\IeC {\~a}o de Faces com Classificadores Haar}{30}{section.2.2}
+\contentsline {subsection}{\numberline {2.2.1}Os Caracter\IeC {\'\i }sticas Haar (\textit {Haar Features}) }{31}{subsection.2.2.1}
+\contentsline {subsection}{\numberline {2.2.2}Algoritmo Viola-Jones (\textit {Haar Cascades Classifier}) }{32}{subsection.2.2.2}
+\contentsline {section}{\numberline {2.3}PROCESSO DA AN\IeC {\'A}LISE DE COMPONENTES PRINCIPAIS (ACP) OU \textit {EIGENFACES} }{34}{section.2.3}
+\contentsline {subsection}{\numberline {2.3.1}O C\IeC {\'a}lculo da An\IeC {\'a}lise de Componentes Principais (ACP)}{36}{subsection.2.3.1}
+\contentsline {subsubsection}{\numberline {2.3.1.1}Fase de Treinamento}{37}{subsubsection.2.3.1.1}
+\contentsline {subsubsection}{\numberline {2.3.1.2}O Reconhecimento}{41}{subsubsection.2.3.1.2}
 \setlength {\cftchapterindent }{0em} \setlength {\cftchapternumwidth }{\cftlastnumwidth }
-\contentsline {chapter}{\chapternumberline {3}\MakeTextUppercase {MATERIAIS E M\IeC {\'E}TODOS}}{41}{chapter.3}
-\contentsline {section}{\numberline {3.1}Materiais}{41}{section.3.1}
-\contentsline {subsection}{\numberline {3.1.1}Hardwares}{41}{subsection.3.1.1}
-\contentsline {subsection}{\numberline {3.1.2}Softwares}{41}{subsection.3.1.2}
-\contentsline {subsubsection}{\numberline {3.1.2.1}Linguagem Java}{42}{subsubsection.3.1.2.1}
-\contentsline {subsubsection}{\numberline {3.1.2.2}Biblioteca OpenCV, JavaCV e JavaCPP}{42}{subsubsection.3.1.2.2}
+\contentsline {chapter}{\chapternumberline {3}\MakeTextUppercase {MATERIAIS E M\IeC {\'E}TODOS}}{42}{chapter.3}
+\contentsline {section}{\numberline {3.1}Materiais}{42}{section.3.1}
+\contentsline {subsection}{\numberline {3.1.1}Hardwares}{42}{subsection.3.1.1}
+\contentsline {subsection}{\numberline {3.1.2}Softwares}{42}{subsection.3.1.2}
+\contentsline {subsubsection}{\numberline {3.1.2.1}Linguagem Java}{43}{subsubsection.3.1.2.1}
+\contentsline {subsubsection}{\numberline {3.1.2.2}Biblioteca OpenCV, JavaCV e JavaCPP}{43}{subsubsection.3.1.2.2}
 \contentsline {subsubsection}{\numberline {3.1.2.3}Biblioteca Colt}{45}{subsubsection.3.1.2.3}
-\contentsline {subsubsection}{\numberline {3.1.2.4}NetBeans IDE}{45}{subsubsection.3.1.2.4}
-\contentsline {subsubsection}{\numberline {3.1.2.5}LaTex e TeXstudio}{45}{subsubsection.3.1.2.5}
-\contentsline {subsubsection}{\numberline {3.1.2.6}Sistema GIT}{46}{subsubsection.3.1.2.6}
-\contentsline {subsubsection}{\numberline {3.1.2.7}Sistemas Linux e Windows}{46}{subsubsection.3.1.2.7}
+\contentsline {subsubsection}{\numberline {3.1.2.4}NetBeans IDE}{46}{subsubsection.3.1.2.4}
+\contentsline {subsubsection}{\numberline {3.1.2.5}Sistema GIT}{46}{subsubsection.3.1.2.5}
+\contentsline {subsubsection}{\numberline {3.1.2.6}Sistemas Linux e Windows}{46}{subsubsection.3.1.2.6}
 \contentsline {section}{\numberline {3.2}M\IeC {\'e}todos}{46}{section.3.2}
 \contentsline {subsection}{\numberline {3.2.1}M\IeC {\'e}todo Experimental}{46}{subsection.3.2.1}
-\contentsline {subsection}{\numberline {3.2.2}Desenvolvimento \IeC {\'A}gil}{46}{subsection.3.2.2}
+\contentsline {subsection}{\numberline {3.2.2}Desenvolvimento \IeC {\'A}gil}{47}{subsection.3.2.2}
 \contentsline {subsubsection}{\numberline {3.2.2.1}XP (\textit {eXtremeProgramming})}{47}{subsubsection.3.2.2.1}
 \contentsline {subsection}{\numberline {3.2.3}Modelagem UML}{47}{subsection.3.2.3}
-\contentsline {section}{\numberline {3.3}Considera\IeC {\c c}\IeC {\~o}es Finais}{48}{section.3.3}
 \setlength {\cftchapterindent }{0em} \setlength {\cftchapternumwidth }{\cftlastnumwidth }
 \contentsline {chapter}{\chapternumberline {4}\MakeTextUppercase {IMPLEMENTA\IeC {\c C}\IeC {\~A}O}}{49}{chapter.4}
 \contentsline {section}{\numberline {4.1}An\IeC {\'a}lise de Requisitos}{49}{section.4.1}
 \contentsline {section}{\numberline {4.2}Diagrama de Pacotes}{50}{section.4.2}
-\contentsline {section}{\numberline {4.3}Diagrama de Classes - Pacote \textit {\textbf {gui}}}{50}{section.4.3}
+\contentsline {section}{\numberline {4.3}Diagrama de Classes - Pacote \textit {\textbf {gui}}}{51}{section.4.3}
 \contentsline {section}{\numberline {4.4}Diagrama de Classes - Pacote \textit {\textbf {eigenfaces}}}{53}{section.4.4}
 \contentsline {section}{\numberline {4.5}Diagrama de Classes - Pacote \textit {\textbf {utils}}}{56}{section.4.5}
 \contentsline {section}{\numberline {4.6}Implementa\IeC {\c c}\IeC {\~a}o do C\IeC {\'o}digo}{58}{section.4.6}
@@ -65,7 +63,6 @@
 \contentsline {subsection}{\numberline {4.6.3}Fase de Treinamento}{60}{subsection.4.6.3}
 \contentsline {subsection}{\numberline {4.6.4}Fase de Reconhecimento}{61}{subsection.4.6.4}
 \contentsline {subsection}{\numberline {4.6.5}Defini\IeC {\c c}\IeC {\~a}o de Sucesso do Reconhecimento}{63}{subsection.4.6.5}
-\contentsline {section}{\numberline {4.7}Considera\IeC {\c c}\IeC {\~o}es Finais}{64}{section.4.7}
 \setlength {\cftchapterindent }{0em} \setlength {\cftchapternumwidth }{\cftlastnumwidth }
 \contentsline {chapter}{\chapternumberline {5}\MakeTextUppercase {TESTES E AN\IeC {\'A}LISE DOS RESULTADOS}}{65}{chapter.5}
 \contentsline {section}{\numberline {5.1}Ambiente de Testes}{65}{section.5.1}
@@ -80,4 +77,4 @@
 \contentsline {section}{\numberline {6.2}SUGEST\IeC {\~O}ES PARA FUTUROS TRABALHOS}{73}{section.6.2}
 \vspace {\cftbeforechapterskip }
 \setlength {\cftchapterindent }{\cftlastnumwidth } \setlength {\cftchapternumwidth }{2em}
-\contentsline {chapter}{\uppercase {REFER{\^ E}NCIAS}}{75}{section*.9}
+\contentsline {chapter}{\MakeTextUppercase {REFER{\^ E}NCIAS}}{75}{section*.11}

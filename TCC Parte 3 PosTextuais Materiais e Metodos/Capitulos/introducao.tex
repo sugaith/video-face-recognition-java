@@ -11,9 +11,9 @@ As pesquisas sobre o assunto envolvem conhecimentos de disciplinas como neuroci�
 
 \section{Breve História}\label{sec:historia}
 
-O reconhecimento automático de faces é um conceito relativamente novo. Desenvolvido na década de 60, o primeiro sistema semi-automático requeria que um administrador do sistema localizasse pontos da imagem como olhos, boca, nariz,  etc, e depois um algoritmos comparava as distâncias entre estes pontos em diferentes fotos para dar um resultado de comparação \cite{nstc_homeland}. Nos anos 80, algoritmos simples foram criados para automatizar este processo. Em 1988, Kirby e Sirovich aplicaram Análise de Componente Principal, uma técnica padrão de estatística, para o problema de reconhecimento de face. Este foi considerado um marco pois mostrou que menos que 100 valores são requeridos para codificar uma imagem de uma face normalizada e bem posicionada \cite{nstc_homeland}. Em 1991, Turk e Pentland descobriram que erro residual das comparações feitas com a técnica \textit{eigenfaces} poderiam ser usadas para detectar faces em uma imagem - uma descoberta que permitiu detecção em tempo-real. 
+O reconhecimento automático de faces é um conceito relativamente novo. Desenvolvido na década de 60, o primeiro sistema semi-automático requeria que um administrador do sistema localizasse pontos da imagem como olhos, boca, nariz,  etc, e depois um algoritmos comparava as distâncias entre estes pontos em diferentes fotos para dar um resultado de comparação \cite{nstc_homeland}. Nos anos 80, algoritmos simples foram criados para automatizar este processo. Em 1988, Kirby e Sirovich aplicaram Análise de Componente Principal, uma técnica padrão de estatística, para o problema de reconhecimento de face. Este foi considerado um marco, pois mostrou que menos que 100 valores são requeridos para codificar uma imagem de uma face normalizada e bem posicionada \cite{nstc_homeland}. Em 1991, Turk e Pentland descobriram que o erro residual das comparações feitas com a técnica \textit{eigenfaces} poderiam ser usadas para detectar faces em uma imagem - uma descoberta que permitiu detecção em tempo-real. 
 
-Apesar desta abordagem ser imitado a posição da face, qualidade da imagem e fatores de ambiente, ela criou um significante interesse no desenvolvimento de tecnologias automáticas para reconhecimento \cite{nstc_homeland}. A tecnologia capturou a atenção da mídia e do público em janeiro de 2001 no evento \textit{SuperBowl}, que capturou rostos das imagens das câmeras de vigilância e comparou com fotos digitais "3x4" de uma base de dados apresentando rostos similares \cite{nstc_homeland}.
+Apesar desta abordagem ter limitações em considerando a posição da face, qualidade da imagem e fatores de ambiente, ela criou um significante interesse no desenvolvimento de tecnologias automáticas para reconhecimento \cite{nstc_homeland}. A tecnologia capturou a atenção da mídia e do público em janeiro de 2001 no evento \textit{SuperBowl}, que capturou rostos das imagens das câmeras de vigilância e comparou com fotos digitais "3x4"\ de uma base de dados apresentando rostos similares \cite{nstc_homeland}.
 
 Hoje, o reconhecimento de faces está sendo usado no combate à fraude de passaportes e cédulas de identidade onde a foto é padronizada com ambiente controlado, aplicativos de celulares e redes sociais para entretenimento, enquanto que grandes governos e organizações patrocinam, incentivam e desafiam empresas para conseguir o algoritmo ideal de reconhecimento \cite{nyu_ccpr_frt}.
 
@@ -21,7 +21,7 @@ Hoje, o reconhecimento de faces está sendo usado no combate à fraude de passap
 
 \section{Problemática}\label{sec:problematica}
 
-A face é um objeto tridimensional (3D) iluminado por fontes de luz e envolvida por um fundo (\textit{background}) com “dados arbitrários” (inclusive outras faces). Portanto, a aparência que uma face possui quando projetada para um plano bidimensional (2D) pode variar tremendamente. Na verdade, problemas de iluminação e de segmentação tem sido questões pertinentes no campo da computação gráfica e visual como um todo \cite{tony_columbia}. Sendo assim o primeiro problema a enfrentar para o reconhecimento de faces seria a aquisição e processamento da imagem para que se possa detectar a face. As seções seguinte irão descrever procedimentos com mais detalhes. 
+A face é um objeto tridimensional (3D) iluminado por fontes de luz e envolvida por um fundo (\textit{background}) com “dados arbitrários” (inclusive outras faces). Portanto, a aparência que uma face possui quando projetada para um plano bidimensional (2D) pode variar tremendamente \cite{tony_columbia}. Na verdade, problemas de iluminação e de segmentação tem sido questões pertinentes no campo da computação gráfica e visual como um todo \cite{tony_columbia}. Sendo assim o primeiro problema a enfrentar para o reconhecimento de faces seria a aquisição e processamento da imagem para que se possa detectar a face. As seções seguinte irão descrever os procedimentos com mais detalhes. 
 
 
 \subsection{Detecção e Aquisição da Face}\label{subsec:aquisicao_imagem}
@@ -48,17 +48,17 @@ Na \autoref{ex_variacao_fig}, lista-se exemplos de alguns destes desafios em ima
 \end{enumerate}
 
 
-A detecção contínua de faces em vídeos (diz-se \textit{tracking} ou rastreamento) segue a mesma lógica e tem os mesmo problemas de aquisições de faces estáticas. O rastreamento nada mais é do que a detecção contínua da face em \textit{frames} advindos de um vídeo, com um forte problema adicional de que deve-se manter a usabilidade do sistema em um computador contemporâneo de baixa a média performance. Em outras palavras, o processamento envolvido deve ser eficiente o bastante considerando o tempo de execução do vídeo (\textit{frames} por segundo) e do sistema e tempo de armazenamento e consulta de dados.
+A detecção contínua de faces em vídeos (diz-se \textit{tracking} ou rastreamento) segue a mesma lógica e tem o mesmo problema de aquisições de faces estáticas. O rastreamento nada mais é do que a detecção contínua da face em \textit{frames} advindos de um vídeo, com um forte problema adicional de que deve-se manter a usabilidade do sistema em um computador contemporâneo de baixa a média desempenho. Em outras palavras, o processamento envolvido deve ser eficiente o bastante considerando o tempo de execução do vídeo (\textit{frames} por segundo) e do sistema e tempo de armazenamento e consulta de dados.
 
-A performance da detecção da face é uma questão-chave no processo de reconhecimento. A detecção de faces pode ser considerada um caso específico da área de detecção de objetos, alcançando confiáveis \cite{stats_face_detection_IEEE}.
+O desempenho da detecção da face é uma questão-chave no processo de reconhecimento. A detecção de faces pode ser considerada um caso específico da área de detecção de objetos, alcançando resultados precidos \cite{stats_face_detection_IEEE}.
 
-Em um trabalho feito em 2003 por \cite{final_project_stanford} na Universidade de Stanford - Califórnia, utilizou-se a técnica \textit{EigenFaces} para detecção, acrescido de algoritmo de identificação de gênero de sexo, com um \textit{Pentium 3} de 700 Mhz e menos de 500 megas de memória, alcançaram resultados que superam 93\% de taxa de sucesso nas condições mais adversas, considerando iluminação e um número grande de faces contidas nas imagens. Outros \textit{benchmarks} mais recentes (2015) apresentam resultados que superam os 97.2\%, como apresentado por \cite{stats_hong_kong}.
+Em um trabalho feito em 2003 por \citeonline{final_project_stanford} na Universidade de Stanford - Califórnia, utilizou-se a técnica \textit{EigenFaces} para detecção, acrescido de algoritmo de identificação de gênero, com um \textit{Pentium 3} de 700 Mhz e menos de 500 MB de memória, alcançaram resultados que superam 93\% de taxa de sucesso nas condições mais adversas, considerando iluminação e um número grande de faces contidas nas imagens. Outros \textit{benchmarks} mais recentes (2015) apresentam resultados que superam os 97,2\%, como apresentado por \cite{stats_hong_kong}.
 
-O problema com estas técnicas relativamente antigas, é que também reconhecem fotos de fotos, ou desenhos de faces como legítimas faces, por vezes até com pontuação bastante para uma verificação de sucesso com uma face real. Outro problema é que estas técnicas nao funciona com qualquer outro ângulo que não seja o frontal.
+O problema com estas técnicas relativamente antigas, é que também reconhecem fotos de fotos, ou desenhos de faces como legítimas faces, por vezes até com pontuação bastante para uma verificação de sucesso com uma face real. Outro problema é que estas técnicas não funcionam com qualquer outro ângulo que não seja o frontal.
 
 Novas técnicas de detecção não-frontais estão sendo implementadas, bem como as de modelagem sub-espacial 3D e comparações com reconhecimento de padrões baseados em aprendizado de máquinas e redes neurais, são fundamentos para os sistemas de reconhecimento de face avançados, capazes de reconhecer não só a face, mas também a estrutura cranial do alvo \cite{3dmodel_fd}. 
 
-Após a face ser identificada e localizada na imagem, para que sirva ao processo de reconhecimento, deve-se recortar esta face da imagem e realizar algumas operações gráficas sobre a mesma. Nesta fase são consideradas atividades de corte da face na região localizada, escalamento e correção de rotação, transformar em escala de cinza, normalizar a imagem para minimizar as condições de ambiente da foto, deixando a face pronta para a próxima faze do processo: o treinamento.
+Após a face ser identificada e localizada na imagem, para que sirva ao processo de reconhecimento, deve-se recortar esta face da imagem e realizar algumas operações gráficas sobre a mesma. Nesta fase são consideradas atividades de corte da face na região localizada, escalamento e correção de rotação, transformar em escala de cinza, normalizar a imagem para minimizar as condições de ambiente da foto, deixando a face pronta para a próxima fase do processo: o treinamento.
 
 
 \subsection{Treinamento e Reconhecimento da Face} \label{subsec:treinrecface}
@@ -77,7 +77,7 @@ Existem várias técnicas e algoritmos de reconhecimento, como \cite{issues_meth
 
 Este trabalho se focará no \textit{EigenFaces}, um algoritmo clássico, famoso por ser pioneiro e objeto de muito estudo, teste e documentação. Os algoritmos convencionais podem ser divididos em duas categorias: caracterização holística ou linear, sendo que \textit{EigenFaces} faz parte da primeira, que por sua vez faz parte de outra subdivisão de métodos de projeção linear chamada Análise de Componentes Principais - \textbf{ACP} (ou no inglês, \textit{Principal Component Analysis} – PCA) \cite{issues_methods_FR}.
 
-Basicamente, o método ACP consiste em tratar a imagem de uma forma uniforme, coletar características da mesma transformando-as em valores numéricos e disponibilizá-las em espaço, que pode ter duas ou mais dimensões. Este processo visa destacar discrepâncias da face, ou seja, padrões de mudança de constaste, de relevo ou sombreamentos, ou diferença de cores. A transformação destes valores manipulados de volta em imagens, cria os chamados \textit{EigenFaces} (Faces de fantasmas, em Alemão), como mostra a \autoref{someeigen} \cite{drmathew_java_programming}.
+Basicamente, o método ACP consiste em tratar a imagem de uma forma uniforme, coletar características da mesma transformando-as em valores numéricos e disponibilizá-las em espaço, que pode ter duas ou mais dimensões. Este processo visa destacar discrepâncias da face, ou seja, padrões de mudança de contraste, de relevo ou sombreamentos, ou diferença de cores. A transformação destes valores manipulados de volta em imagens, cria os chamados \textit{EigenFaces} (Faces de fantasmas, em Alemão), como mostra a \autoref{someeigen} \cite{drmathew_java_programming}.
 
 \begin{figure}[h]
 	\centering
@@ -87,13 +87,13 @@ Basicamente, o método ACP consiste em tratar a imagem de uma forma uniforme, co
 	\label{someeigen}
 \end{figure}
 
-O objetivo é que uma imagem de treinamento possa ser decomposta em uma soma de múltiplas \textit{eigenfaces} medidas e disponibilizadas em uma sequência especial.
+O objetivo é que uma imagem de treinamento possa ser decomposta em uma soma de múltiplas \textit{eigenfaces}, medidas e disponibilizadas em uma sequência especial.
 
-Uma maneira mais simples de representar o relacionamento entre \textit{eigenfaces} e imagens das faces é quem estas faces são disponibilizadas em um espaço multidimensional onde os eixos do plano são as \textit{eigenfaces} \cite{drmathew_java_programming} como ilustra a  \autoref{eigencartesiano}.
+Uma maneira mais simples de representar o relacionamento entre \textit{eigenfaces} e imagens das faces é que estas faces são disponibilizadas em um espaço multidimensional onde os eixos do plano são as \textit{eigenfaces} \cite{drmathew_java_programming}, como ilustra a  \autoref{eigencartesiano}.
 
-Seguindo o proceso de reconhecimento, tendo a nova face representado em valores e disponibilizada em um espaço multidimensional, resta a verificação ou reconhecimento desta nova face.
+Seguindo o proceso de reconhecimento, tendo a nova face representada em valores e disponibilizada em um espaço multidimensional, resta a verificação ou reconhecimento desta nova face.
 
-Para o reconhecimento da face propriamente dito, o mesmo processo do treinamento deve ser repetido e a face representada e disponibilizada no mesmo espaço multidimensional das faces treinadas \cite{drmathew_java_programming}. A distância entre as duas faces representadas espaço multidimensional é medida, e basicamente, quanto menor a distância, maior é a probabilidade das duas imagem possuirem a mesma face. taxa de reconhecimento. Ou seja, uma distância zero entre as duas faces representadas no plano seria uma correspondência perfeita. A \autoref{eigencartesiano} ilustra esta descrição:
+Para o reconhecimento da face propriamente dita, o mesmo processo do treinamento deve ser repetido e a face representada e disponibilizada no mesmo espaço multidimensional das faces treinadas \cite{drmathew_java_programming}. A distância entre as duas faces representada no espaço multidimensional é medida, e basicamente, quanto menor a distância, maior é a probabilidade das duas imagens representarem a mesma face, ou seja, uma distância zero entre as duas faces representadas no plano seria uma correspondência perfeita. A \autoref{eigencartesiano} ilustra esta descrição:
 
 \begin{figure}[h]
 	\centering
@@ -103,12 +103,12 @@ Para o reconhecimento da face propriamente dito, o mesmo processo do treinamento
 	\label{eigencartesiano}
 \end{figure}
 
-Este espaço multidimensional, na prática, pode ser um arquivo binário ou texto, comumente chamado tecnicamente de "\textit{bundle}" (em português, agrupamento).
+Este espaço multidimensional, na prática, pode ser um arquivo binário ou texto, comumente chamado tecnicamente de "\textit{bundle}"\ (em português, agrupamento).
 
 \section{Objetivos}\label{sec:objetivos}
 Este projeto propõe o desenvolvimento de um Sistema de Reconhecimento de Faces em Vídeo utilizando o  \textit{EigenFaces}.
 
-O algoritmo \textit{EigenFaces} será implementado seguindo as instruções e exemplos de código de \cite{drmathew_java_programming}.  
+O algoritmo \textit{EigenFaces} será implementado seguindo as instruções e exemplos de código de \citeonline{drmathew_java_programming}.  
 
 \subsection{Objetivos Específicos}\label{sec:organizacao-trabalho}
 
@@ -117,7 +117,7 @@ O desenvolvimento do sistema se fará na exploração das seguintes fases:
 \begin{itemize}
 	\item Análise das bibliotecas e suas versões para melhor escolha;
 	\item Preparação do ambiente;
-	\item Implementação da interace e manipulação de imagens (e vídeos)  utilizando componentes Java e as bibliotecas gráficas (para  recorte de frames e imagens, aplicação de filtros, mineração de dados da imagem, manipulação de cores, iluminação, normalização, etc);
+	\item Implementação da interace e manipulação de imagens (e vídeos)  utilizando componentes Java e as bibliotecas gráficas (para  recorte de \textit{frames} e imagens, aplicação de filtros, mineração de dados da imagem, manipulação de cores, iluminação, normalização, etc);
 	\item Implementação do algoritmo \textit{EigenFaces};
 	\item Detecção de face em imagens provenientes de câmera;
 	\item Treinamento / reconhecimento de face na imagem;
@@ -125,39 +125,39 @@ O desenvolvimento do sistema se fará na exploração das seguintes fases:
 	\item Realizar uma bateria de testes, e comparar resultados.
 \end{itemize}
 
-O objetivo final é criar um sistema de reconhecimento de faces em vídeo, analisando seus resultados e finalmente disponibilizando todo o trabalho e o código aberto ao público desenvolvedor e acadêmico.
+O objetivo final é criar um sistema de reconhecimento de faces em vídeo, analisando seus resultados e, finalmente, disponibilizando todo o trabalho e o código aberto ao público desenvolvedor e acadêmico.
 
 
 \section{Justificativa} 
 
-O reconhecimento de faces é umas das tecnologias mais estudadas e complexas de hoje em dia. As maiores empresas e governos do planeta estão na corrida para se acercarem aos 100\% de acerto em seus reconhecimentos e governos e organizações como FBI e NSA investem e desafiam os produtores desta tecnologia \cite{nstc_homeland}.
+O reconhecimento de faces é umas das tecnologias mais estudadas e complexas de hoje em dia. As maiores empresas e governos do planeta estão na corrida para se acercarem aos 100\% de acerto em seus reconhecimentos e governos e organizações como FBI (\textit{Federal Bureau of Investigation}) e NSA (\textit{National Security Agency})  investem e desafiam os produtores desta tecnologia \cite{nstc_homeland}.
 
-Eis na \autoref{tabelaempresasrecog} algumas das empresas quem produzem tecnologias de reconhecimento de ponta:
+Consta na \autoref{tabelaempresasrecog} algumas das empresas que produzem tecnologias de reconhecimento:
 
 
 \begin{table}[h]
 	\centering
 	\caption{Empresas que produzem tecnologias de reconhecimento de faces}
-	\includegraphics[width=.6\textwidth]{tabelaEmpresasRecog}
-	\fonte{Adaptado de \cite{nstc_homeland}}
+	\includegraphics[width=.85\textwidth]{tabelaEmpresasRecog}
+	\fonte{Adaptado de \citeonline{nstc_homeland}}
 	\label{tabelaempresasrecog}
 \end{table}
 
-As pioneiras estão avançando exponencialmente no assuntos e empresas a Google e a Baidu já conseguem taxas de erros menores do que as alcançadas por seres humanos, com rapidez de verificação sem precedentes, como ilustra a \autoref{statstoprecog}.
+As pioneiras estão avançando exponencialmente no assunto e empresas como Google e Baidu já conseguem taxas de erros menores do que as alcançadas por seres humanos, com rapidez de verificação sem precedentes, como ilustra o \autoref{statstoprecog}.
 
 \vspace*{10cm}
-\begin{figure}[h]
+\begin{grafico}[h]
 	\centering
 	\includegraphics[width=.9\textwidth]{stats_toprecog}
 	\caption{Comparação de sistemas de reconhecimento de faces em percentagem (\%) de erros}
 	\fonte{Adaptado de \cite{stats_economy_compass_2017}}
 	\label{statstoprecog}
-\end{figure}
+\end{grafico}
 
 
-A \autoref{statstoprecog} mostra que a tecnologia da empresa chinesa Baidu está liderando a corrida com apenas 0.23\% de taxa de erro, contra 0.37\% da empresa americana Google \cite{stats_economy_compass_2017}. Ambas já conseguiram ultrapassar as taxas alcançadas por seres humanos que é de 0.8\% de erros. Como mostra \cite{stats_economy_compass_2017}, os humanos em geral não são uma fonte 100\% precisa para reconhecimento de faces. Humanos podendo facilmente confundir pessoas, ou não reconhecê-las pela idade ou por mudança de aparência ou estilo, ou até esquecê-las.
+A \autoref{statstoprecog} mostra que a tecnologia da empresa chinesa Baidu está liderando a corrida com apenas 0.23\% de taxa de erro, contra 0.37\% da empresa americana Google \cite{stats_economy_compass_2017}. Ambas já conseguiram ultrapassar as taxas alcançadas por seres humanos que é de 0.8\% de erros. Como mostra \citeonline{stats_economy_compass_2017}, os humanos, em geral, não são uma fonte 100\% precisa para reconhecimento de faces. Humanos podem facilmente confundir pessoas, ou não reconhecê-las pela idade ou por mudança de aparência ou estilo, ou até esquecê-las.
 
-No final de 2016 a Baidu implantou seu sistema em sua histórica “Cidade de Água”, substituindo totalmente o sistema de cartões e \textit{tickets} com 99\% de sucesso \cite{baidiu_theverge}, e já estão no processo de implantação em outros parques temáticos. Policiais chineses estão usando óculos de reconhecimento que verificam instantaneamente as faces de turistas e procurados. Com os armazenamentos e reconhecimentos dominando aplicativos de celulares e redes sociais, e a polícia com grande interesse forense no assunto, e outras infinitas possibilidades, obviamente esta tecnologia fará parte do dia a dia do nosso futuro, sendo assim é necessário estuda-la, entendê-la e desenvolvê-la.
+No final de 2016 a Baidu implantou seu sistema em sua histórica “Cidade de Água”, substituindo totalmente o sistema de cartões e \textit{tickets} com 99\% de sucesso \cite{baidiu_theverge}, e já estão no processo de implantação em outros parques temáticos. Policiais chineses estão usando óculos de reconhecimento que verificam, instantaneamente, as faces de turistas e procurados. Com os armazenamentos e reconhecimentos dominando aplicativos de celulares e redes sociais, e a polícia com grande interesse forense no assunto, e outras infinitas possibilidades, obviamente esta tecnologia fará parte do dia a dia do nosso futuro. Sendo assim é necessário estudá-la, entendê-la e desenvolvê-la.
 
 
 

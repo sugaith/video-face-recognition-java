@@ -1,37 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="418e7f84-7618-4fe2-a97b-b4b68e45d5f1" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/eigenfaces/eigen_0.png" beforeDir="false" afterPath="$PROJECT_DIR$/eigenfaces/eigen_0.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/eigenfaces/eigen_1.png" beforeDir="false" afterPath="$PROJECT_DIR$/eigenfaces/eigen_1.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/eigenfaces/eigen_2.png" beforeDir="false" afterPath="$PROJECT_DIR$/eigenfaces/eigen_2.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/eigenfaces/eigen_3.png" beforeDir="false" afterPath="$PROJECT_DIR$/eigenfaces/eigen_3.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/eigenfaces/eigen_4.png" beforeDir="false" afterPath="$PROJECT_DIR$/eigenfaces/eigen_4.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/eigenfaces/eigen_5.png" beforeDir="false" afterPath="$PROJECT_DIR$/eigenfaces/eigen_5.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/eigenfaces/eigen_6.png" beforeDir="false" afterPath="$PROJECT_DIR$/eigenfaces/eigen_6.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/eigenspace.cache" beforeDir="false" afterPath="$PROJECT_DIR$/eigenspace.cache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/gui/FrameCadastroDeFace.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/gui/FrameCadastroDeFace.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../TCC Parte 3 PosTextuais Materiais e Metodos/Apresentacao/agradecimentos.tex" beforeDir="false" afterPath="$PROJECT_DIR$/../TCC Parte 3 PosTextuais Materiais e Metodos/Apresentacao/agradecimentos.tex" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../TCC Parte 3 PosTextuais Materiais e Metodos/Apresentacao/folha_aprovacao.tex" beforeDir="false" afterPath="$PROJECT_DIR$/../TCC Parte 3 PosTextuais Materiais e Metodos/Apresentacao/folha_aprovacao.tex" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../TCC Parte 3 PosTextuais Materiais e Metodos/Capitulos/implementacao.tex" beforeDir="false" afterPath="$PROJECT_DIR$/../TCC Parte 3 PosTextuais Materiais e Metodos/Capitulos/implementacao.tex" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../TCC Parte 3 PosTextuais Materiais e Metodos/Capitulos/introducao.tex" beforeDir="false" afterPath="$PROJECT_DIR$/../TCC Parte 3 PosTextuais Materiais e Metodos/Capitulos/introducao.tex" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../TCC Parte 3 PosTextuais Materiais e Metodos/Capitulos/materiais_metodo.tex" beforeDir="false" afterPath="$PROJECT_DIR$/../TCC Parte 3 PosTextuais Materiais e Metodos/Capitulos/materiais_metodo.tex" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../TCC Parte 3 PosTextuais Materiais e Metodos/Capitulos/resultados.tex" beforeDir="false" afterPath="$PROJECT_DIR$/../TCC Parte 3 PosTextuais Materiais e Metodos/Capitulos/resultados.tex" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../TCC Parte 3 PosTextuais Materiais e Metodos/Capitulos/revisa_bib.tex" beforeDir="false" afterPath="$PROJECT_DIR$/../TCC Parte 3 PosTextuais Materiais e Metodos/Capitulos/revisa_bib.tex" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../TCC Parte 3 PosTextuais Materiais e Metodos/Configuracoes/citacoes.bib" beforeDir="false" afterPath="$PROJECT_DIR$/../TCC Parte 3 PosTextuais Materiais e Metodos/Configuracoes/citacoes.bib" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../TCC Parte 3 PosTextuais Materiais e Metodos/Imagens/grafab-fase12.png" beforeDir="false" afterPath="$PROJECT_DIR$/../TCC Parte 3 PosTextuais Materiais e Metodos/Imagens/grafab-fase12.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../TCC Parte 3 PosTextuais Materiais e Metodos/Imagens/grafab-fase3.png" beforeDir="false" afterPath="$PROJECT_DIR$/../TCC Parte 3 PosTextuais Materiais e Metodos/Imagens/grafab-fase3.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../TCC Parte 3 PosTextuais Materiais e Metodos/modelo.aux" beforeDir="false" afterPath="$PROJECT_DIR$/../TCC Parte 3 PosTextuais Materiais e Metodos/modelo.aux" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../TCC Parte 3 PosTextuais Materiais e Metodos/modelo.bbl" beforeDir="false" afterPath="$PROJECT_DIR$/../TCC Parte 3 PosTextuais Materiais e Metodos/modelo.bbl" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../TCC Parte 3 PosTextuais Materiais e Metodos/modelo.blg" beforeDir="false" afterPath="$PROJECT_DIR$/../TCC Parte 3 PosTextuais Materiais e Metodos/modelo.blg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../TCC Parte 3 PosTextuais Materiais e Metodos/modelo.lof" beforeDir="false" afterPath="$PROJECT_DIR$/../TCC Parte 3 PosTextuais Materiais e Metodos/modelo.lof" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../TCC Parte 3 PosTextuais Materiais e Metodos/modelo.log" beforeDir="false" afterPath="$PROJECT_DIR$/../TCC Parte 3 PosTextuais Materiais e Metodos/modelo.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../TCC Parte 3 PosTextuais Materiais e Metodos/modelo.lot" beforeDir="false" afterPath="$PROJECT_DIR$/../TCC Parte 3 PosTextuais Materiais e Metodos/modelo.lot" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../TCC Parte 3 PosTextuais Materiais e Metodos/modelo.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/../TCC Parte 3 PosTextuais Materiais e Metodos/modelo.pdf" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../TCC Parte 3 PosTextuais Materiais e Metodos/modelo.synctex.gz" beforeDir="false" afterPath="$PROJECT_DIR$/../TCC Parte 3 PosTextuais Materiais e Metodos/modelo.synctex.gz" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../TCC Parte 3 PosTextuais Materiais e Metodos/modelo.toc" beforeDir="false" afterPath="$PROJECT_DIR$/../TCC Parte 3 PosTextuais Materiais e Metodos/modelo.toc" afterDir="false" />
-    </list>
+    <list default="true" id="418e7f84-7618-4fe2-a97b-b4b68e45d5f1" name="Default Changelist" comment="" />
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -96,24 +66,24 @@
       <usages-collector id="statistics.lifecycle.project">
         <counts>
           <entry key="project.closed" value="6" />
-          <entry key="project.open.time.5" value="4" />
+          <entry key="project.open.time.5" value="5" />
           <entry key="project.open.time.6" value="2" />
           <entry key="project.open.time.7" value="1" />
-          <entry key="project.opened" value="7" />
+          <entry key="project.opened" value="8" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
         <counts>
           <entry key="class" value="3" />
           <entry key="form" value="1" />
-          <entry key="java" value="21" />
+          <entry key="java" value="22" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
           <entry key="CLASS" value="3" />
           <entry key="GUI_DESIGNER_FORM" value="1" />
-          <entry key="JAVA" value="19" />
+          <entry key="JAVA" value="20" />
           <entry key="Scratch" value="2" />
         </counts>
       </usages-collector>
@@ -134,25 +104,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/eigenfaces/EigenSpace.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1020">
-              <caret line="79" column="22" selection-start-line="79" selection-start-column="22" selection-end-line="79" selection-end-column="22" />
-              <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="e#1109#1110#0" expanded="true" />
-                <element signature="e#1145#1146#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/gui/PanelCadastroDeFace.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="159">
-              <caret line="602" column="33" selection-start-line="602" selection-start-column="33" selection-end-line="602" selection-end-column="33" />
+            <state relative-caret-position="542">
+              <caret line="220" column="27" selection-start-line="220" selection-start-column="27" selection-end-line="220" selection-end-column="27" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -160,14 +116,24 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
+        <entry file="jar://C:/Program Files/Java/jdk1.8.0_181/src.zip!/java/awt/Component.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="311">
+              <caret line="3309" column="16" selection-start-line="3309" selection-start-column="16" selection-end-line="3309" selection-end-column="16" />
+              <folding>
+                <element signature="e#114480#114481#0" expanded="true" />
+                <element signature="e#114527#114528#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/gui/FrameCadastroDeFace.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="306">
-              <caret line="32" column="25" lean-forward="true" selection-start-line="32" selection-start-column="25" selection-end-line="32" selection-end-column="25" />
-              <folding>
-                <element signature="e#2677#2766#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="17">
+              <caret line="32" column="25" selection-start-line="32" selection-start-column="25" selection-end-line="32" selection-end-column="25" />
             </state>
           </provider>
         </entry>
@@ -217,7 +183,7 @@
         <entry file="file://$PROJECT_DIR$/src/utils/FileUtils.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="544">
-              <caret line="37" column="34" selection-start-line="37" selection-start-column="34" selection-end-line="37" selection-end-column="34" />
+              <caret line="147" column="23" selection-start-line="147" selection-start-column="23" selection-end-line="147" selection-end-column="23" />
             </state>
           </provider>
         </entry>
@@ -330,6 +296,9 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
+      <pane id="AndroidView" />
+      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -364,9 +333,6 @@
           <select />
         </subPane>
       </pane>
-      <pane id="PackagesPane" />
-      <pane id="AndroidView" />
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -468,8 +434,9 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="54" y="-8" width="1874" height="1096" extended-state="6" />
+    <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.4189189" visible="true" weight="0.17585446" />
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.4189189" visible="true" weight="0.17750826" />
       <window_info id="Image Layers" order="1" />
       <window_info id="Designer" order="2" />
       <window_info id="UI Designer" order="3" />
@@ -494,7 +461,7 @@
       <window_info anchor="right" id="Capture Analysis" order="5" />
       <window_info anchor="right" id="Theme Preview" order="6" />
       <window_info anchor="right" id="Palette&#9;" order="7" />
-      <window_info anchor="right" id="Structure" order="8" sideWeight="0.5810811" visible="true" weight="0.14167586" />
+      <window_info active="true" anchor="right" id="Structure" order="8" sideWeight="0.5810811" visible="true" weight="0.14167586" />
       <window_info anchor="right" id="Maven Projects" order="9" sideWeight="0.4992248" weight="0.3296582" />
       <window_info anchor="right" id="simpleUML" order="10" show_stripe_button="false" weight="0.50689465" />
     </layout>
@@ -643,17 +610,8 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/eigenfaces/EigenSpace.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1020">
-          <caret line="79" column="22" selection-start-line="79" selection-start-column="22" selection-end-line="79" selection-end-column="22" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#1109#1110#0" expanded="true" />
-            <element signature="e#1145#1146#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
+    <entry file="file://$PROJECT_DIR$/src/gui/FrameCadastroDeFace.form">
+      <provider selected="true" editor-type-id="ui-designer" />
     </entry>
     <entry file="file://$APPLICATION_CONFIG_DIR$/scratches/scratch.java">
       <provider selected="true" editor-type-id="text-editor">
@@ -690,13 +648,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/utils/FileUtils.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="544">
-          <caret line="37" column="34" selection-start-line="37" selection-start-column="34" selection-end-line="37" selection-end-column="34" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/utils/ImageUtils.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1581">
@@ -727,25 +678,49 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/gui/PanelCadastroDeFace.java">
+    <entry file="file://$PROJECT_DIR$/src/utils/FileUtils.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="159">
-          <caret line="602" column="33" selection-start-line="602" selection-start-column="33" selection-end-line="602" selection-end-column="33" />
+        <state relative-caret-position="544">
+          <caret line="147" column="23" selection-start-line="147" selection-start-column="23" selection-end-line="147" selection-end-column="23" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/gui/FrameCadastroDeFace.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="17">
+          <caret line="32" column="25" selection-start-line="32" selection-start-column="25" selection-end-line="32" selection-end-column="25" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/eigenfaces/EigenSpace.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1105">
+          <caret line="79" column="22" selection-start-line="79" selection-start-column="22" selection-end-line="79" selection-end-column="22" />
           <folding>
             <element signature="imports" expanded="true" />
+            <element signature="e#1109#1110#0" expanded="true" />
+            <element signature="e#1145#1146#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/gui/FrameCadastroDeFace.form">
-      <provider selected="true" editor-type-id="ui-designer" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/gui/FrameCadastroDeFace.java">
+    <entry file="jar://C:/Program Files/Java/jdk1.8.0_181/src.zip!/java/awt/Component.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="306">
-          <caret line="32" column="25" lean-forward="true" selection-start-line="32" selection-start-column="25" selection-end-line="32" selection-end-column="25" />
+        <state relative-caret-position="311">
+          <caret line="3309" column="16" selection-start-line="3309" selection-start-column="16" selection-end-line="3309" selection-end-column="16" />
           <folding>
-            <element signature="e#2677#2766#0" expanded="true" />
+            <element signature="e#114480#114481#0" expanded="true" />
+            <element signature="e#114527#114528#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/gui/PanelCadastroDeFace.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="542">
+          <caret line="220" column="27" selection-start-line="220" selection-start-column="27" selection-end-line="220" selection-end-column="27" />
+          <folding>
+            <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
