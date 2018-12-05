@@ -121,7 +121,14 @@ No Método \textbf{Máximos Canal}, considerando uma imagem RBG, cada pixel "\te
 \end{figure}	
 
 	
-No Método de \textbf{Conversão Clássico} utiliza-se de "pesos" sobre os valores RGB para calcular a resultante "$r$"\ pela equação $r = 0.29R + 0.59G + 0.11B$. A \autoref{conversao_classica} ilustra o resultado do uso deste método. 
+No Método de \textbf{Conversão Clássico} utiliza-se de "pesos" sobre os valores RGB para calcular a resultante "$r$"\ pela equação
+
+ \begin{equation}
+	 r = 0.29R + 0.59G + 0.11B. 
+ \end{equation}
+
+ 
+ A \autoref{conversao_classica} ilustra o resultado do uso deste método. 
 \begin{figure}[h]
 	\centering
 	\includegraphics[width=.4\textwidth]{conversao_classica}
@@ -201,9 +208,25 @@ Em visão computacional, segmentação se refere ao processo de recortar uma ima
 
 Como resultado, cada um dos pixels em uma mesma região é similar com referência a alguma característica ou propriedade computacional, tais como cor, intensidade, textura ou continuidade. Este processo é pré requisito para que reconhecimentos de objetos tenham grandes chances de sucesso \cite{gonzalez_woods}.
 
+
+Na \autoref{pdiexamples} ilustra-se a aplicação dos processos acima descritos na problemática de reconhecimento de faces. 
+
+\begin{figure}[h]
+	\centering
+	\includegraphics[width=.8\textwidth]{pdiexamples}
+	\caption{Exemplo de aplicação de processamento de imagem. \textbf{A}: Segmentação \textbf{B}: Transformação de cores em escala de cinza. \textbf{C}: Escalonamento. \textbf{D}: Equalização de histograma  }
+	\fonte{Elaborado pelo autor.}
+	\label{pdiexamples}
+\end{figure}
+
+
 \subsubsection{Classificação}\label{subsubsec:classificacao}
 
 Segundo \citeonline{edinburgh_classifier}, classificação de imagem contextual é um tópico de reconhecimento de padrões em  Visão Computacional. Chama-se "contextual"\ pois significa que esta abordagem é focada na proximidade com os pixels e sua relação com o "classificador", (contemplado na seção \autoref{subsubsec:elem_haar}). É utilizado efetivamente na detecção de objetos e, também, pode ser aplicado para a detecção de faces em uma imagem.
+
+
+
+
 
 
 %============================================================================================================
@@ -363,20 +386,23 @@ Na \autoref{fig:graphxy} plota-se os valores correspondentes dos vetores \textit
 
 %PASSO 2
 \textbf{Passo 2 - Subtração da Face Média:} neste passo deve-se calcular a face média do conjunto de dados definidos no "Passo 1". A face média ($\Psi$) é definida por \citeonline{geysilva}:
-\begin{center}
-	$\Psi = \frac{1}{n} \sum_{1}^{n} X_n$,
-\end{center}
+
+\begin{equation} 
+	\Psi = \frac{1}{n} \sum_{1}^{n} X_n
+\end{equation}
+
+
 onde $X_n$ são os conjuntos de dados do "passo 1", sendo $n$ a contagem desses conjuntos. Com a face média calculada  ($\Psi$), deve-se subtraí-la do conjunto de dados ($X_n$):
-\begin{center}
-	$\Phi_n = X_n - \Psi$,
-\end{center}
+\begin{equation}
+	\Phi_n = X_n - \Psi,
+\end{equation}
 onde $\Phi_n$ é o vetor resultante, tendendo a obter características distintas das imagens. 
 
 %PASSO 3
 \textbf{Passo 3 - Cálculo da matriz de covariância:} a covariância é uma medida estatística, generalizada da variância, que compara dois conjuntos de dados. Neste passo deve-se calcular a matriz de covariância para quantificar as diferenças \textbf{entre} os conjutos de dados \cite{drmathew_java_programming}.  Realiza-se o cálculo atravez da formula \cite{geysilva}: 
-\begin{center}
-	$C = \Phi^T . \Phi$,	
-\end{center}
+\begin{equation}
+	C = \Phi^T . \Phi,	
+\end{equation}
 onde $\Phi$ é o vetor resultante do "passo 2", $\Phi^T$ é seu equivalente transposta e $C$ é a matriz de covariância resultante \cite{geysilva}.
 
 %Se a fórmula da covariância for aplicada nos dados dos vetores \textit{x} e \textit{y} dados na \autoref{tabelaxy}, o resultado será 0.6154. A parte em que se deve estar atendo é o sinal: se for negativo significa que quando um vetor aumenta em dados, o outro diminui. Quando o valor é positivo, que é o caso, então os dois conjuntos de dados aumentam juntas. Para ilustrar este conceito, 
@@ -394,13 +420,13 @@ Se a fórmula da covariância for aplicada nos dados dos vetores \textit{x} e \t
 \textbf{Passo 4 - Cálculo dos autovetores e autovalores:} para que as \textit{eigenfaces} sejam geradas, deve-se decompor a matriz de covariância em outros conjuntos de dados chamados de autovetores (ou \textit{eigenvectors}) e autovalores (ou \textit{eigenvalues}) \cite{geysilva}.
 
 Segundo \citeonline{drmathew_java_programming}, o autovetor é um vetor de valores ordinário que quando multiplicado por uma dada matriz, muda de magnitude, enquanto que autovalor é o valor desta magnitude. Calcula-se os autovalores atraves de 
- \begin{center}
- 	$|\Phi - \lambda I| = 0$,
- \end{center}
+ \begin{equation}
+ 	|\Phi - \lambda I| = 0,
+ \end{equation}
 onde $\Phi$ é o vetor resultante do "passo 2", $I$ é a matriz identidade, e $\lambda$ é o autovalor \cite{geysilva}. Calcula-se os autovetores atraves de 
-\begin{center}
-	$\Phi e = \lambda e$,	
-\end{center}
+\begin{equation}
+	\Phi e = \lambda e,	
+\end{equation}
 onde $\Phi$ é o vetor resultante do "passo 2", $e$ é o autovetor e $\lambda$ é o autovalor \cite{geysilva}.
 Neste passo também ordena-se os autovetores por ordem de autovalores (ou seja, por ordem de significância) para facilitar possível futuro descarte \cite{geysilva}.
 
@@ -415,9 +441,9 @@ Ambos os autovetores possuem tamanho unitário.
 
 %PASSO 5!
 \textbf{Passo 5 - Projeção dos autovetores ao espaço multidimensional:}  neste último passo de treinamento, cada imagem (ou conjunto de dados) de treinamento é projetado no espaço multidimensional de autovetores. O descritor ACP é calculado por uma combinação linear de autovetores com os vetores originais \cite{geysilva}:
-\begin{center}
-	$W_n = {e_n}^T (X - \Phi)$,
-\end{center}
+\begin{equation}
+	W_n = {e_n}^T (X - \Phi),
+\end{equation}
 onde $e$ são os autovetores, $X$ é o vetor original de faces de treinamento, $\Phi$ é a face média e $W$ seria o espaço multidimensional resultante.
 
 
@@ -573,9 +599,9 @@ O processo de reconhecimento pode ser dividido em 3 passos:
 
 
 \textbf{Passo 2 - Projeção do novo vetor no espaço:} neste passo realiza-se a combinação linear de autovetores com o novo vetor de consulta $Q$ por \cite{geysilva}:
-\begin{center}
-	$W_n = {e^T_n} (Q - \Phi)$,
-\end{center}
+\begin{equation}
+	W_n = {e^T_n} (Q - \Phi),
+\end{equation}
 sendo $e$ os autovetores, $Q$ o vetor de consulta, e $\Phi$ a face média.
 
 \textbf{O terceiro passo} é comparar a distância entre o descitor do vetor de consulta com cada um dos descitores armazenados na base de dados \cite{geysilva}. 
@@ -584,9 +610,9 @@ sendo $e$ os autovetores, $Q$ o vetor de consulta, e $\Phi$ a face média.
 
 Existem algumas técnicas de medidas de distância, dentre elas, há uma simples chamada Distância Euclidiana. Esta medida nada mais é do que a distância mínima entre dois pontos no espaço (uma linha reta). A distância euclidiana entre os pontos $P = (p_1, p_2, ..., p_n)$ $Q = (q_1, q_2, ..., q_n)$ é definida como:
 
-\begin{center}
-	$\sqrt[]{(p_1 - q_1)^2 + (p_1 - q_1)^2 + ... + (p_n - q_n)^2}$ $=$ $\sqrt[]{ \sum_{i=1}^{n} (p_i - q_i)^2 }$
-\end{center}
+\begin{equation}
+	\sqrt[]{(p_1 - q_1)^2 + (p_1 - q_1)^2 + ... + (p_n - q_n)^2} = \sqrt[]{ \sum_{i=1}^{n} (p_i - q_i)^2 }
+\end{equation}
 
 O resultado desta medida é utilizada para calcular a taxa de sucesso de uma comparação. Sendo assim, uma distância nula representaria uma equivalência perfeita.
 

@@ -184,26 +184,26 @@ Observou-se então uma melhora considerável nos resultados, levando em conta qu
 Não obstante, desconsiderando a constante \textit{MIN\_DIST} e analisando apenas a contagem de resultados de sucesso (com falsos positivos já subtraídos) somandos com a contagem dos falsos negativos, verificamos que na maioria das vezes o algoritmo \textit{Eigenfaces} conseguiu equivalência de sucesso, como mostram os resultados dos testes apresentados.
 
 
-\begin{figure}[h]
+\begin{grafico}[h]
 	\centering
 	\includegraphics[width=1.1\textwidth]{grafab-fase12}
 	\caption{\textbf{Gráfico "A"}: Reconhecimentos de sucesso (eixo Y) por quantidade de imagens usadas para o treino (eixo X). \textbf{Gráfico "B"}: Falhas no reconhecimentos (eixo Y) por quantidade de imagens usadas para o treino (eixo X). Referentes as fases de teste "1" e "2".}
 	\fonte{Elaborado pelo autor.}
 	\label{grafab-fase12}
-\end{figure}
+\end{grafico}
 
-\begin{figure}[h]
+\begin{grafico}[h]
 	\centering
 	\includegraphics[width=1.1\textwidth]{grafab-fase3}
 	\caption{\textbf{Gráfico "A"}: Reconhecimentos de sucesso (eixo Y) por quantidade de imagens usadas para o treino (eixo X). \textbf{Gráfico "B"}: Falhas no reconhecimentos (eixo Y) por quantidade de imagens usadas para o treino (eixo X). Referentes as fases de teste "3".}
 	\fonte{Elaborado pelo autor.}
 	\label{grafab-fase3}
-\end{figure}
+\end{grafico}
 
 
-As \autoref{grafab-fase12} e \autoref{grafab-fase3} apresentam dois gráficos: os gráficos "\textit{A}" são às contagens de reconhecimentos de sucesso (eixo \textit{Y}) a medida em que a quantidade de imagens de treino cresce (eixo \textit{X}), e os gráficos "\textit{B}", são as contagens de falhas de reconhecimento a medida em que as imagens de treinamento crescem. A \autoref{grafab-fase12} se refere aos resultados da fase "1"\ e "2", e a \autoref{grafab-fase3} é referente à fase "3". Foram divididos desta forma pelo fato de quem o espaço foi reiniciado no terceiro dia, como descreve a \autoref{ch:testresultfaz3}. 
+Os \autoref{grafab-fase12} e \autoref{grafab-fase3} apresentam dois sub-gráficos "A"\ e "B": os gráficos "\textit{A}"\ são às contagens de reconhecimentos de sucesso (eixo \textit{Y}) a medida em que a quantidade de imagens de treino cresce (eixo \textit{X}), e os gráficos "\textit{B}", são as contagens de falhas de reconhecimento a medida em que as imagens de treinamento crescem. O \autoref{grafab-fase12} se refere aos resultados da fase "1"\ e "2", e o \autoref{grafab-fase3} é referente à fase "3". Foram divididos desta forma pelo fato de quem o espaço foi reiniciado no terceiro dia, como descreve a \autoref{ch:testresultfaz3}. 
 
-Analisando-os, observa-se que nos dois gráficos "A", as linhas de quantidade de sucesso e falsos positivos tendem a se encontram enquanto que nos gráficos "B"\ das duas figuras, o contrário acontece: as linhas de quantidade de falhas e de falsos negativos tendem a se afastar, apesar de não estar tão evidenciado no gráfico "B"\ da \autoref{grafab-fase12}, podendo-se concluir que à medida em que o espaço multidimensional de \textit{eigenfaces} (\textit{eigenspace}) cresce, o método ACP apresenta distâncias falsas e verdadeiras similares, imprecisando seu veridito final.
+Analisando-os, observa-se que nos dois gráficos "A", as linhas de quantidade de sucesso e falsos positivos tendem a se encontram enquanto que nos gráficos "B"\, o contrário acontece: as linhas de quantidade de falhas e de falsos negativos tendem a se afastar, apesar de não estar tão evidenciado \autoref{grafab-fase12} "B"\, podendo-se concluir que à medida em que o espaço multidimensional de \textit{eigenfaces} (\textit{eigenspace}) cresce, o método ACP apresenta distâncias falsas e verdadeiras similares, imprecisando seu veridito final.
 
 
 
