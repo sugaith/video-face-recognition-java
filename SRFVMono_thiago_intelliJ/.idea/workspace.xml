@@ -4,13 +4,8 @@
     <list default="true" id="418e7f84-7618-4fe2-a97b-b4b68e45d5f1" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../TCC Parte 3 PosTextuais Materiais e Metodos/Capitulos/implementacao.tex" beforeDir="false" afterPath="$PROJECT_DIR$/../TCC Parte 3 PosTextuais Materiais e Metodos/Capitulos/implementacao.tex" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../TCC Parte 3 PosTextuais Materiais e Metodos/Capitulos/resultados.tex" beforeDir="false" afterPath="$PROJECT_DIR$/../TCC Parte 3 PosTextuais Materiais e Metodos/Capitulos/resultados.tex" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../TCC Parte 3 PosTextuais Materiais e Metodos/Capitulos/revisa_bib.tex" beforeDir="false" afterPath="$PROJECT_DIR$/../TCC Parte 3 PosTextuais Materiais e Metodos/Capitulos/revisa_bib.tex" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../TCC Parte 3 PosTextuais Materiais e Metodos/Configuracoes/citacoes.bib" beforeDir="false" afterPath="$PROJECT_DIR$/../TCC Parte 3 PosTextuais Materiais e Metodos/Configuracoes/citacoes.bib" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../TCC Parte 3 PosTextuais Materiais e Metodos/Imagens/screenshot-sys.png" beforeDir="false" afterPath="$PROJECT_DIR$/../TCC Parte 3 PosTextuais Materiais e Metodos/Imagens/screenshot-sys.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TCC Parte 3 PosTextuais Materiais e Metodos/cc-udc-abntex2.cls" beforeDir="false" afterPath="$PROJECT_DIR$/../TCC Parte 3 PosTextuais Materiais e Metodos/cc-udc-abntex2.cls" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../TCC Parte 3 PosTextuais Materiais e Metodos/modelo.aux" beforeDir="false" afterPath="$PROJECT_DIR$/../TCC Parte 3 PosTextuais Materiais e Metodos/modelo.aux" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../TCC Parte 3 PosTextuais Materiais e Metodos/modelo.bbl" beforeDir="false" afterPath="$PROJECT_DIR$/../TCC Parte 3 PosTextuais Materiais e Metodos/modelo.bbl" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../TCC Parte 3 PosTextuais Materiais e Metodos/modelo.blg" beforeDir="false" afterPath="$PROJECT_DIR$/../TCC Parte 3 PosTextuais Materiais e Metodos/modelo.blg" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../TCC Parte 3 PosTextuais Materiais e Metodos/modelo.lof" beforeDir="false" afterPath="$PROJECT_DIR$/../TCC Parte 3 PosTextuais Materiais e Metodos/modelo.lof" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../TCC Parte 3 PosTextuais Materiais e Metodos/modelo.log" beforeDir="false" afterPath="$PROJECT_DIR$/../TCC Parte 3 PosTextuais Materiais e Metodos/modelo.log" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../TCC Parte 3 PosTextuais Materiais e Metodos/modelo.logr" beforeDir="false" afterPath="$PROJECT_DIR$/../TCC Parte 3 PosTextuais Materiais e Metodos/modelo.logr" afterDir="false" />
@@ -20,6 +15,10 @@
       <change beforePath="$PROJECT_DIR$/../TCC Parte 3 PosTextuais Materiais e Metodos/modelo.synctex.gz" beforeDir="false" afterPath="$PROJECT_DIR$/../TCC Parte 3 PosTextuais Materiais e Metodos/modelo.synctex.gz" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../TCC Parte 3 PosTextuais Materiais e Metodos/modelo.tex" beforeDir="false" afterPath="$PROJECT_DIR$/../TCC Parte 3 PosTextuais Materiais e Metodos/modelo.tex" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../TCC Parte 3 PosTextuais Materiais e Metodos/modelo.toc" beforeDir="false" afterPath="$PROJECT_DIR$/../TCC Parte 3 PosTextuais Materiais e Metodos/modelo.toc" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TCC Parte 3 PosTextuais Materiais e Metodos/src/acesso.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TCC Parte 3 PosTextuais Materiais e Metodos/src/c.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TCC Parte 3 PosTextuais Materiais e Metodos/src/coletar-hashtags.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TCC Parte 3 PosTextuais Materiais e Metodos/texput.log" beforeDir="false" afterPath="$PROJECT_DIR$/../TCC Parte 3 PosTextuais Materiais e Metodos/texput.log" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -35,11 +34,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/gui/PanelCadastroDeFace.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="105">
-              <caret line="446" column="25" selection-start-line="446" selection-start-column="25" selection-end-line="446" selection-end-column="25" />
+            <state relative-caret-position="379">
+              <caret line="614" column="43" lean-forward="true" selection-start-line="614" selection-start-column="43" selection-end-line="614" selection-end-column="43" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -71,8 +70,20 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/eigenfaces/ACP_Treinamento.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="226">
-              <caret line="66" column="62" selection-start-line="66" selection-start-column="40" selection-end-line="66" selection-end-column="62" />
+            <state relative-caret-position="277">
+              <caret line="170" selection-start-line="170" selection-end-line="182" selection-end-column="5" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/eigenfaces/ACP_Reconhecimento.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="345">
+              <caret line="154" column="5" lean-forward="true" selection-start-line="154" selection-start-column="5" selection-end-line="154" selection-end-column="5" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -83,8 +94,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/utils/AutoVetor_decomp.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="287">
-              <caret line="19" column="15" selection-start-line="19" selection-start-column="15" selection-end-line="19" selection-end-column="15" />
+            <state relative-caret-position="355">
+              <caret line="23" column="37" selection-start-line="23" selection-start-column="22" selection-end-line="23" selection-end-column="37" />
               <folding>
                 <element signature="e#375#376#0" expanded="true" />
                 <element signature="e#402#403#0" expanded="true" />
@@ -118,11 +129,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/utils/Matriz2D.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="396">
-              <caret line="54" lean-forward="true" selection-start-line="54" selection-end-line="54" />
+            <state relative-caret-position="508">
+              <caret line="161" column="30" lean-forward="true" selection-start-line="161" selection-start-column="30" selection-end-line="161" selection-end-column="30" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="e#416#417#0" expanded="true" />
@@ -133,6 +144,8 @@
                 <element signature="e#1267#1268#0" expanded="true" />
                 <element signature="e#1303#1304#0" expanded="true" />
                 <element signature="e#1367#1368#0" expanded="true" />
+                <element signature="e#3504#3505#0" expanded="true" />
+                <element signature="e#3556#3557#0" expanded="true" />
                 <element signature="e#4095#4096#0" expanded="true" />
                 <element signature="e#4144#4145#0" expanded="true" />
               </folding>
@@ -158,6 +171,7 @@
       <find>qual</find>
       <find>EqualizarHistograma</find>
       <find>btn</find>
+      <find>negocio</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -194,6 +208,11 @@
         <option value="$PROJECT_DIR$/src/gui/PanelCadastroDeFace.java" />
         <option value="$PROJECT_DIR$/src/gui/FrameCadastroDeFace.java" />
         <option value="$PROJECT_DIR$/../TCC Parte 3 PosTextuais Materiais e Metodos/src/c.java" />
+        <option value="$PROJECT_DIR$/../TCC Parte 3 PosTextuais Materiais e Metodos/src/snippet-mainthread - Copy.java" />
+        <option value="$PROJECT_DIR$/../TCC Parte 3 PosTextuais Materiais e Metodos/src/snippet-treiamento.java" />
+        <option value="$PROJECT_DIR$/../TCC Parte 3 PosTextuais Materiais e Metodos/src/snippet-treiamento - Copy.java" />
+        <option value="$PROJECT_DIR$/../TCC Parte 3 PosTextuais Materiais e Metodos/src/snippet-reconh.java" />
+        <option value="$PROJECT_DIR$/../TCC Parte 3 PosTextuais Materiais e Metodos/src/snippet-reconh-resultadofim.java" />
       </list>
     </option>
   </component>
@@ -257,7 +276,7 @@
   </component>
   <component name="PropertiesComponent">
     <property name="SearchEverywhereHistoryKey" value="panel&#9;FILE&#9;file://E:/FACULDADE/TCC/em desenvolvimento/mono_rfv_thiago/SRFVMono_thiago_intelliJ/src/gui/PanelCadastroDeFace.java&#10;equal&#9;FILE&#9;file://E:/FACULDADE/TCC/em desenvolvimento/mono_rfv_thiago/SRFVMono_thiago_intelliJ/src/utils/EqualizarHistograma.java" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1544035442501" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1544118331246" />
     <property name="com.intellij.ide.scratch.LRUPopupBuilder$1/New Scratch File" value="JAVA" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="project.structure.last.edited" value="Modules" />
@@ -466,16 +485,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/eigenfaces/ACP_Reconhecimento.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1547">
-          <caret line="96" column="35" selection-start-line="96" selection-start-column="35" selection-end-line="96" selection-end-column="35" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/eigenfaces/InfoDistancia.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="238">
@@ -507,16 +516,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/gui/PanelCadastroDeFace.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="105">
-          <caret line="446" column="25" selection-start-line="446" selection-start-column="25" selection-end-line="446" selection-end-column="25" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/gui/FrameCadastroDeFace.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="306">
@@ -541,35 +540,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/utils/AutoVetor_decomp.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="287">
-          <caret line="19" column="15" selection-start-line="19" selection-start-column="15" selection-end-line="19" selection-end-column="15" />
-          <folding>
-            <element signature="e#375#376#0" expanded="true" />
-            <element signature="e#402#403#0" expanded="true" />
-            <element signature="e#443#444#0" expanded="true" />
-            <element signature="e#488#489#0" expanded="true" />
-            <element signature="e#532#533#0" expanded="true" />
-            <element signature="e#571#572#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/utils/FileUtils.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="226">
           <caret line="34" column="36" selection-start-line="34" selection-start-column="36" selection-end-line="34" selection-end-column="36" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/eigenfaces/ACP_Treinamento.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="226">
-          <caret line="66" column="62" selection-start-line="66" selection-start-column="40" selection-end-line="66" selection-end-column="62" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -585,8 +559,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/utils/Matriz2D.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="396">
-          <caret line="54" lean-forward="true" selection-start-line="54" selection-end-line="54" />
+        <state relative-caret-position="508">
+          <caret line="161" column="30" lean-forward="true" selection-start-line="161" selection-start-column="30" selection-end-line="161" selection-end-column="30" />
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="e#416#417#0" expanded="true" />
@@ -597,8 +571,90 @@
             <element signature="e#1267#1268#0" expanded="true" />
             <element signature="e#1303#1304#0" expanded="true" />
             <element signature="e#1367#1368#0" expanded="true" />
+            <element signature="e#3504#3505#0" expanded="true" />
+            <element signature="e#3556#3557#0" expanded="true" />
             <element signature="e#4095#4096#0" expanded="true" />
             <element signature="e#4144#4145#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/utils/AutoVetor_decomp.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="355">
+          <caret line="23" column="37" selection-start-line="23" selection-start-column="22" selection-end-line="23" selection-end-column="37" />
+          <folding>
+            <element signature="e#375#376#0" expanded="true" />
+            <element signature="e#402#403#0" expanded="true" />
+            <element signature="e#443#444#0" expanded="true" />
+            <element signature="e#488#489#0" expanded="true" />
+            <element signature="e#532#533#0" expanded="true" />
+            <element signature="e#571#572#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../TCC Parte 3 PosTextuais Materiais e Metodos/src/snippet-mainthread - Copy.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="578">
+          <caret line="34" column="51" lean-forward="true" selection-start-line="34" selection-start-column="51" selection-end-line="34" selection-end-column="51" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../TCC Parte 3 PosTextuais Materiais e Metodos/src/snippet-treiamento - Copy.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="204">
+          <caret line="12" column="1" lean-forward="true" selection-start-line="12" selection-start-column="1" selection-end-line="12" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/eigenfaces/ACP_Treinamento.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="277">
+          <caret line="170" selection-start-line="170" selection-end-line="182" selection-end-column="5" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../TCC Parte 3 PosTextuais Materiais e Metodos/src/snippet-reconh.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="102">
+          <caret line="6" column="26" lean-forward="true" selection-start-line="6" selection-start-column="26" selection-end-line="6" selection-end-column="26" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../TCC Parte 3 PosTextuais Materiais e Metodos/src/snippet-treiamento.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="408">
+          <caret line="24" column="27" selection-start-line="24" selection-start-column="27" selection-end-line="24" selection-end-column="27" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/eigenfaces/ACP_Reconhecimento.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="345">
+          <caret line="154" column="5" lean-forward="true" selection-start-line="154" selection-start-column="5" selection-end-line="154" selection-end-column="5" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../TCC Parte 3 PosTextuais Materiais e Metodos/src/snippet-reconh-resultadofim.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="34">
+          <caret line="2" column="17" selection-start-line="1" selection-start-column="4" selection-end-line="2" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/gui/PanelCadastroDeFace.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="379">
+          <caret line="614" column="43" lean-forward="true" selection-start-line="614" selection-start-column="43" selection-end-line="614" selection-end-column="43" />
+          <folding>
+            <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>

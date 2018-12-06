@@ -12,13 +12,7 @@ Os equipamentos (\textit{hardwares}), descritos na \autoref{sub-hardw}, foram po
 
 A interface do sistema, como se pode ver na \autoref{screenshot-sys}, dispõe de uma máscara que indica o local em que a face deve ser posicionada corretamente em frente a câmera, e a câmera posicionada no mesmo local em todos os testes. A cada dia, caso o resultado de correspondência fosse considerada ruim (muito acima do valor mínimo \textit{MIN\_DIST}), ou caso o objeto de teste tenha se movido no momento do treino interrompendo o processo, a face poderia ser treinada novamente, o que acumularia as faces de treino do objeto de teste.
 
-\begin{figure}[h]
-	\centering
-	\includegraphics[width=1\textwidth]{screenshot-sys}
-	\caption{Imagem do Sistema em Funcionamento.}
-	\fonte{Elaborado pelo autor.}
-	\label{screenshot-sys}
-\end{figure}
+
 
 Os usuários foram sujeitos ao teste sempre na mesma ordem. As faces dos objetos de testes foram expostas durante o tempo necessário para o sistema coletar a quantidade estabelecida pela constante \textit{NUM\_FACES\_TREINO}. O sistema foi configurado para faser cerca de 3 a 4 deteções por segundo.
 
@@ -203,7 +197,7 @@ Não obstante, desconsiderando a constante \textit{MIN\_DIST} e analisando apena
 
 Os \autoref{grafab-fase12} e \autoref{grafab-fase3} apresentam dois sub-gráficos "A"\ e "B": os gráficos "\textit{A}"\ são às contagens de reconhecimentos de sucesso (eixo \textit{Y}) a medida em que a quantidade de imagens de treino cresce (eixo \textit{X}), e os gráficos "\textit{B}", são as contagens de falhas de reconhecimento a medida em que as imagens de treinamento crescem. O \autoref{grafab-fase12} se refere aos resultados da fase "1"\ e "2", e o \autoref{grafab-fase3} é referente à fase "3". Foram divididos desta forma pelo fato de quem o espaço foi reiniciado no terceiro dia, como descreve a \autoref{ch:testresultfaz3}. 
 
-Analisando-os, observa-se que nos dois gráficos "A", as linhas de quantidade de sucesso e falsos positivos tendem a se encontram enquanto que nos gráficos "B"\, o contrário acontece: as linhas de quantidade de falhas e de falsos negativos tendem a se afastar, apesar de não estar tão evidenciado \autoref{grafab-fase12} "B"\, podendo-se concluir que à medida em que o espaço multidimensional de \textit{eigenfaces} (\textit{eigenspace}) cresce, o método ACP apresenta distâncias falsas e verdadeiras similares, imprecisando seu veridito final.
+
 
 
 

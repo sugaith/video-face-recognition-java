@@ -22,7 +22,7 @@
 %%
 
 \NeedsTeXFormat{LaTeX2e}
-%\ProvidesClass{cc-udc-abntex2}[2017/03/30 v1.1 Modelo do Curso de Ciência do Centro Universitário União Dinâmica das Cataratas (UDC), baseado em abnTeX2]
+%\ProvidesClass{cc-udc-abntex2}[2018/06/24 v1.2 Modelo do Curso de Ciência do Centro Universitário Dinamica das Cataratas (UDC), baseado em abnTeX2]
 
 %
 % Repassa todos os parametros a classe abntex2, 
@@ -41,6 +41,7 @@
 \RequirePackage{lastpage}	% Usado pela Ficha catalográfica
 \RequirePackage{uarial}		% Usa a fonte uarial - um clone livre da fonte arial (arial é uma fonte comercial, protegida)
 \RequirePackage{ifthen}
+%\RequirePackage{sectsty}	% Disponibiliza a macro \MakeUppercase para colocar os títulos em caixa alta
 
 \newcommand{\ifnotempty}[2]{\ifthenelse{\not\equal{#1}{}}{#2}{}}
 
@@ -49,26 +50,25 @@
 \instituicao{Centro Universit{\' a}rio Din{\^ a}mica das Cataratas}
 \tipotrabalho{Trabalho de Conclus{\~a}o de Curso}
 
-
 % Comandos de dados - nome autor para citacao
 \providecommand{\imprimirinstituicaoSigla}{}
 \newcommand{\instituicaoSigla}[1]{\renewcommand{\imprimirinstituicaoSigla}{#1}}
 \instituicaoSigla{UDC}
 
-% Comandos de dados - nome autor para citacao
+% Comandos de dados - nome do curso
 \providecommand{\imprimircurso}{}
 \newcommand{\curso}[1]{\renewcommand{\imprimircurso}{#1}}
 \curso{Ci{\^ e}ncia da Computa{\c c}{\~ a}o}
 
-% Comandos de dados - nome autor para citacao
+% Comandos de dados - nome do segundo autor
 \providecommand{\imprimirsegundoautor}{}
 \newcommand{\segundoautor}[1]{\renewcommand{\imprimirsegundoautor}{#1}}
 
-% Comandos de dados - nome autor para citacao
+% Comandos de dados - nome do autor como citado
 \providecommand{\imprimirautorcitado}{}
 \newcommand{\autorcitado}[1]{\renewcommand{\imprimirautorcitado}{#1}}
 
-% Comandos de dados - nome autor para citacao
+% Comandos de dados - nome do segundo autor como citado
 \providecommand{\imprimirsegundoautorcitado}{}
 \newcommand{\segundoautorcitado}[1]{\renewcommand{\imprimirsegundoautorcitado}{#1}}
 
@@ -214,11 +214,11 @@
 
 
 
-\setlength{\parindent}{1.3cm} % Identação da primeira linha do parágrafo
-\setlength{\parskip}{0.2cm}  % Controle do espaçamento entre parágrafos
+\setlength{\parindent}{1.5cm} % Identação da primeira linha do parágrafo
+\setlength{\parskip}{0cm}  % Controle do espaçamento entre parágrafos
 
 % Controle do espaçamento entre a legenda e a fonte (e nota) de figuras e tabelas}:
-\setlength{\abovecaptionskip}{0 mm}
+\setlength{\abovecaptionskip}{1 mm}
 \setlength{\belowcaptionskip}{1 mm}
 %----------------------------------------------------------------------------- 
 %----------------------------------------------------------------------------- 
@@ -227,12 +227,6 @@
 \setulmarginsandblock{3cm}{2cm}{*}
 \checkandfixthelayout
 
-
-% Altera o tamanho das fontes dos capítulos e dos apêndices
-% ---
-\renewcommand{\ABNTEXchapterfont}{\bfseries}
-\renewcommand{\ABNTEXchapterfontsize}{\large}
-\renewcommand{\ABNTEXsectionfontsize}{\normalfont}
 
 %-----------------------------------------------------------------------------
 % CONFIGURACAO DO ESTILO DE PÁGINA TEXTUAL 
@@ -257,10 +251,11 @@
 
 
 %----------------------------------------------------------------------------- 
-% Fontes padroes de part, chapter, section, subsection e subsubsection
+% Definição das configurações de fonte para de part, chapter, section, 
+% subsection e subsubsection
 %----------------------------------------------------------------------------- 
-\renewcommand{\ABNTEXpartfont}{\normalfont\bfseries}
-\renewcommand{\ABNTEXpartfontsize}{\Large}
+\renewcommand{\ABNTEXpartfont}{\normalfont\bfseries\large}
+\renewcommand{\ABNTEXpartfontsize}{\large}
 
 \renewcommand{\ABNTEXchapterfont}{\normalfont\bfseries}
 \renewcommand{\ABNTEXchapterfontsize}{\normalsize}
@@ -271,37 +266,22 @@
 \renewcommand{\ABNTEXsubsectionfont}{\normalfont\bfseries}
 \renewcommand{\ABNTEXsubsectionfontsize}{\normalsize}
 
-\renewcommand{\ABNTEXsubsubsectionfont}{\ABNTEXsubsectionfont}
+\renewcommand{\ABNTEXsubsubsectionfont}{\normalfont\itshape}
 \renewcommand{\ABNTEXsubsubsectionfontsize}{\normalsize}
 
-\renewcommand{\ABNTEXsubsubsubsectionfont}{\ABNTEXsubsectionfont}
+\renewcommand{\ABNTEXsubsubsubsectionfont}{\normalfont}
 \renewcommand{\ABNTEXsubsubsubsectionfontsize}{\normalsize}
-%----------------------------------------------------------------------------- 
-%% Altera o tamanho das fontes dos capítulos e dos apêndices
-%% -
-%\renewcommand{\ABNTEXchapterfont}{\normalfont\fontseries{b}\selectfont}
-%\renewcommand{\ABNTEXchapterfontsize}{\normalsize}
-%\renewcommand{\ABNTEXpartfont}{\fontseries{b}\selectfont\selectfont}
-%\renewcommand{\ABNTEXpartfontsize}{\normalsize}
-%\renewcommand{\ABNTEXsectionfont}{\normalfont\selectfont}
-%\renewcommand{\ABNTEXsectionfontsize}{\normalsize}
-%\renewcommand{\ABNTEXsubsectionfont}{\normalfont\selectfont}
-%\renewcommand{\ABNTEXsubsectionfontsize}{\normalsize}
-%\renewcommand{\ABNTEXsubsubsectionfont}{\normalfont\selectfont}
-%\renewcommand{\ABNTEXsubsubsectionfontsize}{\normalsize}
-%\renewcommand{\ABNTEXsubsubsubsectionfont}{\normalfont\itshape\selectfont}
-%\renewcommand{\ABNTEXsubsubsubsectionfontsize}{\normalsize}
 
 %-----------------------------------------------------------------------------
 % CONFIGURACAO DO SUMARIO
 %-----------------------------------------------------------------------------
 % Modifica as fontes do sumário
-\renewcommand*{\cftpartfont}{\normalfont\bfseries\large\scshape}
-\renewcommand*{\cftchapterfont}{\normalfont\bfseries\scshape}
-\renewcommand*{\cftsectionfont}{\normalfont\scshape}
+\renewcommand*{\cftpartfont}{\normalfont\bfseries\large}
+\renewcommand*{\cftchapterfont}{\normalfont\bfseries}
+\renewcommand*{\cftsectionfont}{\normalfont}
 \renewcommand*{\cftsubsectionfont}{\normalfont\bfseries}
-\renewcommand*{\cftsubsubsectionfont}{\normalfont}
-\renewcommand*{\cftparagraphfont}{\normalfont\itshape}
+\renewcommand*{\cftsubsubsectionfont}{\normalfont\itshape}
+\renewcommand*{\cftparagraphfont}{\normalfont}
 
 % Modifica o espaçamento no sumário
 % Nao ha espacos, exceto para as entradas de capitulos
@@ -311,67 +291,13 @@
 \setlength{\cftbeforesubsubsectionskip}{0pt}
 \setlength{\cftbeforeparagraphskip}{0pt}
 
-% Alteração da indentação dos itens do sumário
-%\cftsetindents{section}{0pt}{20pt}
-%\cftsetindents{subsection}{0pt}{30pt}
-%\cftsetindents{subsubsection}{0pt}{40pt}
 
-%%---------------------------------------------------------------------------- 
-%% Modifica a formatacao dos textos no sumário
-%%---------------------------------------------------------------------------- 
-% Patch the command that writes part-level entries
-%   to the table of contents, so they are in 
-%   'normalfont' and uppercase
-\makeatletter% 
-\patchcmd{\l@part}%                     
-    {\cftpartfont {#1}}%                
-    {\normalfont \texorpdfstring{\large\bfseries\uppercase{#1}}{{#1}} }%
-    {\typeout{Success: Patch %
-      'l@part' to uppercase part-level headings in the table of contents.}}%
-    {\typeout{Fail: Patch %
-      'l@part' to uppercase part-level headings in the table of contents.}}%
-\makeatother%
-
-% Patch the command that writes chapter-level 
-%   entries to the table of contents, so they are 
-%   in 'normalfont' and uppercase
-\makeatletter% 
-\patchcmd{\l@chapapp}%                  
-    {\cftchapterfont {#1}}%             
-    {\normalfont\bfseries \texorpdfstring{\uppercase{#1}}{{#1}} }%
-    {\typeout{Success: Patch %
-      'l@chapapp' to uppercase part-level headings in the table of contents.}}%
-    {\typeout{Fail: Patch %
-      'l@chapapp' to uppercase part-level headings in the table of contents.}}%
-\makeatother%
-
-% Patch the command that writes section-level 
-%   entries to the table of contents, so they are 
-%   in 'normalfont' and uppercase
-\makeatletter% 
-\patchcmd{\l@sectionname}%                  
-    {\cftsectionfont {#1}}%             
-    {\normalfont \texorpdfstring{\uppercase{#1}}{{#1}} }%
-    {\typeout{Success: Patch %
-      'l@section' to uppercase part-level headings in the table of contents.}}%
-    {\typeout{Fail: Patch %
-      'l@section' to uppercase part-level headings in the table of contents.}}%
-\makeatother%
-
-% Patch the command that writes subsection-level 
-%   entries to the table of contents, so they are 
-%   in 'normalfont' and uppercase
-\makeatletter% 
-\patchcmd{\l@subsection}%                  
-    {\cftsubsectionfont {#1}}%             
-    {\normalfont \texorpdfstring{\bfseries{#1}}{{#1}} }%
-    {\typeout{Success: Patch %
-      'l@subsection' to uppercase part-level headings in the table of contents.}}%
-    {\typeout{Fail: Patch %
-      'l@subsection' to uppercase part-level headings in the table of contents.}}%
-\makeatother%
-%---------------------------------------------------------------------------- 
-
+% Indica se os nomes de capítulo e seção devem estar em maiúsculas ou não
+\setboolean{ABNTEXupperchapter}{true}
+\setboolean{ABNTEXuppersection}{true}
+\setboolean{ABNTEXuppersubsection}{false}
+\setboolean{ABNTEXuppersubsubsection}{false}
+\setboolean{ABNTEXuppersubsubsubsection}{false}
 
 %---------------------------------------------------------------------------- 
 % CONFIGURAÇÃO DE LISTAS DE CONTEÚDO
@@ -394,7 +320,8 @@
 \renewcommand{\lstlistlistingname}{LISTA DE C{\'O}DIGOS}
 \newcommand{\lstnumberautorefname}{C{\'o}digo}
 
-\begingroup\makeatletter				% configurações para atender às regras da ABNT em listas
+% configurações para atender às regras da ABNT em listas
+\begingroup\makeatletter				
 \let\newcounter\@gobble\let\setcounter\@gobbletwo
   \globaldefs\@ne \let\c@loldepth\@ne
   \newlistof{listings}{lol}{\lstlistlistingname}
@@ -411,19 +338,6 @@
    \oldlstlistoflistings%
    \endgroup}
 
-%% ---
-%% lista de códigos
-%% -
-%\newcommand{\codigoname}{C{\'O}DIGO}
-%\newcommand{\codigoautorefname}{C{\'o}digo}
-%\newcommand{\listofcodigosname}{LISTA DE C{\'O}DIGOS}
-%\newfloat[chapter]{codigo}{locd}{\codigoname}
-%\newlistof{listofcodigos}{locd}{\listofcodigosname}
-%\newlistentry{codigo}{locd}{0}
-%\counterwithout{codigo}{chapter}		% atende às regras da ABNT em listas
-%\renewcommand{\cftcodigoname}{\codigoname\space}
-%\renewcommand*{\cftcodigoaftersnum}{\hfill--\hfill}
-%----------------------------------------------------------------------------- 
 
 
 %----------------------------------------------------------------------------- 
@@ -531,7 +445,8 @@
 	mathescape=true,%    
 	captionpos=t,%
     escapeinside={\%*}{*)},%
-    numbersep=5pt,                  
+    numbersep=5pt,              
+    firstnumber=1,    
     tabsize=2
 }
 }
@@ -540,77 +455,90 @@
 \newcommand{\codigoJava}{%
 \lstset{%
     language=Java,%
-    basicstyle=\linespread{0.94}\ttfamily\small,%basicstyle=\ttfamily\footnotesize,%
-    breaklines=true,%
-    prebreak=\raisebox{0ex}[0ex][0ex]{\ensuremath{\hookleftarrow}},%
-    showtabs=false,%
-    showspaces=false,%
-    showstringspaces=false,%
-    backgroundcolor=\color{whitesmoke},   
-    commentstyle=\color{codegreen},
-    keywordstyle=\color{deepcarminepink}\bfseries,
-    numberstyle=\tiny\color{tealblue},
-    stringstyle=\color{tealgreen}\itshape,
-    basicstyle=\footnotesize,
-    numbers=left,%
-	fancyvrb=true,%
-	mathescape=true,%    
+	backgroundcolor=\color{whitesmoke},   % choose the background color; you must add \usepackage{color} or \usepackage{xcolor}; should come as last argument
+	breakatwhitespace=false,         % sets if automatic breaks should only happen at whitespace
+	breaklines=true,                 % sets automatic line breaking
+	keepspaces=true,                 % keeps spaces in text, useful for keeping indentation of code (possibly needs columns=flexible)
+	keywordstyle=\color{blue},       % keyword style
+	numbers=left,                    % where to put the line-numbers; possible values are (none, left, right)
+	numbersep=5pt,                   % how far the line-numbers are from the code
+	rulecolor=\color{black},         % if not set, the frame-color may be changed on line-breaks within not-black text (e.g. comments (green here))
+	showspaces=false,                % show spaces everywhere adding particular underscores; it overrides 'showstringspaces'
+	showstringspaces=false,          % underline spaces within strings only
+	showtabs=false,                  % show tabs within strings adding particular underscores
+	stepnumber=1,                    % the step between two line-numbers. If it's 1, each line will be numbered
+	tabsize=2,	                   % sets default tabsize to 2 spaces
+	basicstyle=\linespread{0.94}\ttfamily\small,%basicstyle=\ttfamily\footnotesize,%
+	prebreak=\raisebox{0ex}[0ex][0ex]{\ensuremath{\hookleftarrow}},%
+	commentstyle=\color{codegreen},
+	keywordstyle=\color{deepcarminepink}\bfseries,
+	numberstyle=\tiny\color{tealblue},
+	stringstyle=\color{tealgreen}\itshape,
+	numbers=left,%
 	captionpos=t,%
-    escapeinside={\%*}{*)},%
-    numbersep=5pt,                  
-    tabsize=2
+	firstnumber=1,
+	escapeinside={\%*}{*)},%
 }
 }
 
 % Define a formatação de código fonte da linguagem Java
 \newcommand{\codigoC}{%
 \lstset{%
-    language=C,%
+	language=C,                 % the language of the code
+	backgroundcolor=\color{whitesmoke},   % choose the background color; you must add \usepackage{color} or \usepackage{xcolor}; should come as last argument
+	%basicstyle=\footnotesize,        % the size of the fonts that are used for the code
+	breakatwhitespace=false,         % sets if automatic breaks should only happen at whitespace
+	breaklines=true,                 % sets automatic line breaking
+	keepspaces=true,                 % keeps spaces in text, useful for keeping indentation of code (possibly needs columns=flexible)
+	keywordstyle=\color{blue},       % keyword style
+	numbers=left,                    % where to put the line-numbers; possible values are (none, left, right)
+	numbersep=5pt,                   % how far the line-numbers are from the code
+	rulecolor=\color{black},         % if not set, the frame-color may be changed on line-breaks within not-black text (e.g. comments (green here))
+	showspaces=false,                % show spaces everywhere adding particular underscores; it overrides 'showstringspaces'
+	showstringspaces=false,          % underline spaces within strings only
+	showtabs=false,                  % show tabs within strings adding particular underscores
+	stepnumber=1,                    % the step between two line-numbers. If it's 1, each line will be numbered
+	tabsize=2,	                   % sets default tabsize to 2 spaces
     basicstyle=\linespread{0.94}\ttfamily\small,%basicstyle=\ttfamily\footnotesize,%
-    breaklines=true,%
     prebreak=\raisebox{0ex}[0ex][0ex]{\ensuremath{\hookleftarrow}},%
-    showtabs=false,%
-    showspaces=false,%
-    showstringspaces=false,%
-    backgroundcolor=\color{whitesmoke},   
     commentstyle=\color{codegreen},
     keywordstyle=\color{deepcarminepink}\bfseries,
     numberstyle=\tiny\color{tealblue},
     stringstyle=\color{tealgreen}\itshape,
-    basicstyle=\footnotesize,
     numbers=left,%
-	fancyvrb=true,%
-	mathescape=true,%    
 	captionpos=t,%
+	firstnumber=1,
     escapeinside={\%*}{*)},%
-    numbersep=5pt,                  
-    tabsize=2
 }
 }
 
 % Define a formatação de código fonte da linguagem Java
 \newcommand{\codigoCPP}{%
 \lstset{%
-    language=cpp,%
+    language=C++,%
+    backgroundcolor=\color{whitesmoke},   % choose the background color; you must add \usepackage{color} or \usepackage{xcolor}; should come as last argument
+    breakatwhitespace=false,         % sets if automatic breaks should only happen at whitespace
+    breaklines=true,                 % sets automatic line breaking
+    keepspaces=true,                 % keeps spaces in text, useful for keeping indentation of code (possibly needs columns=flexible)
+    keywordstyle=\color{blue},       % keyword style
+    numbers=left,                    % where to put the line-numbers; possible values are (none, left, right)
+    numbersep=5pt,                   % how far the line-numbers are from the code
+    rulecolor=\color{black},         % if not set, the frame-color may be changed on line-breaks within not-black text (e.g. comments (green here))
+    showspaces=false,                % show spaces everywhere adding particular underscores; it overrides 'showstringspaces'
+    showstringspaces=false,          % underline spaces within strings only
+    showtabs=false,                  % show tabs within strings adding particular underscores
+    stepnumber=1,                    % the step between two line-numbers. If it's 1, each line will be numbered
+    tabsize=2,	                   % sets default tabsize to 2 spaces
     basicstyle=\linespread{0.94}\ttfamily\small,%basicstyle=\ttfamily\footnotesize,%
-    breaklines=true,%
     prebreak=\raisebox{0ex}[0ex][0ex]{\ensuremath{\hookleftarrow}},%
-    showtabs=false,%
-    showspaces=false,%
-    showstringspaces=false,%
-    backgroundcolor=\color{whitesmoke},   
     commentstyle=\color{codegreen},
     keywordstyle=\color{deepcarminepink}\bfseries,
     numberstyle=\tiny\color{tealblue},
     stringstyle=\color{tealgreen}\itshape,
-    basicstyle=\footnotesize,
     numbers=left,%
-	fancyvrb=true,%
-	mathescape=true,%    
-	captionpos=t,%
+    captionpos=t,%
+    firstnumber=1,
     escapeinside={\%*}{*)},%
-    numbersep=5pt,                  
-    tabsize=2
 }
 }
 
@@ -635,6 +563,7 @@
     showstringspaces=false,
     showtabs=false,                  
     escapeinside={\%*}{*)},%
+    firstnumber=1,
     tabsize=2
 }
 }

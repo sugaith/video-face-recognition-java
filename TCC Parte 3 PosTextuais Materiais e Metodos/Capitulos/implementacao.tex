@@ -9,7 +9,7 @@ Para que se possa iniciar o planejamento da implementação do sistema, aqui pro
 
 \begin{figure}[h]
 	\centering
-	\includegraphics[width=1.3\textwidth]{ilustracao_tcc_sistema}
+	\includegraphics[width=1.12\textwidth]{ilustracao_tcc_sistema}
 	\caption{Ilustração do processo do sistema.}
 	\fonte{Elaborado pelo autor.}
 	\label{fig:ilustracao}
@@ -27,8 +27,9 @@ Para que se possa iniciar o planejamento da implementação do sistema, aqui pro
 	\item \textbf{entrada/processamento:} se o usuário identifica a face a partir do item acima descrito, o sistema inicia o processo de treinamento da face definido na \autoref{sec:recog_faces}, criando um \textit{eigenspace}, e no momento seguinte à criação deste "espaço", o sistema começa a utiliza-lo para os novos processos de reconhecimento.
 \end{enumerate}
 
-O diagrama de Caso de Uso da \autoref{casouso} ilustra a interação entre o usuário (ator) e o sistema.
+\section{Diagrama de Caso de Uso}\label{sec:diagpacs}
 
+O diagrama de Caso de Uso da \autoref{casouso} ilustra a interação entre o usuário (ator) e o sistema. Observa-se que as únicas atividades do usuário é de se posicionar para que a câmera capture as imagens, e preencher o campo disponibilizado para identificação, caso o usuário deseje.
 
 \begin{figure}[h]
 	\centering
@@ -40,11 +41,8 @@ O diagrama de Caso de Uso da \autoref{casouso} ilustra a interação entre o usu
 
 
 
-
-
-
-
 \section{Diagrama de Pacotes}\label{sec:diagpacs}
+Nesta seção, os pacotes criados para implementação do sistema aqui proposto serão apresentados em forma de diagrama de pacotes UML. A \autoref{fig:SRFV_diagramaPacotes} ilustra tal diagrama:
 
 \begin{figure}[h]
 	\centering
@@ -53,9 +51,6 @@ O diagrama de Caso de Uso da \autoref{casouso} ilustra a interação entre o usu
 	\fonte{Elaborado pelo autor.}
 	\label{fig:SRFV_diagramaPacotes}
 \end{figure}
-
-Nesta seção, os pacotes criados para implementação do sistema aqui proposto serão apresentados em forma de diagrama de pacotes UML. A \autoref{fig:SRFV_diagramaPacotes} ilustra tal diagrama:
-
 
 O pacote \textit{"gui"} possui classes responsáveis pela interface com o usuário e regras do sistema como controle de fluxo de quadros e execução de tarefas. O pacote \textit{"eigenfaces"} possui as classes responsáveis pela execução do algoritmo ACP e a geração do espaço multidimensional de \textit{eigenfaces}. Por fim, o pacote de nome \textit{"utils"}, possui classes utilitárias resposáveis por manipular arquivos (carregar, salvar e deletar) e conversões de formatos de imagens. 
 
@@ -113,20 +108,11 @@ A classe \textbf{\textit{PanelCadastroDeFace}} também é responsávem pelo cont
 		
 		\item \textbf{boolefan recogFace():} método chamado quando o sistema se encontra no estado de reconhecimento, onde a imagem passa por processamento, redimensionando-a e transformando-a em escala de cinza e passada para o método o objeto \textbf{ACP\_Reconhecimento.processaReconhecimento()} é acionado;
 		
-		\item \textbf{boolefan negocioReconhecerClip():} sub-método do método \textit{recogFace()} definido acima, chamado quando o sistema se encontra no estado de reconhecimento, onde a imagem passa por conversões de tipo,  aciona efetivamente \textbf{ACP\_Reconhecimento.processaReconhecimento()} e determina se o reconhecimento foi um sucesso ou uma falha, detalhado posteriormente na autoref{sec:defsucregoc}, passando os dados de reconhecimento para a interface;
+		\item \textbf{boolean negocioReconhecerClip():} sub-método do método \textit{recogFace()} definido acima, chamado quando o sistema se encontra no estado de reconhecimento, onde a imagem passa por conversões de tipo,  aciona efetivamente \textbf{ACP\_Reconhecimento.processaReconhecimento()} e determina se o reconhecimento foi um sucesso ou uma falha, detalhado posteriormente na autoref{sec:defsucregoc}, passando os dados de reconhecimento para a interface;
 	\end{itemize}
 \end{itemize}
 
 
-A \autoref{screenshot-gui} ilustra a interface produzida pela implementação das classes do pacote "gui".
-
-\begin{figure}[h]
-	\centering
-	\includegraphics[width=1\textwidth]{screenshot-gui}
-	\caption{Imagem da interface do sistema.}
-	\fonte{Elaborado pelo autor.}
-	\label{screenshot-gui}
-\end{figure}
 
 
 
@@ -340,24 +326,23 @@ De acordo com o método experimental, utilizou-se três constantes controladas c
 
 \subsection{Processo Principal do Sistema}\label{sec:mainthread}
 
-O bloco de código da \autoref{snippet-mainthread} corresponde a \textit{Thread} (classe para processamento paralelo) que controla o fluxo do sistema que se refere aos processos de detecção, treinamento e reconhecimento da imagem capturada do fluxo de quadros, disponibilizadas pela \textit{webcam}.
+O bloco do \autoref{snippet-mainthread} corresponde a \textit{Thread} (classe para processamento paralelo) que controla o fluxo do sistema que se refere aos processos de detecção, treinamento e reconhecimento da imagem capturada do fluxo de quadros, disponibilizadas pela \textit{webcam}.
 
-\begin{figure}[h]
-	\centering
-	\includegraphics[width=1\textwidth]{snippet-mainthread}
-	\caption{Bloco de código do método \textit{trackFace()} da classe \textit{PanelCadastroDeFace}}
-	\fonte{Elaborado pelo autor.}
-	\label{snippet-mainthread}
-\end{figure}
-
-
-
-\codigoPython
-\lstinputlisting[language=Java, label=coleta-script, caption=\textit{Script} coletar-hashtags.py]{src/c.java}
+%\begin{figure}[h]
+%	\centering
+%	\includegraphics[width=1\textwidth]{snippet-mainthread}
+%	\caption{Bloco de código do método \textit{trackFace()} da classe \textit{PanelCadastroDeFace}}
+%	\fonte{Elaborado pelo autor.}
+%	\label{snippet-mainthread}
+%\end{figure}
 
 
 
-Este bloco está contido do método \textit{trackFace()} da classe \textit{PanelCadastroDeFace}, descritas na \autoref{sec:diagclasses}, que é chamado a cada captura de quadros, atribuindo como parâmetro a image já redimensionada e transformada para cores da escala cinza, como mostra a  \autoref{snippet-mainthread}.
+\codigoJava
+\lstinputlisting[firstnumber=447, language=Java, label=snippet-mainthread, caption=Bloco de código do método \textit{trackFace()} da classe \textit{PanelCadastroDeFace}]{src/snippet-mainthread.java}
+
+
+Este bloco está contido do método \textit{trackFace()} da classe \textit{PanelCadastroDeFace}, descritas na \autoref{sec:diagclasses}, que é chamado a cada captura de quadros, atribuindo como parâmetro a image já redimensionada e transformada para cores da escala cinza, como mostra o  \autoref{snippet-mainthread}.
 
 A linha de número \textit{447}, o método \textit{detectarFace(grayIm)} recebe uma imagem já redimensionada e transformada em escala da cinza pelo método \textit{escalaImagemCinza()}, descrito na \autoref{sec:ituls}, e processa a detecção da face utilizando o algoritmo de Viola-Jones (descritos na \autoref{subsubsec:violajones}). Se a face não for detectada, nada acontece. Caso a face seja detectada na imagem, as coordenadas desta são salvas em uma variável global e os campos de identificação contidos na classe \textit{FrameCadastroFace} para identificação do usuário são ativados  (linha \textit{450} e \textit{452}, respectivamente). 
 
@@ -367,91 +352,131 @@ Se o sistema não se encontra em "estado de treinamento", controlado pelo métod
 
 
 \subsection{Fase de Treinamento}\label{sec:impltrein}
+%\begin{figure}[h]
+%	\centering
+%	\includegraphics[width=1\textwidth]{snippet-treiamento}
+%	\caption{Bloco de código do método \textit{gerar\_EigenSpace()} da classe \textit{ACP\_Treinamento}}
+%	\fonte{Elaborado pelo autor.}
+%	\label{snippet-treiamento}
+%\end{figure}
 
-\begin{figure}[h]
-	\centering
-	\includegraphics[width=1\textwidth]{snippet-treiamento}
-	\caption{Bloco de código do método \textit{gerar\_EigenSpace()} da classe \textit{ACP\_Treinamento}}
-	\fonte{Elaborado pelo autor.}
-	\label{snippet-treiamento}
-\end{figure}
 
+O método \textit{gerar\_EigenSpace()} do \autoref{snippet-treiamento} é chamado pelo método \textit{ACP\_Treinamento.construirEspaco()}, contemplado no bloco de código anterior, que por sua vez resgata todas as imagens de treino, salvar em disco rígido e retorna os caminhos destes arquivos.
 
-O método \textit{gerar\_EigenSpace()} da \autoref{snippet-treiamento} é chamado pelo método \textit{ACP\_Treinamento.construirEspaco()}, contemplado no bloco de código anterior, que por sua vez resgata todas as imagens de treino, salvar em disco rígido e retorna os caminhos destes arquivos.
+\codigoJava
+\lstinputlisting[firstnumber=64, language=Java, label=snippet-treiamento, caption=Bloco de código do método \textit{gerar\_EigenSpace()} da classe \textit{ACP\_Treinamento}]{src/snippet-treiamento.java}
+
 
 Este bloco é o responsável por executar a fase de treinamento do algoritimo ACP (ou \textit{EigenFaces}), contemplada na seção \autoref{subsec:treinamento}, e seus cinco passos:
 
 No primeiro passo, carrega-se as imagens do disco rígido para a memória e as converte para as classes que as representam em matrizes (linha \textit{67} e \textit{69}). 
 
-Para o segundo passo, o cálculo da face média é executado e subtrai-se esta com a matriz criada no primeiro passo, como está nas linhas \textit{72} e \textit{73} da  \autoref{snippet-treiamento}.
+Para o segundo passo, o cálculo da face média é executado e subtrai-se esta com a matriz criada no primeiro passo, como está nas linhas \textit{72} e \textit{73} do  \autoref{snippet-treiamento}.
 
 No terceiro passo, o vetor de covariância é calculado multiplicando a matriz gerada no passo anterior com sua equivalente transposta, como contempla a \autoref{subsec:treinamento} (linhas \textit{76} e \textit{77}).
 
 No quarto passo deve-se decompor a matriz de covariância em autovalores (\textit{eigenvalues}) e autovetores (\textit{eigenvectors}). Isto é feito atravéz dos métodos \textit{getEigenValues()} e \textit{getEigenVectors()} (linhas \textit{81} e \textit{82}, respectivamente) da classe \textit{AutoValor\_decomp}, descritas na \autoref{sec:ituls}, e posteriormenter ordenados por ordem de autovalores (linha \textit{85}).
 
-\begin{figure}[h]
-	\centering
-	\includegraphics[width=0.8\textwidth]{snippet-treiamento-calcesp}
-	\caption{Bloco de código do método \textit{calcEspaco()} da classe \textit{ACP\_Treinamento}, responsável por executar o quinto passo da fase de treinamento.}
-	\fonte{Elaborado pelo autor.}
-	\label{snippet-treiamento-calcesp}
-\end{figure}
-
-Para o quinto e último passo desta fase de treinamento, o cálculo do espaço (\textit{eigenspace}) é executado atravéz do método \textit{calcEspaco()}, descritos no bloco de código da \autoref{snippet-treiamento-calcesp}. 
+%\begin{figure}[h]
+%	\centering
+%	\includegraphics[width=0.8\textwidth]{snippet-treiamento-calcesp}
+%	\caption{Bloco de código do método \textit{calcEspaco()} da classe \textit{ACP\_Treinamento}, responsável por executar o quinto passo da fase de treinamento.}
+%	\fonte{Elaborado pelo autor.}
+%	\label{snippet-treiamento-calcesp}
+%\end{figure}
 
 
+Para o quinto e último passo desta fase de treinamento, o cálculo do espaço (\textit{eigenspace}) é executado atravéz do método \textit{calcEspaco()}, descritos no bloco do \autoref{snippet-treiamento-calcesp}. 
 
+
+\codigoJava
+\lstinputlisting[firstnumber=171, language=Java, label=snippet-treiamento-calcesp, caption=Bloco de código do método \textit{calcEspaco()} da classe \textit{ACP\_Treinamento} - responsável por executar o quinto passo da fase de treinamento.]{src/snippet-treiamento-calcesp.java}
 
 
 \subsection{Fase de Reconhecimento}\label{sec:implrecog}
 
-O método \textit{processaReconhecimento()} contemplado no bloco de código ilustrado pela \autoref{snippet-reconh}, é responsável por executar os três passos da fase de reconhecimento do algoritmo \textit{Eigenfaces} (ACP), descritos na \autoref{subsec:reconhecimento}.
+O método \textit{processaReconhecimento()} contemplado no bloco do \autoref{snippet-reconh}, é responsável por executar os três passos da fase de reconhecimento do algoritmo \textit{Eigenfaces} (ACP), descritos na \autoref{subsec:reconhecimento}.
 
-\begin{figure}[h]
-	\centering
-	\includegraphics[width=1.05\textwidth]{snippet-reconh}
-	\caption{Bloco de código do método \textit{processaReconhecimento()} da classe \textit{ACP\_Reconhecimento}}
-	\fonte{Elaborado pelo autor.}
-	\label{snippet-reconh}
-\end{figure}
+%\begin{figure}[h]
+%	\centering
+%	\includegraphics[width=1.05\textwidth]{snippet-reconh}
+%	\caption{Bloco de código do método \textit{processaReconhecimento()} da classe \textit{ACP\_Reconhecimento}}
+%	\fonte{Elaborado pelo autor.}
+%	\label{snippet-reconh}
+%\end{figure}
+
+
+\codigoJava
+\lstinputlisting[firstnumber=113, language=Java, label=snippet-reconh, caption=Bloco de código do método \textit{processaReconhecimento()} da classe
+\textit{ACP\_Reconhecimento}]{src/snippet-reconh.java}
 
 
 O método \textit{regocFace()} da classe \textit{PanelCadastroDeFace}, como descrito na da \autoref{sec:diagclasses}, invoca este método \textit{processaReconhecimento()} para fazer o reconhecimento, passando imagem da classe \textit{BufferedImage} já processada, que representa a nova face a ser reconhecida. 
 
 Para o primeiro passo da fase de reconhecimento, prepara-se os dados para o cálculo fazendo conversão entre classes (linha \textit{116} e \textit{117}), e normaliza a matriz que representa a nova imagem com a média dos próprios valores (linha \textit{119}).
 
-No segundo passo projeta-se o novo vetor de consulta ao espaço previamente criado na fase de treinamento. Para isto, é necessário extrair a face média do espaço, previamente salva no objeto da classe \textit{eigenspace}, e subtraí-la do vetor de consulta (linha \textit{125} da \autoref{snippet-reconh}) para que seja atendida a equação de definição do espaço com o novo vetor de consulta, detallhada  na \autoref{subsec:reconhecimento}. 
+No segundo passo projeta-se o novo vetor de consulta ao espaço previamente criado na fase de treinamento. Para isto, é necessário extrair a face média do espaço, previamente salva no objeto da classe \textit{eigenspace}, e subtraí-la do vetor de consulta (linha \textit{125} do \autoref{snippet-reconh}) para que seja atendida a equação de definição do espaço com o novo vetor de consulta, detallhada  na \autoref{subsec:reconhecimento}. 
 
-O método \textit{calcEspaco()} (linha \textit{128} da \autoref{snippet-reconh}), semelhante ao método \textit{calcEspaco()} da classe \textit{ACP\_Treiamento}, é responsável pelo cálculo do novo espaço com o novo vetor de consulta, detalhado e ilustrado no bloco de código da \autoref{snippet-reconh-calcesp}. Nele recupara-se os autovalores contidos no espaço previamente criado pela fase de treinamento (linha \textit{150} - \autoref{snippet-reconh-calcesp} ) e se extrai a submatriz determinada de autovalores pela constante \textit{NUM\_EF\_recog}, especificada na \autoref{sec:consts} (linha \textit{151} - \autoref{snippet-reconh-calcesp}), seguidas das operações de transposição e multiplicação (linhas \textit{152} e \textit{154} da \autoref{snippet-reconh-calcesp}), para que se atenda a equação de criação do espaço (\textit{eigenspace}) com o novo vetor de consulta (\autoref{subsec:reconhecimento}).
+O método \textit{calcEspaco()} (linha \textit{128} do \autoref{snippet-reconh}), semelhante ao método \textit{calcEspaco()} da classe \textit{ACP\_Treiamento}, é responsável pelo cálculo do novo espaço com o novo vetor de consulta, detalhado e ilustrado no bloco de código do \autoref{snippet-reconh-calcesp}. Nele recupara-se os autovalores contidos no espaço previamente criado pela fase de treinamento (linha \textit{150} - \autoref{snippet-reconh-calcesp} ) e se extrai a submatriz determinada de autovalores pela constante \textit{NUM\_EF\_recog}, especificada na \autoref{sec:consts} (linha \textit{151} - \autoref{snippet-reconh-calcesp}), seguidas das operações de transposição e multiplicação (linhas \textit{152} e \textit{154} do \autoref{snippet-reconh-calcesp}), para que se atenda a equação de criação do espaço (\textit{eigenspace}) com o novo vetor de consulta (\autoref{subsec:reconhecimento}).
 
-\begin{figure}[h]
-	\centering
-	\includegraphics[width=0.85\textwidth]{snippet-reconh-calcesp}
-	\caption{Bloco de código do método \textit{calcEspaco()} da classe \textit{ACP\_Treinamento}}
-	\fonte{Elaborado pelo autor.}
-	\label{snippet-reconh-calcesp}
-\end{figure}
+%\begin{figure}[h]
+%	\centering
+%	\includegraphics[width=0.85\textwidth]{snippet-reconh-calcesp}
+%	\caption{Bloco de código do método \textit{calcEspaco()} da classe \textit{ACP\_Treinamento}}
+%	\fonte{Elaborado pelo autor.}
+%	\label{snippet-reconh-calcesp}
+%\end{figure}
+
+\codigoJava
+\lstinputlisting[firstnumber=148, language=Java, label=snippet-reconh-calcesp, caption=Bloco de código do método \textit{calcEspaco()} da classe \textit{ACP\_Treinamento}]{src/snippet-reconh-calcesp.java}
 
 
-Para o terceiro e último passo da implementação desta fase de reconhecimento, a Distância Euclidiana entre as coordanadas de cada autovetor (\textit{eigenface}) geradas na faze de treinamento e as coordenadas dos mesmos no novo espaço gerados nesta faze são calculados (linha \textit{131} da \autoref{snippet-reconh}), subtraíndo-as e elevando-as ao quadrado. A menor delas é elegida (linha \textit{132} da \autoref{snippet-reconh}) e é calculada sua raiz quadrada para completar a equação da Distância Euclidiana, contemplada na \autoref{subsec:reconhecimento}, criando um objeto da classe \textit{ResultadoReconhecimento}, detalhado na \autoref{sec:eigenfacesclass}, que salva o resultado da melhor distância obtida e a identificação da imagem de treinamento correspondente (a face).
+Para o terceiro e último passo da implementação desta fase de reconhecimento, a Distância Euclidiana entre as coordanadas de cada autovetor (\textit{eigenface}) geradas na faze de treinamento e as coordenadas dos mesmos no novo espaço gerados nesta faze são calculados (linha \textit{131} do \autoref{snippet-reconh}), subtraíndo-as e elevando-as ao quadrado. A menor delas é elegida (linha \textit{132} do \autoref{snippet-reconh}) e é calculada sua raiz quadrada para completar a equação da Distância Euclidiana, contemplada na \autoref{subsec:reconhecimento}, criando um objeto da classe \textit{ResultadoReconhecimento}, detalhado na \autoref{sec:eigenfacesclass}, que salva o resultado da melhor distância obtida e a identificação da imagem de treinamento correspondente (a face).
 
 
 \subsection{Definição de Sucesso do Reconhecimento}\label{sec:defsucregoc}
 
 Como visto na definição do algoritmo \textit{EigenFaces}, disposta na \autoref{subsec:acp}, este apenas apresenta como resultado a menor distância entre os autovetores e o novo vetor de consulta, sendo responsabilidade de outro processo a análise deste resultado para definir se efetivamente este valor corresponte a uma reconhecimento de sucesso ou uma falha.
 
-A constante \textit{MIN\_DIST}, definida na \autoref{sec:consts}, é a responsável pelo resultado final de sucesso ou falha, a qual é controlada e nos testes da \autoref{ch:resultados} posterior. Como mostra o bloco de código da \autoref{snippet-reconh-resultadofim}, a checagem desta constante contra a distância encontrada na fase de reconhecimento pode ser vista na linha \textit{614}.
+A constante \textit{MIN\_DIST}, definida na \autoref{sec:consts}, é a responsável pelo resultado final de sucesso ou falha, a qual é controlada e nos testes da \autoref{ch:resultados} posterior. Como mostra o bloco de código do \autoref{snippet-reconh-resultadofim}, a checagem desta constante contra a distância encontrada na fase de reconhecimento pode ser vista na linha \textit{614}.
 
-\begin{figure}[h]
-	\centering
-	\includegraphics[width=1\textwidth]{snippet-reconh-resultadofim}
-	\caption{Bloco de código do método \textit{negocioReconhecerClip()} da classe \textit{PanelCadastroDeFace}}
-	\fonte{Elaborado pelo autor.}
-	\label{snippet-reconh-resultadofim}
-\end{figure}
+
+
+\codigoJava
+\lstinputlisting[firstnumber=607, language=Java, label=snippet-reconh-resultadofim, caption=Bloco de código do método \textit{negocioReconhecerClip()} da classe \textit{PanelCadastroDeFace}]{src/snippet-reconh-resultadofim.java}
+
+%\begin{figure}[h]
+%	\centering
+%	\includegraphics[width=1\textwidth]{snippet-reconh-resultadofim}
+%	\caption{Bloco de código do método \textit{negocioReconhecerClip()} da classe \textit{PanelCadastroDeFace}}
+%	\fonte{Elaborado pelo autor.}
+%	\label{snippet-reconh-resultadofim}
+%\end{figure}
 
 Caso a menor ditância calculada seja menor do que a constante \textit{MIN\_DIST}, o resultado é considerado sucesso e os dados correspondentes a este são passados como parâmetro para a interface (linha \textit{619}) para que seja exibido. Tando em caso de sucesso ou de erro, um registro do resultado juntamente com o caminho da imagem correspondente e a distância resultante é realizado (linhas \textit{617}, \textit{618}, \textit{624} e \textit{625}) para futura análise dos resultados, que são apresentados no  \autoref{ch:resultados}.
 
+
+\subsection{Interface}\label{sec:interface}
+
+
+A \autoref{screenshot-gui} ilustra a interface produzida pela implementação das classes do pacote "gui", e a \autoref{screenshot-sys} representa o sistema em funcionamento, mostrando o fluxo de quadros da câmera na janela do sistema e detectando uma face.
+
+\begin{figure}[h]
+	\centering
+	\includegraphics[width=1\textwidth]{screenshot-gui}
+	\caption{Imagem da interface do sistema.}
+	\fonte{Elaborado pelo autor.}
+	\label{screenshot-gui}
+\end{figure}
+
+
+\begin{figure}[h]
+	\centering
+	\includegraphics[width=1\textwidth]{screenshot-sys}
+	\caption{Imagem do Sistema em Funcionamento.}
+	\fonte{Elaborado pelo autor.}
+	\label{screenshot-sys}
+\end{figure}
 
 
 

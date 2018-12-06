@@ -4,9 +4,9 @@
 
 Vários trabalhos serviram como fonte de conhecimento e suporte para o entendimento e desenvolvimento deste tema. Alguns foram considerados mais importantes por abordar detalhadamente o problema de reconhecimento, outros foram buscados para se entender melhor, ou ter outra visão sobre alguns detalhes específicos do problema.
 
-Trabalhos de autores como \cite{geysilva} ajudaram a estruturar e organizar o tema, por abordar tópicos similares e por possuir riqueza de detalhes no assunto de análise de componentes apresentando uma implementação em \textit{MatLab} (um \textit{software} interativo voltado para o cálculo numérico).
+Trabalhos de autores como \citeonline{geysilva} ajudaram a estruturar e organizar o tema, por abordar tópicos similares e por possuir riqueza de detalhes no assunto de análise de componentes apresentando uma implementação em \textit{MatLab} (um \textit{software} interativo voltado para o cálculo numérico).
 
-O trabalho de \cite{img-digital-willians} foi utilizado para se aprofundar no tema de imagens digitais, assim como  \cite{gonzalez_woods} que também esclareceu o funcionamento de escalonamento, normalização e monocromatização de imagens. O autor Dr. Andrew Davison, em seu livro, \cite{drmathew_java_programming} se destacou pela ótima didática, facilitando o entendimento de Análise de Componentes e sua relação com \textit{EigenFaces}. 
+O trabalho de \citeonline{img-digital-willians} foi utilizado para se aprofundar no tema de imagens digitais, assim como  \citeonline{gonzalez_woods} que também esclareceu o funcionamento de escalonamento, normalização e monocromatização de imagens. O autor Dr. Andrew Davison, em seu livro, \citeonline{drmathew_java_programming} se destacou pela ótima didática, facilitando o entendimento de Análise de Componentes e sua relação com \textit{EigenFaces}. 
 
 Os trabalhos \citeonline{tutorial_en_smith} e \citeonline{tutorial_pt} foram estudados para descrever e implementar algoritmo de ACP (\textit{Eigenfaces}).
 
@@ -28,13 +28,13 @@ Converter uma imagem para o formato digital significa transferir os elementos qu
 
 
 %\vspace*{13cm}
-\begin{figure}[h]
-	\centering
-	\includegraphics[width=.6\textwidth]{pixel-img}
-	\caption{Exemplo de imagem representada como uma matriz (M,N) de pixels, com destaque para o pixel (2,4).}
-	\fonte{\cite{img-digital-willians}}
-	\label{pixel_img}
-\end{figure}
+%\begin{figure}[h]
+%	\centering
+%	\includegraphics[width=.6\textwidth]{pixel-img}
+%	\caption{Exemplo de imagem representada como uma matriz (M,N) de pixels, com destaque para o pixel (2,4).}
+%	\fonte{\cite{img-digital-willians}}
+%	\label{pixel_img}
+%\end{figure}
 
 Para que uma imagem analógica (representação real da cena) seja convertida, esta deve sofrer uma separação espacial (amostragem) e em amplitude (quantização) \cite{img-digital-willians}. 
 
@@ -46,7 +46,10 @@ A função  $f(x,y)$  é a multiplicação da iluminância  $i(x,y)$ que é a qu
 
 Sendo assim, podemos dizer que :
 
-$f(x,y) = i(x,y) * r(x,y)$,
+\begin{equation}
+f(x,y) = i(x,y) * r(x,y),
+\end{equation}
+
 onde $0 < i(x,y)$ e $0 < r(x,y) < 1$ .
 
 Quando se utiliza uma imagem colorida, no padrão RGB por exemplo,  deve se usar uma função $f(x,y)$ para cada banda, R (\textit{Red}), G (\textit{Green}) e B (\textit{Blue}) que são as cores primárias \cite{gonzalez_woods}.
@@ -308,7 +311,7 @@ O resultado do algoritmo são as posições dos objetos classificados com as car
 
 \section{PROCESSO DA ANÁLISE DE COMPONENTES PRINCIPAIS (ACP) OU \textit{EIGENFACES} } \label{sec:recog_faces}
 
-A técnica PCA (Análise de Componentes Principais) foi descrita inicialmente por Karl Pearson em 1901 como solução para alguns problemas biométricos da época, mas ele não propôs nenhuma implementação dessa técnica para um caso com mais de duas variáveis. Em 1933 essa técnica foi descrita por Hotteling, mas os cálculos ainda eram complexos quando se tratava de um problema com dezenas de variáveis. Apenas com o surgimento dos computadores atuais, a técnica ficou mais difundida \cite{geysilva}. 
+A técnica ACP (Análise de Componentes Principais) foi descrita inicialmente por Karl Pearson em 1901 como solução para alguns problemas biométricos da época, mas ele não propôs nenhuma implementação dessa técnica para um caso com mais de duas variáveis. Em 1933 essa técnica foi descrita por Hotteling, mas os cálculos ainda eram complexos quando se tratava de um problema com dezenas de variáveis. Apenas com o surgimento dos computadores atuais, a técnica ficou mais difundida \cite{geysilva}. 
 
 O processo de reconhecimento de faces depende de uma fase de treinamento precedente envolvendo imagens faciais com suas identidades associadas. Imagens típicas de treinamento são mostradas na \autoref{fig:trein_img}.
 \begin{figure}[h]
@@ -325,7 +328,7 @@ O processo de treinamento cria as \textit{eigenfaces}, como mostra a \autoref{so
 
 \begin{figure}[h]
 	\centering
-	\includegraphics[width=.4\textwidth]{eigenpeso}
+	\includegraphics[width=.7\textwidth]{eigenpeso}
 	\caption{Exemplo de uma imagem de treinamento representada em uma sequência de pesos de engenfaces.}
 	\fonte{Adapdato de \citeonline{drmathew_java_programming}}
 	\label{fig:eigenpeso}
@@ -339,7 +342,7 @@ Outra maneira de se entender a relação entre as \textit{eigenfaces} e as image
 
 \begin{figure}[h]
 	\centering
-	\includegraphics[width=.4\textwidth]{eigenpeso_axis}
+	\includegraphics[width=.7\textwidth]{eigenpeso_axis}
 	\caption{Exemplo de eigenfaces representadas em um plano cartesiano (\textit{eigenspace}) de 3 dimensões. }
 	\fonte{Adapdato de \citeonline{drmathew_java_programming}}
 	\label{fig:eigenpeso_axis}
