@@ -93,7 +93,7 @@
 \newcommand{\palavrachavetres}[1]{\renewcommand{\imprimirpalavrachavetres}{#1}}
 
 
-\preambulo{Trabalho de conclus{\~ a}o de curso apresentado como requisito obrigat{\' o}rio para obten{\c c}{\~ a}o do t{\' i}tulo de Bacharel em \imprimircurso do \imprimirinstituicao.}
+\preambulo{Trabalho de conclus{\~ a}o de curso apresentado como requisito obrigat{\' o}rio para obten{\c c}{\~ a}o do t{\' i}tulo de Bacharel em \imprimircurso { do} \imprimirinstituicao.}
 
 % ---
 % CAPA

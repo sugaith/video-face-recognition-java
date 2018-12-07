@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.19 (MiKTeX 2.9.6840 64-bit) (preloaded format=pdflatex 2018.12.2)  6 DEC 2018 18:11
+This is pdfTeX, Version 3.14159265-2.6-1.40.19 (MiKTeX 2.9.6840 64-bit) (preloaded format=pdflatex 2018.12.2)  7 DEC 2018 17:53
 entering extended mode
 **./modelo.tex
 (modelo.tex
@@ -1407,7 +1407,7 @@ Overfull \hbox (3.24158pt too wide) in paragraph at lines 35--35
 
 
 ]
-<./Imagens/ex_variacao.png, id=390, 454.69875pt x 536.0025pt>
+<./Imagens/ex_variacao.png, id=387, 454.69875pt x 536.0025pt>
 File: ./Imagens/ex_variacao.png Graphic file (type png)
 <use ./Imagens/ex_variacao.png>
 Package pdftex.def Info: ./Imagens/ex_variacao.png  used on input line 35.
@@ -1425,12 +1425,12 @@ File: omscmr.fd 2014/09/29 v2.5h Standard LaTeX font definitions
 LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <12> not available
 (Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 71.
  [18]
-<./Imagens/someeigen.png, id=434, 263.48438pt x 211.54031pt>
+<./Imagens/someeigen.png, id=431, 263.48438pt x 211.54031pt>
 File: ./Imagens/someeigen.png Graphic file (type png)
 <use ./Imagens/someeigen.png>
 Package pdftex.def Info: ./Imagens/someeigen.png  used on input line 84.
 (pdftex.def)             Requested size: 273.00278pt x 219.19298pt.
-<./Imagens/eigencartesiano.png, id=445, 306.39468pt x 263.48438pt>
+<./Imagens/eigencartesiano.png, id=442, 306.39468pt x 263.48438pt>
 File: ./Imagens/eigencartesiano.png Graphic file (type png)
 <use ./Imagens/eigencartesiano.png>
 Package pdftex.def Info: ./Imagens/eigencartesiano.png  used on input line 100.
@@ -1441,7 +1441,7 @@ Package pdftex.def Info: ./Imagens/eigencartesiano.png  used on input line 100.
 LaTeX Warning: `h' float specifier changed to `ht'.
 
 [19 <./Imagens/someeigen.png>] [20 <./Imagens/eigencartesiano.png>]
-<./Imagens/tabelaEmpresasRecog.png, id=464, 546.54187pt x 848.4197pt>
+<./Imagens/tabelaEmpresasRecog.png, id=461, 546.54187pt x 848.4197pt>
 File: ./Imagens/tabelaEmpresasRecog.png Graphic file (type png)
 <use ./Imagens/tabelaEmpresasRecog.png>
 Package pdftex.def Info: ./Imagens/tabelaEmpresasRecog.png  used on input line 
@@ -1451,7 +1451,7 @@ Package pdftex.def Info: ./Imagens/tabelaEmpresasRecog.png  used on input line
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-<./Imagens/stats_toprecog.png, id=470, 392.21532pt x 150.5625pt>
+<./Imagens/stats_toprecog.png, id=467, 392.21532pt x 150.5625pt>
 File: ./Imagens/stats_toprecog.png Graphic file (type png)
 <use ./Imagens/stats_toprecog.png>
 Package pdftex.def Info: ./Imagens/stats_toprecog.png  used on input line 151.
@@ -1460,13 +1460,6 @@ Package pdftex.def Info: ./Imagens/stats_toprecog.png  used on input line 151.
 ens/tabelaEmpresasRecog.png>] [24
 
 ]
-
-LaTeX Warning: Reference `pixel_img' on page 25 undefined on input line 41.
-
-
-LaTeX Warning: Reference `pixel_img' on page 25 undefined on input line 41.
-
-
 Overfull \hbox (1.45892pt too wide) in paragraph at lines 41--42
 []\T1/cmr/m/n/12 A amos-tra-gem é a di-vi-são do plano $\OT1/cmr/m/n/12 (\OML/c
 mm/m/it/12 x; y\OT1/cmr/m/n/12 )$ \T1/cmr/m/n/12 em uma grade (ou ma-triz bi-di
@@ -1479,21 +1472,23 @@ Overfull \hbox (1.30334pt too wide) in paragraph at lines 68--69
 gens por se-gundo (frequên-
  []
 
-[26]
+
 Overfull \hbox (15.79935pt too wide) in paragraph at lines 87--90
 []\T1/cmr/m/n/12 O pro-ces-sa-mento de ima-gens pode ser di-vi-dido em 3 fa-ses
  bá-si-cas: pré-processamento,
  []
 
-<./Imagens/escalacinza.png, id=569, 850.17625pt x 930.47626pt>
+[26]
+<./Imagens/escalacinza.png, id=567, 850.17625pt x 930.47626pt>
 File: ./Imagens/escalacinza.png Graphic file (type png)
 <use ./Imagens/escalacinza.png>
 Package pdftex.def Info: ./Imagens/escalacinza.png  used on input line 108.
 (pdftex.def)             Requested size: 295.74722pt x 323.68385pt.
 
+
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-<./Imagens/maximo_canal.png, id=577, 334.24875pt x 335.2525pt>
+<./Imagens/maximo_canal.png, id=575, 334.24875pt x 335.2525pt>
 File: ./Imagens/maximo_canal.png Graphic file (type png)
 <use ./Imagens/maximo_canal.png>
 Package pdftex.def Info: ./Imagens/maximo_canal.png  used on input line 120.
@@ -1502,7 +1497,7 @@ Package pdftex.def Info: ./Imagens/maximo_canal.png  used on input line 120.
 LaTeX Warning: `h' float specifier changed to `ht'.
 
 [27]
-<./Imagens/conversao_classica.png, id=593, 328.22626pt x 329.23pt>
+<./Imagens/conversao_classica.png, id=590, 328.22626pt x 329.23pt>
 File: ./Imagens/conversao_classica.png Graphic file (type png)
 <use ./Imagens/conversao_classica.png>
 Package pdftex.def Info: ./Imagens/conversao_classica.png  used on input line 1
@@ -1512,7 +1507,7 @@ Package pdftex.def Info: ./Imagens/conversao_classica.png  used on input line 1
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-<./Imagens/media_canal.png, id=599, 332.24126pt x 330.23375pt>
+<./Imagens/media_canal.png, id=596, 332.24126pt x 330.23375pt>
 File: ./Imagens/media_canal.png Graphic file (type png)
 <use ./Imagens/media_canal.png>
 Package pdftex.def Info: ./Imagens/media_canal.png  used on input line 146.
@@ -1520,7 +1515,7 @@ Package pdftex.def Info: ./Imagens/media_canal.png  used on input line 146.
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-<./Imagens/escalabasico.png, id=609, 643.40375pt x 204.765pt>
+<./Imagens/escalabasico.png, id=606, 643.40375pt x 204.765pt>
 File: ./Imagens/escalabasico.png Graphic file (type png)
 <use ./Imagens/escalabasico.png>
 Package pdftex.def Info: ./Imagens/escalabasico.png  used on input line 164.
@@ -1530,19 +1525,19 @@ Package pdftex.def Info: ./Imagens/escalabasico.png  used on input line 164.
 LaTeX Warning: `h' float specifier changed to `ht'.
 
 [29 <./Imagens/maximo_canal.png> <./Imagens/conversao_classica.png>]
-<./Imagens/vizinho_interp.png, id=633, 701.62125pt x 273.02pt>
+<./Imagens/vizinho_interp.png, id=630, 701.62125pt x 273.02pt>
 File: ./Imagens/vizinho_interp.png Graphic file (type png)
 <use ./Imagens/vizinho_interp.png>
 Package pdftex.def Info: ./Imagens/vizinho_interp.png  used on input line 185.
 (pdftex.def)             Requested size: 318.49861pt x 123.94101pt.
  [30 <./Imagens/media_canal.png> <./Imagens/escalabasico.png> <./Imagens/vizinh
 o_interp.png>]
-<./Imagens/histograma.png, id=655, 289.08pt x 138.5175pt>
+<./Imagens/histograma.png, id=652, 289.08pt x 138.5175pt>
 File: ./Imagens/histograma.png Graphic file (type png)
 <use ./Imagens/histograma.png>
 Package pdftex.def Info: ./Imagens/histograma.png  used on input line 200.
 (pdftex.def)             Requested size: 364.00139pt x 174.42728pt.
-<./Imagens/pdiexamples.png, id=659, 602.25pt x 702.625pt>
+<./Imagens/pdiexamples.png, id=656, 602.25pt x 702.625pt>
 File: ./Imagens/pdiexamples.png Graphic file (type png)
 <use ./Imagens/pdiexamples.png>
 Package pdftex.def Info: ./Imagens/pdiexamples.png  used on input line 219.
@@ -1552,25 +1547,25 @@ Package pdftex.def Info: ./Imagens/pdiexamples.png  used on input line 219.
 LaTeX Warning: `h' float specifier changed to `ht'.
 
 [31 <./Imagens/histograma.png>] [32 <./Imagens/pdiexamples.png>]
-<./Imagens/haarwavelet.png, id=678, 200.24812pt x 151.3153pt>
+<./Imagens/haarwavelet.png, id=675, 200.24812pt x 151.3153pt>
 File: ./Imagens/haarwavelet.png Graphic file (type png)
 <use ./Imagens/haarwavelet.png>
 Package pdftex.def Info: ./Imagens/haarwavelet.png  used on input line 253.
 (pdftex.def)             Requested size: 273.00278pt x 206.31943pt.
  [33 <./Imagens/haarwavelet.png>]
-<./Imagens/haarfeatures.png, id=690, 682.80093pt x 347.04657pt>
+<./Imagens/haarfeatures.png, id=687, 682.80093pt x 347.04657pt>
 File: ./Imagens/haarfeatures.png Graphic file (type png)
 <use ./Imagens/haarfeatures.png>
 Package pdftex.def Info: ./Imagens/haarfeatures.png  used on input line 265.
 (pdftex.def)             Requested size: 409.49722pt x 208.13951pt.
  [34 <./Imagens/haarfeatures.png>]
-<./Imagens/cascata.png, id=712, 357.58594pt x 120.45pt>
+<./Imagens/cascata.png, id=709, 357.58594pt x 120.45pt>
 File: ./Imagens/cascata.png Graphic file (type png)
 <use ./Imagens/cascata.png>
 Package pdftex.def Info: ./Imagens/cascata.png  used on input line 292.
 (pdftex.def)             Requested size: 364.00139pt x 122.61842pt.
  [35 <./Imagens/cascata.png>]
-<./Imagens/trein_img.png, id=732, 401.24907pt x 353.82187pt>
+<./Imagens/trein_img.png, id=729, 401.24907pt x 353.82187pt>
 File: ./Imagens/trein_img.png Graphic file (type png)
 <use ./Imagens/trein_img.png>
 Package pdftex.def Info: ./Imagens/trein_img.png  used on input line 319.
@@ -1579,7 +1574,7 @@ Package pdftex.def Info: ./Imagens/trein_img.png  used on input line 319.
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-<./Imagens/eigenpeso.png, id=738, 402.00188pt x 365.86688pt>
+<./Imagens/eigenpeso.png, id=735, 402.00188pt x 365.86688pt>
 File: ./Imagens/eigenpeso.png Graphic file (type png)
 <use ./Imagens/eigenpeso.png>
 Package pdftex.def Info: ./Imagens/eigenpeso.png  used on input line 331.
@@ -1588,7 +1583,7 @@ Package pdftex.def Info: ./Imagens/eigenpeso.png  used on input line 331.
 LaTeX Warning: `h' float specifier changed to `ht'.
 
 [36]
-<./Imagens/eigenpeso_axis.png, id=751, 336.50719pt x 339.51843pt>
+<./Imagens/eigenpeso_axis.png, id=748, 336.50719pt x 339.51843pt>
 File: ./Imagens/eigenpeso_axis.png Graphic file (type png)
 <use ./Imagens/eigenpeso_axis.png>
 Package pdftex.def Info: ./Imagens/eigenpeso_axis.png  used on input line 345.
@@ -1598,7 +1593,7 @@ Package pdftex.def Info: ./Imagens/eigenpeso_axis.png  used on input line 345.
 LaTeX Warning: `h' float specifier changed to `ht'.
 
 [37 <./Imagens/trein_img.png>]
-<./Imagens/tabelaxy.png, id=772, 128.73094pt x 325.96782pt>
+<./Imagens/tabelaxy.png, id=769, 128.73094pt x 325.96782pt>
 File: ./Imagens/tabelaxy.png Graphic file (type png)
 <use ./Imagens/tabelaxy.png>
 Package pdftex.def Info: ./Imagens/tabelaxy.png  used on input line 374.
@@ -1607,14 +1602,14 @@ Package pdftex.def Info: ./Imagens/tabelaxy.png  used on input line 374.
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-<./Imagens/graphxy.png, id=780, 280.79906pt x 246.1697pt>
+<./Imagens/graphxy.png, id=777, 280.79906pt x 246.1697pt>
 File: ./Imagens/graphxy.png Graphic file (type png)
 <use ./Imagens/graphxy.png>
 Package pdftex.def Info: ./Imagens/graphxy.png  used on input line 384.
 (pdftex.def)             Requested size: 181.99722pt x 159.55013pt.
 [38 <./Imagens/eigenpeso.png>] [39 <./Imagens/eigenpeso_axis.png> <./Imagens/gr
 aphxy.png>] [40 <./Imagens/tabelaxy.png>]
-<./Imagens/graphxy2.png, id=825, 376.40625pt x 243.91125pt>
+<./Imagens/graphxy2.png, id=822, 376.40625pt x 243.91125pt>
 File: ./Imagens/graphxy2.png Graphic file (type png)
 <use ./Imagens/graphxy2.png>
 Package pdftex.def Info: ./Imagens/graphxy2.png  used on input line 562.
@@ -1624,7 +1619,7 @@ Package pdftex.def Info: ./Imagens/graphxy2.png  used on input line 562.
 LaTeX Warning: `h' float specifier changed to `ht'.
 
 [41]
-<./Imagens/graphxy3.png, id=847, 347.79938pt x 251.43938pt>
+<./Imagens/graphxy3.png, id=844, 347.79938pt x 251.43938pt>
 File: ./Imagens/graphxy3.png Graphic file (type png)
 <use ./Imagens/graphxy3.png>
 Package pdftex.def Info: ./Imagens/graphxy3.png  used on input line 585.
@@ -1657,7 +1652,7 @@ am uti-li-za-dos ([][]GROFFE[][],
  []
 
 [49]) (Capitulos/implementacao.tex [50]
-<./Imagens/ilustracao_tcc_sistema.png, id=959, 803.0pt x 602.25pt>
+<./Imagens/ilustracao_tcc_sistema.png, id=956, 803.0pt x 602.25pt>
 File: ./Imagens/ilustracao_tcc_sistema.png Graphic file (type png)
 <use ./Imagens/ilustracao_tcc_sistema.png>
 Package pdftex.def Info: ./Imagens/ilustracao_tcc_sistema.png  used on input li
@@ -1674,7 +1669,7 @@ LaTeX Warning: `h' float specifier changed to `ht'.
 [51
 
 ]
-<./Imagens/casouso.png, id=974, 838.13126pt x 549.05125pt>
+<./Imagens/casouso.png, id=971, 838.13126pt x 549.05125pt>
 File: ./Imagens/casouso.png Graphic file (type png)
 <use ./Imagens/casouso.png>
 Package pdftex.def Info: ./Imagens/casouso.png  used on input line 36.
@@ -1683,7 +1678,7 @@ Package pdftex.def Info: ./Imagens/casouso.png  used on input line 36.
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-<./Imagens/SRFV_diagramaPacotes.png, id=976, 501.875pt x 501.875pt>
+<./Imagens/SRFV_diagramaPacotes.png, id=973, 501.875pt x 501.875pt>
 File: ./Imagens/SRFV_diagramaPacotes.png Graphic file (type png)
 <use ./Imagens/SRFV_diagramaPacotes.png>
 Package pdftex.def Info: ./Imagens/SRFV_diagramaPacotes.png  used on input line
@@ -1693,7 +1688,7 @@ Package pdftex.def Info: ./Imagens/SRFV_diagramaPacotes.png  used on input line
 LaTeX Warning: `h' float specifier changed to `ht'.
 
 [52 <./Imagens/ilustracao_tcc_sistema.png>]
-<./Imagens/SRFV_diagramaClassse_gui.png, id=983, 853.1875pt x 453.695pt>
+<./Imagens/SRFV_diagramaClassse_gui.png, id=980, 853.1875pt x 453.695pt>
 File: ./Imagens/SRFV_diagramaClassse_gui.png Graphic file (type png)
 <use ./Imagens/SRFV_diagramaClassse_gui.png>
 Package pdftex.def Info: ./Imagens/SRFV_diagramaClassse_gui.png  used on input 
@@ -1719,7 +1714,7 @@ Overfull \hbox (23.45009pt too wide) in paragraph at lines 109--110
 mento, redimensionando-
  []
 
-<./Imagens/SRFV_diagramaClassse_eigenfaces.png, id=997, 652.68843pt x 642.90187
+<./Imagens/SRFV_diagramaClassse_eigenfaces.png, id=994, 652.68843pt x 642.90187
 pt>
 File: ./Imagens/SRFV_diagramaClassse_eigenfaces.png Graphic file (type png)
 <use ./Imagens/SRFV_diagramaClassse_eigenfaces.png>
@@ -1733,7 +1728,7 @@ Overfull \hbox (45.50278pt too wide) in paragraph at lines 124--125
 
 [55 <./Imagens/SRFV_diagramaClassse_gui.png (PNG copy)>] [56 <./Imagens/SRFV_di
 agramaClassse_eigenfaces.png>] [57]
-<./Imagens/SRFV_diagramaClassse_utils.png, id=1024, 671.50874pt x 563.10374pt>
+<./Imagens/SRFV_diagramaClassse_utils.png, id=1021, 671.50874pt x 563.10374pt>
 File: ./Imagens/SRFV_diagramaClassse_utils.png Graphic file (type png)
 <use ./Imagens/SRFV_diagramaClassse_utils.png>
 Package pdftex.def Info: ./Imagens/SRFV_diagramaClassse_utils.png  used on inpu
@@ -1748,7 +1743,7 @@ Overfull \hbox (45.50278pt too wide) in paragraph at lines 226--227
 LaTeX Warning: `h' float specifier changed to `ht'.
 
 [58] [59 <./Imagens/SRFV_diagramaClassse_utils.png>]
-<./Imagens/diagsequencia.png, id=1042, 752.8125pt x 501.875pt>
+<./Imagens/diagsequencia.png, id=1039, 752.8125pt x 501.875pt>
 File: ./Imagens/diagsequencia.png Graphic file (type png)
 <use ./Imagens/diagsequencia.png>
 Package pdftex.def Info: ./Imagens/diagsequencia.png  used on input line 290.
@@ -1757,7 +1752,7 @@ Package pdftex.def Info: ./Imagens/diagsequencia.png  used on input line 290.
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-<./Imagens/diagsequenciaMatrixOP.png, id=1043, 752.8125pt x 501.875pt>
+<./Imagens/diagsequenciaMatrixOP.png, id=1040, 752.8125pt x 501.875pt>
 File: ./Imagens/diagsequenciaMatrixOP.png Graphic file (type png)
 <use ./Imagens/diagsequenciaMatrixOP.png>
 Package pdftex.def Info: ./Imagens/diagsequenciaMatrixOP.png  used on input lin
@@ -4650,12 +4645,12 @@ Package xcolor Warning: Incompatible color definition on input line 446.
 Package xcolor Warning: Incompatible color definition on input line 446.
 
 [68]
-<./Imagens/screenshot-gui.png, id=1294, 481.04718pt x 441.14813pt>
+<./Imagens/screenshot-gui.png, id=1291, 481.04718pt x 441.14813pt>
 File: ./Imagens/screenshot-gui.png Graphic file (type png)
 <use ./Imagens/screenshot-gui.png>
 Package pdftex.def Info: ./Imagens/screenshot-gui.png  used on input line 466.
 (pdftex.def)             Requested size: 455.0pt x 417.27087pt.
-<./Imagens/screenshot-sys.png, id=1295, 483.30562pt x 442.65375pt>
+<./Imagens/screenshot-sys.png, id=1292, 483.30562pt x 442.65375pt>
 File: ./Imagens/screenshot-sys.png Graphic file (type png)
 <use ./Imagens/screenshot-sys.png>
 Package pdftex.def Info: ./Imagens/screenshot-sys.png  used on input line 475.
@@ -4668,7 +4663,7 @@ LaTeX Warning: `h' float specifier changed to `ht'.
 screenshot-sys.png>] [71
 
 ]
-<./Imagens/tab-res-fase1dia1.png, id=1318, 577.40718pt x 144.54pt>
+<./Imagens/tab-res-fase1dia1.png, id=1315, 577.40718pt x 144.54pt>
 File: ./Imagens/tab-res-fase1dia1.png Graphic file (type png)
 <use ./Imagens/tab-res-fase1dia1.png>
 Package pdftex.def Info: ./Imagens/tab-res-fase1dia1.png  used on input line 57
@@ -4678,7 +4673,7 @@ Package pdftex.def Info: ./Imagens/tab-res-fase1dia1.png  used on input line 57
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-<./Imagens/tab-res-fase1dia2.png, id=1320, 578.16pt x 143.03438pt>
+<./Imagens/tab-res-fase1dia2.png, id=1317, 578.16pt x 143.03438pt>
 File: ./Imagens/tab-res-fase1dia2.png Graphic file (type png)
 <use ./Imagens/tab-res-fase1dia2.png>
 Package pdftex.def Info: ./Imagens/tab-res-fase1dia2.png  used on input line 67
@@ -4688,7 +4683,7 @@ Package pdftex.def Info: ./Imagens/tab-res-fase1dia2.png  used on input line 67
 LaTeX Warning: `h' float specifier changed to `ht'.
 
 [72]
-<./Imagens/tab-res-fase2dia1.png, id=1327, 578.16pt x 194.22563pt>
+<./Imagens/tab-res-fase2dia1.png, id=1324, 578.16pt x 194.22563pt>
 File: ./Imagens/tab-res-fase2dia1.png Graphic file (type png)
 <use ./Imagens/tab-res-fase2dia1.png>
 Package pdftex.def Info: ./Imagens/tab-res-fase2dia1.png  used on input line 10
@@ -4699,7 +4694,7 @@ Package pdftex.def Info: ./Imagens/tab-res-fase2dia1.png  used on input line 10
 LaTeX Warning: `h' float specifier changed to `ht'.
 
 [73 <./Imagens/tab-res-fase1dia1.png> <./Imagens/tab-res-fase1dia2.png>]
-<./Imagens/tab-res-fase2dia2.png, id=1335, 577.40718pt x 194.22563pt>
+<./Imagens/tab-res-fase2dia2.png, id=1332, 577.40718pt x 194.22563pt>
 File: ./Imagens/tab-res-fase2dia2.png Graphic file (type png)
 <use ./Imagens/tab-res-fase2dia2.png>
 Package pdftex.def Info: ./Imagens/tab-res-fase2dia2.png  used on input line 11
@@ -4707,12 +4702,12 @@ Package pdftex.def Info: ./Imagens/tab-res-fase2dia2.png  used on input line 11
 (pdftex.def)             Requested size: 455.0pt x 153.0572pt.
 
 [74 <./Imagens/tab-res-fase2dia1.png> <./Imagens/tab-res-fase2dia2.png>]
-<./Imagens/tab-res-fase3.png, id=1342, 577.40718pt x 194.22563pt>
+<./Imagens/tab-res-fase3.png, id=1339, 577.40718pt x 194.22563pt>
 File: ./Imagens/tab-res-fase3.png Graphic file (type png)
 <use ./Imagens/tab-res-fase3.png>
 Package pdftex.def Info: ./Imagens/tab-res-fase3.png  used on input line 144.
 (pdftex.def)             Requested size: 455.0pt x 153.0572pt.
-<./Imagens/taxarecogfases.png, id=1344, 560.8453pt x 64.74188pt>
+<./Imagens/taxarecogfases.png, id=1341, 560.8453pt x 64.74188pt>
 File: ./Imagens/taxarecogfases.png Graphic file (type png)
 <use ./Imagens/taxarecogfases.png>
 Package pdftex.def Info: ./Imagens/taxarecogfases.png  used on input line 162.
@@ -4727,7 +4722,7 @@ Overfull \hbox (17.99084pt too wide) in paragraph at lines 172--173
 se apre-sen-ta-vam ele-va-das. Reconfigurou-
  []
 
-<./Imagens/grafab-fase12.png, id=1351, 697.8572pt x 269.50688pt>
+<./Imagens/grafab-fase12.png, id=1348, 697.8572pt x 269.50688pt>
 File: ./Imagens/grafab-fase12.png Graphic file (type png)
 <use ./Imagens/grafab-fase12.png>
 Package pdftex.def Info: ./Imagens/grafab-fase12.png  used on input line 183.
@@ -4740,7 +4735,7 @@ Overfull \hbox (45.50278pt too wide) in paragraph at lines 183--184
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-<./Imagens/grafab-fase3.png, id=1352, 676.02562pt x 261.22594pt>
+<./Imagens/grafab-fase3.png, id=1349, 676.02562pt x 261.22594pt>
 File: ./Imagens/grafab-fase3.png Graphic file (type png)
 <use ./Imagens/grafab-fase3.png>
 Package pdftex.def Info: ./Imagens/grafab-fase3.png  used on input line 191.
@@ -4859,49 +4854,45 @@ Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 259.
 Package atveryend Info: Empty hook `AtEndAfterFileList' on input line 259.
 
 
-LaTeX Warning: There were undefined references.
-
-
 LaTeX Warning: There were multiply-defined labels.
 
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 259.
  ) 
 Here is how much of TeX's memory you used:
- 37221 strings out of 492970
- 835055 string characters out of 3135858
- 1426608 words of memory out of 3000000
- 39870 multiletter control sequences out of 15000+200000
- 22855 words of font info for 63 fonts, out of 3000000 for 9000
+ 37195 strings out of 492970
+ 834704 string characters out of 3135858
+ 1426612 words of memory out of 3000000
+ 39860 multiletter control sequences out of 15000+200000
+ 20388 words of font info for 54 fonts, out of 3000000 for 9000
  1150 hyphenation exceptions out of 8191
- 78i,13n,136p,1161b,2000s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 78i,13n,136p,1088b,2000s stack positions out of 5000i,500n,10000p,200000b,50000s
  <C:\Users\suga\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi600\e
 cbx0800.pk> <C:\Users\suga\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec
 \dpi600\ecit1095.pk> <C:\Users\suga\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jk
 nappen\ec\dpi600\ectt1095.pk> <C:\Users\suga\AppData\Local\MiKTeX\2.9\fonts\pk\
 ljfour\jknappen\ec\dpi600\ecti1000.pk> <C:\Users\suga\AppData\Local\MiKTeX\2.9\
-fonts\pk\ljfour\jknappen\ec\dpi600\ecrm0700.pk> <C:\Users\suga\AppData\Local\Mi
-KTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi600\ecrm0800.pk> <C:\Users\suga\AppData
-\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi600\ecbi1200.pk> <C:\Users\sug
-a\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi600\ecbx1200.pk> <C:\
-Users\suga\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi600\ecti1200
+fonts\pk\ljfour\jknappen\ec\dpi600\ecrm0800.pk> <C:\Users\suga\AppData\Local\Mi
+KTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi600\ecbi1200.pk> <C:\Users\suga\AppData
+\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi600\ecbx1200.pk> <C:\Users\sug
+a\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi600\ecti1200.pk> <C:\
+Users\suga\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi600\ecrm1000
 .pk> <C:\Users\suga\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi600
-\ecrm1000.pk> <C:\Users\suga\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappen\
-ec\dpi600\ecti1440.pk> <C:\Users\suga\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\
-jknappen\ec\dpi600\ecrm1440.pk> <C:\Users\suga\AppData\Local\MiKTeX\2.9\fonts\p
-k\ljfour\jknappen\ec\dpi600\ecrm1095.pk> <C:\Users\suga\AppData\Local\MiKTeX\2.
-9\fonts\pk\ljfour\jknappen\ec\dpi600\ecbi1440.pk> <C:\Users\suga\AppData\Local\
-MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi600\ecrm1200.pk> <C:\Users\suga\AppDa
-ta\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi600\ecbx1440.pk><C:/Program 
-Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmex10.pfb><C:/Program Files/Mi
-KTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi10.pfb><C:/Program Files/MiKTeX 2.9
-/fonts/type1/public/amsfonts/cm/cmmi12.pfb><C:/Program Files/MiKTeX 2.9/fonts/t
-ype1/public/amsfonts/cm/cmmi8.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/publ
-ic/amsfonts/cm/cmr12.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfon
-ts/cm/cmr8.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy
-10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy8.pfb>
-Output written on modelo.pdf (84 pages, 4412206 bytes).
+\ecti1440.pk> <C:\Users\suga\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappen\
+ec\dpi600\ecrm1440.pk> <C:\Users\suga\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\
+jknappen\ec\dpi600\ecrm1095.pk> <C:\Users\suga\AppData\Local\MiKTeX\2.9\fonts\p
+k\ljfour\jknappen\ec\dpi600\ecbi1440.pk> <C:\Users\suga\AppData\Local\MiKTeX\2.
+9\fonts\pk\ljfour\jknappen\ec\dpi600\ecrm1200.pk> <C:\Users\suga\AppData\Local\
+MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi600\ecbx1440.pk><C:/Program Files/MiK
+TeX 2.9/fonts/type1/public/amsfonts/cm/cmex10.pfb><C:/Program Files/MiKTeX 2.9/
+fonts/type1/public/amsfonts/cm/cmmi10.pfb><C:/Program Files/MiKTeX 2.9/fonts/ty
+pe1/public/amsfonts/cm/cmmi12.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/publ
+ic/amsfonts/cm/cmmi8.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfon
+ts/cm/cmr12.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr
+8.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C
+:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy8.pfb>
+Output written on modelo.pdf (84 pages, 4410738 bytes).
 PDF statistics:
- 2518 PDF objects out of 2984 (max. 8388607)
- 438 named destinations out of 1000 (max. 500000)
+ 2510 PDF objects out of 2984 (max. 8388607)
+ 437 named destinations out of 1000 (max. 500000)
  862 words of extra memory for PDF output out of 10000 (max. 10000000)
 

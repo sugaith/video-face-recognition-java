@@ -222,7 +222,7 @@
       <select />
     </treeState>
   </component>
-  <component name="ProjectFrameBounds" extendedState="6">
+  <component name="ProjectFrameBounds" extendedState="7">
     <option name="x" value="376" />
     <option name="y" value="-19" />
     <option name="width" value="1400" />
@@ -276,7 +276,7 @@
   </component>
   <component name="PropertiesComponent">
     <property name="SearchEverywhereHistoryKey" value="panel&#9;FILE&#9;file://E:/FACULDADE/TCC/em desenvolvimento/mono_rfv_thiago/SRFVMono_thiago_intelliJ/src/gui/PanelCadastroDeFace.java&#10;equal&#9;FILE&#9;file://E:/FACULDADE/TCC/em desenvolvimento/mono_rfv_thiago/SRFVMono_thiago_intelliJ/src/utils/EqualizarHistograma.java" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1544118331246" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1544120943572" />
     <property name="com.intellij.ide.scratch.LRUPopupBuilder$1/New Scratch File" value="JAVA" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="project.structure.last.edited" value="Modules" />
@@ -372,8 +372,7 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="54" y="-8" width="1874" height="1096" extended-state="6" />
-    <editor active="true" />
+    <frame x="54" y="-8" width="1874" height="1096" extended-state="7" />
     <layout>
       <window_info content_ui="combo" id="Project" order="0" sideWeight="0.4189189" visible="true" weight="0.13450937" />
       <window_info id="Image Layers" order="1" />

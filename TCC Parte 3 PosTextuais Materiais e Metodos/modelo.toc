@@ -66,7 +66,7 @@
 \contentsline {subsection}{\numberline {4.7.3}Fase de Treinamento}{64}{subsection.4.7.3}
 \contentsline {subsection}{\numberline {4.7.4}Fase de Reconhecimento}{66}{subsection.4.7.4}
 \contentsline {subsection}{\numberline {4.7.5}Defini\IeC {\c c}\IeC {\~a}o de Sucesso do Reconhecimento}{68}{subsection.4.7.5}
-\contentsline {subsection}{\numberline {4.7.6}Interface}{69}{subsection.4.7.6}
+\contentsline {subsection}{\numberline {4.7.6}Interface do Sistema}{69}{subsection.4.7.6}
 \setlength {\cftchapterindent }{0em} \setlength {\cftchapternumwidth }{\cftlastnumwidth }
 \contentsline {chapter}{\chapternumberline {5}\MakeTextUppercase {TESTES E AN\IeC {\'A}LISE DOS RESULTADOS}}{71}{chapter.5}
 \contentsline {section}{\numberline {5.1}Ambiente de Testes}{71}{section.5.1}

@@ -8,7 +8,7 @@ Trabalhos de autores como \citeonline{geysilva} ajudaram a estruturar e organiza
 
 O trabalho de \citeonline{img-digital-willians} foi utilizado para se aprofundar no tema de imagens digitais, assim como  \citeonline{gonzalez_woods} que também esclareceu o funcionamento de escalonamento, normalização e monocromatização de imagens. O autor Dr. Andrew Davison, em seu livro, \citeonline{drmathew_java_programming} se destacou pela ótima didática, facilitando o entendimento de Análise de Componentes e sua relação com \textit{EigenFaces}. 
 
-Os trabalhos \citeonline{tutorial_en_smith} e \citeonline{tutorial_pt} foram estudados para descrever e implementar algoritmo de ACP (\textit{Eigenfaces}).
+Os trabalhos \citeonline{tutorial_en_smith} e \citeonline{tutorial_pt} foram estudados para descrever e implementar algoritmo ACP (ou \textit{Eigenfaces}).
 
 Nas próximas seções serão explanados os conteúdos destes e de outros trabalhos.
 
@@ -38,7 +38,7 @@ Converter uma imagem para o formato digital significa transferir os elementos qu
 
 Para que uma imagem analógica (representação real da cena) seja convertida, esta deve sofrer uma separação espacial (amostragem) e em amplitude (quantização) \cite{img-digital-willians}. 
 
-A amostragem é a divisão do plano $(x,y)$ em uma grade (ou matriz bi-dimensional) onde \textit{x} e \textit{y} serão números inteiros. Os pontos da matriz são denominados \textit{pixels} (\textit{PICTure Elements}), como ilustra a \autoref{pixel_img}. Cada pixel representa uma parte da cena real, desta forma a resolução espacial da imagem é proporcional aos valores de M e N correspondentes na matriz (ao exemplo da \autoref{pixel_img}). Em geral, na malha de amostragem, o formato dos pixels $(x,y)$ é retangular, mas pode também ser triangular ou mais complexa. Os valores de cada ponto da matriz, coluna \textit{x} e linha \textit{y}, que identificam um único pixel $(M,N)$, devem ser escolhidos de forma a respeitar a relação qualidade da imagem \textit{vs.} espaço de armazenamento, em função da aplicação para a qual a imagem se destina. Para uma imagem digital com 256 níveis de cinza, o número de bytes ocupados para armazenar a imagem é o produto da linha ou coluna da matriz e 8 bits (unidade mínima de armazenamento digital) \cite{img-digital-willians}. 
+A amostragem é a divisão do plano $(x,y)$ em uma grade (ou matriz bi-dimensional) onde \textit{x} e \textit{y} serão números inteiros. Os pontos da matriz são denominados \textit{pixels} (\textit{PICTure Elements}) Cada pixel representa uma parte da cena real, desta forma a resolução espacial da imagem é proporcional aos valores de M e N correspondentes na matriz. Em geral, na malha de amostragem, o formato dos pixels $(x,y)$ é retangular, mas pode também ser triangular ou mais complexa. Os valores de cada ponto da matriz, coluna \textit{x} e linha \textit{y}, que identificam um único pixel $(M,N)$, devem ser escolhidos de forma a respeitar a relação qualidade da imagem \textit{vs.} espaço de armazenamento, em função da aplicação para a qual a imagem se destina. Para uma imagem digital com 256 níveis de cinza, o número de bytes ocupados para armazenar a imagem é o produto da linha ou coluna da matriz e 8 bits (unidade mínima de armazenamento digital) \cite{img-digital-willians}. 
 
 Matematicamente, toda imagem em escala de cinza é um função $f(x,y)$ da intensidade luminosa, em qualquer parte das coordenadas $(x,y)$, proporcional ao brilho (tons de cinza) da imagem em um determinado ponto \cite{gonzalez_woods}. 
 
