@@ -3,22 +3,21 @@
   <component name="ChangeListManager">
     <list default="true" id="418e7f84-7618-4fe2-a97b-b4b68e45d5f1" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../TCC Parte 3 PosTextuais Materiais e Metodos/Capitulos/implementacao.tex" beforeDir="false" afterPath="$PROJECT_DIR$/../TCC Parte 3 PosTextuais Materiais e Metodos/Capitulos/implementacao.tex" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../TCC Parte 3 PosTextuais Materiais e Metodos/cc-udc-abntex2.cls" beforeDir="false" afterPath="$PROJECT_DIR$/../TCC Parte 3 PosTextuais Materiais e Metodos/cc-udc-abntex2.cls" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../TCC Parte 3 PosTextuais Materiais e Metodos/modelo.aux" beforeDir="false" afterPath="$PROJECT_DIR$/../TCC Parte 3 PosTextuais Materiais e Metodos/modelo.aux" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../TCC Parte 3 PosTextuais Materiais e Metodos/modelo.lof" beforeDir="false" afterPath="$PROJECT_DIR$/../TCC Parte 3 PosTextuais Materiais e Metodos/modelo.lof" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../TCC Parte 3 PosTextuais Materiais e Metodos/modelo.log" beforeDir="false" afterPath="$PROJECT_DIR$/../TCC Parte 3 PosTextuais Materiais e Metodos/modelo.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../TCC Parte 3 PosTextuais Materiais e Metodos/modelo.logr" beforeDir="false" afterPath="$PROJECT_DIR$/../TCC Parte 3 PosTextuais Materiais e Metodos/modelo.logr" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../TCC Parte 3 PosTextuais Materiais e Metodos/modelo.lol" beforeDir="false" afterPath="$PROJECT_DIR$/../TCC Parte 3 PosTextuais Materiais e Metodos/modelo.lol" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../TCC Parte 3 PosTextuais Materiais e Metodos/modelo.lot" beforeDir="false" afterPath="$PROJECT_DIR$/../TCC Parte 3 PosTextuais Materiais e Metodos/modelo.lot" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../TCC Parte 3 PosTextuais Materiais e Metodos/modelo.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/../TCC Parte 3 PosTextuais Materiais e Metodos/modelo.pdf" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../TCC Parte 3 PosTextuais Materiais e Metodos/modelo.synctex.gz" beforeDir="false" afterPath="$PROJECT_DIR$/../TCC Parte 3 PosTextuais Materiais e Metodos/modelo.synctex.gz" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../TCC Parte 3 PosTextuais Materiais e Metodos/modelo.tex" beforeDir="false" afterPath="$PROJECT_DIR$/../TCC Parte 3 PosTextuais Materiais e Metodos/modelo.tex" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../TCC Parte 3 PosTextuais Materiais e Metodos/modelo.toc" beforeDir="false" afterPath="$PROJECT_DIR$/../TCC Parte 3 PosTextuais Materiais e Metodos/modelo.toc" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../TCC Parte 3 PosTextuais Materiais e Metodos/src/acesso.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../TCC Parte 3 PosTextuais Materiais e Metodos/src/c.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../TCC Parte 3 PosTextuais Materiais e Metodos/src/coletar-hashtags.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../TCC Parte 3 PosTextuais Materiais e Metodos/texput.log" beforeDir="false" afterPath="$PROJECT_DIR$/../TCC Parte 3 PosTextuais Materiais e Metodos/texput.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/eigenfaces/eigen_0.png" beforeDir="false" afterPath="$PROJECT_DIR$/eigenfaces/eigen_0.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/eigenfaces/eigen_1.png" beforeDir="false" afterPath="$PROJECT_DIR$/eigenfaces/eigen_1.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/eigenfaces/eigen_10.png" beforeDir="false" afterPath="$PROJECT_DIR$/eigenfaces/eigen_10.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/eigenfaces/eigen_11.png" beforeDir="false" afterPath="$PROJECT_DIR$/eigenfaces/eigen_11.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/eigenfaces/eigen_12.png" beforeDir="false" afterPath="$PROJECT_DIR$/eigenfaces/eigen_12.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/eigenfaces/eigen_2.png" beforeDir="false" afterPath="$PROJECT_DIR$/eigenfaces/eigen_2.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/eigenfaces/eigen_3.png" beforeDir="false" afterPath="$PROJECT_DIR$/eigenfaces/eigen_3.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/eigenfaces/eigen_4.png" beforeDir="false" afterPath="$PROJECT_DIR$/eigenfaces/eigen_4.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/eigenfaces/eigen_5.png" beforeDir="false" afterPath="$PROJECT_DIR$/eigenfaces/eigen_5.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/eigenfaces/eigen_6.png" beforeDir="false" afterPath="$PROJECT_DIR$/eigenfaces/eigen_6.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/eigenfaces/eigen_7.png" beforeDir="false" afterPath="$PROJECT_DIR$/eigenfaces/eigen_7.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/eigenfaces/eigen_8.png" beforeDir="false" afterPath="$PROJECT_DIR$/eigenfaces/eigen_8.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/eigenfaces/eigen_9.png" beforeDir="false" afterPath="$PROJECT_DIR$/eigenfaces/eigen_9.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/eigenspace.cache" beforeDir="false" afterPath="$PROJECT_DIR$/eigenspace.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/imagensTreinamento/_0.png" beforeDir="false" afterPath="$PROJECT_DIR$/imagensTreinamento/_0.png" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -38,7 +37,7 @@
         <entry file="file://$PROJECT_DIR$/src/gui/PanelCadastroDeFace.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="379">
-              <caret line="614" column="43" lean-forward="true" selection-start-line="614" selection-start-column="43" selection-end-line="614" selection-end-column="43" />
+              <caret line="614" column="43" selection-start-line="614" selection-start-column="43" selection-end-line="614" selection-end-column="43" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -49,7 +48,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/utils/EqualizarHistograma.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="66">
+            <state relative-caret-position="102">
               <caret line="14" column="27" selection-start-line="14" selection-start-column="23" selection-end-line="14" selection-end-column="27" />
               <folding>
                 <element signature="imports" expanded="true" />
@@ -70,7 +69,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/eigenfaces/ACP_Treinamento.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="277">
+            <state relative-caret-position="2788">
               <caret line="170" selection-start-line="170" selection-end-line="182" selection-end-column="5" />
               <folding>
                 <element signature="imports" expanded="true" />
@@ -82,8 +81,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/eigenfaces/ACP_Reconhecimento.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="345">
-              <caret line="154" column="5" lean-forward="true" selection-start-line="154" selection-start-column="5" selection-end-line="154" selection-end-column="5" />
+            <state relative-caret-position="2533">
+              <caret line="154" column="5" selection-start-line="154" selection-start-column="5" selection-end-line="154" selection-end-column="5" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -94,7 +93,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/utils/AutoVetor_decomp.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="355">
+            <state relative-caret-position="323">
               <caret line="23" column="37" selection-start-line="23" selection-start-column="22" selection-end-line="23" selection-end-column="37" />
               <folding>
                 <element signature="e#375#376#0" expanded="true" />
@@ -111,7 +110,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/utils/FileUtils.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="226">
+            <state relative-caret-position="493">
               <caret line="34" column="36" selection-start-line="34" selection-start-column="36" selection-end-line="34" selection-end-column="36" />
             </state>
           </provider>
@@ -132,8 +131,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/utils/Matriz2D.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="508">
-              <caret line="161" column="30" lean-forward="true" selection-start-line="161" selection-start-column="30" selection-end-line="161" selection-end-column="30" />
+            <state relative-caret-position="2346">
+              <caret line="161" column="30" selection-start-line="161" selection-start-column="30" selection-end-line="161" selection-end-column="30" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="e#416#417#0" expanded="true" />
@@ -222,7 +221,7 @@
       <select />
     </treeState>
   </component>
-  <component name="ProjectFrameBounds" extendedState="7">
+  <component name="ProjectFrameBounds" extendedState="6">
     <option name="x" value="376" />
     <option name="y" value="-19" />
     <option name="width" value="1400" />
@@ -236,6 +235,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -271,7 +271,6 @@
         </subPane>
       </pane>
       <pane id="Scope" />
-      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -372,9 +371,9 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="54" y="-8" width="1874" height="1096" extended-state="7" />
+    <frame x="54" y="-8" width="1874" height="1096" extended-state="6" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.4189189" visible="true" weight="0.13450937" />
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.4189189" visible="true" weight="0.10088203" />
       <window_info id="Image Layers" order="1" />
       <window_info id="Designer" order="2" />
       <window_info id="UI Designer" order="3" />
@@ -399,7 +398,7 @@
       <window_info anchor="right" id="Capture Analysis" order="5" />
       <window_info anchor="right" id="Theme Preview" order="6" />
       <window_info anchor="right" id="Palette&#9;" order="7" />
-      <window_info active="true" anchor="right" id="Structure" order="8" sideWeight="0.5810811" visible="true" weight="0.2061742" />
+      <window_info anchor="right" id="Structure" order="8" sideWeight="0.5810811" visible="true" weight="0.15214995" />
       <window_info anchor="right" id="Maven Projects" order="9" sideWeight="0.4992248" weight="0.3296582" />
       <window_info anchor="right" id="simpleUML" order="10" show_stripe_button="false" weight="0.50689465" />
       <window_info anchor="right" id="Maven" order="11" />
@@ -508,30 +507,7 @@
       </provider>
     </entry>
     <entry file="jar://C:/Program Files/Java/jdk1.8.0_181/src.zip!/java/awt/Component.java" />
-    <entry file="file://$PROJECT_DIR$/../TCC Parte 3 PosTextuais Materiais e Metodos/src/c.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="34">
-          <caret line="2" column="1" selection-start-line="2" selection-start-column="1" selection-end-line="2" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/gui/FrameCadastroDeFace.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="306">
-          <caret line="32" column="25" selection-start-line="32" selection-start-column="25" selection-end-line="32" selection-end-column="25" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/utils/ImageUtils.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1581">
-          <caret line="101" column="32" selection-start-line="101" selection-start-column="32" selection-end-line="101" selection-end-column="32" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/../TCC Parte 3 PosTextuais Materiais e Metodos/src/c.java" />
     <entry file="file://$PROJECT_DIR$/src/utils/Utilitarios.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="106">
@@ -539,84 +515,8 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/utils/FileUtils.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="226">
-          <caret line="34" column="36" selection-start-line="34" selection-start-column="36" selection-end-line="34" selection-end-column="36" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/utils/EqualizarHistograma.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="66">
-          <caret line="14" column="27" selection-start-line="14" selection-start-column="23" selection-end-line="14" selection-end-column="27" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/utils/Matriz2D.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="508">
-          <caret line="161" column="30" lean-forward="true" selection-start-line="161" selection-start-column="30" selection-end-line="161" selection-end-column="30" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#416#417#0" expanded="true" />
-            <element signature="e#443#444#0" expanded="true" />
-            <element signature="e#567#568#0" expanded="true" />
-            <element signature="e#600#601#0" expanded="true" />
-            <element signature="e#1186#1187#0" expanded="true" />
-            <element signature="e#1267#1268#0" expanded="true" />
-            <element signature="e#1303#1304#0" expanded="true" />
-            <element signature="e#1367#1368#0" expanded="true" />
-            <element signature="e#3504#3505#0" expanded="true" />
-            <element signature="e#3556#3557#0" expanded="true" />
-            <element signature="e#4095#4096#0" expanded="true" />
-            <element signature="e#4144#4145#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/utils/AutoVetor_decomp.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="355">
-          <caret line="23" column="37" selection-start-line="23" selection-start-column="22" selection-end-line="23" selection-end-column="37" />
-          <folding>
-            <element signature="e#375#376#0" expanded="true" />
-            <element signature="e#402#403#0" expanded="true" />
-            <element signature="e#443#444#0" expanded="true" />
-            <element signature="e#488#489#0" expanded="true" />
-            <element signature="e#532#533#0" expanded="true" />
-            <element signature="e#571#572#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../TCC Parte 3 PosTextuais Materiais e Metodos/src/snippet-mainthread - Copy.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="578">
-          <caret line="34" column="51" lean-forward="true" selection-start-line="34" selection-start-column="51" selection-end-line="34" selection-end-column="51" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../TCC Parte 3 PosTextuais Materiais e Metodos/src/snippet-treiamento - Copy.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="204">
-          <caret line="12" column="1" lean-forward="true" selection-start-line="12" selection-start-column="1" selection-end-line="12" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/eigenfaces/ACP_Treinamento.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="277">
-          <caret line="170" selection-start-line="170" selection-end-line="182" selection-end-column="5" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/../TCC Parte 3 PosTextuais Materiais e Metodos/src/snippet-mainthread - Copy.java" />
+    <entry file="file://$PROJECT_DIR$/../TCC Parte 3 PosTextuais Materiais e Metodos/src/snippet-treiamento - Copy.java" />
     <entry file="file://$PROJECT_DIR$/../TCC Parte 3 PosTextuais Materiais e Metodos/src/snippet-reconh.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="102">
@@ -631,16 +531,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/eigenfaces/ACP_Reconhecimento.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="345">
-          <caret line="154" column="5" lean-forward="true" selection-start-line="154" selection-start-column="5" selection-end-line="154" selection-end-column="5" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/../TCC Parte 3 PosTextuais Materiais e Metodos/src/snippet-reconh-resultadofim.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="34">
@@ -651,9 +541,100 @@
     <entry file="file://$PROJECT_DIR$/src/gui/PanelCadastroDeFace.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="379">
-          <caret line="614" column="43" lean-forward="true" selection-start-line="614" selection-start-column="43" selection-end-line="614" selection-end-column="43" />
+          <caret line="614" column="43" selection-start-line="614" selection-start-column="43" selection-end-line="614" selection-end-column="43" />
           <folding>
             <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/utils/EqualizarHistograma.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="102">
+          <caret line="14" column="27" selection-start-line="14" selection-start-column="23" selection-end-line="14" selection-end-column="27" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/gui/FrameCadastroDeFace.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="306">
+          <caret line="32" column="25" selection-start-line="32" selection-start-column="25" selection-end-line="32" selection-end-column="25" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/eigenfaces/ACP_Treinamento.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2788">
+          <caret line="170" selection-start-line="170" selection-end-line="182" selection-end-column="5" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/eigenfaces/ACP_Reconhecimento.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2533">
+          <caret line="154" column="5" selection-start-line="154" selection-start-column="5" selection-end-line="154" selection-end-column="5" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/utils/AutoVetor_decomp.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="323">
+          <caret line="23" column="37" selection-start-line="23" selection-start-column="22" selection-end-line="23" selection-end-column="37" />
+          <folding>
+            <element signature="e#375#376#0" expanded="true" />
+            <element signature="e#402#403#0" expanded="true" />
+            <element signature="e#443#444#0" expanded="true" />
+            <element signature="e#488#489#0" expanded="true" />
+            <element signature="e#532#533#0" expanded="true" />
+            <element signature="e#571#572#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/utils/FileUtils.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="493">
+          <caret line="34" column="36" selection-start-line="34" selection-start-column="36" selection-end-line="34" selection-end-column="36" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/utils/ImageUtils.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1581">
+          <caret line="101" column="32" selection-start-line="101" selection-start-column="32" selection-end-line="101" selection-end-column="32" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/utils/Matriz2D.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2346">
+          <caret line="161" column="30" selection-start-line="161" selection-start-column="30" selection-end-line="161" selection-end-column="30" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#416#417#0" expanded="true" />
+            <element signature="e#443#444#0" expanded="true" />
+            <element signature="e#567#568#0" expanded="true" />
+            <element signature="e#600#601#0" expanded="true" />
+            <element signature="e#1186#1187#0" expanded="true" />
+            <element signature="e#1267#1268#0" expanded="true" />
+            <element signature="e#1303#1304#0" expanded="true" />
+            <element signature="e#1367#1368#0" expanded="true" />
+            <element signature="e#3504#3505#0" expanded="true" />
+            <element signature="e#3556#3557#0" expanded="true" />
+            <element signature="e#4095#4096#0" expanded="true" />
+            <element signature="e#4144#4145#0" expanded="true" />
           </folding>
         </state>
       </provider>
