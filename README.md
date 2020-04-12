@@ -1,6 +1,6 @@
 # Video Face Recognition System with Java and EigenFaces (PCA).
 
-* Oficial Title: `Estudo e Implementação de um Sistema de Reconhecimento de Faces em Vídeo com os Algorítimos EigenFaces em JAVA`.
+* Official Title: `Estudo e Implementação de um Sistema de Reconhecimento de Faces em Vídeo com os Algorítimos EigenFaces em JAVA`.
 
 * IntelliJ Java Project [HERE](https://github.com/sugaith/mono_rfv_thiago/tree/master/SRFVMono_thiago_intelliJ)
 
